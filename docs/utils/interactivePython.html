@@ -637,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
     }
   }
   function insertFibonacciCode() {
-    const fibCode = `def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n# Print the first 10 Fibonacci numbers\nfor i in range(10):\n    print(fibonacci(i))`;
+    const fibCode = `def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n# Print the first 15 Fibonacci numbers\nfor i in range(15):\n    print(fibonacci(i))`;
     document.getElementById('python-code-input').value = fibCode;
   }
   function clearPythonPlayground() {
