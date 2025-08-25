@@ -118,11 +118,10 @@ format:
 Welcome! Enter your Python code below, run it, and save it to your computer. 
 
 ### Extra Python Resources?!
+
 If you need a notebook for your work, maybe try <a href="https://www.oliverbonhamcarter.com/live/lab/index.html" target="_blank">JupyterLite</a>!
 
 **Note**: All saved files are in the cookies and are therefore temporary. To get around this, please download the files from the Jupyter notebook to your local machine.
-
-
 
 <textarea id="python-code-input" class="lesson-input" rows="16" placeholder="# Write your Python code here..."></textarea>
 
@@ -134,7 +133,6 @@ If you need a notebook for your work, maybe try <a href="https://www.oliverbonha
   <button onclick="clearPythonPlayground()" class="clear-btn">🧹 Clear</button>
   <button onclick="increaseFontSize()" class="example-btn">🔍+ Larger Font</button>
   <button onclick="decreaseFontSize()" class="example-btn">🔍- Smaller Font</button>
-
 </div>
 
 <div id="python-output" class="lesson-terminal" style="margin-top:1em; min-height:2em; background:#222; color:#ffd700; padding:1em; border-radius:6px;">

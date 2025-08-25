@@ -168,55 +168,6 @@
     "text": "Welcome! Enter your Python code below, run it, and save it to your computer.\n\n\nIf you need a notebook for your work, maybe try JupyterLite!\nNote: All saved files are in the cookies and are therefore temporary. To get around this, please download the files from the Jupyter notebook to your local machine.\n\n\n▶ Run Code 💾 Save Code 📂 Load Code ➕ Insert Fibonacci Example 🧹 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nOutput will appear here."
   },
   {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html",
-    "href": "misc/lesson-boilerplate-template_qmd.html",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "",
-    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\n[OBJECTIVE_1]\n[OBJECTIVE_2]\n[OBJECTIVE_3]\n[OBJECTIVE_4]"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#introduction",
-    "href": "misc/lesson-boilerplate-template_qmd.html#introduction",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Introduction",
-    "text": "Introduction\n[LESSON_INTRODUCTION_TEXT]"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#key-concepts",
-    "href": "misc/lesson-boilerplate-template_qmd.html#key-concepts",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n💡 Concept 1: [CONCEPT_1_NAME]\n\n[CONCEPT_1_EXPLANATION]\nExample:\n# [CONCEPT_1_EXAMPLE_CODE]\n\n\n\n💡 Concept 2: [CONCEPT_2_NAME]\n\n[CONCEPT_2_EXPLANATION]\nExample:\n# [CONCEPT_2_EXAMPLE_CODE]"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#interactive-examples",
-    "href": "misc/lesson-boilerplate-template_qmd.html#interactive-examples",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Interactive Examples",
-    "text": "Interactive Examples\n\nExample 1: [EXAMPLE_1_TITLE]\n\nWhat this code does: [EXAMPLE_1_EXPLANATION]\n\nExample Code:\n[EXAMPLE_1_CODE_BLOCK]\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n[EXAMPLE_1_CODE_TEXTAREA]\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: [EXAMPLE_2_TITLE]\n\nWhat this code does: [EXAMPLE_2_EXPLANATION]\n\nExample Code:\n[EXAMPLE_2_CODE_BLOCK]\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n[EXAMPLE_2_CODE_TEXTAREA]\n\n▶ Run Code 🗑 Clear\n\n\nExample 3: [EXAMPLE_3_TITLE]\n\nWhat this code does: [EXAMPLE_3_EXPLANATION]\n\nExample Code:\n[EXAMPLE_3_CODE_BLOCK]\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n[EXAMPLE_3_CODE_TEXTAREA]\n\n▶ Run Code 🗑 Clear\n\n\nChallenge Yourself\n\n[CHALLENGE_TITLE]\n[CHALLENGE_DESCRIPTION]\nChallenge Code:\n[CHALLENGE_CODE_BLOCK]\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n[CHALLENGE_CODE_TEXTAREA]\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\n[CHALLENGE_TASK_1]\n[CHALLENGE_TASK_2]\n[CHALLENGE_TASK_3]\n[CHALLENGE_TASK_4]\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\n[SUMMARY_POINT_1]\n[SUMMARY_POINT_2]\n[SUMMARY_POINT_3]\n[SUMMARY_POINT_4]\n\n\n\n\n\nKey Takeaways\n[KEY_TAKEAWAYS_TEXT]\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nResource 1 Title\nResource 2 Title\nResource 3 Title"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#challenge-yourself",
-    "href": "misc/lesson-boilerplate-template_qmd.html#challenge-yourself",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Challenge Yourself",
-    "text": "Challenge Yourself\n\n[CHALLENGE_TITLE]\n[CHALLENGE_DESCRIPTION]\nChallenge Code:\n[CHALLENGE_CODE_BLOCK]\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n[CHALLENGE_CODE_TEXTAREA]\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\n[CHALLENGE_TASK_1]\n[CHALLENGE_TASK_2]\n[CHALLENGE_TASK_3]\n[CHALLENGE_TASK_4]\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\n[SUMMARY_POINT_1]\n[SUMMARY_POINT_2]\n[SUMMARY_POINT_3]\n[SUMMARY_POINT_4]\n\n\n\n\n\nKey Takeaways\n[KEY_TAKEAWAYS_TEXT]\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nResource 1 Title\nResource 2 Title\nResource 3 Title"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#summary",
-    "href": "misc/lesson-boilerplate-template_qmd.html#summary",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\n[SUMMARY_POINT_1]\n[SUMMARY_POINT_2]\n[SUMMARY_POINT_3]\n[SUMMARY_POINT_4]"
-  },
-  {
-    "objectID": "misc/lesson-boilerplate-template_qmd.html#key-takeaways",
-    "href": "misc/lesson-boilerplate-template_qmd.html#key-takeaways",
-    "title": "Lesson [NUMBER]: [LESSON_TITLE]",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n[KEY_TAKEAWAYS_TEXT]\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nResource 1 Title\nResource 2 Title\nResource 3 Title"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "CMPSC101 Fall 2025 :: DataStructures",

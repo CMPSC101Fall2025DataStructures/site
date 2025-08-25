@@ -169,7 +169,7 @@ grades. Adjustments to grades will be applied on top of base grades according to
  -->
 ---
 
-![](../graphics/levelup.png)
+![](graphics/levelup.png)
 
 ## Schedule At-A-Glance
 
