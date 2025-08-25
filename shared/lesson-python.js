@@ -6,7 +6,15 @@ let pyodideReadyPromise = loadPyodide();
 
 async function initializeLessonPython() {
   let pyodide = await pyodideReadyPromise;
-  
+
+  // NotWorking
+  // Load extra Python libraries for use in lessons
+  // Add more package names to this array as needed
+  // await pyodide.loadPackage(["numpy", "matplotlib", "seaborn"]);
+  // Example: await pyodide.loadPackage(["scipy", "pandas"]);
+
+
+
   // Initialize all terminals (supports up to 10 terminals)
   for (let i = 1; i <= 10; i++) {
     const terminal = document.getElementById(`lesson-terminal-${i}`);
@@ -14,7 +22,7 @@ async function initializeLessonPython() {
       terminal.innerHTML = '<div class="python-prompt">>>> </div><div class="python-output">Python interpreter ready! Type your code above.</div>';
     }
   }
-  
+
   return pyodide;
 }
 
