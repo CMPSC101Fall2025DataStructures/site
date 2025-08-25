@@ -94,6 +94,10 @@ format:
               const fibCode = `def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n# Print the first 10 Fibonacci numbers\nfor i in range(10):\n    print(fibonacci(i))`;
               document.getElementById('python-code-input').value = fibCode;
             }
+            function clearPythonPlayground() {
+              document.getElementById('python-code-input').value = '';
+              document.getElementById('python-output').textContent = '';
+            }
           </script>
 ---
 
@@ -109,6 +113,7 @@ Welcome! Enter your Python code below, run it, and save it to your computer.
   <button onclick="savePythonCode()" class="save-btn">💾 Save Code</button>
   <button onclick="loadPythonCode()" class="save-btn">📂 Load Code</button>
   <button onclick="insertFibonacciCode()" class="example-btn">➕ Insert Fibonacci Example</button>
+  <button onclick="clearPythonPlayground()" class="clear-btn">🧹 Clear</button>
 </div>
 
 <div id="python-output" class="lesson-terminal" style="margin-top:1em; min-height:2em; background:#222; color:#ffd700; padding:1em; border-radius:6px;">
