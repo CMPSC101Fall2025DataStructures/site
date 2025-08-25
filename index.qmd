@@ -1,0 +1,9 @@
+---
+title: "CMPSC 101 Data Structures"
+format: html
+embed-resources: true
+---
+
+![](graphics/levelup.png){width=10%}
+
+{{< include syllabus/syllabus.qmd >}}
