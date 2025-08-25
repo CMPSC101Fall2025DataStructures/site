@@ -12,6 +12,8 @@ Instructor Office Hours: Visit the below URL to find availability and schedule a
 
 *Note*: If the office hours times are not convenient, then please reach out to me and we can find an alternative time to meet.
  
+![](../graphics/binary_tree_01_500x482.png)
+
 ## Course Description
 
 A continuation of CMPSC 100 with an emphasis on implementing, using, and
@@ -165,6 +167,8 @@ grades. Adjustments to grades will be applied on top of base grades according to
 | Engineering Labs (8) |     40     |
  -->
 ---
+
+![](../graphics/levelup.png)
 
 ## Schedule At-A-Glance
 
