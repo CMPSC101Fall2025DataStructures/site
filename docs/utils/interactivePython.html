@@ -140,15 +140,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="python-playground" class="level2">
 <h2 class="anchored" data-anchor-id="python-playground">Python Playground</h2>
 <p>Welcome! Enter your Python code below, run it, and save it to your computer.</p>
+<section id="extra-python-resources" class="level3">
+<h3 class="anchored" data-anchor-id="extra-python-resources">Extra Python Resources?!</h3>
+<p>If you need a notebook for your work, maybe try <a href="https://www.oliverbonhamcarter.com/live/lab/index.html" target="_blank">JupyterLite</a>!</p>
+<p><strong>Note</strong>: All saved files are in the cookies and are therefore temporary. To get around this, please download the files from the Jupyter notebook to your local machine.</p>
 <textarea id="python-code-input" class="lesson-input" rows="16" placeholder="# Write your Python code here..."></textarea>
 <div class="lesson-buttons">
-<p><button onclick="runGenericPythonCode()" class="run-btn">▶ Run Code</button> <button onclick="savePythonCode()" class="save-btn">💾 Save Code</button> <button onclick="loadPythonCode()" class="save-btn">📂 Load Code</button> <button onclick="insertFibonacciCode()" class="example-btn">➕ Insert Fibonacci Example</button> <button onclick="clearPythonPlayground()" class="clear-btn">🧹 Clear</button></p>
+<p><button onclick="runGenericPythonCode()" class="run-btn">▶ Run Code</button> <button onclick="savePythonCode()" class="save-btn">💾 Save Code</button> <button onclick="loadPythonCode()" class="save-btn">📂 Load Code</button> <button onclick="insertFibonacciCode()" class="example-btn">➕ Insert Fibonacci Example</button> <button onclick="clearPythonPlayground()" class="clear-btn">🧹 Clear</button> <button onclick="increaseFontSize()" class="example-btn">🔍+ Larger Font</button> <button onclick="decreaseFontSize()" class="example-btn">🔍- Smaller Font</button></p>
 </div>
 <div id="python-output" class="lesson-terminal" style="margin-top:1em; min-height:2em; background:#222; color:#ffd700; padding:1em; border-radius:6px;">
 <p><span style="font-style:italic;">Output will appear here.</span></p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -639,6 +644,17 @@ ul.task-list li input[type="checkbox"] {
     document.getElementById('python-code-input').value = '';
     document.getElementById('python-output').textContent = '';
   }
+
+// Font size adjustment functions
+function increaseFontSize() {
+  document.body.classList.remove('lesson-small-font');
+  document.body.classList.add('lesson-large-font');
+}
+
+function decreaseFontSize() {
+  document.body.classList.remove('lesson-large-font');
+  document.body.classList.add('lesson-small-font');
+}
 </script>
 
 
