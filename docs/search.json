@@ -95,7 +95,7 @@
     "href": "syllabus/syllabus.html#schedule-at-a-glance",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
     "section": "Schedule At-A-Glance",
-    "text": "Schedule At-A-Glance\n\nWeek One: Software Operations (Guttag Chapter 1)\nWeek Two: Python Foundations (Guttage Chapter 2)\nWeek Three: Numerical Programs (Guttag Chapter 3)\nWeek Four: Function Scope (Guttag Chapter 4)\nWeek Five: Structured Types (Guttag Chapter 5)\nWeek Six: Mutability and Aliasing (Guttag Chapter 5)\nWeek Seven: Recursion (Guttag Chapter 6)\nSpring Break\nWeek Nine: Modules and Files (Guttag Chapter 7)\nWeek Ten: Testing and Handling Exceptions (Guttag Chapter 8 and 9)\nWeek Eleven: Object-Oriented Programming (Guttag Chapter 10)\nWeek Twelve: Algorithmic Complexity (Guttag Chapter 11)\nWeek Thirteen: Sorting (Guttag Chapter 12)\nWeek Fourteen: Data Structures (Guttag Chapter 12 cont)\nWeek Fifteen: Optimization Problems (Guttag Chapter 14)\nWeek Sixteen: Review\n\n\nFinal\n\nThursday, May 1, 2025 at 9:00 AM (Complete Final Exam Schedule)"
+    "text": "Schedule At-A-Glance\n\nWeek One: Software Operations (Guttag Chapter 1)\nWeek Two: Python Foundations (Guttage Chapter 2)\nWeek Three: Numerical Programs (Guttag Chapter 3)\nWeek Four: Function Scope (Guttag Chapter 4)\nWeek Five: Structured Types (Guttag Chapter 5)\nWeek Six: Mutability and Aliasing (Guttag Chapter 5)\nWeek Seven: Recursion (Guttag Chapter 6)\nSpring Break\nWeek Nine: Modules and Files (Guttag Chapter 7)\nWeek Ten: Testing and Handling Exceptions (Guttag Chapter 8 and 9)\nWeek Eleven: Object-Oriented Programming (Guttag Chapter 10)\nWeek Twelve: Algorithmic Complexity (Guttag Chapter 11)\nWeek Thirteen: Sorting (Guttag Chapter 12)\nWeek Fourteen: Data Structures (Guttag Chapter 12 cont)\nWeek Fifteen: Optimization Problems (Guttag Chapter 14)\nWeek Sixteen: Review\n\n\nFinal Deliverable\n\nWednesday, December 10, 2025 at 9:00 AM (Complete Final Exam Schedule)\nExam Code: G"
   },
   {
     "objectID": "syllabus/syllabus.html#assignment-policies",
@@ -112,11 +112,11 @@
     "text": "Quiz Policies\nQuizzes on previously-covered or assigned materials are given in class, typically on the day following lab.\nIn case you are absent on a day when there is a quiz, you can make it up in any instructor office hours slot within one week. Reach out if the office hours time slots do not work for you."
   },
   {
-    "objectID": "syllabus/syllabus.html#discord-policies",
-    "href": "syllabus/syllabus.html#discord-policies",
+    "objectID": "syllabus/syllabus.html#discord",
+    "href": "syllabus/syllabus.html#discord",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
-    "section": "Discord Policies",
-    "text": "Discord Policies\nParticipation through Discord is required. Each student is required to post at least once per week by either asking a real question or answering a question asked by your classmate. Collegial conversations about course topics or activities are also allowed. Weekly usage of Discord is what determines your participation grade."
+    "section": "Discord",
+    "text": "Discord\nThe instructor will be using Discord to pass important information along to the class, such as code, news and other details. Please actively check your Discord each day to ensure that you are up-to-date with course events."
   },
   {
     "objectID": "syllabus/syllabus.html#additional-policies",
@@ -256,7 +256,7 @@
     "href": "index.html#schedule-at-a-glance",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
     "section": "Schedule At-A-Glance",
-    "text": "Schedule At-A-Glance\n\nWeek One: Software Operations (Guttag Chapter 1)\nWeek Two: Python Foundations (Guttage Chapter 2)\nWeek Three: Numerical Programs (Guttag Chapter 3)\nWeek Four: Function Scope (Guttag Chapter 4)\nWeek Five: Structured Types (Guttag Chapter 5)\nWeek Six: Mutability and Aliasing (Guttag Chapter 5)\nWeek Seven: Recursion (Guttag Chapter 6)\nSpring Break\nWeek Nine: Modules and Files (Guttag Chapter 7)\nWeek Ten: Testing and Handling Exceptions (Guttag Chapter 8 and 9)\nWeek Eleven: Object-Oriented Programming (Guttag Chapter 10)\nWeek Twelve: Algorithmic Complexity (Guttag Chapter 11)\nWeek Thirteen: Sorting (Guttag Chapter 12)\nWeek Fourteen: Data Structures (Guttag Chapter 12 cont)\nWeek Fifteen: Optimization Problems (Guttag Chapter 14)\nWeek Sixteen: Review\n\n\nFinal\n\nThursday, May 1, 2025 at 9:00 AM (Complete Final Exam Schedule)"
+    "text": "Schedule At-A-Glance\n\nWeek One: Software Operations (Guttag Chapter 1)\nWeek Two: Python Foundations (Guttage Chapter 2)\nWeek Three: Numerical Programs (Guttag Chapter 3)\nWeek Four: Function Scope (Guttag Chapter 4)\nWeek Five: Structured Types (Guttag Chapter 5)\nWeek Six: Mutability and Aliasing (Guttag Chapter 5)\nWeek Seven: Recursion (Guttag Chapter 6)\nSpring Break\nWeek Nine: Modules and Files (Guttag Chapter 7)\nWeek Ten: Testing and Handling Exceptions (Guttag Chapter 8 and 9)\nWeek Eleven: Object-Oriented Programming (Guttag Chapter 10)\nWeek Twelve: Algorithmic Complexity (Guttag Chapter 11)\nWeek Thirteen: Sorting (Guttag Chapter 12)\nWeek Fourteen: Data Structures (Guttag Chapter 12 cont)\nWeek Fifteen: Optimization Problems (Guttag Chapter 14)\nWeek Sixteen: Review\n\n\nFinal Deliverable\n\nWednesday, December 10, 2025 at 9:00 AM (Complete Final Exam Schedule)\nExam Code: G"
   },
   {
     "objectID": "index.html#assignment-policies",
@@ -273,11 +273,11 @@
     "text": "Quiz Policies\nQuizzes on previously-covered or assigned materials are given in class, typically on the day following lab.\nIn case you are absent on a day when there is a quiz, you can make it up in any instructor office hours slot within one week. Reach out if the office hours time slots do not work for you."
   },
   {
-    "objectID": "index.html#discord-policies",
-    "href": "index.html#discord-policies",
+    "objectID": "index.html#discord",
+    "href": "index.html#discord",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
-    "section": "Discord Policies",
-    "text": "Discord Policies\nParticipation through Discord is required. Each student is required to post at least once per week by either asking a real question or answering a question asked by your classmate. Collegial conversations about course topics or activities are also allowed. Weekly usage of Discord is what determines your participation grade."
+    "section": "Discord",
+    "text": "Discord\nThe instructor will be using Discord to pass important information along to the class, such as code, news and other details. Please actively check your Discord each day to ensure that you are up-to-date with course events."
   },
   {
     "objectID": "index.html#additional-policies",

@@ -3,11 +3,11 @@ title: "CMPSC101 Fall 2025 :: DataStructures"
 author: "Oliver Bonham-Carter"
 ---
 
-Class Sessions: MWF 10:00 AM to 10:50 AM, Alden 101  
-Laboratory Session: Thursday, 2:30 PM to 4 PM, Alden 101  
-Instructor: Dr. Bonham-Carter, [obonhamcarter@allegheny.edu](obonhamcarter@allegheny.edu)  
-Office Location: Alden Hall 204 
-Instructor Office Hours: Visit the below URL to find availability and schedule and appointment.
+**Class Sessions**: MWF 10:00 AM to 10:50 AM, Alden 101  
+**Laboratory Session**: Thursday, 2:30 PM to 4 PM, Alden 101  
+**Instructor**: Dr. Bonham-Carter, [obonhamcarter@allegheny.edu](obonhamcarter@allegheny.edu)  
+**Office Location**: Alden Hall 204 
+**Instructor Office Hours**: Visit the below URL to find availability and schedule and appointment.
 [https://www.oliverbonhamcarter.com/contactandabout/](https://www.oliverbonhamcarter.com/contactandabout/)
 
 *Note*: If the office hours times are not convenient, then please reach out to me and we can find an alternative time to meet.
@@ -189,11 +189,12 @@ grades. Adjustments to grades will be applied on top of base grades according to
 - **Week Fifteen**: Optimization Problems (Guttag Chapter 14)
 - **Week Sixteen**: Review
 
-### Final
+### Final Deliverable
 
-- Thursday, May 1, 2025 at 9:00 AM
-  ([Complete Final Exam Schedule](https://sites.allegheny.edu/registrar/spring-2025-final-exam-schedule/))
-
+- Wednesday, December 10, 2025 at 9:00 AM
+  ([Complete Final Exam Schedule](https://sites.allegheny.edu/registrar/fall-2025-final-exam-schedule/))
+- *Exam Code: G*
+  
 ---
 
 ## Assignment Policies
@@ -231,9 +232,11 @@ In case you are **absent** on a day when there is a quiz, you can make it up in 
 
 ---
 
-## Discord Policies
+## Discord
 
-Participation through Discord is required. Each student is required to post at least once per week by either asking a real question or answering a question asked by your classmate. Collegial conversations about course topics or activities are also allowed. Weekly usage of Discord is what determines your participation grade.
+The instructor will be using Discord to pass important information along to the class, such as code, news and other details. Please actively check your Discord each day to ensure that you are up-to-date with course events.
+
+<!-- Participation through Discord is required. Each student is required to post at least once per week by either asking a real question or answering a question asked by your classmate. Collegial conversations about course topics or activities are also allowed. Weekly usage of Discord is what determines your participation grade. -->
 
 ## Additional Policies
 
