@@ -15,7 +15,7 @@ author: "Oliver Bonham-Carter"
 
 *Note*: If the office hours times are not convenient, then please reach out to me and we can find an alternative time to meet.
  
-<!-- ![](../graphics/binarytree.png) -->
+![](../graphics/binarytree.png)
 
 ## Quick Links
 

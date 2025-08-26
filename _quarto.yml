@@ -12,7 +12,7 @@ website:
       - href: utils/interactivePython.qmd
         text: Python Interactive
       - href: lessons/lessons.qmd
-        text: Lessons Playground
+        text: Playground
       # - href: syllabus/syllabus.qmd
         # text: Syllabus
 

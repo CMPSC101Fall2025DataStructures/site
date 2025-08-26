@@ -369,5 +369,12 @@
     "title": "Just For Fun: Fibonacci Sequence",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
+  },
+  {
+    "objectID": "lessons/gettingToKnowYou.html#survey",
+    "href": "lessons/gettingToKnowYou.html#survey",
+    "title": "Activity: Getting To Know You",
+    "section": "Survey",
+    "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
   }
 ]
