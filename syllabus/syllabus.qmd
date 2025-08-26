@@ -17,8 +17,10 @@ author: "Oliver Bonham-Carter"
  
 ![](../graphics/binary_tree_01_500x482.png)
 
-## Table of Contents
+## Quick Links
 
++ [Token Form for Automatic Extension](https://forms.gle/hjrJLnpHrauFmJqH8)
++ [The attendance form](https://forms.gle/PQRJH3PoZwbNgC3y8)
 
 ## Course Description
 
@@ -218,8 +220,9 @@ The instructor will be using Discord to pass important information along to the 
 
 Students are expected to come to class **prepared, on time,
 and to stay engaged** for the duration of the class period. This includes both class
-and lab sessions. This behavior is core to our [shared departmental values](https://www.cis.allegheny.edu/teaching/policies/) and is in
-addition to the college’s attendance policy.
+and lab sessions. This behavior is core to our [shared departmental values](https://www.cis.allegheny.edu/teaching/policies/) and is in addition to the college’s attendance policy.
+
+Each day of class, please complete the attendance [form](https://forms.gle/PQRJH3PoZwbNgC3y8).
 
 #### _Preparedness_
 
@@ -265,7 +268,7 @@ A token may be applied via a Google Form up to the assignment deadline, with exc
 
 Tokens grant an automatic extension of one week to anything except the final exam.
 
-[Token Form for Automatic Extension](https://forms.gle/Nj4hJHmYZdBBa4ELA)
+[Token Form for Automatic Extension](https://forms.gle/hjrJLnpHrauFmJqH8)
 
 ### _Extenuating Circumstances_
 
