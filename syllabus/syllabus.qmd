@@ -15,7 +15,7 @@ author: "Oliver Bonham-Carter"
 
 *Note*: If the office hours times are not convenient, then please reach out to me and we can find an alternative time to meet.
  
-![graphic](../graphics/binarytree.png)
+<!-- ![A vibrant digital tree with glowing branches and roots, surrounded by colorful flowers and butterflies in a nighttime setting. The tree canopy is filled with binary numbers such as 101011, 10104, 51, 10104, 101011, 12131, 0501, and 01, which are integrated into the leaves and branches. The environment features cascading streams of blue and teal data, creating a magical and energetic atmosphere that evokes curiosity and wonder.] -->
 
 ## Quick Links
 
