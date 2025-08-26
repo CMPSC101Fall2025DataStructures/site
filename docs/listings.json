@@ -2,8 +2,9 @@
   {
     "listing": "/lessons/lessons.html",
     "items": [
-      "/lessons/stringCheese.html",
-      "/lessons/fibonacci.html"
+      "/lessons/gettingToKnowYou.html",
+      "/lessons/fibonacci.html",
+      "/lessons/stringCheese.html"
     ]
   }
 ]
