@@ -22,9 +22,9 @@ format:
                 await pyodide.runPythonAsync(`import sys\nimport io\nsys.stdout = io.StringIO()`);
                 await pyodide.runPythonAsync(code);
                 const output = await pyodide.runPythonAsync('sys.stdout.getvalue()');
-                outputDiv.textContent = output;
+                  outputDiv.innerHTML = output.replace(/\n/g, '<br>');
               } catch (err) {
-                outputDiv.textContent = err;
+                  outputDiv.innerHTML = String(err).replace(/\n/g, '<br>');
               }
             }
             async function savePythonCode() {
