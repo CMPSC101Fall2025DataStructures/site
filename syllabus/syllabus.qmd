@@ -166,7 +166,7 @@ grades. Adjustments to grades will be applied on top of base grades according to
 - **Week Five**: Structured Types (Guttag Chapter 5)
 - **Week Six**: Mutability and Aliasing (Guttag Chapter 5)
 - **Week Seven**: Recursion (Guttag Chapter 6)
-- **Spring Break**
+- **Fall Break** (Thursday to Sunday)
 - **Week Nine**: Modules and Files (Guttag Chapter 7)
 - **Week Ten**: Testing and Handling Exceptions (Guttag Chapter 8 and 9)
 - **Week Eleven**: Object-Oriented Programming (Guttag Chapter 10)
