@@ -194,36 +194,23 @@ must be submitted to through a student's GitHub repository created by GitHub
 Classroom. No credit will be awarded for any course work that you submit to the
 incorrect GitHub repository.
 
-### _Assignment Evaluation_
+**Labs** are graded based on gatorgrade scores and other criteria.
 
-You will privately receive a grade for each assignment in Canvas. Your grade will be a function of whether or not you completed the work that correctly fulfills the assignment's specification and submitted it by the deadline.
-
-**Engineering Labs** are graded based on gatorgrade scores and other criteria.
-
-- Fifty percent of the grade of each Engineering Lab is determined by
+- Fifty percent of the grade of each Lab is determined by
   the percentage of gatorgrade checks passed.
 - One quarter of the grade is determined by code correctness following a rubric.
 - One quarter of the grade is determined by professional skills and presentation
   following a rubric. Professional presentation is impacted by linting, formatting, testing, profiling, duplication avoidance, commenting, markdown styling and communication in reflections.
 
-**Spec Labs** are graded based only on the gatorgrade score. A gatorgrade score
-of 93% on a given spec lab will result in a grade of 93% for that lab.
 
----
-<!-- 
-## Quiz Policies
-
-Quizzes on previously-covered or assigned materials are given in class, typically on the day following lab.
-
-In case you are **absent** on a day when there is a quiz, you can make it up in any [instructor office hours](https://allegheny-college-cmpsc-101-spring-2025.github.io/site) slot within one week. Reach out if the office hours time slots do not work for you.   -->
+**Activities**
+Nearly weekly, we will have an activity for which points in the course may be earned. Please be sure to turn in activities by the due date as they cannot be made up at a later time.
 
 ---
 
 ## Discord
 
 The instructor will be using Discord to pass important information along to the class, such as code, news and other details. Please actively check your Discord each day to ensure that you are up-to-date with course events.
-
-<!-- Participation through Discord is required. Each student is required to post at least once per week by either asking a real question or answering a question asked by your classmate. Collegial conversations about course topics or activities are also allowed. Weekly usage of Discord is what determines your participation grade. -->
 
 ## Additional Policies
 
@@ -278,7 +265,7 @@ A token may be applied via a Google Form up to the assignment deadline, with exc
 
 Tokens grant an automatic extension of one week to anything except the final exam.
 
-[Token Form for Automatic Extension](https://forms.gle/scmBrKDyFFryfBM5A)
+[Token Form for Automatic Extension](https://forms.gle/Nj4hJHmYZdBBa4ELA)
 
 ### _Extenuating Circumstances_
 
