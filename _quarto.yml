@@ -10,11 +10,11 @@ website:
         text: Home
       # - about.qmd
       - href: utils/interactivePython.qmd
-        text: Python Interactive
-      - href: lessons/lessons.qmd
+        text: Interactive
+      - href: playground/0_playground.qmd
         text: Playground
-      # - href: syllabus/syllabus.qmd
-        # text: Syllabus
+      - href: materials/0_materials.qmd
+        text: Materials
 
 format:
   html:

@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="OBC">
+<meta name="dcterms.date" content="2025-08-26">
 
-<title>Listings – CMPSC101 Fall 2025 :: DataStructures</title>
+<title>Activity: Getting To Know You – CMPSC101 Fall 2025 :: DataStructures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,15 +32,13 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -69,65 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -155,11 +97,15 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../utils/interactivePython.html"> 
-<span class="menu-text">Python Interactive</span></a>
+<span class="menu-text">Interactive</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../lessons/lessons.html" aria-current="page"> 
+    <a class="nav-link" href="../playground/0_playground.html"> 
 <span class="menu-text">Playground</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../materials/0_materials.html"> 
+<span class="menu-text">Materials</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -172,22 +118,41 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduce-your-partner" id="toc-introduce-your-partner" class="nav-link active" data-scroll-target="#introduce-your-partner">Introduce Your Partner!</a></li>
+  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Listings</h1>
+<h1 class="title">Activity: Getting To Know You</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>OBC </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 26, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -197,263 +162,29 @@ window.Quarto = {
 </header>
 
 
-<p>Here you will find a listing of interactive lessons for the course.</p>
-<p><img src="../graphics/levelup.png" class="img-fluid" style="width:10.0%"></p>
-<!-- ---
-title: "Lesson Playground"
-format: html
-embed-resources: true
-<!-- ---
+<p><img src="../graphics/talking400x400.png" class="img-fluid"></p>
+<section id="introduce-your-partner" class="level2">
+<h2 class="anchored" data-anchor-id="introduce-your-partner">Introduce Your Partner!</h2>
+<p>Choose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;</p>
+<ul>
+<li>How they would like to be called in class,</li>
+<li>Where they are from,</li>
+<li>What types of classes they like,</li>
+<li>What they enjoy doing on campus,</li>
+<li>What is their favorite music</li>
+<li>Why they are in this course at Allegheny College. Take turns sharing.</li>
+</ul>
+<p>Then, each of you will present the other to the course today.</p>
+</section>
+<section id="survey" class="level2">
+<h2 class="anchored" data-anchor-id="survey">Survey</h2>
+<p>I would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to <a href="https://discord.com/">https://discord.com/</a> to get started. <strong>For our course, please use your actual name in Discord.</strong></p>
+<p>Survey Link: <a href="https://forms.gle/oM5mxSCZ2Umfhrqp7">https://forms.gle/oM5mxSCZ2Umfhrqp7</a></p>
 
 
----
-title: "Just For Fun: String Cheese Demo"
-subtitle: "Testing the simplified lesson template"
-date: "22 Aug 2025"
-author: "OBC"
-format: 
-  html:
-    toc: true
-    toc-depth: 1
-    code-fold: false
-    css: 
-      - ../shared/lesson-styles.css
-    include-in-header:
-      - text: |
-          <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
-    include-after-body:
-      - text: |
-          <script src="../shared/lesson-python.js"></script>
----
+</section>
 
-::: {.callout-note icon="🎯"}
-
-## Lesson Objectives
-By the end of this lesson, you will be able to:
-
-- [ ] Print strings in Python
-- [ ] Use for loops with range()
-- [ ] Format strings with f-strings
-- [ ] Understand string repetition
-:::
-
-## Introduction
-
-In this lesson, we'll learn how to print "String Cheese" using Python! This fun example will teach you about loops, strings, and formatting.
-
-## Key Concepts
-
-::: {.lesson-concept}
-::: {.concept-title}
-💡 **Concept 1: String Printing and Loops**
-:::
-We can use Python's `print()` function combined with `for` loops to create repeated output. The `range()` function helps us control how many times something repeats.
-
-**Example:**
-```python
-# Print String Cheese multiple times
-for i in range(5):
-    print(f"String Cheese : {i}")
-```
-:::
-
-## Interactive Examples
-
-### Example 1: Basic String Cheese Loop
-
-::: {.code-explanation}
-**What this code does:** This creates a simple loop that prints "String Cheese" 10 times, each with a number.
-:::
-
-<div id="lesson-terminal-1" class="lesson-terminal">
-  <div class="python-prompt">>>> </div>
-  <div style="color: var(--golden-yellow); font-style: italic;">Loading Python interpreter...</div>
-</div>
-
-<textarea id="lesson-input-1" class="lesson-input" rows="4" placeholder="# Basic String Cheese Loop
-# Type your Python code here..."></textarea>
-
-<div class="lesson-buttons">
-  <button onclick="runLessonCode(1)" class="run-btn">▶ Run Code</button>
-  <button onclick="clearLessonTerminal(1)" class="clear-btn">🗑 Clear</button>
-  <button onclick="loadExample(1, `for i in range(10):\n    print(f'String Cheese : {i}')`)" class="example-btn">📝 Load Example</button>
-  <button onclick="increaseFontSize()" class="example-btn">🔍+ Larger Font</button>
-  <button onclick="decreaseFontSize()" class="example-btn">🔍- Smaller Font</button>
-</div>
-
-### Example 2: String Cheese with Custom Messages
-
-::: {.code-explanation}
-**What this code does:** This example shows how to create more creative String Cheese messages with different formatting.
-:::
-
-<div id="lesson-terminal-2" class="lesson-terminal">
-  <div class="python-prompt">>>> </div>
-  <div style="color: var(--golden-yellow); font-style: italic;">Loading Python interpreter...</div>
-</div>
-
-<textarea id="lesson-input-2" class="lesson-input" rows="4" placeholder="# Custom String Cheese Messages
-# Type your Python code here...">
-</textarea>
-
-<div class="lesson-buttons">
-  <button onclick="runLessonCode(2)" class="run-btn">▶ Run Code</button>
-  <button onclick="clearLessonTerminal(2)" class="clear-btn">🗑 Clear</button>
-  <button onclick="loadExample(2, `for i in range(5):\n    print(f'🧀 String Cheese #{i+1} is delicious! 🧀')`)" class="example-btn">📝 Load Example</button>
-</div>
-
-## Try It Yourself
-
-::: {.try-it-box}
-**🚀 Challenge:** Create your own String Cheese variations!
-
-**Your task:** Write a loop that prints "String Cheese" with different numbers and messages.
-
-**Hint:** Try using different ranges and string formatting options.
-:::
-
-<div id="lesson-terminal-3" class="lesson-terminal">
-  <div class="python-prompt">>>> </div>
-  <div style="color: var(--golden-yellow); font-style: italic;">Ready for your solution!</div>
-</div>
-
-<textarea id="lesson-input-3" class="lesson-input" rows="6" placeholder="# Your String Cheese creation here
-# Try different ranges and messages!"></textarea>
-
-<div class="lesson-buttons">
-  <button onclick="runLessonCode(3)" class="run-btn">▶ Run Code</button>
-  <button onclick="clearLessonTerminal(3)" class="clear-btn">🗑 Clear</button>
-  <button onclick="loadExample(3, `# Solution: Creative String Cheese\nfor i in range(1, 6):\n    cheese ='🧀' \n    print(f'String Cheese Level {i}: {cheese * i}')`)" class="example-btn">💡 Show Solution</button>
-</div>
-
-## Summary
-
-::: {.callout-tip icon="✅"}
-## What You Learned
-
-In this lesson, you explored:
-
-- **String printing with print() function**
-- **For loops with range() function**
-- **F-string formatting for dynamic messages**
-- **Creative text output and formatting**
-:::
-
-## Next Steps
-
-::: {.callout-important icon="➡️"}
-## Coming Up Next
-
-In the next lesson, we'll cover:
-- Variables and data types
-- More complex string operations
-:::
-
----
-
-::: {.callout-note icon="📖"}
-## Additional Resources
-
-- [Python String Formatting](https://docs.python.org/3/tutorial/inputoutput.html)
-- [Python For Loops](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
-- [Practice Problems](https://github.com/your-repo/practice-problems)
-:::
-
-
-{{< include fibonacci.qmd >}} -->
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1756180800000" data-listing-file-modified-sort="1756235077726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
-<div class="thumbnail"><a href="../lessons/gettingToKnowYou.html" class="no-external">
-
-<p class="card-img-top"><img src="../graphics/talking400x400.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../lessons/gettingToKnowYou.html" class="no-external">Activity: Getting To Know You</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../lessons/gettingToKnowYou.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="../lessons/gettingToKnowYou.html" class="no-external">
-Choose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;
-</a></div>
-</div>
-<div class="metadata">
-<a href="../lessons/gettingToKnowYou.html" class="no-external">
-<div class="listing-date">
-Aug 26, 2025
-</div>
-<div class="listing-author">
-OBC
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1755835200000" data-listing-file-modified-sort="1756224527784" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1575">
-<div class="thumbnail"><a href="../lessons/fibonacci.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../lessons/fibonacci.html" class="no-external">Just For Fun: Fibonacci Sequence</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../lessons/fibonacci.html" class="no-external">Three Approaches to Computing the Famous Sequence</a>
-</div>
-<div class="delink listing-description"><a href="../lessons/fibonacci.html" class="no-external">
-By the end of this lesson, you will be able to:
-</a></div>
-</div>
-<div class="metadata">
-<a href="../lessons/fibonacci.html" class="no-external">
-<div class="listing-date">
-Aug 22, 2025
-</div>
-<div class="listing-author">
-OBC
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1755835200000" data-listing-file-modified-sort="1756226006860" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
-<div class="thumbnail"><a href="../lessons/stringCheese.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../lessons/stringCheese.html" class="no-external">Just For Fun: String Cheese Demo</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../lessons/stringCheese.html" class="no-external">Testing the simplified lesson template</a>
-</div>
-<div class="delink listing-description"><a href="../lessons/stringCheese.html" class="no-external">
-By the end of this lesson, you will be able to:
-</a></div>
-</div>
-<div class="metadata">
-<a href="../lessons/stringCheese.html" class="no-external">
-<div class="listing-date">
-Aug 22, 2025
-</div>
-<div class="listing-author">
-OBC
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

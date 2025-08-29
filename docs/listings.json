@@ -1,10 +1,14 @@
 [
   {
-    "listing": "/lessons/lessons.html",
+    "listing": "/materials/0_materials.html",
+    "items": []
+  },
+  {
+    "listing": "/playground/0_playground.html",
     "items": [
-      "/lessons/gettingToKnowYou.html",
-      "/lessons/fibonacci.html",
-      "/lessons/stringCheese.html"
+      "/playground/gettingToKnowYou.html",
+      "/playground/fibonacci.html",
+      "/playground/stringCheese.html"
     ]
   }
 ]
