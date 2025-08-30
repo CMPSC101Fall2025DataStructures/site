@@ -1,8 +1,8 @@
 ---
 title: "Materials"
-listing:
-  contents:
-    - "*.qmd"
+# listing:
+  # contents:
+    # - "*.qmd"
     # - "lab-notes/*reports.qmd"
 ---
 Here you will find a listing of lesson materials for the course such as slides, assignments, and similar.

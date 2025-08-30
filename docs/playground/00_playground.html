@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="OBC">
-<meta name="dcterms.date" content="2025-08-22">
 
-<title>Just For Fun: String Cheese Demo – CMPSC101 Fall 2025 :: DataStructures</title>
+<title>Playground – CMPSC101 Fall 2025 :: DataStructures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -67,13 +30,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -104,11 +69,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../shared/lesson-styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -137,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Interactive</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../playground/0_playground.html"> 
+    <a class="nav-link active" href="../playground/00_playground.html" aria-current="page"> 
 <span class="menu-text">Playground</span></a>
   </li>  
   <li class="nav-item">
@@ -163,27 +184,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Just For Fun: String Cheese Demo</h1>
-<p class="subtitle lead">Testing the simplified lesson template</p>
+<h1 class="title">Playground</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>OBC </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 22, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -193,182 +201,157 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lesson Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>By the end of this lesson, you will be able to:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Print strings in Python</label></li>
-<li><label><input type="checkbox">Use for loops with range()</label></li>
-<li><label><input type="checkbox">Format strings with f-strings</label></li>
-<li><label><input type="checkbox">Understand string repetition</label></li>
-</ul>
-</div>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In this lesson, we’ll learn how to print “String Cheese” using Python! This fun example will teach you about loops, strings, and formatting.</p>
-</section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
-<div class="lesson-concept">
-<div class="concept-title">
-<p>💡 <strong>Concept 1: String Printing and Loops</strong></p>
-</div>
-<p>We can use Python’s <code>print()</code> function combined with <code>for</code> loops to create repeated output. The <code>range()</code> function helps us control how many times something repeats.</p>
-<p><strong>Example:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print String Cheese multiple times</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"String Cheese : </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="interactive-examples" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-examples">Interactive Examples</h2>
-<section id="example-1-basic-string-cheese-loop" class="level3">
-<h3 class="anchored">Example 1: Basic String Cheese Loop</h3>
-<div class="code-explanation">
-<p><strong>What this code does:</strong> This creates a simple loop that prints “String Cheese” 10 times, each with a number.</p>
-</div>
-<div id="lesson-terminal-1" class="lesson-terminal">
-<div class="python-prompt">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-</blockquote></blockquote></blockquote></div>
-<div style="color: var(--golden-yellow); font-style: italic;">
-Loading Python interpreter…
-</div>
-
-
-
-</div>
-<textarea id="lesson-input-1" class="lesson-input" rows="4" placeholder="# Basic String Cheese Loop
-# Type your Python code here..."></textarea>
-<div class="lesson-buttons">
-<p><button onclick="runLessonCode(1)" class="run-btn">▶ Run Code</button> <button onclick="clearLessonTerminal(1)" class="clear-btn">🗑 Clear</button> <button onclick="loadExample(1, `for i in range(10):\n    print(f'String Cheese : {i}')`)" class="example-btn">📝 Load Example</button> <button onclick="increaseFontSize()" class="example-btn">🔍+ Larger Font</button> <button onclick="decreaseFontSize()" class="example-btn">🔍- Smaller Font</button></p>
-</div>
-<section id="example-2-string-cheese-with-custom-messages" class="level3">
-<h3 class="anchored">Example 2: String Cheese with Custom Messages</h3>
-<div class="code-explanation">
-<p><strong>What this code does:</strong> This example shows how to create more creative String Cheese messages with different formatting.</p>
-</div>
-<div id="lesson-terminal-2" class="lesson-terminal">
-<div class="python-prompt">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-</blockquote></blockquote></blockquote></div>
-<div style="color: var(--golden-yellow); font-style: italic;">
-Loading Python interpreter…
-</div>
-
-
-
-</div>
-<textarea id="lesson-input-2" class="lesson-input" rows="4" placeholder="# Custom String Cheese Messages
-# Type your Python code here..."></textarea>
-<div class="lesson-buttons">
-<p><button onclick="runLessonCode(2)" class="run-btn">▶ Run Code</button> <button onclick="clearLessonTerminal(2)" class="clear-btn">🗑 Clear</button> <button onclick="loadExample(2, `for i in range(5):\n    print(f'🧀 String Cheese #{i+1} is delicious! 🧀')`)" class="example-btn">📝 Load Example</button></p>
-</div>
-<section id="try-it-yourself" class="level2">
-<h2 class="anchored" data-anchor-id="try-it-yourself">Try It Yourself</h2>
-<div class="try-it-box">
-<p><strong>🚀 Challenge:</strong> Create your own String Cheese variations!</p>
-<p><strong>Your task:</strong> Write a loop that prints “String Cheese” with different numbers and messages.</p>
-<p><strong>Hint:</strong> Try using different ranges and string formatting options.</p>
-</div>
-<div id="lesson-terminal-3" class="lesson-terminal">
-<div class="python-prompt">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-</blockquote></blockquote></blockquote></div>
-<div style="color: var(--golden-yellow); font-style: italic;">
-Ready for your solution!
-</div>
-
-
-
-</div>
-<textarea id="lesson-input-3" class="lesson-input" rows="6" placeholder="# Your String Cheese creation here
-# Try different ranges and messages!"></textarea>
-<div class="lesson-buttons">
-<p><button onclick="runLessonCode(3)" class="run-btn">▶ Run Code</button> <button onclick="clearLessonTerminal(3)" class="clear-btn">🗑 Clear</button> <button onclick="loadExample(3, `# Solution: Creative String Cheese\nfor i in range(1, 6):\n    cheese ='🧀' \n    print(f'String Cheese Level {i}: {cheese * i}')`)" class="example-btn">💡 Show Solution</button></p>
-</div>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-What You Learned
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In this lesson, you explored:</p>
-<ul>
-<li><strong>String printing with print() function</strong></li>
-<li><strong>For loops with range() function</strong></li>
-<li><strong>F-string formatting for dynamic messages</strong></li>
-<li><strong>Creative text output and formatting</strong></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Coming Up Next
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In the next lesson, we’ll cover: - Variables and data types - More complex string operations</p>
-</div>
-</div>
-<hr>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Additional Resources
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://docs.python.org/3/tutorial/inputoutput.html">Python String Formatting</a></li>
-<li><a href="https://docs.python.org/3/tutorial/controlflow.html#for-statements">Python For Loops</a></li>
-<li><a href="https://github.com/your-repo/practice-problems">Practice Problems</a></li>
-</ul>
-</div>
-</div>
-
-
-</section>
-</section></section></section></section></main></div>
+<p>Here you will find a listing of interactive curiosities from the course.</p>
+<p><img src="../graphics/levelup.png" class="img-fluid" style="width:10.0%"></p>
 
 
 
 
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1755835200000" data-listing-file-modified-sort="1756530022832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1575">
+<div class="thumbnail"><a href="../playground/00_fibonacci.html" class="no-external">
 
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../playground/00_fibonacci.html" class="no-external">0_Just For Fun: Fibonacci Sequence</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../playground/00_fibonacci.html" class="no-external">Three Approaches to Computing the Famous Sequence</a>
+</div>
+<div class="delink listing-description"><a href="../playground/00_fibonacci.html" class="no-external">
+By the end of this lesson, you will be able to:
+</a></div>
+</div>
+<div class="metadata">
+<a href="../playground/00_fibonacci.html" class="no-external">
+<div class="listing-date">
+Aug 22, 2025
+</div>
+<div class="listing-author">
+OBC
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1755835200000" data-listing-file-modified-sort="1756530030012" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
+<div class="thumbnail"><a href="../playground/00_stringCheese.html" class="no-external">
 
- <!-- /main -->
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../playground/00_stringCheese.html" class="no-external">0_Just For Fun: String Cheese Demo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../playground/00_stringCheese.html" class="no-external">Testing the simplified lesson template</a>
+</div>
+<div class="delink listing-description"><a href="../playground/00_stringCheese.html" class="no-external">
+By the end of this lesson, you will be able to:
+</a></div>
+</div>
+<div class="metadata">
+<a href="../playground/00_stringCheese.html" class="no-external">
+<div class="listing-date">
+Aug 22, 2025
+</div>
+<div class="listing-author">
+OBC
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1756180800000" data-listing-file-modified-sort="1756498839882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="thumbnail"><a href="../playground/01_gettingToKnowYou.html" class="no-external">
+
+<p class="card-img-top"><img src="../graphics/talking400x400.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../playground/01_gettingToKnowYou.html" class="no-external">01_Activity: Getting To Know You</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../playground/01_gettingToKnowYou.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="../playground/01_gettingToKnowYou.html" class="no-external">
+Choose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;
+</a></div>
+</div>
+<div class="metadata">
+<a href="../playground/01_gettingToKnowYou.html" class="no-external">
+<div class="listing-date">
+Aug 26, 2025
+</div>
+<div class="listing-author">
+OBC
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1756526400000" data-listing-file-modified-sort="1756529969164" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="856">
+<div class="thumbnail"><a href="../playground/02_functionCalls_general.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../playground/02_functionCalls_general.html" class="no-external">02_Activity: Function Calls in Code</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../playground/02_functionCalls_general.html" class="no-external">Understanding Functions, Flow, and Mathematical Reasoning</a>
+</div>
+<div class="delink listing-description"><a href="../playground/02_functionCalls_general.html" class="no-external">
+By the end of this lesson, you will be able to:
+</a></div>
+</div>
+<div class="metadata">
+<a href="../playground/02_functionCalls_general.html" class="no-external">
+<div class="listing-date">
+Aug 30, 2025
+</div>
+<div class="listing-author">
+OBC
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1756526400000" data-listing-file-modified-sort="1756529962354" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="394">
+<div class="thumbnail"><a href="../playground/02_functionCalls_squareArea.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../playground/02_functionCalls_squareArea.html" class="no-external">02_Activity: Area of a Square and Function Calls</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../playground/02_functionCalls_squareArea.html" class="no-external">Exploring Python Functions and Iteration</a>
+</div>
+<div class="delink listing-description"><a href="../playground/02_functionCalls_squareArea.html" class="no-external">
+<strong>What this code does:</strong> This code defines a function <code>squareArea(s)</code> that calculates the area of a square given its side length <code>s</code>. The <code>main()</code> function acts as a driver: it prints…<strong></strong><code></code><code></code><code></code><code></code><code></code>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../playground/02_functionCalls_squareArea.html" class="no-external">
+<div class="listing-date">
+Aug 30, 2025
+</div>
+<div class="listing-author">
+OBC
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -768,8 +751,7 @@ Additional Resources
     }
   });
   </script>
- <!-- /content -->
-<script src="../shared/lesson-python.js"></script>
+</div> <!-- /content -->
 
 
 

@@ -1,14 +1,12 @@
 [
   {
-    "listing": "/materials/0_materials.html",
-    "items": []
-  },
-  {
-    "listing": "/playground/0_playground.html",
+    "listing": "/playground/00_playground.html",
     "items": [
-      "/playground/gettingToKnowYou.html",
-      "/playground/fibonacci.html",
-      "/playground/stringCheese.html"
+      "/playground/00_fibonacci.html",
+      "/playground/00_stringCheese.html",
+      "/playground/01_gettingToKnowYou.html",
+      "/playground/02_functionCalls_general.html",
+      "/playground/02_functionCalls_squareArea.html"
     ]
   }
 ]

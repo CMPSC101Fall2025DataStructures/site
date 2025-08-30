@@ -11,7 +11,7 @@ website:
       # - about.qmd
       - href: utils/interactivePython.qmd
         text: Interactive
-      - href: playground/0_playground.qmd
+      - href: playground/00_playground.qmd
         text: Playground
       - href: materials/0_materials.qmd
         text: Materials
