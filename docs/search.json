@@ -98,81 +98,172 @@
     "text": "Syllabus Changes\nThe instructor may make updates or changes to this document at any time as needed until term grades are due. Changes will be announced to the class."
   },
   {
-    "objectID": "playground/00_playground.html",
-    "href": "playground/00_playground.html",
-    "title": "Playground",
+    "objectID": "playground/02_functionCalls_squareArea.html",
+    "href": "playground/02_functionCalls_squareArea.html",
+    "title": "02_Activity: Area of a Square and Function Calls",
     "section": "",
-    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n01_Activity: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "What this code does: This code defines a function squareArea(s) that calculates the area of a square given its side length s. The main() function acts as a driver: it prints the area for a single value, then iterates over a list of test values (including integers, zero, negative numbers, and a complex number) and prints the area for each. Function calls: - squareArea(s) is called inside main() for each value in testValues_list and for the initial sideLength. - main() is called at the end to start the program.\n\nExample Code:\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\n\n\n\n\n\n\nLoading Python interpreter…"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html",
-    "href": "playground/02_functionCalls_general.html",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/00_fibonacci.html",
+    "href": "playground/00_fibonacci.html",
+    "title": "0_Just For Fun: Fibonacci Sequence",
     "section": "",
-    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nIdentify and describe the anatomy of a Python function\nExplain the flow of execution in a Python script\nDiscuss the mathematical reasoning behind calculating the area of a square\nExperiment with function calls and inputs interactively"
+    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nUnderstand the mathematical definition of the Fibonacci sequence\nImplement recursive Fibonacci calculation\nCreate an iterative Fibonacci algorithm\nApply Binet’s formula for direct Fibonacci computation"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#introduction",
-    "href": "playground/02_functionCalls_general.html#introduction",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/00_fibonacci.html#introduction",
+    "href": "playground/00_fibonacci.html#introduction",
+    "title": "0_Just For Fun: Fibonacci Sequence",
     "section": "Introduction",
-    "text": "Introduction\nIn this lesson, you’ll explore the structure of Python code, focusing on how functions are defined and called. We’ll use a simple example that calculates the area of a square to illustrate key concepts."
+    "text": "Introduction\nThe Fibonacci sequence is one of the most famous sequences in mathematics, appearing in nature, art, and computer science. Each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144…\nIn this lesson, we’ll explore three different computational approaches to generate Fibonacci numbers, each with unique advantages and trade-offs."
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#key-concepts",
-    "href": "playground/02_functionCalls_general.html#key-concepts",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/00_fibonacci.html#key-concepts",
+    "href": "playground/00_fibonacci.html#key-concepts",
+    "title": "0_Just For Fun: Fibonacci Sequence",
     "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n💡 Concept 1: Function Definition & Calls\n\nA function in Python is a reusable block of code that performs a specific task. Functions are defined using the def keyword, followed by the function name and parameters. To use a function, you “call” it by its name and provide the required arguments.\nExample:\ndef squareArea(s: float) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s * s\n\n\n\n💡 Concept 2: Flow of Execution\n\nPython executes code from top to bottom. The main() function is often used as a “driver” to organize the flow. When main() is called, it runs the code inside it, including any function calls.\nExample:\ndef main() -&gt; None:\n    sideLength = 5\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n\n\nExample 1a: Calculating the Area of a Rectangle\n\nWhat this code does: Defines a function to calculate the area of a rectangle and calls it with sample values.\n\nExample Code:\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1b: Calculating the Area of a Circle\n\nWhat this code does: Defines a function to calculate the area of a circle and calls it with a sample value.\n\nExample Code:\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1c: Calculating the Volume of a Cube\n\nWhat this code does: Defines a function to calculate the volume of a cube and calls it with a sample value.\n\nExample Code:\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nChallenge Questions\n\nChoose a function to check whether a side can have a negative distance value. What should the function do if it receives a negative value?\nChange the one of the circleArea or cubeVolume functions to handle a radius of zero or negative values. Should the area be zero or should it raise an error?\nChallenge: Write a function to calculate the volume of a cylinder (π * r^2 * h). Try different values for radius and height.\nChallenge: Write a function to calculate the area of a triangle given its base and height. Test your function with different values.\n\nUse the interactive code fields above to modify and run your solutions. Have fun experimenting and solving these challenges!\n\n\nYour Turn!\n\nChallenge Tasks:\n\nTry using different types of inputs (integers, floats, strings, booleans, complex numbers) and observe the results.\nModify the function to handle invalid inputs gracefully (e.g., using type checking or error handling).\nAdd comments to explain each part of the code.\nWrite your own function to calculate the area of a rectangle.\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior\n\n\n\n\nKey Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
+    "text": "Key Concepts\n\n\n💡 Concept 1: Mathematical Definition\n\nThe Fibonacci sequence is defined as: - F(0) = 0 - F(1) = 1\n- F(n) = F(n-1) + F(n-2) for n &gt; 1\nThis recursive definition leads naturally to our first implementation approach.\nExample:\n# Mathematical definition\n# F(5) = F(4) + F(3) = 5\n# F(4) = F(3) + F(2) = 3 \n# F(3) = F(2) + F(1) = 2\n\n\n\n💡 Concept 2: Computational Complexity\n\nDifferent algorithms have different time complexities: - Recursive: O(2^n) - exponential, very slow for large n - Iterative: O(n) - linear, efficient for reasonable n - Binet’s Formula: O(1) - constant time, but limited by floating-point precision\nExample:\n# Time comparison for F(40):\n# Recursive: ~1.6 billion operations\n# Iterative: ~40 operations  \n# Binet's: ~5 operations"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#summary",
-    "href": "playground/02_functionCalls_general.html#summary",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/00_fibonacci.html#interactive-examples",
+    "href": "playground/00_fibonacci.html#interactive-examples",
+    "title": "0_Just For Fun: Fibonacci Sequence",
+    "section": "Interactive Examples",
+    "text": "Interactive Examples\n\nExample 1: Recursive Fibonacci\n\nWhat this code does: This implements the mathematical definition directly using recursion. Each function call splits into two more calls, creating a tree-like computation structure. While elegant, it’s very inefficient for large numbers.\n\nExample Code:\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: Iterative Fibonacci\n\nWhat this code does: This approach builds up the sequence from the bottom, keeping track of only the last two numbers. It’s much more efficient than recursion, using O(n) time and O(1) space.\n\nExample Code:\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n▶ Run Code 🗑 Clear\n\n\nExample 3: Binet’s Formula\n\nWhat this code does: This uses Binet’s closed-form formula to calculate Fibonacci numbers directly using the golden ratio. It’s mathematically elegant and theoretically O(1), but limited by floating-point precision for very large numbers.\n\nExample Code:\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n▶ Run Code 🗑 Clear\n\n\nChallenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
+  },
+  {
+    "objectID": "playground/00_fibonacci.html#challenge-yourself",
+    "href": "playground/00_fibonacci.html#challenge-yourself",
+    "title": "0_Just For Fun: Fibonacci Sequence",
+    "section": "Challenge Yourself",
+    "text": "Challenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
+  },
+  {
+    "objectID": "playground/00_fibonacci.html#summary",
+    "href": "playground/00_fibonacci.html#summary",
+    "title": "0_Just For Fun: Fibonacci Sequence",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior"
+    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#key-takeaways",
-    "href": "playground/02_functionCalls_general.html#key-takeaways",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/00_fibonacci.html#key-takeaways",
+    "href": "playground/00_fibonacci.html#key-takeaways",
+    "title": "0_Just For Fun: Fibonacci Sequence",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
+    "text": "Key Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
   },
   {
-    "objectID": "playground/01_gettingToKnowYou.html#introduce-your-partner",
-    "href": "playground/01_gettingToKnowYou.html#introduce-your-partner",
-    "title": "01_Activity: Getting To Know You",
-    "section": "Introduce Your Partner!",
-    "text": "Introduce Your Partner!\nChoose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;\n\nHow they would like to be called in class,\nWhere they are from,\nWhat types of classes they like,\nWhat they enjoy doing on campus,\nWhat is their favorite music\nWhy they are in this course at Allegheny College. Take turns sharing.\n\nThen, each of you will present the other to the course today."
-  },
-  {
-    "objectID": "playground/01_gettingToKnowYou.html#survey",
-    "href": "playground/01_gettingToKnowYou.html#survey",
-    "title": "01_Activity: Getting To Know You",
-    "section": "Survey",
-    "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
-  },
-  {
-    "objectID": "materials/0_materials.html",
-    "href": "materials/0_materials.html",
-    "title": "Materials",
+    "objectID": "playground/00_stringCheese.html",
+    "href": "playground/00_stringCheese.html",
+    "title": "0_Just For Fun: String Cheese Demo",
     "section": "",
-    "text": "Here you will find a listing of lesson materials for the course such as slides, assignments, and similar."
+    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nPrint strings in Python\nUse for loops with range()\nFormat strings with f-strings\nUnderstand string repetition"
   },
   {
-    "objectID": "materials/0_materials.html#introduction",
-    "href": "materials/0_materials.html#introduction",
-    "title": "Materials",
-    "section": "1. Introduction",
-    "text": "1. Introduction\n\n\nREADME: 01_activity Due Date: Monday 1 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
+    "objectID": "playground/00_stringCheese.html#introduction",
+    "href": "playground/00_stringCheese.html#introduction",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lesson, we’ll learn how to print “String Cheese” using Python! This fun example will teach you about loops, strings, and formatting."
   },
   {
-    "objectID": "materials/0_materials.html#introduction-to-python",
-    "href": "materials/0_materials.html#introduction-to-python",
-    "title": "Materials",
-    "section": "2. Introduction to Python",
-    "text": "2. Introduction to Python\n\nRequired Reading: Guttag Chapter 1\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML\nPDF"
+    "objectID": "playground/00_stringCheese.html#key-concepts",
+    "href": "playground/00_stringCheese.html#key-concepts",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\n\n💡 Concept 1: String Printing and Loops\n\nWe can use Python’s print() function combined with for loops to create repeated output. The range() function helps us control how many times something repeats.\nExample:\n# Print String Cheese multiple times\nfor i in range(5):\n    print(f\"String Cheese : {i}\")"
+  },
+  {
+    "objectID": "playground/00_stringCheese.html#interactive-examples",
+    "href": "playground/00_stringCheese.html#interactive-examples",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Interactive Examples",
+    "text": "Interactive Examples\n\nExample 1: Basic String Cheese Loop\n\nWhat this code does: This creates a simple loop that prints “String Cheese” 10 times, each with a number.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: String Cheese with Custom Messages\n\nWhat this code does: This example shows how to create more creative String Cheese messages with different formatting.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example\n\n\nTry It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "playground/00_stringCheese.html#try-it-yourself",
+    "href": "playground/00_stringCheese.html#try-it-yourself",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Try It Yourself",
+    "text": "Try It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "playground/00_stringCheese.html#summary",
+    "href": "playground/00_stringCheese.html#summary",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting"
+  },
+  {
+    "objectID": "playground/00_stringCheese.html#next-steps",
+    "href": "playground/00_stringCheese.html#next-steps",
+    "title": "0_Just For Fun: String Cheese Demo",
+    "section": "Next Steps",
+    "text": "Next Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#what-are-literals",
+    "href": "materials/2_introToPython.html#what-are-literals",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "What are literals?",
+    "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#python-code-sample",
+    "href": "materials/2_introToPython.html#python-code-sample",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#interesting-application",
+    "href": "materials/2_introToPython.html#interesting-application",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#challenge-1-literal-mix-up",
+    "href": "materials/2_introToPython.html#challenge-1-literal-mix-up",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 1: Literal Mix-Up",
+    "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#challenge-2-variable-math",
+    "href": "materials/2_introToPython.html#challenge-2-variable-math",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 2: Variable Math",
+    "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
+    "href": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 3: Loop & Conditional Fun",
+    "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#challenge-4-squaring-game",
+    "href": "materials/2_introToPython.html#challenge-4-squaring-game",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 4: Squaring Game",
+    "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
+    "href": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 5: String Slicing Mystery",
+    "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
+  },
+  {
+    "objectID": "materials/2_introToPython.html#consider-this",
+    "href": "materials/2_introToPython.html#consider-this",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Consider This!",
+    "text": "Consider This!\nLet’s do these in class!"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#what-are-literals",
@@ -266,172 +357,81 @@
     "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways."
   },
   {
-    "objectID": "materials/2_introToPython.html#what-are-literals",
-    "href": "materials/2_introToPython.html#what-are-literals",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "What are literals?",
-    "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#python-code-sample",
-    "href": "materials/2_introToPython.html#python-code-sample",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Python Code Sample",
-    "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#interesting-application",
-    "href": "materials/2_introToPython.html#interesting-application",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Interesting Application",
-    "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#challenge-1-literal-mix-up",
-    "href": "materials/2_introToPython.html#challenge-1-literal-mix-up",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Challenge 1: Literal Mix-Up",
-    "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#challenge-2-variable-math",
-    "href": "materials/2_introToPython.html#challenge-2-variable-math",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Challenge 2: Variable Math",
-    "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
-    "href": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Challenge 3: Loop & Conditional Fun",
-    "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#challenge-4-squaring-game",
-    "href": "materials/2_introToPython.html#challenge-4-squaring-game",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Challenge 4: Squaring Game",
-    "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
-    "href": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Challenge 5: String Slicing Mystery",
-    "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
-  },
-  {
-    "objectID": "materials/2_introToPython.html#consider-this",
-    "href": "materials/2_introToPython.html#consider-this",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "Consider This!",
-    "text": "Consider This!\nLet’s do these in class!"
-  },
-  {
-    "objectID": "playground/00_stringCheese.html",
-    "href": "playground/00_stringCheese.html",
-    "title": "0_Just For Fun: String Cheese Demo",
+    "objectID": "materials/0_materials.html",
+    "href": "materials/0_materials.html",
+    "title": "Materials",
     "section": "",
-    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nPrint strings in Python\nUse for loops with range()\nFormat strings with f-strings\nUnderstand string repetition"
+    "text": "Here you will find a listing of lesson materials for the course such as slides, assignments, and similar."
   },
   {
-    "objectID": "playground/00_stringCheese.html#introduction",
-    "href": "playground/00_stringCheese.html#introduction",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Introduction",
-    "text": "Introduction\nIn this lesson, we’ll learn how to print “String Cheese” using Python! This fun example will teach you about loops, strings, and formatting."
+    "objectID": "materials/0_materials.html#introduction",
+    "href": "materials/0_materials.html#introduction",
+    "title": "Materials",
+    "section": "1. Introduction",
+    "text": "1. Introduction\n\n\nREADME: 01_activity Due Date: Monday 1 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
   },
   {
-    "objectID": "playground/00_stringCheese.html#key-concepts",
-    "href": "playground/00_stringCheese.html#key-concepts",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n💡 Concept 1: String Printing and Loops\n\nWe can use Python’s print() function combined with for loops to create repeated output. The range() function helps us control how many times something repeats.\nExample:\n# Print String Cheese multiple times\nfor i in range(5):\n    print(f\"String Cheese : {i}\")"
+    "objectID": "materials/0_materials.html#introduction-to-python",
+    "href": "materials/0_materials.html#introduction-to-python",
+    "title": "Materials",
+    "section": "2. Introduction to Python",
+    "text": "2. Introduction to Python\n\nRequired Reading: Guttag Chapter 1\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML\nPDF"
   },
   {
-    "objectID": "playground/00_stringCheese.html#interactive-examples",
-    "href": "playground/00_stringCheese.html#interactive-examples",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Interactive Examples",
-    "text": "Interactive Examples\n\nExample 1: Basic String Cheese Loop\n\nWhat this code does: This creates a simple loop that prints “String Cheese” 10 times, each with a number.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: String Cheese with Custom Messages\n\nWhat this code does: This example shows how to create more creative String Cheese messages with different formatting.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example\n\n\nTry It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+    "objectID": "playground/01_gettingToKnowYou.html#introduce-your-partner",
+    "href": "playground/01_gettingToKnowYou.html#introduce-your-partner",
+    "title": "01_Activity: Getting To Know You",
+    "section": "Introduce Your Partner!",
+    "text": "Introduce Your Partner!\nChoose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;\n\nHow they would like to be called in class,\nWhere they are from,\nWhat types of classes they like,\nWhat they enjoy doing on campus,\nWhat is their favorite music\nWhy they are in this course at Allegheny College. Take turns sharing.\n\nThen, each of you will present the other to the course today."
   },
   {
-    "objectID": "playground/00_stringCheese.html#try-it-yourself",
-    "href": "playground/00_stringCheese.html#try-it-yourself",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Try It Yourself",
-    "text": "Try It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+    "objectID": "playground/01_gettingToKnowYou.html#survey",
+    "href": "playground/01_gettingToKnowYou.html#survey",
+    "title": "01_Activity: Getting To Know You",
+    "section": "Survey",
+    "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
   },
   {
-    "objectID": "playground/00_stringCheese.html#summary",
-    "href": "playground/00_stringCheese.html#summary",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting"
-  },
-  {
-    "objectID": "playground/00_stringCheese.html#next-steps",
-    "href": "playground/00_stringCheese.html#next-steps",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Next Steps",
-    "text": "Next Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
-  },
-  {
-    "objectID": "playground/00_fibonacci.html",
-    "href": "playground/00_fibonacci.html",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/02_functionCalls_general.html",
+    "href": "playground/02_functionCalls_general.html",
+    "title": "02_Activity: Function Calls in Code",
     "section": "",
-    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nUnderstand the mathematical definition of the Fibonacci sequence\nImplement recursive Fibonacci calculation\nCreate an iterative Fibonacci algorithm\nApply Binet’s formula for direct Fibonacci computation"
+    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nIdentify and describe the anatomy of a Python function\nExplain the flow of execution in a Python script\nDiscuss the mathematical reasoning behind calculating the area of a square\nExperiment with function calls and inputs interactively"
   },
   {
-    "objectID": "playground/00_fibonacci.html#introduction",
-    "href": "playground/00_fibonacci.html#introduction",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/02_functionCalls_general.html#introduction",
+    "href": "playground/02_functionCalls_general.html#introduction",
+    "title": "02_Activity: Function Calls in Code",
     "section": "Introduction",
-    "text": "Introduction\nThe Fibonacci sequence is one of the most famous sequences in mathematics, appearing in nature, art, and computer science. Each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144…\nIn this lesson, we’ll explore three different computational approaches to generate Fibonacci numbers, each with unique advantages and trade-offs."
+    "text": "Introduction\nIn this lesson, you’ll explore the structure of Python code, focusing on how functions are defined and called. We’ll use a simple example that calculates the area of a square to illustrate key concepts."
   },
   {
-    "objectID": "playground/00_fibonacci.html#key-concepts",
-    "href": "playground/00_fibonacci.html#key-concepts",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/02_functionCalls_general.html#key-concepts",
+    "href": "playground/02_functionCalls_general.html#key-concepts",
+    "title": "02_Activity: Function Calls in Code",
     "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n💡 Concept 1: Mathematical Definition\n\nThe Fibonacci sequence is defined as: - F(0) = 0 - F(1) = 1\n- F(n) = F(n-1) + F(n-2) for n &gt; 1\nThis recursive definition leads naturally to our first implementation approach.\nExample:\n# Mathematical definition\n# F(5) = F(4) + F(3) = 5\n# F(4) = F(3) + F(2) = 3 \n# F(3) = F(2) + F(1) = 2\n\n\n\n💡 Concept 2: Computational Complexity\n\nDifferent algorithms have different time complexities: - Recursive: O(2^n) - exponential, very slow for large n - Iterative: O(n) - linear, efficient for reasonable n - Binet’s Formula: O(1) - constant time, but limited by floating-point precision\nExample:\n# Time comparison for F(40):\n# Recursive: ~1.6 billion operations\n# Iterative: ~40 operations  \n# Binet's: ~5 operations"
+    "text": "Key Concepts\n\n\n💡 Concept 1: Function Definition & Calls\n\nA function in Python is a reusable block of code that performs a specific task. Functions are defined using the def keyword, followed by the function name and parameters. To use a function, you “call” it by its name and provide the required arguments.\nExample:\ndef squareArea(s: float) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s * s\n\n\n\n💡 Concept 2: Flow of Execution\n\nPython executes code from top to bottom. The main() function is often used as a “driver” to organize the flow. When main() is called, it runs the code inside it, including any function calls.\nExample:\ndef main() -&gt; None:\n    sideLength = 5\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n\n\nExample 1a: Calculating the Area of a Rectangle\n\nWhat this code does: Defines a function to calculate the area of a rectangle and calls it with sample values.\n\nExample Code:\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1b: Calculating the Area of a Circle\n\nWhat this code does: Defines a function to calculate the area of a circle and calls it with a sample value.\n\nExample Code:\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1c: Calculating the Volume of a Cube\n\nWhat this code does: Defines a function to calculate the volume of a cube and calls it with a sample value.\n\nExample Code:\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nChallenge Questions\n\nChoose a function to check whether a side can have a negative distance value. What should the function do if it receives a negative value?\nChange the one of the circleArea or cubeVolume functions to handle a radius of zero or negative values. Should the area be zero or should it raise an error?\nChallenge: Write a function to calculate the volume of a cylinder (π * r^2 * h). Try different values for radius and height.\nChallenge: Write a function to calculate the area of a triangle given its base and height. Test your function with different values.\n\nUse the interactive code fields above to modify and run your solutions. Have fun experimenting and solving these challenges!\n\n\nYour Turn!\n\nChallenge Tasks:\n\nTry using different types of inputs (integers, floats, strings, booleans, complex numbers) and observe the results.\nModify the function to handle invalid inputs gracefully (e.g., using type checking or error handling).\nAdd comments to explain each part of the code.\nWrite your own function to calculate the area of a rectangle.\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior\n\n\n\n\nKey Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
   },
   {
-    "objectID": "playground/00_fibonacci.html#interactive-examples",
-    "href": "playground/00_fibonacci.html#interactive-examples",
-    "title": "0_Just For Fun: Fibonacci Sequence",
-    "section": "Interactive Examples",
-    "text": "Interactive Examples\n\nExample 1: Recursive Fibonacci\n\nWhat this code does: This implements the mathematical definition directly using recursion. Each function call splits into two more calls, creating a tree-like computation structure. While elegant, it’s very inefficient for large numbers.\n\nExample Code:\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: Iterative Fibonacci\n\nWhat this code does: This approach builds up the sequence from the bottom, keeping track of only the last two numbers. It’s much more efficient than recursion, using O(n) time and O(1) space.\n\nExample Code:\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n▶ Run Code 🗑 Clear\n\n\nExample 3: Binet’s Formula\n\nWhat this code does: This uses Binet’s closed-form formula to calculate Fibonacci numbers directly using the golden ratio. It’s mathematically elegant and theoretically O(1), but limited by floating-point precision for very large numbers.\n\nExample Code:\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n▶ Run Code 🗑 Clear\n\n\nChallenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
-  },
-  {
-    "objectID": "playground/00_fibonacci.html#challenge-yourself",
-    "href": "playground/00_fibonacci.html#challenge-yourself",
-    "title": "0_Just For Fun: Fibonacci Sequence",
-    "section": "Challenge Yourself",
-    "text": "Challenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
-  },
-  {
-    "objectID": "playground/00_fibonacci.html#summary",
-    "href": "playground/00_fibonacci.html#summary",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/02_functionCalls_general.html#summary",
+    "href": "playground/02_functionCalls_general.html#summary",
+    "title": "02_Activity: Function Calls in Code",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time"
+    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior"
   },
   {
-    "objectID": "playground/00_fibonacci.html#key-takeaways",
-    "href": "playground/00_fibonacci.html#key-takeaways",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/02_functionCalls_general.html#key-takeaways",
+    "href": "playground/02_functionCalls_general.html#key-takeaways",
+    "title": "02_Activity: Function Calls in Code",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
+    "text": "Key Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
   },
   {
-    "objectID": "playground/02_functionCalls_squareArea.html",
-    "href": "playground/02_functionCalls_squareArea.html",
-    "title": "02_Activity: Area of a Square and Function Calls",
+    "objectID": "playground/00_playground.html",
+    "href": "playground/00_playground.html",
+    "title": "Playground",
     "section": "",
-    "text": "What this code does: This code defines a function squareArea(s) that calculates the area of a square given its side length s. The main() function acts as a driver: it prints the area for a single value, then iterates over a list of test values (including integers, zero, negative numbers, and a complex number) and prints the area for each. Function calls: - squareArea(s) is called inside main() for each value in testValues_list and for the initial sideLength. - main() is called at the end to start the program.\n\nExample Code:\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\n\n\n\n\n\n\nLoading Python interpreter…"
+    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n01_Activity: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "utils/interactivePython.html",
@@ -537,19 +537,5 @@
     "title": "CMPSC101 Fall 2025 :: DataStructures",
     "section": "Syllabus Changes",
     "text": "Syllabus Changes\nThe instructor may make updates or changes to this document at any time as needed until term grades are due. Changes will be announced to the class."
-  },
-  {
-    "objectID": "materials/2_introToPython_solutions.html",
-    "href": "materials/2_introToPython_solutions.html",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Tip\n\n\n\nLet’s make learning Python fun and practical!\n\n\n\n\n\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)\n\n\n\n\n\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True\n\n\n\nUse literals to set default values in games, apps, or data analysis scripts!"
-  },
-  {
-    "objectID": "materials/2_introToPython.html",
-    "href": "materials/2_introToPython.html",
-    "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Tip\n\n\n\nLet’s make learning Python fun and practical!\n\n\n\n\n\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)\n\n\n\n\n\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True\n\n\n\nUse literals to set default values in games, apps, or data analysis scripts!"
   }
 ]

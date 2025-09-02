@@ -62,8 +62,7 @@ Use literals to set default values in games, apps, or data analysis scripts!
 
 # Python Literals
 
-Literals are fixed values written directly in your code. They include numbers, strings, booleans, and more.  
-Literals are used to assign values to variables or as standalone values in expressions.
+Literals are fixed values written directly in your code and are used to assign values to variables or as standalone values in expressions.
 
 <!-- ::: {.example-large} -->
 ::: {.example}
@@ -86,7 +85,7 @@ This code demonstrates how to use different types of literals in Python.
 
 # Variables and Operators
 
-Variables store data for use in your program. Operators let you perform operations like addition, comparison, and assignment.
+Variables store data for use in your program which can be manipulated by *operators* (e.g., addition, comparison, and assignment).
 
 <!-- ::: {.example-large} -->
 ::: {.example}
@@ -94,15 +93,12 @@ Variables store data for use in your program. Operators let you perform operatio
 """
 This example shows how to use variables and operators.
 """
-
 x = 10      # Assign 10 to x
 y = 5       # Assign 5 to y
-
 sum_xy = x + y         # Addition operator
 diff_xy = x - y        # Subtraction operator
 prod_xy = x * y        # Multiplication operator
 is_equal = x == y      # Comparison operator
-
 print(sum_xy, diff_xy, prod_xy, is_equal)
 # Output: 15 5 50 False
 ```
@@ -118,8 +114,6 @@ Loops repeat actions. Conditionals let your code make decisions.
 <!-- ::: {.example-large} -->
 ::: {.example}
 ```python
-# Example: Loops and conditionals
-
 """
 This example prints numbers and checks if they are even or odd.
 """
@@ -132,9 +126,7 @@ for i in range(1, 6):  # Loop from 1 to 5
 # Output:
 # 1 is odd
 # 2 is even
-# 3 is odd
-# 4 is even
-# 5 is odd
+# ... and similar up to 5
 ```
 :::
 This code loops through numbers and uses a conditional to check if each is even or odd.
@@ -151,14 +143,13 @@ Squaring means multiplying a number by itself. There are several ways to do this
 """
 This example shows three ways to square a number.
 """
-
-num = 7
-
-squ1 = num * num         # Multiplication
-squ2 = num ** 2          # Exponentiation
 def square(n):
     """Returns the square of n."""
     return n * n
+
+num = 7
+squ1 = num * num         # Multiplication
+squ2 = num ** 2          # Exponentiation
 
 print(f"squ1: {squ1}, squ2: {squ2}, square(num): {square(num)}")
 # Output: squ1: 49, squ2: 49, square(num): 49
