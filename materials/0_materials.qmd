@@ -19,5 +19,5 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 - [Required Reading: Guttag Chapter 1](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/1)
 - **Literals, Variables, Conditionals, Strings, etc. ** 
-  - [HTML](1_introToPython.html) 
-  -  [PDF](1_introToPython.pdf)
+  - [HTML](2_introToPython.html) 
+  -  [PDF](2_introToPython.pdf)
