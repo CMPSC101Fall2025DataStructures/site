@@ -102,7 +102,7 @@
     "href": "playground/00_playground.html",
     "title": "Playground",
     "section": "",
-    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n01_Activity: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\nNo matching items"
+    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n01_Activity: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "playground/02_functionCalls_general.html",
@@ -154,6 +154,188 @@
     "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
   },
   {
+    "objectID": "materials/1_introToPython_solutions.html#what-are-literals",
+    "href": "materials/1_introToPython_solutions.html#what-are-literals",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "",
+    "text": "Literals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#python-code-sample",
+    "href": "materials/1_introToPython_solutions.html#python-code-sample",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "",
+    "text": "age = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#interesting-application",
+    "href": "materials/1_introToPython_solutions.html#interesting-application",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "",
+    "text": "Use literals to set default values in games, apps, or data analysis scripts!"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#challenge-1-literal-mix-up",
+    "href": "materials/1_introToPython_solutions.html#challenge-1-literal-mix-up",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 1: Literal Mix-Up",
+    "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#challenge-2-variable-math",
+    "href": "materials/1_introToPython_solutions.html#challenge-2-variable-math",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 2: Variable Math",
+    "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#challenge-3-loop-conditional-fun",
+    "href": "materials/1_introToPython_solutions.html#challenge-3-loop-conditional-fun",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 3: Loop & Conditional Fun",
+    "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#challenge-4-squaring-game",
+    "href": "materials/1_introToPython_solutions.html#challenge-4-squaring-game",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 4: Squaring Game",
+    "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#challenge-5-string-slicing-mystery",
+    "href": "materials/1_introToPython_solutions.html#challenge-5-string-slicing-mystery",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 5: String Slicing Mystery",
+    "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#solution-1-literal-mix-up",
+    "href": "materials/1_introToPython_solutions.html#solution-1-literal-mix-up",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 1: Literal Mix-Up",
+    "text": "Solution 1: Literal Mix-Up\n\ninteger = 7\nfloat_num = 2.5\ntext = \"apples\"\nis_fresh = True\nprint(f\"I bought {integer} {text}, each cost {float_num} dollars. Fresh? {is_fresh}\")\n\nThis code uses integer, float, string, and boolean literals in a sentence."
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#solution-2-variable-math",
+    "href": "materials/1_introToPython_solutions.html#solution-2-variable-math",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 2: Variable Math",
+    "text": "Solution 2: Variable Math\n\nx = 12\ny = 4\nprint(f\"Addition: {x + y}\")\nprint(f\"Subtraction: {x - y}\")\nprint(f\"Multiplication: {x * y}\")\nprint(f\"Division: {x / y}\")\n\nThis code performs math operations and prints results with labels."
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#solution-3-loop-conditional-fun",
+    "href": "materials/1_introToPython_solutions.html#solution-3-loop-conditional-fun",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 3: Loop & Conditional Fun",
+    "text": "Solution 3: Loop & Conditional Fun\n\nfor n in range(1, 11):\n    if n % 3 == 0:\n        print(f\"{n} is a multiple of 3\")\n    else:\n        print(f\"{n} is not a multiple of 3\")\n\nThis code loops through numbers and checks for multiples of 3."
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#solution-4-squaring-game",
+    "href": "materials/1_introToPython_solutions.html#solution-4-squaring-game",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 4: Squaring Game",
+    "text": "Solution 4: Squaring Game\n\ndef square_and_cube(num):\n    \"\"\"Returns the square and cube of num.\"\"\"\n    return num ** 2, num ** 3\n\nsq, cu = square_and_cube(5)\nprint(f\"Square: {sq}, Cube: {cu}\")\n\nThis function returns both the square and cube of a number."
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html#solution-5-string-slicing-mystery",
+    "href": "materials/1_introToPython_solutions.html#solution-5-string-slicing-mystery",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 5: String Slicing Mystery",
+    "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#what-are-literals",
+    "href": "materials/1_introToPython.html#what-are-literals",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "What are literals?",
+    "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#python-code-sample",
+    "href": "materials/1_introToPython.html#python-code-sample",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#interesting-application",
+    "href": "materials/1_introToPython.html#interesting-application",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#challenge-1-literal-mix-up",
+    "href": "materials/1_introToPython.html#challenge-1-literal-mix-up",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 1: Literal Mix-Up",
+    "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#challenge-2-variable-math",
+    "href": "materials/1_introToPython.html#challenge-2-variable-math",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 2: Variable Math",
+    "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#challenge-3-loop-conditional-fun",
+    "href": "materials/1_introToPython.html#challenge-3-loop-conditional-fun",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 3: Loop & Conditional Fun",
+    "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#challenge-4-squaring-game",
+    "href": "materials/1_introToPython.html#challenge-4-squaring-game",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 4: Squaring Game",
+    "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#challenge-5-string-slicing-mystery",
+    "href": "materials/1_introToPython.html#challenge-5-string-slicing-mystery",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Challenge 5: String Slicing Mystery",
+    "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#solution-1-literal-mix-up",
+    "href": "materials/1_introToPython.html#solution-1-literal-mix-up",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 1: Literal Mix-Up",
+    "text": "Solution 1: Literal Mix-Up\n\ninteger = 7\nfloat_num = 2.5\ntext = \"apples\"\nis_fresh = True\nprint(f\"I bought {integer} {text}, each cost {float_num} dollars. Fresh? {is_fresh}\")\n\nThis code uses integer, float, string, and boolean literals in a sentence."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#solution-2-variable-math",
+    "href": "materials/1_introToPython.html#solution-2-variable-math",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 2: Variable Math",
+    "text": "Solution 2: Variable Math\n\nx = 12\ny = 4\nprint(f\"Addition: {x + y}\")\nprint(f\"Subtraction: {x - y}\")\nprint(f\"Multiplication: {x * y}\")\nprint(f\"Division: {x / y}\")\n\nThis code performs math operations and prints results with labels."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#solution-3-loop-conditional-fun",
+    "href": "materials/1_introToPython.html#solution-3-loop-conditional-fun",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 3: Loop & Conditional Fun",
+    "text": "Solution 3: Loop & Conditional Fun\n\nfor n in range(1, 11):\n    if n % 3 == 0:\n        print(f\"{n} is a multiple of 3\")\n    else:\n        print(f\"{n} is not a multiple of 3\")\n\nThis code loops through numbers and checks for multiples of 3."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#solution-4-squaring-game",
+    "href": "materials/1_introToPython.html#solution-4-squaring-game",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 4: Squaring Game",
+    "text": "Solution 4: Squaring Game\n\ndef square_and_cube(num):\n    \"\"\"Returns the square and cube of num.\"\"\"\n    return num ** 2, num ** 3\n\nsq, cu = square_and_cube(5)\nprint(f\"Square: {sq}, Cube: {cu}\")\n\nThis function returns both the square and cube of a number."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#solution-5-string-slicing-mystery",
+    "href": "materials/1_introToPython.html#solution-5-string-slicing-mystery",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Solution 5: String Slicing Mystery",
+    "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways. –&gt;"
+  },
+  {
     "objectID": "materials/0_materials.html",
     "href": "materials/0_materials.html",
     "title": "Materials",
@@ -172,7 +354,7 @@
     "href": "materials/0_materials.html#software-operations",
     "title": "Materials",
     "section": "2. Software Operations",
-    "text": "2. Software Operations\n\nRequired Reading: Guttag Chapter 1"
+    "text": "2. Software Operations\n\nRequired Reading: Guttag Chapter 1\nIntroduction to Python\n\nHTML\nPDF"
   },
   {
     "objectID": "playground/00_stringCheese.html",
@@ -383,5 +565,40 @@
     "title": "CMPSC101 Fall 2025 :: DataStructures",
     "section": "Syllabus Changes",
     "text": "Syllabus Changes\nThe instructor may make updates or changes to this document at any time as needed until term grades are due. Changes will be announced to the class."
+  },
+  {
+    "objectID": "materials/1_introToPython.html#ok",
+    "href": "materials/1_introToPython.html#ok",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "ok!",
+    "text": "ok!"
+  },
+  {
+    "objectID": "materials/1_introToPython_solutions.html",
+    "href": "materials/1_introToPython_solutions.html",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "",
+    "text": "Tip\n\n\n\nLet’s make learning Python fun and practical!\n\n\n\n\n\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)\n\n\n\n\n\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True\n\n\n\nUse literals to set default values in games, apps, or data analysis scripts!"
+  },
+  {
+    "objectID": "materials/1_introToPython.html",
+    "href": "materials/1_introToPython.html",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "",
+    "text": "Tip\n\n\n\nLet’s make learning Python fun and practical!\n\n\n\n\n\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)\n\n\n\n\n\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True\n\n\n\nUse literals to set default values in games, apps, or data analysis scripts!"
+  },
+  {
+    "objectID": "materials/1_introToPython.html#consider-this",
+    "href": "materials/1_introToPython.html#consider-this",
+    "title": "Python Programming: Colourful Concepts",
+    "section": "Consider This!",
+    "text": "Consider This!\nLet’s do these in class!"
+  },
+  {
+    "objectID": "materials/0_materials.html#introduction-to-python",
+    "href": "materials/0_materials.html#introduction-to-python",
+    "title": "Materials",
+    "section": "2. Introduction to Python",
+    "text": "2. Introduction to Python\n\nRequired Reading: Guttag Chapter 1\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML\nPDF"
   }
 ]

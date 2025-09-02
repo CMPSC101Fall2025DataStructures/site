@@ -15,6 +15,9 @@ Here you will find a listing of lesson materials for the course such as slides, 
   Due Date: Monday 1 Sept 2025 (by the end of class)
 - [GitHub Classroom Link](https://classroom.github.com/a/Xr8c08jx) (Used to setup your workspace and repository for your assignment submission.)
 
-## 2. Software Operations
+## 2. Introduction to Python
 
 - [Required Reading: Guttag Chapter 1](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/1)
+- **Literals, Variables, Conditionals, Strings, etc. ** 
+  - [HTML](1_introToPython.html) 
+  -  [PDF](1_introToPython.pdf)
