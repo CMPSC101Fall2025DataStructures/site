@@ -178,22 +178,22 @@
     "objectID": "materials/2_introToPython_solutions.html#what-are-literals",
     "href": "materials/2_introToPython_solutions.html#what-are-literals",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Literals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
+    "section": "What are literals?",
+    "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#python-code-sample",
     "href": "materials/2_introToPython_solutions.html#python-code-sample",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "age = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#interesting-application",
     "href": "materials/2_introToPython_solutions.html#interesting-application",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Use literals to set default values in games, apps, or data analysis scripts!"
+    "section": "Interesting Application",
+    "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-1-literal-mix-up",
@@ -269,22 +269,22 @@
     "objectID": "materials/2_introToPython.html#what-are-literals",
     "href": "materials/2_introToPython.html#what-are-literals",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Literals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
+    "section": "What are literals?",
+    "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
     "objectID": "materials/2_introToPython.html#python-code-sample",
     "href": "materials/2_introToPython.html#python-code-sample",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "age = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
     "objectID": "materials/2_introToPython.html#interesting-application",
     "href": "materials/2_introToPython.html#interesting-application",
     "title": "Python Programming: Colourful Concepts",
-    "section": "",
-    "text": "Use literals to set default values in games, apps, or data analysis scripts!"
+    "section": "Interesting Application",
+    "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-1-literal-mix-up",
