@@ -12,7 +12,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 ## 1. Introduction
 <!-- - _Specification Lab: CLI vs Script vs Notebook_ (20 Points)   -->
 - **README**: [01_activity](https://github.com/CMPSC101Fall2025DataStructures/01_activity_maze/blob/main/README.md)
-  Due Date: Monday 1 Sept 2025 (by the end of class)
+  Due Date: Wednesday 3 Sept 2025 (by the end of class)
 - [GitHub Classroom Link](https://classroom.github.com/a/Xr8c08jx) (Used to setup your workspace and repository for your assignment submission.)
 
 ## 2. Introduction to Python
