@@ -19,5 +19,8 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 - [Required Reading: Guttag Chapter 1](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/1)
 - **Literals, Variables, Conditionals, Strings, etc. ** 
-  - [HTML](2_introToPython.html) 
-  -  [PDF](2_introToPython.pdf)
+  - [HTML](2_introToPython.html) Slides
+  -  [PDF](2_introToPython.pdf) A page of the material on the slides.
+- **Lab 01**: Working with the UV package manager to run Python code.
+  - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta) 
+  - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md)
