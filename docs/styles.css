@@ -318,10 +318,16 @@ footer {
 }
 
 /* Callout enhancements for challenges */
+.callout-output .callout-icon::before,
 .callout-tip .callout-icon::before,
 .callout-warning .callout-icon::before,
 .callout-important .callout-icon::before {
   font-size: 1.2em;
+}
+
+.callout-output {
+  border-left-color: var(--golden-yellow) !important;
+  background: linear-gradient(90deg, #b3428b1a, transparent) !important;
 }
 
 .callout-tip {

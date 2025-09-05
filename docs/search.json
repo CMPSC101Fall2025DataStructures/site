@@ -205,156 +205,485 @@
   {
     "objectID": "materials/2_introToPython.html#what-are-literals",
     "href": "materials/2_introToPython.html#what-are-literals",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "What are literals?",
     "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
     "objectID": "materials/2_introToPython.html#python-code-sample",
     "href": "materials/2_introToPython.html#python-code-sample",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Python Code Sample",
     "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
     "objectID": "materials/2_introToPython.html#interesting-application",
     "href": "materials/2_introToPython.html#interesting-application",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Interesting Application",
     "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-1-literal-mix-up",
     "href": "materials/2_introToPython.html#challenge-1-literal-mix-up",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 1: Literal Mix-Up",
     "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-2-variable-math",
     "href": "materials/2_introToPython.html#challenge-2-variable-math",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 2: Variable Math",
     "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
     "href": "materials/2_introToPython.html#challenge-3-loop-conditional-fun",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 3: Loop & Conditional Fun",
     "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-4-squaring-game",
     "href": "materials/2_introToPython.html#challenge-4-squaring-game",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 4: Squaring Game",
     "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
     "href": "materials/2_introToPython.html#challenge-5-string-slicing-mystery",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 5: String Slicing Mystery",
     "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython.html#consider-this",
     "href": "materials/2_introToPython.html#consider-this",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Consider This!",
     "text": "Consider This!\nLet’s do these in class!"
   },
   {
+    "objectID": "materials/Untitled-1.html#python-code-sample",
+    "href": "materials/Untitled-1.html#python-code-sample",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\n\n\n\n\n\n\nNote\n\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#operators",
+    "href": "materials/Untitled-1.html#operators",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Operators",
+    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+  },
+  {
+    "objectID": "materials/Untitled-1.html#python-code-sample-1",
+    "href": "materials/Untitled-1.html#python-code-sample-1",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1\n:::"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#interesting-application",
+    "href": "materials/Untitled-1.html#interesting-application",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#loops",
+    "href": "materials/Untitled-1.html#loops",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Loops",
+    "text": "Loops\nLoops repeat actions. Use for and while loops."
+  },
+  {
+    "objectID": "materials/Untitled-1.html#conditionals",
+    "href": "materials/Untitled-1.html#conditionals",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 # Do not forget to increment the counter, or you will create an infinite loop!\n\nif x &gt; y:\n    print(\"x is greater!\")\nelif x == y:\n    print(\"x equals y!\")\nelse:\n    print(\"x is less!\")"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#sort-of-interesting-application",
+    "href": "materials/Untitled-1.html#sort-of-interesting-application",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Sort of Interesting Application",
+    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#nested-conditionals",
+    "href": "materials/Untitled-1.html#nested-conditionals",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Nested Conditionals",
+    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#logical-operator",
+    "href": "materials/Untitled-1.html#logical-operator",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Logical Operator",
+    "text": "Logical Operator\nLogical operators use True and False to determine outcomes. ::: {.callout-large} Examples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5\n\n:::"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#string-manipulation",
+    "href": "materials/Untitled-1.html#string-manipulation",
+    "title": "Review Python Loops and Conditionals",
+    "section": "String Manipulation",
+    "text": "String Manipulation\nWe now look at how we can manipulate strings ::: {.callout-large} Examples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World\n\n:::"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#lists",
+    "href": "materials/Untitled-1.html#lists",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Lists",
+    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
+  },
+  {
+    "objectID": "materials/Untitled-1.html#demo-of-lists",
+    "href": "materials/Untitled-1.html#demo-of-lists",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Demo of Lists",
+    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#dictionaries",
+    "href": "materials/Untitled-1.html#dictionaries",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
+  },
+  {
+    "objectID": "materials/Untitled-1.html#demo-of-dictionaries",
+    "href": "materials/Untitled-1.html#demo-of-dictionaries",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Demo of Dictionaries",
+    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
+  },
+  {
+    "objectID": "materials/Untitled-1.html#coding-challenges",
+    "href": "materials/Untitled-1.html#coding-challenges",
+    "title": "Review Python Loops and Conditionals",
+    "section": "Coding Challenges",
+    "text": "Coding Challenges\n\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\nSolution:\n\na = 10\nb = 5\nprint(\"Sum:\", a + b)\nprint(\"Difference:\", a - b)\nprint(\"Product:\", a * b)\nprint(\"Quotient:\", a / b)\n\nTODO\nTODO\n\n\n\n\n\n2. Working with Lists\nChallenge:\nCreate a list of five numbers. Print the largest number in the list.\n\nSolution:\nnumbers = [3, 7, 2, 9, 5]\nprint(\"Largest number:\", max(numbers))\n\nTODO\nTODO\n\n\n\n\n\n3. Dictionaries\nChallenge:\nCreate a dictionary with three key-value pairs representing a person’s name, age, and city. Print each key and its value.\n\nSolution:\nperson = {\"name\": \"Alice\", \"age\": 25, \"city\": \"New York\"}\nfor key, value in person.items():\n    print(key, \":\", value)\n\nTODO\nTODO\n\n\n\n\n\n4. For Loops\nChallenge:\nUse a for loop to print all even numbers from 1 to 10.\n\nSolution:\nfor i in range(1, 11):\n    if i % 2 == 0:\n        print(i)\n\nTODO\nTODO\n\n\n\n\n\n5. While Loops and Conditionals\nChallenge:\nUse a while loop to keep asking the user to enter a number until they enter a negative number.\nSolution: ::: {.example}\nwhile True:\n    num = int(input(\"Enter a number: \"))\n    if num &lt; 0:\n        break\n\nTODO\nTODO"
+  },
+  {
     "objectID": "materials/2_introToPython_solutions.html#what-are-literals",
     "href": "materials/2_introToPython_solutions.html#what-are-literals",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "What are literals?",
     "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#python-code-sample",
     "href": "materials/2_introToPython_solutions.html#python-code-sample",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Python Code Sample",
     "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#interesting-application",
     "href": "materials/2_introToPython_solutions.html#interesting-application",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Interesting Application",
     "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-1-literal-mix-up",
     "href": "materials/2_introToPython_solutions.html#challenge-1-literal-mix-up",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 1: Literal Mix-Up",
     "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-2-variable-math",
     "href": "materials/2_introToPython_solutions.html#challenge-2-variable-math",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 2: Variable Math",
     "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-3-loop-conditional-fun",
     "href": "materials/2_introToPython_solutions.html#challenge-3-loop-conditional-fun",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 3: Loop & Conditional Fun",
     "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-4-squaring-game",
     "href": "materials/2_introToPython_solutions.html#challenge-4-squaring-game",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 4: Squaring Game",
     "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#challenge-5-string-slicing-mystery",
     "href": "materials/2_introToPython_solutions.html#challenge-5-string-slicing-mystery",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Challenge 5: String Slicing Mystery",
     "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#solution-1-literal-mix-up",
     "href": "materials/2_introToPython_solutions.html#solution-1-literal-mix-up",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Solution 1: Literal Mix-Up",
     "text": "Solution 1: Literal Mix-Up\n\ninteger = 7\nfloat_num = 2.5\ntext = \"apples\"\nis_fresh = True\nprint(f\"I bought {integer} {text}, each cost {float_num} dollars. Fresh? {is_fresh}\")\n\nThis code uses integer, float, string, and boolean literals in a sentence."
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#solution-2-variable-math",
     "href": "materials/2_introToPython_solutions.html#solution-2-variable-math",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Solution 2: Variable Math",
     "text": "Solution 2: Variable Math\n\nx = 12\ny = 4\nprint(f\"Addition: {x + y}\")\nprint(f\"Subtraction: {x - y}\")\nprint(f\"Multiplication: {x * y}\")\nprint(f\"Division: {x / y}\")\n\nThis code performs math operations and prints results with labels."
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#solution-3-loop-conditional-fun",
     "href": "materials/2_introToPython_solutions.html#solution-3-loop-conditional-fun",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Solution 3: Loop & Conditional Fun",
     "text": "Solution 3: Loop & Conditional Fun\n\nfor n in range(1, 11):\n    if n % 3 == 0:\n        print(f\"{n} is a multiple of 3\")\n    else:\n        print(f\"{n} is not a multiple of 3\")\n\nThis code loops through numbers and checks for multiples of 3."
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#solution-4-squaring-game",
     "href": "materials/2_introToPython_solutions.html#solution-4-squaring-game",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Solution 4: Squaring Game",
     "text": "Solution 4: Squaring Game\n\ndef square_and_cube(num):\n    \"\"\"Returns the square and cube of num.\"\"\"\n    return num ** 2, num ** 3\n\nsq, cu = square_and_cube(5)\nprint(f\"Square: {sq}, Cube: {cu}\")\n\nThis function returns both the square and cube of a number."
   },
   {
     "objectID": "materials/2_introToPython_solutions.html#solution-5-string-slicing-mystery",
     "href": "materials/2_introToPython_solutions.html#solution-5-string-slicing-mystery",
-    "title": "Python Programming: Colourful Concepts",
+    "title": "Python Programming: Colourful Concepts I",
     "section": "Solution 5: String Slicing Mystery",
     "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways."
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#what-are-literals-again",
+    "href": "materials/3_introToPython_solutions.html#what-are-literals-again",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "What are literals, Again??",
+    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#python-code-sample-with-f-strings",
+    "href": "materials/3_introToPython_solutions.html#python-code-sample-with-f-strings",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Python Code Sample with F-strings",
+    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#operators",
+    "href": "materials/3_introToPython_solutions.html#operators",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Operators",
+    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#python-code-sample",
+    "href": "materials/3_introToPython_solutions.html#python-code-sample",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#interesting-application",
+    "href": "materials/3_introToPython_solutions.html#interesting-application",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#loops",
+    "href": "materials/3_introToPython_solutions.html#loops",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Loops",
+    "text": "Loops\nLoops repeat actions. Use for and while loops."
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#conditionals",
+    "href": "materials/3_introToPython_solutions.html#conditionals",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#sort-of-interesting-application",
+    "href": "materials/3_introToPython_solutions.html#sort-of-interesting-application",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Sort of Interesting Application",
+    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#nested-conditionals",
+    "href": "materials/3_introToPython_solutions.html#nested-conditionals",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Nested Conditionals",
+    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#logical-operator",
+    "href": "materials/3_introToPython_solutions.html#logical-operator",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Logical Operator",
+    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#string-manipulation",
+    "href": "materials/3_introToPython_solutions.html#string-manipulation",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "String Manipulation",
+    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#lists",
+    "href": "materials/3_introToPython_solutions.html#lists",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Lists",
+    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#demo-of-lists",
+    "href": "materials/3_introToPython_solutions.html#demo-of-lists",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Demo of Lists",
+    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#dictionaries",
+    "href": "materials/3_introToPython_solutions.html#dictionaries",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#demo-of-dictionaries",
+    "href": "materials/3_introToPython_solutions.html#demo-of-dictionaries",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Demo of Dictionaries",
+    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
+  },
+  {
+    "objectID": "materials/3_introToPython_solutions.html#coding-challenges",
+    "href": "materials/3_introToPython_solutions.html#coding-challenges",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Coding Challenges",
+    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\na = 10\nb = 5\nprint(\"Sum:\", a + b)\nprint(\"Difference:\", a - b)\nprint(\"Product:\", a * b)\nprint(\"Quotient:\", a / b)"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#what-are-literals-again",
+    "href": "materials/3_introToPython.html#what-are-literals-again",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "What are literals, Again??",
+    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
+  },
+  {
+    "objectID": "materials/3_introToPython.html#python-code-sample-with-f-strings",
+    "href": "materials/3_introToPython.html#python-code-sample-with-f-strings",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Python Code Sample with F-strings",
+    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#operators",
+    "href": "materials/3_introToPython.html#operators",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Operators",
+    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+  },
+  {
+    "objectID": "materials/3_introToPython.html#python-code-sample",
+    "href": "materials/3_introToPython.html#python-code-sample",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#interesting-application",
+    "href": "materials/3_introToPython.html#interesting-application",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#loops",
+    "href": "materials/3_introToPython.html#loops",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Loops",
+    "text": "Loops\nLoops repeat actions. Use for and while loops."
+  },
+  {
+    "objectID": "materials/3_introToPython.html#conditionals",
+    "href": "materials/3_introToPython.html#conditionals",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#sort-of-interesting-application",
+    "href": "materials/3_introToPython.html#sort-of-interesting-application",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Sort of Interesting Application",
+    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#nested-conditionals",
+    "href": "materials/3_introToPython.html#nested-conditionals",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Nested Conditionals",
+    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#logical-operator",
+    "href": "materials/3_introToPython.html#logical-operator",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Logical Operator",
+    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#string-manipulation",
+    "href": "materials/3_introToPython.html#string-manipulation",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "String Manipulation",
+    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#lists",
+    "href": "materials/3_introToPython.html#lists",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Lists",
+    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
+  },
+  {
+    "objectID": "materials/3_introToPython.html#demo-of-lists",
+    "href": "materials/3_introToPython.html#demo-of-lists",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Demo of Lists",
+    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#dictionaries",
+    "href": "materials/3_introToPython.html#dictionaries",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
+  },
+  {
+    "objectID": "materials/3_introToPython.html#demo-of-dictionaries",
+    "href": "materials/3_introToPython.html#demo-of-dictionaries",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Demo of Dictionaries",
+    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
+  },
+  {
+    "objectID": "materials/3_introToPython.html#coding-challenges",
+    "href": "materials/3_introToPython.html#coding-challenges",
+    "title": "Python Programming: Colourful Concepts II",
+    "section": "Coding Challenges",
+    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\n# TODO"
   },
   {
     "objectID": "materials/0_materials.html",
@@ -371,11 +700,18 @@
     "text": "1. Introduction\n\n\nREADME: 01_activity Due Date: Wednesday 3 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
   },
   {
-    "objectID": "materials/0_materials.html#introduction-to-python",
-    "href": "materials/0_materials.html#introduction-to-python",
+    "objectID": "materials/0_materials.html#introduction-to-python-i",
+    "href": "materials/0_materials.html#introduction-to-python-i",
     "title": "Materials",
-    "section": "2. Introduction to Python",
-    "text": "2. Introduction to Python\n\nRequired Reading: Guttag Chapter 1\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF A page of the material on the slides.\n\nLab 01: Working with the UV package manager to run Python code.\n\nGitHub Classroom Link\nREADME Lab 01 documentation"
+    "section": "2. Introduction to Python I",
+    "text": "2. Introduction to Python I\n\nRequired Reading: Guttag Chapter 1\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF A page of the material on the slides.\n\nLab 01: Working with the UV package manager to run Python code.\n\nGitHub Classroom Link\nREADME Lab 01 documentation"
+  },
+  {
+    "objectID": "materials/0_materials.html#introduction-to-python-ii",
+    "href": "materials/0_materials.html#introduction-to-python-ii",
+    "title": "Materials",
+    "section": "2. Introduction to Python II",
+    "text": "2. Introduction to Python II\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF A page of the material on the slides."
   },
   {
     "objectID": "playground/01_gettingToKnowYou.html#introduce-your-partner",

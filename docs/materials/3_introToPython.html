@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Oliver Bonham-Carter">
-  <title>CMPSC101 Fall 2025 :: DataStructures – Python Programming: Colourful Concepts I</title>
+  <title>CMPSC101 Fall 2025 :: DataStructures – Python Programming: Colourful Concepts II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,8 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Python Programming: Colourful Concepts I</h1>
-  <p class="subtitle">Guttag Chapter 2</p>
+  <h1 class="title">Python Programming: Colourful Concepts II</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -211,13 +210,8 @@ Oliver Bonham-Carter
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/welcome-to-python-programming" id="/toc-welcome-to-python-programming">Welcome to Python Programming!</a></li>
-<li><a href="#/python-literals" id="/toc-python-literals">Python Literals</a></li>
-<li><a href="#/variables-and-operators" id="/toc-variables-and-operators">Variables and Operators</a></li>
-<li><a href="#/loops-and-conditionals" id="/toc-loops-and-conditionals">Loops and Conditionals</a></li>
-<li><a href="#/squaring-algorithms" id="/toc-squaring-algorithms">Squaring Algorithms</a></li>
-<li><a href="#/strings-and-slicing" id="/toc-strings-and-slicing">Strings and Slicing</a></li>
-<li><a href="#/python-challenge-exercises" id="/toc-python-challenge-exercises">Python Challenge Exercises</a></li>
+<li><a href="#/welcome-to-more-python-programming" id="/toc-welcome-to-more-python-programming">Welcome to MORE Python Programming!</a></li>
+<li><a href="#/review-python-loops-and-conditionals" id="/toc-review-python-loops-and-conditionals">Review Python Loops and Conditionals</a></li>
 </ul>
 </nav>
 </section>
@@ -226,8 +220,8 @@ Oliver Bonham-Carter
 <!-- Find your available themes: ls /Applications/quarto/share/formats/revealjs/themes -->
 </section>
 <section>
-<section id="welcome-to-python-programming" class="title-slide slide level1 center">
-<h1>Welcome to Python Programming!</h1>
+<section id="welcome-to-more-python-programming" class="title-slide slide level1 center">
+<h1>Welcome to MORE Python Programming!</h1>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -237,14 +231,14 @@ Oliver Bonham-Carter
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Let’s make learning Python fun and practical!</strong></p>
+<p><strong>Learning smaller parts of code will help you to implement specific types of functionalities in larger projects!</strong></p>
 </div>
 </div>
 </div>
 </section>
-<section id="what-are-literals" class="slide level2 center">
-<h2>What are literals?</h2>
-<p>Literals are fixed values in your code. They can be numbers, strings, booleans, etc.</p>
+<section id="what-are-literals-again" class="slide level2 center">
+<h2>What are literals, Again??</h2>
+<p>Let’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using <code>print()</code>.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -254,193 +248,324 @@ Oliver Bonham-Carter
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Examples:</strong> - <code>42</code> (integer) - <code>3.14</code> (float) - <code>'hello'</code> (string) - <code>True</code>, <code>False</code> (boolean)</p>
+<p>In Python, print statements with an <code>f</code> prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="python-code-sample-with-f-strings" class="slide level2 center">
+<h2>Python Code Sample with F-strings</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Curiously, both of the below print statements print out the same results, but the code is not the same …</p>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>firstName <span class="op">=</span> <span class="st">"Robert"</span></span>
+<span id="cb1-2"><a></a>lastName <span class="op">=</span> <span class="st">"Paulson"</span></span>
+<span id="cb1-3"><a></a><span class="bu">print</span>(<span class="ss">f"His name is: </span><span class="sc">{</span>firstName<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>lastName<span class="sc">}</span><span class="ss">!"</span>) <span class="co"># f for auto formatting</span></span>
+<span id="cb1-4"><a></a><span class="bu">print</span>(<span class="st">"His name is:"</span>,firstName, lastName,<span class="st">"!"</span>) <span class="co"># original structure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-output">
+<p>Output:</p>
+<p>His name is: Robert Paulson!</p>
+<p>His name is: Robert Paulson ! # A space appears?!</p>
+</div>
+</section>
+<section id="operators" class="slide level2 center">
+<h2>Operators</h2>
+<p>Operators let you do math, compare values, and more!</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Examples:</strong></p>
+<ul>
+<li><p>Arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code> (power)</p></li>
+<li><p>Comparison: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code></p></li>
+<li><p>Assignment: <code>=</code>, <code>+=</code>, <code>-=</code></p></li>
+</ul>
 </div>
 </div>
 </div>
 </section>
 <section id="python-code-sample" class="slide level2 center">
 <h2>Python Code Sample</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>age <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb1-2"><a></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
-<span id="cb1-3"><a></a>greeting <span class="op">=</span> <span class="st">"Hello, world!"</span></span>
-<span id="cb1-4"><a></a>is_active <span class="op">=</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-2"><a></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-3"><a></a><span class="bu">sum</span> <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb2-4"><a></a>product <span class="op">=</span> x <span class="op">*</span> y</span>
+<span id="cb2-5"><a></a>is_equal <span class="op">=</span> (x <span class="op">==</span> y)</span>
+<span id="cb2-6"><a></a>x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="interesting-application" class="slide level2 center">
 <h2>Interesting Application</h2>
-<p>Use literals to set default values in games, apps, or data analysis scripts!</p>
-</section>
-<section class="slide level2 center">
-
+<p>Variables and operators are the backbone of calculators, games, and simulations!</p>
 </section></section>
 <section>
-<section id="python-literals" class="title-slide slide level1 center">
-<h1>Python Literals</h1>
-<p>Literals are fixed values written directly in your code and are used to assign values to variables or as standalone values in expressions.</p>
-<!-- ::: {.example-large} -->
-<div class="example">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co">"""</span></span>
-<span id="cb2-2"><a></a><span class="co">This example shows different types of literals.</span></span>
-<span id="cb2-3"><a></a><span class="co">"""</span></span>
-<span id="cb2-4"><a></a>integer_literal <span class="op">=</span> <span class="dv">42</span>        <span class="co"># An integer literal</span></span>
-<span id="cb2-5"><a></a>float_literal <span class="op">=</span> <span class="fl">3.14</span>        <span class="co"># A floating-point literal</span></span>
-<span id="cb2-6"><a></a>string_literal <span class="op">=</span> <span class="st">"hello"</span>    <span class="co"># A string literal</span></span>
-<span id="cb2-7"><a></a>boolean_literal <span class="op">=</span> <span class="va">True</span>      <span class="co"># A boolean literal</span></span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a><span class="bu">print</span>(integer_literal, float_literal, string_literal, boolean_literal)</span>
-<span id="cb2-10"><a></a><span class="co"># Output: 42 3.14 hello True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This code demonstrates how to use different types of literals in Python.</p>
-</section>
-<section class="slide level2 center">
+<section id="review-python-loops-and-conditionals" class="title-slide slide level1 center">
+<h1>Review Python Loops and Conditionals</h1>
 
-</section></section>
-<section>
-<section id="variables-and-operators" class="title-slide slide level1 center">
-<h1>Variables and Operators</h1>
-<p>Variables store data for use in your program which can be manipulated by <em>operators</em> (e.g., addition, comparison, and assignment).</p>
-<!-- ::: {.example-large} -->
-<div class="example">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co">"""</span></span>
-<span id="cb3-2"><a></a><span class="co">This example shows how to use variables and operators.</span></span>
-<span id="cb3-3"><a></a><span class="co">"""</span></span>
-<span id="cb3-4"><a></a>x <span class="op">=</span> <span class="dv">10</span>      <span class="co"># Assign 10 to x</span></span>
-<span id="cb3-5"><a></a>y <span class="op">=</span> <span class="dv">5</span>       <span class="co"># Assign 5 to y</span></span>
-<span id="cb3-6"><a></a>sum_xy <span class="op">=</span> x <span class="op">+</span> y         <span class="co"># Addition operator</span></span>
-<span id="cb3-7"><a></a>diff_xy <span class="op">=</span> x <span class="op">-</span> y        <span class="co"># Subtraction operator</span></span>
-<span id="cb3-8"><a></a>prod_xy <span class="op">=</span> x <span class="op">*</span> y        <span class="co"># Multiplication operator</span></span>
-<span id="cb3-9"><a></a>is_equal <span class="op">=</span> x <span class="op">==</span> y      <span class="co"># Comparison operator</span></span>
-<span id="cb3-10"><a></a><span class="bu">print</span>(sum_xy, diff_xy, prod_xy, is_equal)</span>
-<span id="cb3-11"><a></a><span class="co"># Output: 15 5 50 False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This code uses variables and operators to do math and compare values.</p>
 </section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="loops-and-conditionals" class="title-slide slide level1 center">
-<h1>Loops and Conditionals</h1>
-<p>Loops repeat actions. Conditionals let your code make decisions.</p>
-<!-- ::: {.example-large} -->
-<div class="example">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">"""</span></span>
-<span id="cb4-2"><a></a><span class="co">This example prints numbers and checks if they are even or odd.</span></span>
-<span id="cb4-3"><a></a><span class="co">"""</span></span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):  <span class="co"># Loop from 1 to 5</span></span>
-<span id="cb4-6"><a></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:     <span class="co"># Conditional: is i even?</span></span>
-<span id="cb4-7"><a></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> is even"</span>)</span>
-<span id="cb4-8"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb4-9"><a></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> is odd"</span>)</span>
-<span id="cb4-10"><a></a><span class="co"># Output:</span></span>
-<span id="cb4-11"><a></a><span class="co"># 1 is odd</span></span>
-<span id="cb4-12"><a></a><span class="co"># 2 is even</span></span>
-<span id="cb4-13"><a></a><span class="co"># ... and similar up to 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This code loops through numbers and uses a conditional to check if each is even or odd.</p>
+<section id="loops" class="slide level2 center">
+<h2>Loops</h2>
+<p>Loops repeat actions. Use <code>for</code> and <code>while</code> loops.</p>
 </section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="squaring-algorithms" class="title-slide slide level1 center">
-<h1>Squaring Algorithms</h1>
-<p>Squaring means multiplying a number by itself. There are several ways to do this in Python.</p>
-<!-- ::: {.example-large} -->
-<div class="example">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co">"""</span></span>
-<span id="cb5-2"><a></a><span class="co">This example shows three ways to square a number.</span></span>
-<span id="cb5-3"><a></a><span class="co">"""</span></span>
-<span id="cb5-4"><a></a><span class="kw">def</span> square(n):</span>
-<span id="cb5-5"><a></a>    <span class="co">"""Returns the square of n."""</span></span>
-<span id="cb5-6"><a></a>    <span class="cf">return</span> n <span class="op">*</span> n</span>
-<span id="cb5-7"><a></a></span>
-<span id="cb5-8"><a></a>num <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb5-9"><a></a>squ1 <span class="op">=</span> num <span class="op">*</span> num         <span class="co"># Multiplication</span></span>
-<span id="cb5-10"><a></a>squ2 <span class="op">=</span> num <span class="op">**</span> <span class="dv">2</span>          <span class="co"># Exponentiation</span></span>
-<span id="cb5-11"><a></a></span>
-<span id="cb5-12"><a></a><span class="bu">print</span>(<span class="ss">f"squ1: </span><span class="sc">{</span>squ1<span class="sc">}</span><span class="ss">, squ2: </span><span class="sc">{</span>squ2<span class="sc">}</span><span class="ss">, square(num): </span><span class="sc">{</span>square(num)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb5-13"><a></a><span class="co"># Output: squ1: 49, squ2: 49, square(num): 49</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This code demonstrates three ways to square a number in Python.</p>
-</section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="strings-and-slicing" class="title-slide slide level1 center">
-<h1>Strings and Slicing</h1>
-<p>Strings store text. Slicing lets you extract parts of a string.</p>
-<!-- ::: {.example-large} -->
-<div class="example">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co">"""</span></span>
-<span id="cb6-2"><a></a><span class="co">This example slices a string in different ways.</span></span>
-<span id="cb6-3"><a></a><span class="co">"""</span></span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>text <span class="op">=</span> <span class="st">"Python is awesome!"</span></span>
-<span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a>first_word <span class="op">=</span> text[:<span class="dv">6</span>]      <span class="co"># Get 'Python'</span></span>
-<span id="cb6-8"><a></a>last_word <span class="op">=</span> text[<span class="op">-</span><span class="dv">8</span>:]      <span class="co"># Get 'awesome!'</span></span>
-<span id="cb6-9"><a></a>every_other <span class="op">=</span> text[::<span class="dv">2</span>]    <span class="co"># Get every other character</span></span>
-<span id="cb6-10"><a></a></span>
-<span id="cb6-11"><a></a><span class="bu">print</span>(first_word)    <span class="co"># Output: Python</span></span>
-<span id="cb6-12"><a></a><span class="bu">print</span>(last_word)     <span class="co"># Output: awesome!</span></span>
-<span id="cb6-13"><a></a><span class="bu">print</span>(every_other)   <span class="co"># Output: Pto saeo!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This code shows how to slice strings to get different parts or patterns.</p>
-</section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="python-challenge-exercises" class="title-slide slide level1 center">
-<h1>Python Challenge Exercises</h1>
-<p>Try these programming challenges to practice your Python skills!</p>
-</section>
-<section id="challenge-1-literal-mix-up" class="slide level2 center">
-<h2>Challenge 1: Literal Mix-Up</h2>
-<p>Write code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.</p>
-<div class="example">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="conditionals" class="slide level2 center">
+<h2>Conditionals</h2>
+<p>Conditionals let your code make decisions using <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+<div class="callout-medium">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb3-2"><a></a>    <span class="bu">print</span>(i)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-5"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb3-6"><a></a>    <span class="bu">print</span>(<span class="st">"Counting:"</span>, count)</span>
+<span id="cb3-7"><a></a>    count <span class="op">+=</span> <span class="dv">1</span> </span>
+<span id="cb3-8"><a></a>    <span class="co"># Do not forget to increment </span></span>
+<span id="cb3-9"><a></a>    <span class="co"># the counter, or you will create an infinite loop!</span></span>
+<span id="cb3-10"><a></a></span>
+<span id="cb3-11"><a></a>    <span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb3-12"><a></a>        <span class="bu">print</span>(<span class="st">"x is greater!"</span>)</span>
+<span id="cb3-13"><a></a>    <span class="cf">elif</span> x <span class="op">==</span> y:</span>
+<span id="cb3-14"><a></a>        <span class="bu">print</span>(<span class="st">"x equals y!"</span>)</span>
+<span id="cb3-15"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb3-16"><a></a>        <span class="bu">print</span>(<span class="st">"x is less!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="challenge-2-variable-math" class="slide level2 center">
-<h2>Challenge 2: Variable Math</h2>
-<p>Create two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.</p>
-<div class="example">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="sort-of-interesting-application" class="slide level2 center">
+<h2>Sort of Interesting Application</h2>
+<p>Loops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!</p>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>num <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb4-2"><a></a><span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-3"><a></a>    <span class="bu">print</span>(<span class="st">"Positive number"</span>)</span>
+<span id="cb4-4"><a></a><span class="cf">elif</span> num <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-5"><a></a>    <span class="bu">print</span>(<span class="st">"Zero"</span>)</span>
+<span id="cb4-6"><a></a><span class="cf">else</span>:</span>
+<span id="cb4-7"><a></a>    <span class="bu">print</span>(<span class="st">"Negative number"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-output">
+<p>Output:</p>
+<p>Positive</p>
 </div>
 </section>
-<section id="challenge-3-loop-conditional-fun" class="slide level2 center">
-<h2>Challenge 3: Loop &amp; Conditional Fun</h2>
-<p>Write a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.</p>
-<div class="example">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="nested-conditionals" class="slide level2 center">
+<h2>Nested Conditionals</h2>
+<p>You can nest loops, one inside the other.</p>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>num <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb5-2"><a></a><span class="cf">if</span> num <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb5-3"><a></a>    <span class="cf">if</span> num <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-4"><a></a>        <span class="bu">print</span>(<span class="st">"Zero"</span>)</span>
+<span id="cb5-5"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb5-6"><a></a>        <span class="bu">print</span>(<span class="st">"Positive number"</span>)</span>
+<span id="cb5-7"><a></a><span class="cf">else</span>:</span>
+<span id="cb5-8"><a></a>    <span class="bu">print</span>(<span class="st">"Negative number"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-output">
+<p>Output:</p>
+<p>Positive</p>
 </div>
 </section>
-<section id="challenge-4-squaring-game" class="slide level2 center">
-<h2>Challenge 4: Squaring Game</h2>
-<p>Write a function that takes a number and returns both its square and its cube. Print the results for the number 5.</p>
-<div class="example">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="logical-operator" class="slide level2 center">
+<h2>Logical Operator</h2>
+<p>Logical operators use <code>True</code> and <code>False</code> to determine outcomes.</p>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>a <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb6-2"><a></a>b <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb6-3"><a></a><span class="cf">if</span> a <span class="op">&gt;</span> <span class="dv">5</span> <span class="kw">and</span> b <span class="op">&gt;</span> <span class="dv">15</span>:</span>
+<span id="cb6-4"><a></a>    <span class="bu">print</span>(<span class="st">"Both conditions are true"</span>)</span>
+<span id="cb6-5"><a></a><span class="cf">if</span> a <span class="op">&gt;</span> <span class="dv">5</span> <span class="kw">or</span> b <span class="op">&lt;</span> <span class="dv">15</span>:</span>
+<span id="cb6-6"><a></a>    <span class="bu">print</span>(<span class="st">"At least one condition is true"</span>)</span>
+<span id="cb6-7"><a></a><span class="cf">if</span> <span class="kw">not</span> a <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb6-8"><a></a>    <span class="bu">print</span>(<span class="st">"a is not less than 5"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-output">
+<p>Output:</p>
+<p>Both conditions are true At least one condition is true a is not less than 5</p>
 </div>
 </section>
-<section id="challenge-5-string-slicing-mystery" class="slide level2 center">
-<h2>Challenge 5: String Slicing Mystery</h2>
-<p>Given the string <code>mystery = "QuartoPythonRocks!"</code>, print:</p>
+<section id="string-manipulation" class="slide level2 center">
+<h2>String Manipulation</h2>
+<p>We now look at how we can manipulate strings</p>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>text <span class="op">=</span> <span class="st">"Hello, World!"</span></span>
+<span id="cb7-2"><a></a><span class="bu">print</span>(text.lower())  <span class="co"># hello, world!</span></span>
+<span id="cb7-3"><a></a><span class="bu">print</span>(text.upper())  <span class="co"># HELLO, WORLD!</span></span>
+<span id="cb7-4"><a></a><span class="bu">print</span>(text.replace(<span class="st">"World"</span>, <span class="st">"Python"</span>))  <span class="co"># Hello, Python!</span></span>
+<span id="cb7-5"><a></a><span class="bu">print</span>(text.split(<span class="st">", "</span>))  <span class="co"># ['Hello', 'World!']</span></span>
+<span id="cb7-6"><a></a><span class="bu">print</span>(text.strip(<span class="st">"!"</span>))  <span class="co"># Hello, World</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- ::: {.callout-output}
+Output:
+::: -->
+</section>
+<section id="lists" class="slide level2 center">
+<h2>Lists</h2>
 <ul>
-<li>The first 6 characters</li>
-<li>The last 5 characters</li>
-<li>Every third character</li>
+<li><p>A list is a fundamental data structure in Python used to store an ordered collection of items.</p></li>
+<li><p>Lists maintain the order of elements, with each item accessible by its index (starting from 0).</p></li>
+<li><p>Lists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).</p></li>
+<li><p>Lists can hold items of different data types, including other lists.</p></li>
+<li><p>Lists are created using square brackets, with elements separated by commas.</p></li>
 </ul>
-<div class="example">
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="demo-of-lists" class="slide level2 center">
+<h2>Demo of Lists</h2>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>] <span class="co"># definition</span></span>
+<span id="cb8-2"><a></a><span class="bu">print</span>(my_list[<span class="dv">0</span>])  <span class="co"># Access first element</span></span>
+<span id="cb8-3"><a></a>my_list.append(<span class="dv">6</span>)  <span class="co"># Add an element to the end</span></span>
+<span id="cb8-4"><a></a><span class="bu">print</span>(my_list)  <span class="co"># [1, 2, 3, 4, 5, 6]</span></span>
+<span id="cb8-5"><a></a>my_list.remove(<span class="dv">3</span>)  <span class="co"># Remove element with value 3</span></span>
+<span id="cb8-6"><a></a><span class="bu">print</span>(my_list)  <span class="co"># [1, 2, 4, 5, 6]</span></span>
+<span id="cb8-7"><a></a><span class="bu">print</span>(<span class="bu">len</span>(my_list))  <span class="co"># Length of the list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-output">
+<p>Output:</p>
+<p>1</p>
+<p>[1, 2, 3, 4, 5, 6]</p>
+<p>[1, 2, 4, 5, 6]</p>
+<p>5</p>
+</div>
 </div>
 </section>
-<section id="consider-this" class="slide level2 center">
-<h2>Consider This!</h2>
-<p>Let’s do these in class!</p>
+<section id="dictionaries" class="slide level2 center">
+<h2>Dictionaries</h2>
+<p>A dictionary is a built-in data structure in Python used to store key-value pairs.</p>
+<p>Dictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.</p>
+<p>Dictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).</p>
+<p>Keys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.</p>
+<p>Dictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value.</p>
+</section>
+<section id="demo-of-dictionaries" class="slide level2 center">
+<h2>Demo of Dictionaries</h2>
+<div class="callout-large">
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>my_dict <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">25</span>, <span class="st">"is_student"</span>: <span class="va">True</span>}  <span class="co"># definition</span></span>
+<span id="cb9-2"><a></a><span class="bu">print</span>(my_dict[<span class="st">"name"</span>])  <span class="co"># Access value by key</span></span>
+<span id="cb9-3"><a></a>my_dict[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">26</span>  <span class="co"># Modify value</span></span>
+<span id="cb9-4"><a></a>my_dict[<span class="st">"city"</span>] <span class="op">=</span> <span class="st">"New York"</span>  <span class="co"># Add new key-value pair</span></span>
+<span id="cb9-5"><a></a><span class="bu">print</span>(my_dict)  <span class="co"># {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}</span></span>
+<span id="cb9-6"><a></a><span class="kw">del</span> my_dict[<span class="st">"is_student"</span>]  <span class="co"># Remove a key-value pair</span></span>
+<span id="cb9-7"><a></a><span class="bu">print</span>(my_dict)  <span class="co"># {'name': 'Alice', 'age': 26, 'city': 'New York'}</span></span>
+<span id="cb9-8"><a></a><span class="bu">print</span>(<span class="bu">len</span>(my_dict))  <span class="co"># Number of key-value pairs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-output">
+<p>Output:</p>
+<p>Alice</p>
+<p>{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}</p>
+<p>{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}</p>
+<p>3</p>
+</div>
+</div>
+</section>
+<section id="coding-challenges" class="slide level2 center">
+<h2>Coding Challenges</h2>
+<h3 id="variables-and-operators">1. Variables and Operators</h3>
+<p><strong>Challenge:</strong><br>
+Create two variables, <code>a</code> and <code>b</code>, assign them integer values, and print their sum, difference, product, and quotient.</p>
+<div class="callout-large">
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ::: {.callout-large}
+**Solution:**
+``` python
+a = 10
+b = 5
+print("Sum:", a + b)
+print("Difference:", a - b)
+print("Product:", a * b)
+print("Quotient:", a / b)
+``` -->
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="working-with-lists">2. Working with Lists</h3>
+<p><strong>Challenge:</strong><br>
+Create a list of five numbers. Print the largest number in the list.</p>
+<div class="callout-large">
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- 
+::: {.callout-large}
+**Solution:**
+```python
+numbers = [3, 7, 2, 9, 5]
+print("Largest number:", max(numbers))
+``` -->
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="dictionaries-1">3. Dictionaries</h3>
+<p><strong>Challenge:</strong><br>
+Create a dictionary with three key-value pairs representing a person’s name, age, and city. Print each key and its value.</p>
+<div class="callout-large">
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ::: {.callout-large}
+**Solution:**
+```python
+person = {"name": "Alice", "age": 25, "city": "New York"}
+for key, value in person.items():
+    print(key, ":", value)
+```
+ -->
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="for-loops">4. For Loops</h3>
+<p><strong>Challenge:</strong><br>
+Use a for loop to print all even numbers from 1 to 10.</p>
+<div class="callout-large">
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="co"># </span><span class="al">TODO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ::: {.callout-large}
+**Solution:**
+```python
+for i in range(1, 11):
+    if i % 2 == 0:
+        print(i)
+``` -->
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="while-loops-and-conditionals">5. While Loops and Conditionals</h3>
+<p><strong>Challenge:</strong><br>
+Use a while loop to keep asking the user to enter a number until they enter a negative number.</p>
+<div class="callout-large">
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># </span><span class="al">TODO</span><span class="co"> </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ::: {.callout-large}
+**Solution:**
+```python
+while True:
+    num = int(input("Enter a number: "))
+    if num < 0:
+        break
+```
+ -->
+</div>
 </section>
 <section class="slide level2 center">
 

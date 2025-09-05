@@ -15,7 +15,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
   Due Date: Wednesday 3 Sept 2025 (by the end of class)
 - [GitHub Classroom Link](https://classroom.github.com/a/Xr8c08jx) (Used to setup your workspace and repository for your assignment submission.)
 
-## 2. Introduction to Python
+## 2. Introduction to Python I
 
 - [Required Reading: Guttag Chapter 1](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/1)
 - **Literals, Variables, Conditionals, Strings, etc. ** 
@@ -24,3 +24,14 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Lab 01**: Working with the UV package manager to run Python code.
   - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta) 
   - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md)
+
+## 2. Introduction to Python II
+
+- [Required Reading: Guttag Chapter 2](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/11)
+- **Literals, Variables, Conditionals, Strings, etc. ** 
+  - [HTML](3_introToPython.html) Slides
+  -  [PDF](3_introToPython.pdf) A page of the material on the slides.
+<!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
+  <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
+  <!-- - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md) -->
+  
