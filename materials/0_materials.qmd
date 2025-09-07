@@ -9,28 +9,30 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 <!-- ![](../graphics/levelup.png){width=10%} -->
 
-## 1. Introduction
+## 1. Welcome Weeks
 <!-- - _Specification Lab: CLI vs Script vs Notebook_ (20 Points)   -->
 - **README**: [01_activity](https://github.com/CMPSC101Fall2025DataStructures/01_activity_maze/blob/main/README.md)
   Due Date: Wednesday 3 Sept 2025 (by the end of class)
 - [GitHub Classroom Link](https://classroom.github.com/a/Xr8c08jx) (Used to setup your workspace and repository for your assignment submission.)
 
-## 2. Introduction to Python I
+## 2. Getting Started
 
+- Installing necessary software for the course. [Python](https://www.python.org/), [Visual Studio Code](https://code.visualstudio.com/download) and [GitHub](https://github.com/git-guides/install-git).
 - [Required Reading: Guttag Chapter 1](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/1)
-- **Literals, Variables, Conditionals, Strings, etc. ** 
-  - [HTML](2_introToPython.html) Slides
-  -  [PDF](2_introToPython.pdf) A page of the material on the slides.
 - **Lab 01**: Working with the UV package manager to run Python code.
   - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta) 
   - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md)
 
-## 2. Introduction to Python II
+## 3. Crash Course: Python
 
 - [Required Reading: Guttag Chapter 2](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/11)
 - **Literals, Variables, Conditionals, Strings, etc. ** 
-  - [HTML](3_introToPython.html) Slides
-  -  [PDF](3_introToPython.pdf) A page of the material on the slides.
+  - [HTML](3_i_introToPython.html) Slides
+  -  [PDF](3_i_introToPython.pdf) The slide's material as a pdf.
+
+- **Literals, Variables, Conditionals, Strings, etc. ** 
+  - [HTML](3_ii_introToPython.html) Slides
+  -  [PDF](3_ii_introToPython.pdf) The slide's material as a pdf.
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
   <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
   <!-- - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md) -->
