@@ -1,5 +1,5 @@
 ---
-title: "Python Programming: Colourful Concepts II"
+title: "Python Programming: Concepts II"
 #subtitle: "Guttag Chapter 2"
 author: "Oliver Bonham-Carter"
 format: revealjs

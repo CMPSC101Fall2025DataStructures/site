@@ -183,7 +183,9 @@
 .lesson-large-font .python-output,
 .lesson-large-font .python-error,
 .lesson-large-font .python-prompt {
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .lesson-small-font .lesson-terminal,
@@ -191,7 +193,7 @@
 .lesson-small-font .python-output,
 .lesson-small-font .python-error,
 .lesson-small-font .python-prompt {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* Mobile responsiveness */
