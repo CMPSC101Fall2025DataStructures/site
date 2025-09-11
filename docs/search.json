@@ -602,11 +602,18 @@
     "text": "2. Getting Started\n\nInstalling necessary software for the course. Python, Visual Studio Code and GitHub.\nRequired Reading: Guttag Chapter 1\nLab 01: Working with the UV package manager to run Python code.\n\nGitHub Classroom Link\nREADME Lab 01 documentation"
   },
   {
-    "objectID": "materials/0_materials.html#crash-course-python",
-    "href": "materials/0_materials.html#crash-course-python",
+    "objectID": "materials/0_materials.html#crash-course-i-python",
+    "href": "materials/0_materials.html#crash-course-i-python",
     "title": "Materials",
-    "section": "3. Crash Course: Python",
-    "text": "3. Crash Course: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf."
+    "section": "3. Crash Course I: Python",
+    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation"
+  },
+  {
+    "objectID": "materials/0_materials.html#crash-course-ii-python",
+    "href": "materials/0_materials.html#crash-course-ii-python",
+    "title": "Materials",
+    "section": "4. Crash Course II: Python",
+    "text": "4. Crash Course II: Python\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf."
   },
   {
     "objectID": "playground/01_gettingToKnowYou.html#introduce-your-partner",

@@ -23,13 +23,17 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta) 
   - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md)
 
-## 3. Crash Course: Python
+## 3. Crash Course I: Python
 
 - [Required Reading: Guttag Chapter 2](https://mitpress.ublish.com/ebook/itcapup3-preview/12609/11)
 - **Literals, Variables, Conditionals, Strings, etc. ** 
-  - [HTML](3_i_introToPython.html) Slides
-  -  [PDF](3_i_introToPython.pdf) The slide's material as a pdf.
+  - [HTML](3_i_introToPython_solutions.html) Slides
+  -  [PDF](3_i_introToPython_solutions.pdf) The slide's material as a pdf.
+- **Lab 02**: Refactoring (Restructuring) a *Rock, Paper, Scissors* Python game.
+  - [GitHub Classroom Link](https://classroom.github.com/a/whuXaH09) 
+  - **README** [Lab 02 documentation](https://github.com/CMPSC101Fall2025DataStructures/lab02/blob/main/README.md)
 
+## 4. Crash Course II: Python
 - **Literals, Variables, Conditionals, Strings, etc. ** 
   - [HTML](3_ii_introToPython.html) Slides
   -  [PDF](3_ii_introToPython.pdf) The slide's material as a pdf.
