@@ -606,7 +606,7 @@
     "href": "materials/0_materials.html#crash-course-i-python",
     "title": "Materials",
     "section": "3. Crash Course I: Python",
-    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation"
+    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation\n\nActivity: Building a morse code translator in Python and UV\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/0_materials.html#crash-course-ii-python",
