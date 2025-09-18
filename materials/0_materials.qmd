@@ -39,9 +39,11 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 - **Literals, Variables, Conditionals, Strings, etc. ** 
   - [HTML](3_ii_introToPython.html) Slides
-  -  [PDF](3_ii_introToPython.pdf) The slide's material as a pdf.
+  -  [PDF](3_ii_introToPython_solutions.pdf) The slide's material as a pdf.
 - **Activity**: Coding using literals, lists and conditionals
   - [GitHub Classroom Link](https://classroom.github.com/a/NVL_RB-3)
+- **Lab03**: Completing smaller Python programs.
+  - [GitHub Classroom Link](https://classroom.github.com/a/9c1qDmys)
   
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
   <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
