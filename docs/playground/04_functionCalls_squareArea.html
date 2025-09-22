@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="OBC">
-<meta name="dcterms.date" content="2025-08-26">
+<meta name="dcterms.date" content="2025-08-30">
 
-<title>01_Activity: Getting To Know You – CMPSC101 Fall 2025 :: DataStructures</title>
+<title>Just For Fun 04: Area of a Square and Function Calls – CMPSC101 Fall 2025 :: DataStructures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,9 +104,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared/lesson-styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -118,22 +155,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduce-your-partner" id="toc-introduce-your-partner" class="nav-link active" data-scroll-target="#introduce-your-partner">Introduce Your Partner!</a></li>
-  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">01_Activity: Getting To Know You</h1>
+<h1 class="title">Just For Fun 04: Area of a Square and Function Calls</h1>
+<p class="subtitle lead">Exploring Python Functions and Iteration</p>
 </div>
 
 
@@ -150,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2025</p>
+      <p class="date">August 30, 2025</p>
     </div>
   </div>
   
@@ -162,29 +193,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="../graphics/talking400x400.png" class="img-fluid"></p>
-<section id="introduce-your-partner" class="level2">
-<h2 class="anchored" data-anchor-id="introduce-your-partner">Introduce Your Partner!</h2>
-<p>Choose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;</p>
-<ul>
-<li>How they would like to be called in class,</li>
-<li>Where they are from,</li>
-<li>What types of classes they like,</li>
-<li>What they enjoy doing on campus,</li>
-<li>What is their favorite music</li>
-<li>Why they are in this course at Allegheny College. Take turns sharing.</li>
-</ul>
-<p>Then, each of you will present the other to the course today.</p>
-</section>
-<section id="survey" class="level2">
-<h2 class="anchored" data-anchor-id="survey">Survey</h2>
-<p>I would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to <a href="https://discord.com/">https://discord.com/</a> to get started. <strong>For our course, please use your actual name in Discord.</strong></p>
-<p>Survey Link: <a href="https://forms.gle/oM5mxSCZ2Umfhrqp7">https://forms.gle/oM5mxSCZ2Umfhrqp7</a></p>
+<div class="code-explanation">
+<p><strong>What this code does:</strong> This code defines a function <code>squareArea(s)</code> that calculates the area of a square given its side length <code>s</code>. The <code>main()</code> function acts as a driver: it prints the area for a single value, then iterates over a list of test values (including integers, zero, negative numbers, and a complex number) and prints the area for each. <strong>Function calls:</strong> - <code>squareArea(s)</code> is called inside <code>main()</code> for each value in <code>testValues_list</code> and for the initial <code>sideLength</code>. - <code>main()</code> is called at the end to start the program.</p>
+</div>
+<p><strong>Example Code:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> squareArea(s: <span class="bu">float</span> ) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" determine area of square"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s<span class="op">*</span>s <span class="co"># area of square is s*s</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># end of squareArea()</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" driver function """</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    sideLength <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Testing value</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Length </span><span class="sc">{</span>sideLength<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" Area: </span><span class="sc">{</span>squareArea(sideLength)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># These inputs work</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    testValues_list <span class="op">=</span>[<span class="dv">2</span>,<span class="dv">0</span>,<span class="op">-</span><span class="dv">3</span>,<span class="dv">2</span> <span class="op">+</span> <span class="ot">5j</span>]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># why will these inputs not work?</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># testValues_list =[True, "radius"]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st"> Iterating over the list."</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> val <span class="kw">in</span> testValues_list: <span class="co">#iteration</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f" Length </span><span class="sc">{</span>val<span class="sc">}</span><span class="ss">, Area: </span><span class="sc">{</span>squareArea(val)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># end main()</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>main() <span class="co"># call the driver function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<textarea id="lesson-input-1" class="lesson-input" rows="20" placeholder="# Copy the code above or write your own...">def squareArea(s: float ) -&gt; float:
+    """ determine area of square"""
+    return s*s # area of square is s*s
+# end of squareArea()
+
+def main() -&gt; None:
+    """ driver function """
+    sideLength = 5
+    # Testing value
+    print(f"Length {sideLength}")
+    print(f" Area: {squareArea(sideLength)}")
+    # These inputs work
+    testValues_list =[2,0,-3,2 + 5j]
+    # why will these inputs not work?
+    # testValues_list =[True, "radius"]
+    print("\n Iterating over the list.")
+    for val in testValues_list: #iteration
+        print(f" Length {val}, Area: {squareArea(val)}")
+    # end main()
+
+main() # call the driver function
+</textarea>
+<div class="lesson-buttons">
+<p><button onclick="runLessonCode(1)" class="run-btn">▶ Run Code</button> <button onclick="clearLessonTerminal(1)" class="clear-btn">🗑 Clear</button> <button onclick="increaseFontSize()" class="example-btn">🔍+ Larger Font</button> <button onclick="decreaseFontSize()" class="example-btn">🔍- Smaller Font</button></p>
+</div>
+<div id="lesson-terminal-1" class="lesson-terminal">
+<div class="python-prompt">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+</blockquote></blockquote></blockquote></div>
+<div style="color: var(--golden-yellow); font-style: italic;">
+Loading Python interpreter…
+</div>
 
 
-</section>
 
-</main> <!-- /main -->
+</div>
+
+
+</main></div>
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -584,7 +660,8 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
+<script src="../shared/lesson-python.js"></script>
 
 
 

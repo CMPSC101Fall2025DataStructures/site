@@ -1,5 +1,5 @@
 ---
-title: "0_Just For Fun: Fibonacci Sequence"
+title: "Just For Fun 01: Fibonacci Sequence"
 subtitle: "Three Approaches to Computing the Famous Sequence"
 date: "22 Aug 2025"
 author: "OBC"

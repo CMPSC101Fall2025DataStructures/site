@@ -35,11 +35,11 @@
     "text": "Course Learning Objectives\n\nWhen solving a problem with a Python program, accurately describe data structures and algorithms and their inherent trade-offs.\nUse data structures and algorithms to correctly and efficiently solve a problem through the use of a Python program.\nUse empirical methods to characterize the performance of a Python program that uses data structures and algorithms.\nUse industry-standard practices, such as testing and debugging, and professional-grade integrated development environments (IDEs), command-line tools, and version control systems to implement Python programs.\nImplement Python programs and documentation that conforms to industry-standard formats and styles.\n\nLearning Outcome QR: Students who successfully complete this requirement will demonstrate an understanding of how to interpret numeric data and/or their graphical or symbolic representations.\nLearning Outcome SP: Students who successfully complete this requirement will demonstrate an understanding of the nature, approaches, and domain of scientific inquiry."
   },
   {
-    "objectID": "index.html#materials",
-    "href": "index.html#materials",
+    "objectID": "index.html#course-materials",
+    "href": "index.html#course-materials",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
-    "section": "Materials",
-    "text": "Materials\n\nTextbook\nIntroduction to Computation and Programming Using Python by John V. Guttag\n\n\n\nOnline Resources and Course Materials\n\nW3schools  \nCourse GitHub Organization\nJupyter Notebooks Directory\nGuttag Textbook Publisher Preview\nGuttag Textbook Google Previews\nAdditional Guttag Textbook Availability\nGuttag Lectures\nPython Docs Proactive Programmers\n\n\n\nSelected Software and Technologies\nWe will be using the following technologies in class.\n\nVSCode\nPython 3.12 or later\npipx\nPoetry\nGatorgrade\nGit\nFree GitHub Account\nFree Discord Account\nAllegheny College Email\n\n\n\nGrading\n\n\nGradebook Repository\nGradeBook repository will be used to deliver your grades from your activities and labs to you. In this repository, you will find a file which contains the same information that the instructor has in the gradebook. While it is a repository that you will pull from, you will never need to push anything to this repository.\nPlease use the following URL to create your gradebook repository; https://classroom.github.com/a/34hXX52q.\n\nGrading Scale\n\n\n\n\n\n\n\n\n\n\n\n\nLetter\nRange\nLetter\nRange\nLetter\nRange\n\n\n\n\nA\n96 - 100\nA-\n90 - 95.9\n\n\n\n\nB+\n87 - 89.9\nB\n83 - 86.9\nB-\n80 - 82.9\n\n\nC+\n77 - 79.9\nC\n73 - 76.9\nC-\n70 - 72.9\n\n\nD+\n67 - 69.9\nD\n63 - 66.9\nF\n59.9 and below\n\n\n\n\n\nBenchmarks\nThe grade that a student receives in this class will be based on the following categories. All percentages are approximate and, if the need to do so presents itself, it is possible for the assigned percentages to change during the academic semester.\n\n\n\nCategory\nPercentage\nAssessment metric\n\n\n\n\nClass Participation and Activities\n20%\ncheck mark grade\n\n\nLabs\n40%\nletter grade\n\n\nMidterm Exam\n20%\nletter grade\n\n\nFinal Project\n20%\nletter grade\n\n\nTotal\n100%\n\n\n\n\n\n\nDefinitions of Grading Categories\n\nClass Participation: All students are required to actively participate during all of the class sessions. Your participation will take forms such as answering questions about the required reading assignments, completing in-class exercises, asking constructive questions of the other members of the class, giving presentations, leading a discussion session in class.% and in the course’s Slack channels.\nActivities: These assignments invite students to explore different techniques for rigorously designing, implementing, programming, evaluating, and documenting real-world Python programs. These assignments will invite students to use tools like a text editor, a terminal window, and a modern Python development environment to implement functions that strike the right balance between understandability, generalizability, and specialization. Students will also use the data collected from running experiments to evaluate the implementation of a Python function as they consider, for instance, its efficiency and correctness. Knowledge gained from the class and the textbook will be integral to the completion of these projects. Unless other information is given about a due date, activities are to be completed by the end of class.\nExams: The exams will cover all of the material in their associated module(s). The finalized date for each of the exams will be announced at least one week in advance of the scheduled date. Unless prior arrangements are made with the course instructor, all students will be expected to take these exams on the scheduled date and complete the exams in the stated period of time.\nFinal Project: This project will present you with an opportunity to design and implement a correct and carefully evaluated programming solution for a specific problem. Completion of the final project will require you to apply the knowledge, programming and technical skills that you have acquired during the course. The details for the final project will be given approximately a month before the project due date (during finals week)."
+    "section": "Course Materials",
+    "text": "Course Materials\n\nTextbook\nIntroduction to Computation and Programming Using Python by John V. Guttag\n\n\n\nOnline Resources and Course Materials\n\nW3schools  \nCourse GitHub Organization\nJupyter Notebooks Directory\nGuttag Textbook Publisher Preview\nGuttag Textbook Google Previews\nAdditional Guttag Textbook Availability\nGuttag Lectures\nPython Docs Proactive Programmers\n\n\n\nSelected Software and Technologies\nWe will be using the following technologies in class.\n\nVSCode\nPython 3.12 or later\npipx\nPoetry\nGatorgrade\nGit\nFree GitHub Account\nFree Discord Account\nAllegheny College Email\n\n\n\nGrading\n\n\nGradebook Repository\nGradeBook repository will be used to deliver your grades from your activities and labs to you. In this repository, you will find a file which contains the same information that the instructor has in the gradebook. While it is a repository that you will pull from, you will never need to push anything to this repository.\nPlease use the following URL to create your gradebook repository; https://classroom.github.com/a/34hXX52q.\n\nGrading Scale\n\n\n\n\n\n\n\n\n\n\n\n\nLetter\nRange\nLetter\nRange\nLetter\nRange\n\n\n\n\nA\n96 - 100\nA-\n90 - 95.9\n\n\n\n\nB+\n87 - 89.9\nB\n83 - 86.9\nB-\n80 - 82.9\n\n\nC+\n77 - 79.9\nC\n73 - 76.9\nC-\n70 - 72.9\n\n\nD+\n67 - 69.9\nD\n63 - 66.9\nF\n59.9 and below\n\n\n\n\n\nBenchmarks\nThe grade that a student receives in this class will be based on the following categories. All percentages are approximate and, if the need to do so presents itself, it is possible for the assigned percentages to change during the academic semester.\n\n\n\nCategory\nPercentage\nAssessment metric\n\n\n\n\nClass Participation and Activities\n20%\ncheck mark grade\n\n\nLabs\n40%\nletter grade\n\n\nMidterm Exam\n20%\nletter grade\n\n\nFinal Project\n20%\nletter grade\n\n\nTotal\n100%\n\n\n\n\n\n\nDefinitions of Grading Categories\n\nClass Participation: All students are required to actively participate during all of the class sessions. Your participation will take forms such as answering questions about the required reading assignments, completing in-class exercises, asking constructive questions of the other members of the class, giving presentations, leading a discussion session in class.% and in the course’s Slack channels.\nActivities: These assignments invite students to explore different techniques for rigorously designing, implementing, programming, evaluating, and documenting real-world Python programs. These assignments will invite students to use tools like a text editor, a terminal window, and a modern Python development environment to implement functions that strike the right balance between understandability, generalizability, and specialization. Students will also use the data collected from running experiments to evaluate the implementation of a Python function as they consider, for instance, its efficiency and correctness. Knowledge gained from the class and the textbook will be integral to the completion of these projects. Unless other information is given about a due date, activities are to be completed by the end of class.\nExams: The exams will cover all of the material in their associated module(s). The finalized date for each of the exams will be announced at least one week in advance of the scheduled date. Unless prior arrangements are made with the course instructor, all students will be expected to take these exams on the scheduled date and complete the exams in the stated period of time.\nFinal Project: This project will present you with an opportunity to design and implement a correct and carefully evaluated programming solution for a specific problem. Completion of the final project will require you to apply the knowledge, programming and technical skills that you have acquired during the course. The details for the final project will be given approximately a month before the project due date (during finals week)."
   },
   {
     "objectID": "index.html#schedule-at-a-glance",
@@ -98,312 +98,179 @@
     "text": "Syllabus Changes\nThe instructor may make updates or changes to this document at any time as needed until term grades are due. Changes will be announced to the class."
   },
   {
-    "objectID": "playground/02_functionCalls_squareArea.html",
-    "href": "playground/02_functionCalls_squareArea.html",
-    "title": "02_Activity: Area of a Square and Function Calls",
-    "section": "",
-    "text": "What this code does: This code defines a function squareArea(s) that calculates the area of a square given its side length s. The main() function acts as a driver: it prints the area for a single value, then iterates over a list of test values (including integers, zero, negative numbers, and a complex number) and prints the area for each. Function calls: - squareArea(s) is called inside main() for each value in testValues_list and for the initial sideLength. - main() is called at the end to start the program.\n\nExample Code:\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\n\n\n\n\n\n\nLoading Python interpreter…"
+    "objectID": "playground/03_gettingToKnowYou.html#introduce-your-partner",
+    "href": "playground/03_gettingToKnowYou.html#introduce-your-partner",
+    "title": "Just For Fun 03: Getting To Know You",
+    "section": "Introduce Your Partner!",
+    "text": "Introduce Your Partner!\nChoose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;\n\nHow they would like to be called in class,\nWhere they are from,\nWhat types of classes they like,\nWhat they enjoy doing on campus,\nWhat is their favorite music\nWhy they are in this course at Allegheny College. Take turns sharing.\n\nThen, each of you will present the other to the course today."
   },
   {
-    "objectID": "playground/00_fibonacci.html",
-    "href": "playground/00_fibonacci.html",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/03_gettingToKnowYou.html#survey",
+    "href": "playground/03_gettingToKnowYou.html#survey",
+    "title": "Just For Fun 03: Getting To Know You",
+    "section": "Survey",
+    "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
+  },
+  {
+    "objectID": "playground/00_playground.html",
+    "href": "playground/00_playground.html",
+    "title": "Playground",
+    "section": "",
+    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 01: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 02: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 03: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 04: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 05: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\nJust For Fun 06: Lists and Dictionaries\n\n\nOrganizing and Managing Data with Python Collections\n\n\n\n\n\n\n\n\nSep 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "playground/01_fibonacci.html",
+    "href": "playground/01_fibonacci.html",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "",
     "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nUnderstand the mathematical definition of the Fibonacci sequence\nImplement recursive Fibonacci calculation\nCreate an iterative Fibonacci algorithm\nApply Binet’s formula for direct Fibonacci computation"
   },
   {
-    "objectID": "playground/00_fibonacci.html#introduction",
-    "href": "playground/00_fibonacci.html#introduction",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#introduction",
+    "href": "playground/01_fibonacci.html#introduction",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Introduction",
     "text": "Introduction\nThe Fibonacci sequence is one of the most famous sequences in mathematics, appearing in nature, art, and computer science. Each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144…\nIn this lesson, we’ll explore three different computational approaches to generate Fibonacci numbers, each with unique advantages and trade-offs."
   },
   {
-    "objectID": "playground/00_fibonacci.html#key-concepts",
-    "href": "playground/00_fibonacci.html#key-concepts",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#key-concepts",
+    "href": "playground/01_fibonacci.html#key-concepts",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Key Concepts",
     "text": "Key Concepts\n\n\n💡 Concept 1: Mathematical Definition\n\nThe Fibonacci sequence is defined as: - F(0) = 0 - F(1) = 1\n- F(n) = F(n-1) + F(n-2) for n &gt; 1\nThis recursive definition leads naturally to our first implementation approach.\nExample:\n# Mathematical definition\n# F(5) = F(4) + F(3) = 5\n# F(4) = F(3) + F(2) = 3 \n# F(3) = F(2) + F(1) = 2\n\n\n\n💡 Concept 2: Computational Complexity\n\nDifferent algorithms have different time complexities: - Recursive: O(2^n) - exponential, very slow for large n - Iterative: O(n) - linear, efficient for reasonable n - Binet’s Formula: O(1) - constant time, but limited by floating-point precision\nExample:\n# Time comparison for F(40):\n# Recursive: ~1.6 billion operations\n# Iterative: ~40 operations  \n# Binet's: ~5 operations"
   },
   {
-    "objectID": "playground/00_fibonacci.html#interactive-examples",
-    "href": "playground/00_fibonacci.html#interactive-examples",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#interactive-examples",
+    "href": "playground/01_fibonacci.html#interactive-examples",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Interactive Examples",
     "text": "Interactive Examples\n\nExample 1: Recursive Fibonacci\n\nWhat this code does: This implements the mathematical definition directly using recursion. Each function call splits into two more calls, creating a tree-like computation structure. While elegant, it’s very inefficient for large numbers.\n\nExample Code:\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_recursive(n):\n    \"\"\"Calculate Fibonacci number using recursion\"\"\"\n    if n &lt;= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Test with small numbers (try 10, 15, 20)\nfor i in range(11):\n    print(f'F({i}) = {fibonacci_recursive(i)}')\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: Iterative Fibonacci\n\nWhat this code does: This approach builds up the sequence from the bottom, keeping track of only the last two numbers. It’s much more efficient than recursion, using O(n) time and O(1) space.\n\nExample Code:\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef fibonacci_iterative(n):\n    \"\"\"Calculate Fibonacci number using iteration\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n# Test with larger numbers (try 50, 100)\nfor i in [10, 20, 30, 40, 50]:\n    print(f'F({i}) = {fibonacci_iterative(i)}')\n\n# Show the sequence\nprint(\"\\nFirst 20 Fibonacci numbers:\")\nfib_sequence = [fibonacci_iterative(i) for i in range(20)]\nprint(fib_sequence)\n\n▶ Run Code 🗑 Clear\n\n\nExample 3: Binet’s Formula\n\nWhat this code does: This uses Binet’s closed-form formula to calculate Fibonacci numbers directly using the golden ratio. It’s mathematically elegant and theoretically O(1), but limited by floating-point precision for very large numbers.\n\nExample Code:\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\n\ndef fibonacci_binet(n):\n    \"\"\"Calculate Fibonacci number using Binet's formula\"\"\"\n    if n &lt;= 1:\n        return n\n    \n    # Golden ratio\n    phi = (1 + math.sqrt(5)) / 2\n    psi = (1 - math.sqrt(5)) / 2\n    \n    # Binet's formula\n    result = (phi**n - psi**n) / math.sqrt(5)\n    return round(result)\n\n# Test Binet's formula\nprint(\"Binet's Formula Results:\")\nfor i in range(15):\n    print(f'F({i}) = {fibonacci_binet(i)}')\n\n# Compare accuracy with iterative method\nprint(\"\\nAccuracy comparison (Binet vs Iterative):\")\nfor i in [20, 30, 40, 50]:\n    binet_result = fibonacci_binet(i)\n    iterative_result = fibonacci_iterative(i)\n    match = \"✓\" if binet_result == iterative_result else \"✗\"\n    print(f'F({i}): Binet={binet_result}, Iterative={iterative_result} {match}')\n\n▶ Run Code 🗑 Clear\n\n\nChallenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
   },
   {
-    "objectID": "playground/00_fibonacci.html#challenge-yourself",
-    "href": "playground/00_fibonacci.html#challenge-yourself",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#challenge-yourself",
+    "href": "playground/01_fibonacci.html#challenge-yourself",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Challenge Yourself",
     "text": "Challenge Yourself\n\nPerformance Comparison Challenge\nNow that you’ve seen all three methods, let’s compare their performance! Try running this timing comparison to see the dramatic differences between approaches:\nChallenge Code:\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport time\n\n# Time comparison for different methods\ndef time_function(func, n):\n    start = time.time()\n    result = func(n)\n    end = time.time()\n    return result, end - start\n\n# Test with a moderate number (careful with recursive!)\ntest_n = 30\n\nprint(f\"Computing F({test_n}) with different methods:\\n\")\n\n# Iterative (fast)\nresult, duration = time_function(fibonacci_iterative, test_n)\nprint(f\"Iterative: {result} (took {duration:.6f} seconds)\")\n\n# Binet's formula (very fast)\nresult, duration = time_function(fibonacci_binet, test_n)\nprint(f\"Binet's:   {result} (took {duration:.6f} seconds)\")\n\n# Recursive (slow - be patient!)\nprint(\"\\nRecursive method running... (this will take a while)\")\nresult, duration = time_function(fibonacci_recursive, test_n)\nprint(f\"Recursive: {result} (took {duration:.6f} seconds)\")\n\nprint(\"\\n🎯 Challenge: Try changing test_n to see how each method scales!\")\nprint(\"   - Iterative & Binet's can handle n=50+ easily\")\nprint(\"   - Recursive becomes very slow after n=35\")\n\n▶ Run Code 🗑 Clear\n\n\nYour Turn!\n\nChallenge Tasks:\n\nModify the recursive function to use memoization (caching previous results) to make it faster\nCreate a function that generates the first n Fibonacci numbers using your preferred method\nInvestigate the golden ratio - calculate φ (phi) from consecutive Fibonacci numbers: F(n+1)/F(n)\nResearch question: Why does Binet’s formula eventually become inaccurate for very large numbers?\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time\n\n\n\n\n\nKey Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
   },
   {
-    "objectID": "playground/00_fibonacci.html#summary",
-    "href": "playground/00_fibonacci.html#summary",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#summary",
+    "href": "playground/01_fibonacci.html#summary",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Summary",
     "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored three different approaches to computing Fibonacci numbers:\n\nRecursive Implementation: Elegant but exponentially slow (O(2^n)) - demonstrates the mathematical definition directly\nIterative Implementation: Efficient and practical (O(n) time, O(1) space) - builds solutions step-by-step\n\nBinet’s Formula: Mathematically beautiful (O(1) but limited by precision) - uses the golden ratio for direct calculation\nPerformance Analysis: Understanding how algorithm choice dramatically affects execution time"
   },
   {
-    "objectID": "playground/00_fibonacci.html#key-takeaways",
-    "href": "playground/00_fibonacci.html#key-takeaways",
-    "title": "0_Just For Fun: Fibonacci Sequence",
+    "objectID": "playground/01_fibonacci.html#key-takeaways",
+    "href": "playground/01_fibonacci.html#key-takeaways",
+    "title": "Just For Fun 01: Fibonacci Sequence",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nEach approach teaches us different programming and mathematical concepts: - Recursion and why it can be inefficient without optimization (memoization) - Iteration and the power of building solutions incrementally - Mathematical formulas and their computational trade-offs between elegance and precision - Algorithm complexity and how it affects real-world performance\nThe Fibonacci sequence appears everywhere in nature and mathematics, making it a perfect example for understanding both algorithmic thinking and mathematical beauty in programming!\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nFibonacci Numbers in Nature\nGolden Ratio and Mathematics\nAlgorithm Complexity Guide"
   },
   {
-    "objectID": "playground/00_stringCheese.html",
-    "href": "playground/00_stringCheese.html",
-    "title": "0_Just For Fun: String Cheese Demo",
+    "objectID": "materials/0_materials.html",
+    "href": "materials/0_materials.html",
+    "title": "Materials",
     "section": "",
-    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nPrint strings in Python\nUse for loops with range()\nFormat strings with f-strings\nUnderstand string repetition"
+    "text": "Here you will find a listing of lesson materials for the course such as slides, assignments, and similar."
   },
   {
-    "objectID": "playground/00_stringCheese.html#introduction",
-    "href": "playground/00_stringCheese.html#introduction",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Introduction",
-    "text": "Introduction\nIn this lesson, we’ll learn how to print “String Cheese” using Python! This fun example will teach you about loops, strings, and formatting."
+    "objectID": "materials/0_materials.html#welcome-weeks",
+    "href": "materials/0_materials.html#welcome-weeks",
+    "title": "Materials",
+    "section": "1. Welcome Weeks",
+    "text": "1. Welcome Weeks\n\n\nREADME: 01_activity Due Date: Wednesday 3 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
   },
   {
-    "objectID": "playground/00_stringCheese.html#key-concepts",
-    "href": "playground/00_stringCheese.html#key-concepts",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n💡 Concept 1: String Printing and Loops\n\nWe can use Python’s print() function combined with for loops to create repeated output. The range() function helps us control how many times something repeats.\nExample:\n# Print String Cheese multiple times\nfor i in range(5):\n    print(f\"String Cheese : {i}\")"
+    "objectID": "materials/0_materials.html#getting-started",
+    "href": "materials/0_materials.html#getting-started",
+    "title": "Materials",
+    "section": "2. Getting Started",
+    "text": "2. Getting Started\n\nInstalling necessary software for the course. Python, Visual Studio Code and GitHub.\nRequired Reading: Guttag Chapter 1\nLab 01: Working with the UV package manager to run Python code.\n\nGitHub Classroom Link\nREADME Lab 01 documentation"
   },
   {
-    "objectID": "playground/00_stringCheese.html#interactive-examples",
-    "href": "playground/00_stringCheese.html#interactive-examples",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Interactive Examples",
-    "text": "Interactive Examples\n\nExample 1: Basic String Cheese Loop\n\nWhat this code does: This creates a simple loop that prints “String Cheese” 10 times, each with a number.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: String Cheese with Custom Messages\n\nWhat this code does: This example shows how to create more creative String Cheese messages with different formatting.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example\n\n\nTry It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+    "objectID": "materials/0_materials.html#crash-course-i-python",
+    "href": "materials/0_materials.html#crash-course-i-python",
+    "title": "Materials",
+    "section": "3. Crash Course I: Python",
+    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation\n\nActivity: Building a morse code translator in Python and UV\n\nGitHub Classroom Link"
   },
   {
-    "objectID": "playground/00_stringCheese.html#try-it-yourself",
-    "href": "playground/00_stringCheese.html#try-it-yourself",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Try It Yourself",
-    "text": "Try It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+    "objectID": "materials/0_materials.html#crash-course-ii-python",
+    "href": "materials/0_materials.html#crash-course-ii-python",
+    "title": "Materials",
+    "section": "4. Crash Course II: Python",
+    "text": "4. Crash Course II: Python\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity: Coding using literals, lists and conditionals\n\nGitHub Classroom Link\n\nLab 03: Completing smaller Python programs.\n\nGitHub Classroom Link\n\nGuest Speaker: Form"
   },
   {
-    "objectID": "playground/00_stringCheese.html#summary",
-    "href": "playground/00_stringCheese.html#summary",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting"
+    "objectID": "materials/0_materials.html#lists-and-dictionaries",
+    "href": "materials/0_materials.html#lists-and-dictionaries",
+    "title": "Materials",
+    "section": "5. Lists and Dictionaries",
+    "text": "5. Lists and Dictionaries\n\nReturn to Programming challenges of Activity 03\n\nREADME\n\nLists and Dictionaries at Work\n\nPlayGround demonstrations: Demonstration\n\nNote: This time only: Changed Due Date. Now set to 22nd Sept 2025, 11:30pm\n\nFinish slides from last week (Check the challenges)\n\nHTML Slides"
   },
   {
-    "objectID": "playground/00_stringCheese.html#next-steps",
-    "href": "playground/00_stringCheese.html#next-steps",
-    "title": "0_Just For Fun: String Cheese Demo",
-    "section": "Next Steps",
-    "text": "Next Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
-  },
-  {
-    "objectID": "materials/3_i_introToPython_solutions.html#what-are-literals",
-    "href": "materials/3_i_introToPython_solutions.html#what-are-literals",
+    "objectID": "materials/3_i_introToPython.html#what-are-literals",
+    "href": "materials/3_i_introToPython.html#what-are-literals",
     "title": "Python Programming: Concepts I",
     "section": "What are literals?",
     "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#python-code-sample",
-    "href": "materials/3_i_introToPython_solutions.html#python-code-sample",
+    "objectID": "materials/3_i_introToPython.html#python-code-sample",
+    "href": "materials/3_i_introToPython.html#python-code-sample",
     "title": "Python Programming: Concepts I",
     "section": "Python Code Sample",
     "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#interesting-application",
-    "href": "materials/3_i_introToPython_solutions.html#interesting-application",
+    "objectID": "materials/3_i_introToPython.html#interesting-application",
+    "href": "materials/3_i_introToPython.html#interesting-application",
     "title": "Python Programming: Concepts I",
     "section": "Interesting Application",
     "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#challenge-1-literal-mix-up",
-    "href": "materials/3_i_introToPython_solutions.html#challenge-1-literal-mix-up",
+    "objectID": "materials/3_i_introToPython.html#challenge-1-literal-mix-up",
+    "href": "materials/3_i_introToPython.html#challenge-1-literal-mix-up",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 1: Literal Mix-Up",
     "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#challenge-2-variable-math",
-    "href": "materials/3_i_introToPython_solutions.html#challenge-2-variable-math",
+    "objectID": "materials/3_i_introToPython.html#challenge-2-variable-math",
+    "href": "materials/3_i_introToPython.html#challenge-2-variable-math",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 2: Variable Math",
     "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#challenge-3-loop-conditional-fun",
-    "href": "materials/3_i_introToPython_solutions.html#challenge-3-loop-conditional-fun",
+    "objectID": "materials/3_i_introToPython.html#challenge-3-loop-conditional-fun",
+    "href": "materials/3_i_introToPython.html#challenge-3-loop-conditional-fun",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 3: Loop & Conditional Fun",
     "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#challenge-4-squaring-game",
-    "href": "materials/3_i_introToPython_solutions.html#challenge-4-squaring-game",
+    "objectID": "materials/3_i_introToPython.html#challenge-4-squaring-game",
+    "href": "materials/3_i_introToPython.html#challenge-4-squaring-game",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 4: Squaring Game",
     "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#challenge-5-string-slicing-mystery",
-    "href": "materials/3_i_introToPython_solutions.html#challenge-5-string-slicing-mystery",
+    "objectID": "materials/3_i_introToPython.html#challenge-5-string-slicing-mystery",
+    "href": "materials/3_i_introToPython.html#challenge-5-string-slicing-mystery",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 5: String Slicing Mystery",
     "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython_solutions.html#solution-1-literal-mix-up",
-    "href": "materials/3_i_introToPython_solutions.html#solution-1-literal-mix-up",
+    "objectID": "materials/3_i_introToPython.html#consider-this",
+    "href": "materials/3_i_introToPython.html#consider-this",
     "title": "Python Programming: Concepts I",
-    "section": "Solution 1: Literal Mix-Up",
-    "text": "Solution 1: Literal Mix-Up\n\ninteger = 7\nfloat_num = 2.5\ntext = \"apples\"\nis_fresh = True\nprint(f\"I bought {integer} {text}, each cost {float_num} dollars. Fresh? {is_fresh}\")\n\nThis code uses integer, float, string, and boolean literals in a sentence."
-  },
-  {
-    "objectID": "materials/3_i_introToPython_solutions.html#solution-2-variable-math",
-    "href": "materials/3_i_introToPython_solutions.html#solution-2-variable-math",
-    "title": "Python Programming: Concepts I",
-    "section": "Solution 2: Variable Math",
-    "text": "Solution 2: Variable Math\n\nx = 12\ny = 4\nprint(f\"Addition: {x + y}\")\nprint(f\"Subtraction: {x - y}\")\nprint(f\"Multiplication: {x * y}\")\nprint(f\"Division: {x / y}\")\n\nThis code performs math operations and prints results with labels."
-  },
-  {
-    "objectID": "materials/3_i_introToPython_solutions.html#solution-3-loop-conditional-fun",
-    "href": "materials/3_i_introToPython_solutions.html#solution-3-loop-conditional-fun",
-    "title": "Python Programming: Concepts I",
-    "section": "Solution 3: Loop & Conditional Fun",
-    "text": "Solution 3: Loop & Conditional Fun\n\nfor n in range(1, 11):\n    if n % 3 == 0:\n        print(f\"{n} is a multiple of 3\")\n    else:\n        print(f\"{n} is not a multiple of 3\")\n\nThis code loops through numbers and checks for multiples of 3."
-  },
-  {
-    "objectID": "materials/3_i_introToPython_solutions.html#solution-4-squaring-game",
-    "href": "materials/3_i_introToPython_solutions.html#solution-4-squaring-game",
-    "title": "Python Programming: Concepts I",
-    "section": "Solution 4: Squaring Game",
-    "text": "Solution 4: Squaring Game\n\ndef square_and_cube(num):\n    \"\"\"Returns the square and cube of num.\"\"\"\n    return num ** 2, num ** 3\n\nsq, cu = square_and_cube(5)\nprint(f\"Square: {sq}, Cube: {cu}\")\n\nThis function returns both the square and cube of a number."
-  },
-  {
-    "objectID": "materials/3_i_introToPython_solutions.html#solution-5-string-slicing-mystery",
-    "href": "materials/3_i_introToPython_solutions.html#solution-5-string-slicing-mystery",
-    "title": "Python Programming: Concepts I",
-    "section": "Solution 5: String Slicing Mystery",
-    "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#what-are-literals-again",
-    "href": "materials/3_ii_introToPython.html#what-are-literals-again",
-    "title": "Python Programming: Concepts II",
-    "section": "What are literals, Again??",
-    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#python-code-sample-with-f-strings",
-    "href": "materials/3_ii_introToPython.html#python-code-sample-with-f-strings",
-    "title": "Python Programming: Concepts II",
-    "section": "Python Code Sample with F-strings",
-    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#operators",
-    "href": "materials/3_ii_introToPython.html#operators",
-    "title": "Python Programming: Concepts II",
-    "section": "Operators",
-    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#python-code-sample",
-    "href": "materials/3_ii_introToPython.html#python-code-sample",
-    "title": "Python Programming: Concepts II",
-    "section": "Python Code Sample",
-    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#interesting-application",
-    "href": "materials/3_ii_introToPython.html#interesting-application",
-    "title": "Python Programming: Concepts II",
-    "section": "Interesting Application",
-    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#loops",
-    "href": "materials/3_ii_introToPython.html#loops",
-    "title": "Python Programming: Concepts II",
-    "section": "Loops",
-    "text": "Loops\nLoops repeat actions. Use for and while loops."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#conditionals",
-    "href": "materials/3_ii_introToPython.html#conditionals",
-    "title": "Python Programming: Concepts II",
-    "section": "Conditionals",
-    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#sort-of-interesting-application",
-    "href": "materials/3_ii_introToPython.html#sort-of-interesting-application",
-    "title": "Python Programming: Concepts II",
-    "section": "Sort of Interesting Application",
-    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#nested-conditionals",
-    "href": "materials/3_ii_introToPython.html#nested-conditionals",
-    "title": "Python Programming: Concepts II",
-    "section": "Nested Conditionals",
-    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#logical-operator",
-    "href": "materials/3_ii_introToPython.html#logical-operator",
-    "title": "Python Programming: Concepts II",
-    "section": "Logical Operator",
-    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#string-manipulation",
-    "href": "materials/3_ii_introToPython.html#string-manipulation",
-    "title": "Python Programming: Concepts II",
-    "section": "String Manipulation",
-    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#lists",
-    "href": "materials/3_ii_introToPython.html#lists",
-    "title": "Python Programming: Concepts II",
-    "section": "Lists",
-    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#demo-of-lists",
-    "href": "materials/3_ii_introToPython.html#demo-of-lists",
-    "title": "Python Programming: Concepts II",
-    "section": "Demo of Lists",
-    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#dictionaries",
-    "href": "materials/3_ii_introToPython.html#dictionaries",
-    "title": "Python Programming: Concepts II",
-    "section": "Dictionaries",
-    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#demo-of-dictionaries",
-    "href": "materials/3_ii_introToPython.html#demo-of-dictionaries",
-    "title": "Python Programming: Concepts II",
-    "section": "Demo of Dictionaries",
-    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython.html#coding-challenges",
-    "href": "materials/3_ii_introToPython.html#coding-challenges",
-    "title": "Python Programming: Concepts II",
-    "section": "Coding Challenges",
-    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\n# TODO"
+    "section": "Consider This!",
+    "text": "Consider This!\nLet’s do these in class!"
   },
   {
     "objectID": "materials/3_ii_introToPython_solutions.html#what-are-literals-again",
@@ -518,158 +385,347 @@
     "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\na = 10\nb = 5\nprint(\"Sum:\", a + b)\nprint(\"Difference:\", a - b)\nprint(\"Product:\", a * b)\nprint(\"Quotient:\", a / b)"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#what-are-literals",
-    "href": "materials/3_i_introToPython.html#what-are-literals",
+    "objectID": "materials/3_ii_introToPython.html#what-are-literals-again",
+    "href": "materials/3_ii_introToPython.html#what-are-literals-again",
+    "title": "Python Programming: Concepts II",
+    "section": "What are literals, Again??",
+    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#python-code-sample-with-f-strings",
+    "href": "materials/3_ii_introToPython.html#python-code-sample-with-f-strings",
+    "title": "Python Programming: Concepts II",
+    "section": "Python Code Sample with F-strings",
+    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#operators",
+    "href": "materials/3_ii_introToPython.html#operators",
+    "title": "Python Programming: Concepts II",
+    "section": "Operators",
+    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#python-code-sample",
+    "href": "materials/3_ii_introToPython.html#python-code-sample",
+    "title": "Python Programming: Concepts II",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#interesting-application",
+    "href": "materials/3_ii_introToPython.html#interesting-application",
+    "title": "Python Programming: Concepts II",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#loops",
+    "href": "materials/3_ii_introToPython.html#loops",
+    "title": "Python Programming: Concepts II",
+    "section": "Loops",
+    "text": "Loops\nLoops repeat actions. Use for and while loops."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#conditionals",
+    "href": "materials/3_ii_introToPython.html#conditionals",
+    "title": "Python Programming: Concepts II",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#sort-of-interesting-application",
+    "href": "materials/3_ii_introToPython.html#sort-of-interesting-application",
+    "title": "Python Programming: Concepts II",
+    "section": "Sort of Interesting Application",
+    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#nested-conditionals",
+    "href": "materials/3_ii_introToPython.html#nested-conditionals",
+    "title": "Python Programming: Concepts II",
+    "section": "Nested Conditionals",
+    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#logical-operator",
+    "href": "materials/3_ii_introToPython.html#logical-operator",
+    "title": "Python Programming: Concepts II",
+    "section": "Logical Operator",
+    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#string-manipulation",
+    "href": "materials/3_ii_introToPython.html#string-manipulation",
+    "title": "Python Programming: Concepts II",
+    "section": "String Manipulation",
+    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#lists",
+    "href": "materials/3_ii_introToPython.html#lists",
+    "title": "Python Programming: Concepts II",
+    "section": "Lists",
+    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#demo-of-lists",
+    "href": "materials/3_ii_introToPython.html#demo-of-lists",
+    "title": "Python Programming: Concepts II",
+    "section": "Demo of Lists",
+    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#dictionaries",
+    "href": "materials/3_ii_introToPython.html#dictionaries",
+    "title": "Python Programming: Concepts II",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#demo-of-dictionaries",
+    "href": "materials/3_ii_introToPython.html#demo-of-dictionaries",
+    "title": "Python Programming: Concepts II",
+    "section": "Demo of Dictionaries",
+    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython.html#coding-challenges",
+    "href": "materials/3_ii_introToPython.html#coding-challenges",
+    "title": "Python Programming: Concepts II",
+    "section": "Coding Challenges",
+    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\n# TODO"
+  },
+  {
+    "objectID": "materials/3_i_introToPython_solutions.html#what-are-literals",
+    "href": "materials/3_i_introToPython_solutions.html#what-are-literals",
     "title": "Python Programming: Concepts I",
     "section": "What are literals?",
     "text": "What are literals?\nLiterals are fixed values in your code. They can be numbers, strings, booleans, etc.\n\n\n\n\n\n\nNote\n\n\nExamples: - 42 (integer) - 3.14 (float) - 'hello' (string) - True, False (boolean)"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#python-code-sample",
-    "href": "materials/3_i_introToPython.html#python-code-sample",
+    "objectID": "materials/3_i_introToPython_solutions.html#python-code-sample",
+    "href": "materials/3_i_introToPython_solutions.html#python-code-sample",
     "title": "Python Programming: Concepts I",
     "section": "Python Code Sample",
     "text": "Python Code Sample\nage = 18\npi = 3.14159\ngreeting = \"Hello, world!\"\nis_active = True"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#interesting-application",
-    "href": "materials/3_i_introToPython.html#interesting-application",
+    "objectID": "materials/3_i_introToPython_solutions.html#interesting-application",
+    "href": "materials/3_i_introToPython_solutions.html#interesting-application",
     "title": "Python Programming: Concepts I",
     "section": "Interesting Application",
     "text": "Interesting Application\nUse literals to set default values in games, apps, or data analysis scripts!"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#challenge-1-literal-mix-up",
-    "href": "materials/3_i_introToPython.html#challenge-1-literal-mix-up",
+    "objectID": "materials/3_i_introToPython_solutions.html#challenge-1-literal-mix-up",
+    "href": "materials/3_i_introToPython_solutions.html#challenge-1-literal-mix-up",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 1: Literal Mix-Up",
     "text": "Challenge 1: Literal Mix-Up\nWrite code that uses at least three different types of literals (integer, float, string, boolean) and prints them in a single sentence.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#challenge-2-variable-math",
-    "href": "materials/3_i_introToPython.html#challenge-2-variable-math",
+    "objectID": "materials/3_i_introToPython_solutions.html#challenge-2-variable-math",
+    "href": "materials/3_i_introToPython_solutions.html#challenge-2-variable-math",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 2: Variable Math",
     "text": "Challenge 2: Variable Math\nCreate two variables, perform addition, subtraction, multiplication, and division, and print the results with clear labels.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#challenge-3-loop-conditional-fun",
-    "href": "materials/3_i_introToPython.html#challenge-3-loop-conditional-fun",
+    "objectID": "materials/3_i_introToPython_solutions.html#challenge-3-loop-conditional-fun",
+    "href": "materials/3_i_introToPython_solutions.html#challenge-3-loop-conditional-fun",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 3: Loop & Conditional Fun",
     "text": "Challenge 3: Loop & Conditional Fun\nWrite a loop that prints numbers from 1 to 10. For each number, print whether it is a multiple of 3 or not.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#challenge-4-squaring-game",
-    "href": "materials/3_i_introToPython.html#challenge-4-squaring-game",
+    "objectID": "materials/3_i_introToPython_solutions.html#challenge-4-squaring-game",
+    "href": "materials/3_i_introToPython_solutions.html#challenge-4-squaring-game",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 4: Squaring Game",
     "text": "Challenge 4: Squaring Game\nWrite a function that takes a number and returns both its square and its cube. Print the results for the number 5.\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#challenge-5-string-slicing-mystery",
-    "href": "materials/3_i_introToPython.html#challenge-5-string-slicing-mystery",
+    "objectID": "materials/3_i_introToPython_solutions.html#challenge-5-string-slicing-mystery",
+    "href": "materials/3_i_introToPython_solutions.html#challenge-5-string-slicing-mystery",
     "title": "Python Programming: Concepts I",
     "section": "Challenge 5: String Slicing Mystery",
     "text": "Challenge 5: String Slicing Mystery\nGiven the string mystery = \"QuartoPythonRocks!\", print:\n\nThe first 6 characters\nThe last 5 characters\nEvery third character\n\n\n# TODO"
   },
   {
-    "objectID": "materials/3_i_introToPython.html#consider-this",
-    "href": "materials/3_i_introToPython.html#consider-this",
+    "objectID": "materials/3_i_introToPython_solutions.html#solution-1-literal-mix-up",
+    "href": "materials/3_i_introToPython_solutions.html#solution-1-literal-mix-up",
     "title": "Python Programming: Concepts I",
-    "section": "Consider This!",
-    "text": "Consider This!\nLet’s do these in class!"
+    "section": "Solution 1: Literal Mix-Up",
+    "text": "Solution 1: Literal Mix-Up\n\ninteger = 7\nfloat_num = 2.5\ntext = \"apples\"\nis_fresh = True\nprint(f\"I bought {integer} {text}, each cost {float_num} dollars. Fresh? {is_fresh}\")\n\nThis code uses integer, float, string, and boolean literals in a sentence."
   },
   {
-    "objectID": "materials/0_materials.html",
-    "href": "materials/0_materials.html",
-    "title": "Materials",
+    "objectID": "materials/3_i_introToPython_solutions.html#solution-2-variable-math",
+    "href": "materials/3_i_introToPython_solutions.html#solution-2-variable-math",
+    "title": "Python Programming: Concepts I",
+    "section": "Solution 2: Variable Math",
+    "text": "Solution 2: Variable Math\n\nx = 12\ny = 4\nprint(f\"Addition: {x + y}\")\nprint(f\"Subtraction: {x - y}\")\nprint(f\"Multiplication: {x * y}\")\nprint(f\"Division: {x / y}\")\n\nThis code performs math operations and prints results with labels."
+  },
+  {
+    "objectID": "materials/3_i_introToPython_solutions.html#solution-3-loop-conditional-fun",
+    "href": "materials/3_i_introToPython_solutions.html#solution-3-loop-conditional-fun",
+    "title": "Python Programming: Concepts I",
+    "section": "Solution 3: Loop & Conditional Fun",
+    "text": "Solution 3: Loop & Conditional Fun\n\nfor n in range(1, 11):\n    if n % 3 == 0:\n        print(f\"{n} is a multiple of 3\")\n    else:\n        print(f\"{n} is not a multiple of 3\")\n\nThis code loops through numbers and checks for multiples of 3."
+  },
+  {
+    "objectID": "materials/3_i_introToPython_solutions.html#solution-4-squaring-game",
+    "href": "materials/3_i_introToPython_solutions.html#solution-4-squaring-game",
+    "title": "Python Programming: Concepts I",
+    "section": "Solution 4: Squaring Game",
+    "text": "Solution 4: Squaring Game\n\ndef square_and_cube(num):\n    \"\"\"Returns the square and cube of num.\"\"\"\n    return num ** 2, num ** 3\n\nsq, cu = square_and_cube(5)\nprint(f\"Square: {sq}, Cube: {cu}\")\n\nThis function returns both the square and cube of a number."
+  },
+  {
+    "objectID": "materials/3_i_introToPython_solutions.html#solution-5-string-slicing-mystery",
+    "href": "materials/3_i_introToPython_solutions.html#solution-5-string-slicing-mystery",
+    "title": "Python Programming: Concepts I",
+    "section": "Solution 5: String Slicing Mystery",
+    "text": "Solution 5: String Slicing Mystery\n\nmystery = \"QuartoPythonRocks!\"\nprint(mystery[:6])      # First 6 characters\nprint(mystery[-5:])     # Last 5 characters\nprint(mystery[::3])     # Every third character\n\nThis code slices the string in three different ways."
+  },
+  {
+    "objectID": "playground/06_listAndDictionaries.html",
+    "href": "playground/06_listAndDictionaries.html",
+    "title": "Just For Fun 06: Lists and Dictionaries",
     "section": "",
-    "text": "Here you will find a listing of lesson materials for the course such as slides, assignments, and similar."
+    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nCreate and manipulate lists to store sequences of data\nCreate and work with dictionaries to store key-value pairs\nAccess, modify, and iterate through lists and dictionaries\nChoose the appropriate data structure (list vs dictionary) for different tasks"
   },
   {
-    "objectID": "materials/0_materials.html#welcome-weeks",
-    "href": "materials/0_materials.html#welcome-weeks",
-    "title": "Materials",
-    "section": "1. Welcome Weeks",
-    "text": "1. Welcome Weeks\n\n\nREADME: 01_activity Due Date: Wednesday 3 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
+    "objectID": "playground/06_listAndDictionaries.html#introduction",
+    "href": "playground/06_listAndDictionaries.html#introduction",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Introduction",
+    "text": "Introduction\nLists and dictionaries are two of the most important data structures in Python. They allow you to organize and manage collections of data efficiently:\n\nLists are ordered collections that can store multiple items in sequence\nDictionaries are collections of key-value pairs that allow you to quickly look up values using unique keys\n\nThink of a list like a shopping list where the order matters, and a dictionary like a phone book where you look up a person’s name (key) to find their phone number (value)."
   },
   {
-    "objectID": "materials/0_materials.html#getting-started",
-    "href": "materials/0_materials.html#getting-started",
-    "title": "Materials",
-    "section": "2. Getting Started",
-    "text": "2. Getting Started\n\nInstalling necessary software for the course. Python, Visual Studio Code and GitHub.\nRequired Reading: Guttag Chapter 1\nLab 01: Working with the UV package manager to run Python code.\n\nGitHub Classroom Link\nREADME Lab 01 documentation"
+    "objectID": "playground/06_listAndDictionaries.html#key-concepts",
+    "href": "playground/06_listAndDictionaries.html#key-concepts",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\n\n💡 Concept 1: Lists - Ordered Collections\n\nLists are ordered, mutable collections that can store multiple items. Items in a list are accessed by their position (index), starting from 0.\nExample:\n# Creating a list with three string elements\nfruits = [\"apple\", \"banana\", \"orange\"]\n# Access the first element (index 0) and print it\nprint(fruits[0])  # Outputs: apple\n\n\n\n💡 Concept 2: Dictionaries - Key-Value Pairs\n\nDictionaries store data as key-value pairs. Instead of using numeric indices, you use meaningful keys to access values quickly.\nExample:\n# Creating a dictionary with string keys and mixed value types\nstudent = {\"name\": \"Alice\", \"age\": 20, \"grade\": \"A\"}\n# Access the value associated with the \"name\" key\nprint(student[\"name\"])  # Outputs: Alice"
   },
   {
-    "objectID": "materials/0_materials.html#crash-course-i-python",
-    "href": "materials/0_materials.html#crash-course-i-python",
-    "title": "Materials",
-    "section": "3. Crash Course I: Python",
-    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation\n\nActivity: Building a morse code translator in Python and UV\n\nGitHub Classroom Link"
+    "objectID": "playground/06_listAndDictionaries.html#interactive-examples",
+    "href": "playground/06_listAndDictionaries.html#interactive-examples",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Interactive Examples",
+    "text": "Interactive Examples\n\nExample 1: Working with Lists\n\nWhat this code does: This example demonstrates how to create a list, add items to it, and access elements by their index position.\n\nExample Code:\n# Create an empty list to store color names\ncolors = []\n\n# Add individual items to the end of the list using append()\ncolors.append(\"red\")\ncolors.append(\"blue\")\ncolors.append(\"green\")\n\n# Display the entire list and access specific elements\nprint(\"List of colors:\", colors)\nprint(\"First color:\", colors[0])  # Index 0 is the first element\nprint(\"Number of colors:\", len(colors))  # len() returns list length\n\n# Add multiple items at once using extend()\ncolors.extend([\"yellow\", \"purple\"])\nprint(\"Updated list:\", colors)\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n# Create an empty list to store color names\ncolors = []\n\n# Add individual items to the end of the list using append()\ncolors.append(\"red\")\ncolors.append(\"blue\")\ncolors.append(\"green\")\n\n# Display the entire list and access specific elements\nprint(\"List of colors:\", colors)\nprint(\"First color:\", colors[0])  # Index 0 is the first element\nprint(\"Number of colors:\", len(colors))  # len() returns list length\n\n# Add multiple items at once using extend()\ncolors.extend([\"yellow\", \"purple\"])\nprint(\"Updated list:\", colors)\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: Dictionary Basics and Key-Value Storage\n\nWhat this code does: This example demonstrates creating a dictionary, populating it with key-value pairs using a loop, and then retrieving values using their keys.\n\nExample Code:\n# Declare an empty dictionary to store number mappings\nnum_dict = {} # define the dictionary here\n\n# Populating the dictionary with key-value pairs\nprint(\"\\t Populating the dictionary.\")\nfor i in range(10):  # Loop from 0 to 9\n     key = i           # The key will be the number itself\n     value = i**2      # The value will be the square of the number\n     print(f\"\\t {key} --&gt; {value}\")  # Show what we're storing\n     num_dict[key] = value # Store the key-value pair in the dictionary\n\n# Retrieve values from the dictionary using their keys\nprint(\"\\t Pulling values from the dictionary using their keys.\")\nfor i in range(10):  # Loop through the same range\n     # Access the stored value using the key (i)\n     print(f\"\\t num_dict: {i} --&gt; {num_dict[i]}\") # pull values by their keys\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n# Declare an empty dictionary to store number mappings\nnum_dict = {} # define the dictionary here\n\n# Populating the dictionary with key-value pairs\nprint(\"\\t Populating the dictionary.\")\nfor i in range(10):  # Loop from 0 to 9\n     key = i           # The key will be the number itself\n     value = i**2      # The value will be the square of the number\n     print(f\"\\t {key} --&gt; {value}\")  # Show what we're storing\n     num_dict[key] = value # Store the key-value pair in the dictionary\n\n# Retrieve values from the dictionary using their keys\nprint(\"\\t Pulling values from the dictionary using their keys.\")\nfor i in range(10):  # Loop through the same range\n     # Access the stored value using the key (i)\n     print(f\"\\t num_dict: {i} --&gt; {num_dict[i]}\") # pull values by their keys\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 3: Student Grade Management System\n\nWhat this code does: This example creates a practical grade management system using both lists and dictionaries to store student information and calculate statistics.\n\nExample Code:\n# Create a dictionary where keys are student names and values are lists of grades\nstudents = {\n    \"Alice\": [85, 92, 78, 95],    # Alice's test scores\n    \"Bob\": [79, 85, 91, 88],      # Bob's test scores\n    \"Charlie\": [92, 89, 94, 97]   # Charlie's test scores\n}\n\n# Display all students and their grades with calculated averages\nprint(\"Student Grade Report:\")\nprint(\"-\" * 30)  # Print a line separator\n\n# Loop through each student and their grades\nfor student_name, grades in students.items():\n    # Calculate the average by summing all grades and dividing by count\n    average = sum(grades) / len(grades)\n    print(f\"{student_name}: {grades}\")\n    print(f\"  Average: {average:.1f}\")  # .1f rounds to 1 decimal place\n    print()  # Empty line for better formatting\n\n# Find the highest average across all students\nall_averages = []  # Create empty list to store all averages\nfor grades in students.values():  # Loop through just the grade lists\n    average = sum(grades) / len(grades)  # Calculate average for each student\n    all_averages.append(average)  # Add to our list of averages\n\n# Find the maximum value in the list of averages\nhighest_avg = max(all_averages)\nprint(f\"Highest class average: {highest_avg:.1f}\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n# Create a dictionary where keys are student names and values are lists of grades\nstudents = {\n    \"Alice\": [85, 92, 78, 95],    # Alice's test scores\n    \"Bob\": [79, 85, 91, 88],      # Bob's test scores\n    \"Charlie\": [92, 89, 94, 97]   # Charlie's test scores\n}\n\n# Display all students and their grades with calculated averages\nprint(\"Student Grade Report:\")\nprint(\"-\" * 30)  # Print a line separator\n\n# Loop through each student and their grades\nfor student_name, grades in students.items():\n    # Calculate the average by summing all grades and dividing by count\n    average = sum(grades) / len(grades)\n    print(f\"{student_name}: {grades}\")\n    print(f\"  Average: {average:.1f}\")  # .1f rounds to 1 decimal place\n    print()  # Empty line for better formatting\n\n# Find the highest average across all students\nall_averages = []  # Create empty list to store all averages\nfor grades in students.values():  # Loop through just the grade lists\n    average = sum(grades) / len(grades)  # Calculate average for each student\n    all_averages.append(average)  # Add to our list of averages\n\n# Find the maximum value in the list of averages\nhighest_avg = max(all_averages)\nprint(f\"Highest class average: {highest_avg:.1f}\")\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nChallenge Yourself\n\nWord Frequency Counter\nCreate a program that counts how many times each word appears in a sentence using a dictionary.\nChallenge Code:\n# Start with this sentence to analyze\nsentence = \"the quick brown fox jumps over the lazy dog the fox is quick\"\n\n# Split the sentence into individual words using spaces as separators\nwords = sentence.split()\nprint(\"Words in sentence:\", words)\n\n# Create an empty dictionary to store word counts\nword_count = {}\n\n# Your challenge: Complete this code to count word frequencies\n# Hint: Loop through the words and update the dictionary\nfor word in words:\n    # Add your code here to count each word\n    # If the word is already in the dictionary, increment its count\n    # If the word is new, add it with a count of 1\n    pass\n\n# Display the results - show each word and how many times it appears\nprint(\"Word frequencies:\")\nfor word, count in word_count.items():\n    print(f\"'{word}': {count}\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n# Start with this sentence to analyze\nsentence = \"the quick brown fox jumps over the lazy dog the fox is quick\"\n\n# Split the sentence into individual words using spaces as separators\nwords = sentence.split()\nprint(\"Words in sentence:\", words)\n\n# Create an empty dictionary to store word counts\nword_count = {}\n\n# Your challenge: Complete this code to count word frequencies\n# Hint: Loop through the words and update the dictionary\nfor word in words:\n    # Add your code here to count each word\n    # If the word is already in the dictionary, increment its count\n    # If the word is new, add it with a count of 1\n    pass\n\n# Display the results - show each word and how many times it appears\nprint(\"Word frequencies:\")\nfor word, count in word_count.items():\n    print(f\"'{word}': {count}\")\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nYour Turn!\n\nChallenge Tasks:\n\nList Manipulation: Create a list of your favorite movies, add 2 more movies, remove one, and print the final list.\nDictionary Creation: Build a dictionary that maps country names to their capital cities (at least 5 countries).\nCombined Challenge: Create a shopping list (as a list) and a price dictionary. Calculate the total cost of your shopping list.\nAdvanced Challenge: Modify the word frequency counter to ignore case (treat “The” and “the” as the same word).\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nLists: Ordered collections perfect for storing sequences of related items\nDictionaries: Key-value pairs ideal for quick lookups and data organization\nPractical Applications: How to use these data structures to solve real-world problems\nWhen to Use Each: Lists for ordered data, dictionaries for labeled data and fast lookups\n\n\n\n\n\nKey Takeaways\nLists and dictionaries are fundamental building blocks in Python programming. Lists excel when you need to maintain order and access items by position, while dictionaries shine when you need to associate meaningful labels (keys) with values for quick retrieval. Both are mutable, meaning you can modify them after creation, making them powerful tools for dynamic data management. As you continue programming, you’ll find these data structures essential for organizing information efficiently.\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Lists Documentation\nPython Dictionaries Documentation\nReal Python: Python Lists and Tuples\nReal Python: Python Dictionaries"
   },
   {
-    "objectID": "materials/0_materials.html#crash-course-ii-python",
-    "href": "materials/0_materials.html#crash-course-ii-python",
-    "title": "Materials",
-    "section": "4. Crash Course II: Python",
-    "text": "4. Crash Course II: Python\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity: Coding using literals, lists and conditionals\n\nGitHub Classroom Link\n\nLab 03: Completing smaller Python programs.\n\nGitHub Classroom Link\n\nGuest Speaker: Form"
+    "objectID": "playground/06_listAndDictionaries.html#challenge-yourself",
+    "href": "playground/06_listAndDictionaries.html#challenge-yourself",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Challenge Yourself",
+    "text": "Challenge Yourself\n\nWord Frequency Counter\nCreate a program that counts how many times each word appears in a sentence using a dictionary.\nChallenge Code:\n# Start with this sentence to analyze\nsentence = \"the quick brown fox jumps over the lazy dog the fox is quick\"\n\n# Split the sentence into individual words using spaces as separators\nwords = sentence.split()\nprint(\"Words in sentence:\", words)\n\n# Create an empty dictionary to store word counts\nword_count = {}\n\n# Your challenge: Complete this code to count word frequencies\n# Hint: Loop through the words and update the dictionary\nfor word in words:\n    # Add your code here to count each word\n    # If the word is already in the dictionary, increment its count\n    # If the word is new, add it with a count of 1\n    pass\n\n# Display the results - show each word and how many times it appears\nprint(\"Word frequencies:\")\nfor word, count in word_count.items():\n    print(f\"'{word}': {count}\")\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n# Start with this sentence to analyze\nsentence = \"the quick brown fox jumps over the lazy dog the fox is quick\"\n\n# Split the sentence into individual words using spaces as separators\nwords = sentence.split()\nprint(\"Words in sentence:\", words)\n\n# Create an empty dictionary to store word counts\nword_count = {}\n\n# Your challenge: Complete this code to count word frequencies\n# Hint: Loop through the words and update the dictionary\nfor word in words:\n    # Add your code here to count each word\n    # If the word is already in the dictionary, increment its count\n    # If the word is new, add it with a count of 1\n    pass\n\n# Display the results - show each word and how many times it appears\nprint(\"Word frequencies:\")\nfor word, count in word_count.items():\n    print(f\"'{word}': {count}\")\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nYour Turn!\n\nChallenge Tasks:\n\nList Manipulation: Create a list of your favorite movies, add 2 more movies, remove one, and print the final list.\nDictionary Creation: Build a dictionary that maps country names to their capital cities (at least 5 countries).\nCombined Challenge: Create a shopping list (as a list) and a price dictionary. Calculate the total cost of your shopping list.\nAdvanced Challenge: Modify the word frequency counter to ignore case (treat “The” and “the” as the same word).\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nLists: Ordered collections perfect for storing sequences of related items\nDictionaries: Key-value pairs ideal for quick lookups and data organization\nPractical Applications: How to use these data structures to solve real-world problems\nWhen to Use Each: Lists for ordered data, dictionaries for labeled data and fast lookups\n\n\n\n\n\nKey Takeaways\nLists and dictionaries are fundamental building blocks in Python programming. Lists excel when you need to maintain order and access items by position, while dictionaries shine when you need to associate meaningful labels (keys) with values for quick retrieval. Both are mutable, meaning you can modify them after creation, making them powerful tools for dynamic data management. As you continue programming, you’ll find these data structures essential for organizing information efficiently.\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Lists Documentation\nPython Dictionaries Documentation\nReal Python: Python Lists and Tuples\nReal Python: Python Dictionaries"
   },
   {
-    "objectID": "playground/01_gettingToKnowYou.html#introduce-your-partner",
-    "href": "playground/01_gettingToKnowYou.html#introduce-your-partner",
-    "title": "01_Activity: Getting To Know You",
-    "section": "Introduce Your Partner!",
-    "text": "Introduce Your Partner!\nChoose the person sitting right next to you. Have a conversation with the person to find out who they are. Ask them about;\n\nHow they would like to be called in class,\nWhere they are from,\nWhat types of classes they like,\nWhat they enjoy doing on campus,\nWhat is their favorite music\nWhy they are in this course at Allegheny College. Take turns sharing.\n\nThen, each of you will present the other to the course today."
+    "objectID": "playground/06_listAndDictionaries.html#summary",
+    "href": "playground/06_listAndDictionaries.html#summary",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nLists: Ordered collections perfect for storing sequences of related items\nDictionaries: Key-value pairs ideal for quick lookups and data organization\nPractical Applications: How to use these data structures to solve real-world problems\nWhen to Use Each: Lists for ordered data, dictionaries for labeled data and fast lookups"
   },
   {
-    "objectID": "playground/01_gettingToKnowYou.html#survey",
-    "href": "playground/01_gettingToKnowYou.html#survey",
-    "title": "01_Activity: Getting To Know You",
-    "section": "Survey",
-    "text": "Survey\nI would like to get to know you a bit better! Please fill out this short survey so I can learn more about you and your interests. Note: one of the questions will ask you for your Dicord handle. If you have not yet got a Discord account, please go to https://discord.com/ to get started. For our course, please use your actual name in Discord.\nSurvey Link: https://forms.gle/oM5mxSCZ2Umfhrqp7"
+    "objectID": "playground/06_listAndDictionaries.html#key-takeaways",
+    "href": "playground/06_listAndDictionaries.html#key-takeaways",
+    "title": "Just For Fun 06: Lists and Dictionaries",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nLists and dictionaries are fundamental building blocks in Python programming. Lists excel when you need to maintain order and access items by position, while dictionaries shine when you need to associate meaningful labels (keys) with values for quick retrieval. Both are mutable, meaning you can modify them after creation, making them powerful tools for dynamic data management. As you continue programming, you’ll find these data structures essential for organizing information efficiently.\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Lists Documentation\nPython Dictionaries Documentation\nReal Python: Python Lists and Tuples\nReal Python: Python Dictionaries"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html",
-    "href": "playground/02_functionCalls_general.html",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/05_functionCalls_general.html",
+    "href": "playground/05_functionCalls_general.html",
+    "title": "Just For Fun 05: Function Calls in Code",
     "section": "",
     "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nIdentify and describe the anatomy of a Python function\nExplain the flow of execution in a Python script\nDiscuss the mathematical reasoning behind calculating the area of a square\nExperiment with function calls and inputs interactively"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#introduction",
-    "href": "playground/02_functionCalls_general.html#introduction",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/05_functionCalls_general.html#introduction",
+    "href": "playground/05_functionCalls_general.html#introduction",
+    "title": "Just For Fun 05: Function Calls in Code",
     "section": "Introduction",
     "text": "Introduction\nIn this lesson, you’ll explore the structure of Python code, focusing on how functions are defined and called. We’ll use a simple example that calculates the area of a square to illustrate key concepts."
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#key-concepts",
-    "href": "playground/02_functionCalls_general.html#key-concepts",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/05_functionCalls_general.html#key-concepts",
+    "href": "playground/05_functionCalls_general.html#key-concepts",
+    "title": "Just For Fun 05: Function Calls in Code",
     "section": "Key Concepts",
     "text": "Key Concepts\n\n\n💡 Concept 1: Function Definition & Calls\n\nA function in Python is a reusable block of code that performs a specific task. Functions are defined using the def keyword, followed by the function name and parameters. To use a function, you “call” it by its name and provide the required arguments.\nExample:\ndef squareArea(s: float) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s * s\n\n\n\n💡 Concept 2: Flow of Execution\n\nPython executes code from top to bottom. The main() function is often used as a “driver” to organize the flow. When main() is called, it runs the code inside it, including any function calls.\nExample:\ndef main() -&gt; None:\n    sideLength = 5\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n\n\nExample 1a: Calculating the Area of a Rectangle\n\nWhat this code does: Defines a function to calculate the area of a rectangle and calls it with sample values.\n\nExample Code:\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef rectangleArea(length: float, width: float) -&gt; float:\n    \"\"\" determine area of rectangle\"\"\"\n    return length * width\n\nprint(rectangleArea(6, 3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1b: Calculating the Area of a Circle\n\nWhat this code does: Defines a function to calculate the area of a circle and calls it with a sample value.\n\nExample Code:\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\nimport math\ndef circleArea(radius: float) -&gt; float:\n    \"\"\" determine area of circle\"\"\"\n    return math.pi * radius * radius\n\nprint(circleArea(2))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 1c: Calculating the Volume of a Cube\n\nWhat this code does: Defines a function to calculate the volume of a cube and calls it with a sample value.\n\nExample Code:\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\ndef cubeVolume(s: float) -&gt; float:\n    \"\"\" determine volume of cube\"\"\"\n    return s ** 3\n\nprint(cubeVolume(3))\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\nChallenge Questions\n\nChoose a function to check whether a side can have a negative distance value. What should the function do if it receives a negative value?\nChange the one of the circleArea or cubeVolume functions to handle a radius of zero or negative values. Should the area be zero or should it raise an error?\nChallenge: Write a function to calculate the volume of a cylinder (π * r^2 * h). Try different values for radius and height.\nChallenge: Write a function to calculate the area of a triangle given its base and height. Test your function with different values.\n\nUse the interactive code fields above to modify and run your solutions. Have fun experimenting and solving these challenges!\n\n\nYour Turn!\n\nChallenge Tasks:\n\nTry using different types of inputs (integers, floats, strings, booleans, complex numbers) and observe the results.\nModify the function to handle invalid inputs gracefully (e.g., using type checking or error handling).\nAdd comments to explain each part of the code.\nWrite your own function to calculate the area of a rectangle.\n\nUse any of the terminals above to experiment with these challenges!\n\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior\n\n\n\n\nKey Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#summary",
-    "href": "playground/02_functionCalls_general.html#summary",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/05_functionCalls_general.html#summary",
+    "href": "playground/05_functionCalls_general.html#summary",
+    "title": "Just For Fun 05: Function Calls in Code",
     "section": "Summary",
     "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored: - The structure and anatomy of Python functions - How function calls work and how data flows through a program - Mathematical reasoning for calculating area - How different input types affect function behavior"
   },
   {
-    "objectID": "playground/02_functionCalls_general.html#key-takeaways",
-    "href": "playground/02_functionCalls_general.html#key-takeaways",
-    "title": "02_Activity: Function Calls in Code",
+    "objectID": "playground/05_functionCalls_general.html#key-takeaways",
+    "href": "playground/05_functionCalls_general.html#key-takeaways",
+    "title": "Just For Fun 05: Function Calls in Code",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\nFunctions are reusable blocks of code\nFlow of execution is organized using functions like main()\nMathematical formulas can be implemented directly in code\nInput types matter for function behavior\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython Functions Documentation\nPython Data Types\nQuarto Interactive Python"
   },
   {
-    "objectID": "playground/00_playground.html",
-    "href": "playground/00_playground.html",
-    "title": "Playground",
+    "objectID": "playground/02_stringCheese.html",
+    "href": "playground/02_stringCheese.html",
+    "title": "Just For Fun 02: String Cheese Demo",
     "section": "",
-    "text": "Here you will find a listing of interactive curiosities from the course.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: Fibonacci Sequence\n\n\nThree Approaches to Computing the Famous Sequence\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n0_Just For Fun: String Cheese Demo\n\n\nTesting the simplified lesson template\n\n\n\n\n\n\n\n\nAug 22, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n01_Activity: Getting To Know You\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Function Calls in Code\n\n\nUnderstanding Functions, Flow, and Mathematical Reasoning\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n02_Activity: Area of a Square and Function Calls\n\n\nExploring Python Functions and Iteration\n\n\n\n\n\n\n\n\nAug 30, 2025\n\n\nOBC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lesson Objectives\n\n\n\nBy the end of this lesson, you will be able to:\n\nPrint strings in Python\nUse for loops with range()\nFormat strings with f-strings\nUnderstand string repetition"
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#introduction",
+    "href": "playground/02_stringCheese.html#introduction",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lesson, we’ll learn how to print “String Cheese” using Python! This fun example will teach you about loops, strings, and formatting."
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#key-concepts",
+    "href": "playground/02_stringCheese.html#key-concepts",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\n\n💡 Concept 1: String Printing and Loops\n\nWe can use Python’s print() function combined with for loops to create repeated output. The range() function helps us control how many times something repeats.\nExample:\n# Print String Cheese multiple times\nfor i in range(5):\n    print(f\"String Cheese : {i}\")"
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#interactive-examples",
+    "href": "playground/02_stringCheese.html#interactive-examples",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Interactive Examples",
+    "text": "Interactive Examples\n\nExample 1: Basic String Cheese Loop\n\nWhat this code does: This creates a simple loop that prints “String Cheese” 10 times, each with a number.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example 🔍+ Larger Font 🔍- Smaller Font\n\n\nExample 2: String Cheese with Custom Messages\n\nWhat this code does: This example shows how to create more creative String Cheese messages with different formatting.\n\n\n\n\n\n\n\n\nLoading Python interpreter…\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 📝 Load Example\n\n\nTry It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#try-it-yourself",
+    "href": "playground/02_stringCheese.html#try-it-yourself",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Try It Yourself",
+    "text": "Try It Yourself\n\n🚀 Challenge: Create your own String Cheese variations!\nYour task: Write a loop that prints “String Cheese” with different numbers and messages.\nHint: Try using different ranges and string formatting options.\n\n\n\n\n\n\n\n\nReady for your solution!\n\n\n\n\n\n\n\n▶ Run Code 🗑 Clear 💡 Show Solution\n\n\nSummary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting\n\n\n\n\n\nNext Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#summary",
+    "href": "playground/02_stringCheese.html#summary",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\nWhat You Learned\n\n\n\nIn this lesson, you explored:\n\nString printing with print() function\nFor loops with range() function\nF-string formatting for dynamic messages\nCreative text output and formatting"
+  },
+  {
+    "objectID": "playground/02_stringCheese.html#next-steps",
+    "href": "playground/02_stringCheese.html#next-steps",
+    "title": "Just For Fun 02: String Cheese Demo",
+    "section": "Next Steps",
+    "text": "Next Steps\n\n\n\n\n\n\nComing Up Next\n\n\n\nIn the next lesson, we’ll cover: - Variables and data types - More complex string operations\n\n\n\n\n\n\n\n\n\nAdditional Resources\n\n\n\n\nPython String Formatting\nPython For Loops\nPractice Problems"
+  },
+  {
+    "objectID": "playground/04_functionCalls_squareArea.html",
+    "href": "playground/04_functionCalls_squareArea.html",
+    "title": "Just For Fun 04: Area of a Square and Function Calls",
+    "section": "",
+    "text": "What this code does: This code defines a function squareArea(s) that calculates the area of a square given its side length s. The main() function acts as a driver: it prints the area for a single value, then iterates over a list of test values (including integers, zero, negative numbers, and a complex number) and prints the area for each. Function calls: - squareArea(s) is called inside main() for each value in testValues_list and for the initial sideLength. - main() is called at the end to start the program.\n\nExample Code:\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\ndef squareArea(s: float ) -&gt; float:\n    \"\"\" determine area of square\"\"\"\n    return s*s # area of square is s*s\n# end of squareArea()\n\ndef main() -&gt; None:\n    \"\"\" driver function \"\"\"\n    sideLength = 5\n    # Testing value\n    print(f\"Length {sideLength}\")\n    print(f\" Area: {squareArea(sideLength)}\")\n    # These inputs work\n    testValues_list =[2,0,-3,2 + 5j]\n    # why will these inputs not work?\n    # testValues_list =[True, \"radius\"]\n    print(\"\\n Iterating over the list.\")\n    for val in testValues_list: #iteration\n        print(f\" Length {val}, Area: {squareArea(val)}\")\n    # end main()\n\nmain() # call the driver function\n\n\n▶ Run Code 🗑 Clear 🔍+ Larger Font 🔍- Smaller Font\n\n\n\n\n\n\n\n\nLoading Python interpreter…"
   },
   {
     "objectID": "utils/interactivePython.html",
@@ -714,11 +770,11 @@
     "text": "Course Learning Objectives\n\nWhen solving a problem with a Python program, accurately describe data structures and algorithms and their inherent trade-offs.\nUse data structures and algorithms to correctly and efficiently solve a problem through the use of a Python program.\nUse empirical methods to characterize the performance of a Python program that uses data structures and algorithms.\nUse industry-standard practices, such as testing and debugging, and professional-grade integrated development environments (IDEs), command-line tools, and version control systems to implement Python programs.\nImplement Python programs and documentation that conforms to industry-standard formats and styles.\n\nLearning Outcome QR: Students who successfully complete this requirement will demonstrate an understanding of how to interpret numeric data and/or their graphical or symbolic representations.\nLearning Outcome SP: Students who successfully complete this requirement will demonstrate an understanding of the nature, approaches, and domain of scientific inquiry."
   },
   {
-    "objectID": "syllabus/syllabus.html#materials",
-    "href": "syllabus/syllabus.html#materials",
+    "objectID": "syllabus/syllabus.html#course-materials",
+    "href": "syllabus/syllabus.html#course-materials",
     "title": "CMPSC101 Fall 2025 :: DataStructures",
-    "section": "Materials",
-    "text": "Materials\n\nTextbook\nIntroduction to Computation and Programming Using Python by John V. Guttag\n\n\n\nOnline Resources and Course Materials\n\nW3schools  \nCourse GitHub Organization\nJupyter Notebooks Directory\nGuttag Textbook Publisher Preview\nGuttag Textbook Google Previews\nAdditional Guttag Textbook Availability\nGuttag Lectures\nPython Docs Proactive Programmers\n\n\n\nSelected Software and Technologies\nWe will be using the following technologies in class.\n\nVSCode\nPython 3.12 or later\npipx\nPoetry\nGatorgrade\nGit\nFree GitHub Account\nFree Discord Account\nAllegheny College Email\n\n\n\nGrading\n\n\nGradebook Repository\nGradeBook repository will be used to deliver your grades from your activities and labs to you. In this repository, you will find a file which contains the same information that the instructor has in the gradebook. While it is a repository that you will pull from, you will never need to push anything to this repository.\nPlease use the following URL to create your gradebook repository; https://classroom.github.com/a/34hXX52q.\n\nGrading Scale\n\n\n\n\n\n\n\n\n\n\n\n\nLetter\nRange\nLetter\nRange\nLetter\nRange\n\n\n\n\nA\n96 - 100\nA-\n90 - 95.9\n\n\n\n\nB+\n87 - 89.9\nB\n83 - 86.9\nB-\n80 - 82.9\n\n\nC+\n77 - 79.9\nC\n73 - 76.9\nC-\n70 - 72.9\n\n\nD+\n67 - 69.9\nD\n63 - 66.9\nF\n59.9 and below\n\n\n\n\n\nBenchmarks\nThe grade that a student receives in this class will be based on the following categories. All percentages are approximate and, if the need to do so presents itself, it is possible for the assigned percentages to change during the academic semester.\n\n\n\nCategory\nPercentage\nAssessment metric\n\n\n\n\nClass Participation and Activities\n20%\ncheck mark grade\n\n\nLabs\n40%\nletter grade\n\n\nMidterm Exam\n20%\nletter grade\n\n\nFinal Project\n20%\nletter grade\n\n\nTotal\n100%\n\n\n\n\n\n\nDefinitions of Grading Categories\n\nClass Participation: All students are required to actively participate during all of the class sessions. Your participation will take forms such as answering questions about the required reading assignments, completing in-class exercises, asking constructive questions of the other members of the class, giving presentations, leading a discussion session in class.% and in the course’s Slack channels.\nActivities: These assignments invite students to explore different techniques for rigorously designing, implementing, programming, evaluating, and documenting real-world Python programs. These assignments will invite students to use tools like a text editor, a terminal window, and a modern Python development environment to implement functions that strike the right balance between understandability, generalizability, and specialization. Students will also use the data collected from running experiments to evaluate the implementation of a Python function as they consider, for instance, its efficiency and correctness. Knowledge gained from the class and the textbook will be integral to the completion of these projects. Unless other information is given about a due date, activities are to be completed by the end of class.\nExams: The exams will cover all of the material in their associated module(s). The finalized date for each of the exams will be announced at least one week in advance of the scheduled date. Unless prior arrangements are made with the course instructor, all students will be expected to take these exams on the scheduled date and complete the exams in the stated period of time.\nFinal Project: This project will present you with an opportunity to design and implement a correct and carefully evaluated programming solution for a specific problem. Completion of the final project will require you to apply the knowledge, programming and technical skills that you have acquired during the course. The details for the final project will be given approximately a month before the project due date (during finals week)."
+    "section": "Course Materials",
+    "text": "Course Materials\n\nTextbook\nIntroduction to Computation and Programming Using Python by John V. Guttag\n\n\n\nOnline Resources and Course Materials\n\nW3schools  \nCourse GitHub Organization\nJupyter Notebooks Directory\nGuttag Textbook Publisher Preview\nGuttag Textbook Google Previews\nAdditional Guttag Textbook Availability\nGuttag Lectures\nPython Docs Proactive Programmers\n\n\n\nSelected Software and Technologies\nWe will be using the following technologies in class.\n\nVSCode\nPython 3.12 or later\npipx\nPoetry\nGatorgrade\nGit\nFree GitHub Account\nFree Discord Account\nAllegheny College Email\n\n\n\nGrading\n\n\nGradebook Repository\nGradeBook repository will be used to deliver your grades from your activities and labs to you. In this repository, you will find a file which contains the same information that the instructor has in the gradebook. While it is a repository that you will pull from, you will never need to push anything to this repository.\nPlease use the following URL to create your gradebook repository; https://classroom.github.com/a/34hXX52q.\n\nGrading Scale\n\n\n\n\n\n\n\n\n\n\n\n\nLetter\nRange\nLetter\nRange\nLetter\nRange\n\n\n\n\nA\n96 - 100\nA-\n90 - 95.9\n\n\n\n\nB+\n87 - 89.9\nB\n83 - 86.9\nB-\n80 - 82.9\n\n\nC+\n77 - 79.9\nC\n73 - 76.9\nC-\n70 - 72.9\n\n\nD+\n67 - 69.9\nD\n63 - 66.9\nF\n59.9 and below\n\n\n\n\n\nBenchmarks\nThe grade that a student receives in this class will be based on the following categories. All percentages are approximate and, if the need to do so presents itself, it is possible for the assigned percentages to change during the academic semester.\n\n\n\nCategory\nPercentage\nAssessment metric\n\n\n\n\nClass Participation and Activities\n20%\ncheck mark grade\n\n\nLabs\n40%\nletter grade\n\n\nMidterm Exam\n20%\nletter grade\n\n\nFinal Project\n20%\nletter grade\n\n\nTotal\n100%\n\n\n\n\n\n\nDefinitions of Grading Categories\n\nClass Participation: All students are required to actively participate during all of the class sessions. Your participation will take forms such as answering questions about the required reading assignments, completing in-class exercises, asking constructive questions of the other members of the class, giving presentations, leading a discussion session in class.% and in the course’s Slack channels.\nActivities: These assignments invite students to explore different techniques for rigorously designing, implementing, programming, evaluating, and documenting real-world Python programs. These assignments will invite students to use tools like a text editor, a terminal window, and a modern Python development environment to implement functions that strike the right balance between understandability, generalizability, and specialization. Students will also use the data collected from running experiments to evaluate the implementation of a Python function as they consider, for instance, its efficiency and correctness. Knowledge gained from the class and the textbook will be integral to the completion of these projects. Unless other information is given about a due date, activities are to be completed by the end of class.\nExams: The exams will cover all of the material in their associated module(s). The finalized date for each of the exams will be announced at least one week in advance of the scheduled date. Unless prior arrangements are made with the course instructor, all students will be expected to take these exams on the scheduled date and complete the exams in the stated period of time.\nFinal Project: This project will present you with an opportunity to design and implement a correct and carefully evaluated programming solution for a specific problem. Completion of the final project will require you to apply the knowledge, programming and technical skills that you have acquired during the course. The details for the final project will be given approximately a month before the project due date (during finals week)."
   },
   {
     "objectID": "syllabus/syllabus.html#schedule-at-a-glance",
