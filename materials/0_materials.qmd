@@ -49,9 +49,9 @@ Here you will find a listing of lesson materials for the course such as slides, 
 ## 5. Lists and Dictionaries
 - **Return to Programming challenges of Activity 03**
     -  [README](https://github.com/CMPSC101Fall2025DataStructures/03-activity/blob/main/README.md)
+    -  Note: *This time only: Changed Due Date.  Now set to 22nd Sept 2025, 11:30pm*
 - **Lists and Dictionaries at Work**  
   - **PlayGround demonstrations**: [Demonstration](../playground/06_listAndDictionaries.qmd)
-    -  Note: *This time only: Changed Due Date.  Now set to 22nd Sept 2025, 11:30pm*
   - **Finish slides from last week** (Check the challenges)
     - [HTML](3_ii_introToPython.html) Slides
 
