@@ -54,7 +54,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - **PlayGround demonstrations**: [Demonstration](../playground/06_listAndDictionaries.qmd)
   - **Finish slides from last week** (Check the challenges)
     - [HTML](3_ii_introToPython.html) Slides
-- **Lab04**: For loops and Hile Loops
+- **Lab04**: For loops and While Loops
   - [GitHub Classroom link](https://classroom.github.com/a/zRXBQrSJ)
 
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
