@@ -179,7 +179,7 @@
     "href": "materials/0_materials.html#welcome-weeks",
     "title": "Materials",
     "section": "1. Welcome Weeks",
-    "text": "1. Welcome Weeks\n\n\nREADME: 01_activity Due Date: Wednesday 3 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
+    "text": "1. Welcome Weeks\n\n\nActivity 01: README.md Due Date: Wednesday 3 Sept 2025 (by the end of class)\nGitHub Classroom Link (Used to setup your workspace and repository for your assignment submission.)"
   },
   {
     "objectID": "materials/0_materials.html#getting-started",
@@ -193,21 +193,21 @@
     "href": "materials/0_materials.html#crash-course-i-python",
     "title": "Materials",
     "section": "3. Crash Course I: Python",
-    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation\n\nActivity: Building a morse code translator in Python and UV\n\nGitHub Classroom Link"
+    "text": "3. Crash Course I: Python\n\nRequired Reading: Guttag Chapter 2\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab 02: Refactoring (Restructuring) a Rock, Paper, Scissors Python game.\n\nGitHub Classroom Link\nREADME Lab 02 documentation\n\nActivity 02: Building a morse code translator in Python and UV\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/0_materials.html#crash-course-ii-python",
     "href": "materials/0_materials.html#crash-course-ii-python",
     "title": "Materials",
     "section": "4. Crash Course II: Python",
-    "text": "4. Crash Course II: Python\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity: Coding using literals, lists and conditionals\n\nGitHub Classroom Link\n\nLab 03: Completing smaller Python programs.\n\nGitHub Classroom Link\n\nGuest Speaker: Form"
+    "text": "4. Crash Course II: Python\n\nLiterals, Variables, Conditionals, Strings, etc. \n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity 03: Coding using literals, lists and conditionals\n\nGitHub Classroom Link\n\nLab 03: Completing smaller Python programs.\n\nGitHub Classroom Link\n\nGuest Speaker: Form"
   },
   {
     "objectID": "materials/0_materials.html#lists-and-dictionaries",
     "href": "materials/0_materials.html#lists-and-dictionaries",
     "title": "Materials",
     "section": "5. Lists and Dictionaries",
-    "text": "5. Lists and Dictionaries\n\nReturn to Programming challenges of Activity 03\n\nREADME\nNote: This time only: Changed Due Date. Now set to 22nd Sept 2025, 11:30pm\n\nLists and Dictionaries at Work\n\nPlayGround demonstrations: Demonstration\nFinish slides from last week (Check the challenges)\n\nHTML Slides\n\n\nLab04: For loops and While Loops\n\nGitHub Classroom link"
+    "text": "5. Lists and Dictionaries\n\nReturn to Programming challenges of Activity 03\n\nREADME\nNote: This time only: Changed Due Date. Now set to 22nd Sept 2025, 11:30pm\n\nLists and Dictionaries at Work\n\nPlayGround demonstrations: Demonstration\nFinish slides from last week (Check the challenges)\n\nHTML Slides\n\n\nLab04: For loops and While Loops\n\nGitHub Classroom link\n\nActivity 04: Fixing code for finding approximations\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/3_i_introToPython.html#what-are-literals",

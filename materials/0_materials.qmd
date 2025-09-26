@@ -11,7 +11,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 ## 1. Welcome Weeks
 <!-- - _Specification Lab: CLI vs Script vs Notebook_ (20 Points)   -->
-- **README**: [01_activity](https://github.com/CMPSC101Fall2025DataStructures/01_activity_maze/blob/main/README.md)
+- **Activity 01**: [README.md](https://github.com/CMPSC101Fall2025DataStructures/01_activity_maze/blob/main/README.md)
   Due Date: Wednesday 3 Sept 2025 (by the end of class)
 - [GitHub Classroom Link](https://classroom.github.com/a/Xr8c08jx) (Used to setup your workspace and repository for your assignment submission.)
 
@@ -32,7 +32,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Lab 02**: Refactoring (Restructuring) a *Rock, Paper, Scissors* Python game.
   - [GitHub Classroom Link](https://classroom.github.com/a/whuXaH09) 
   - **README** [Lab 02 documentation](https://github.com/CMPSC101Fall2025DataStructures/lab02/blob/main/README.md)
-- **Activity**: Building a morse code translator in Python and UV
+- **Activity 02**: Building a morse code translator in Python and UV
   - [GitHub Classroom Link](https://classroom.github.com/a/J49gcN2d)
 
 ## 4. Crash Course II: Python
@@ -40,7 +40,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Literals, Variables, Conditionals, Strings, etc. ** 
   - [HTML](3_ii_introToPython.html) Slides
   -  [PDF](3_ii_introToPython_solutions.pdf) The slide's material as a pdf.
-- **Activity**: Coding using literals, lists and conditionals
+- **Activity 03**: Coding using literals, lists and conditionals
   - [GitHub Classroom Link](https://classroom.github.com/a/NVL_RB-3)
 - **Lab 03**: Completing smaller Python programs.
   - [GitHub Classroom Link](https://classroom.github.com/a/9c1qDmys)
@@ -56,6 +56,8 @@ Here you will find a listing of lesson materials for the course such as slides, 
     - [HTML](3_ii_introToPython.html) Slides
 - **Lab04**: For loops and While Loops
   - [GitHub Classroom link](https://classroom.github.com/a/zRXBQrSJ)
+- **Activity 04**: Fixing code for finding approximations
+  - [GitHub Classroom Link](https://classroom.github.com/a/MgMNCCpF)
 
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
   <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
