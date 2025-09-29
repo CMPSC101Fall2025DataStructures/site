@@ -59,6 +59,12 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Activity 04**: Fixing code for finding approximations
   - [GitHub Classroom Link](https://classroom.github.com/a/MgMNCCpF)
 
+
+## 6. Exhaustive enumeration and Approximation
+- **Some Approximation Techniques in Python**
+  - [HTML](6_exhaustive_approximation.html) Slides
+  -  [PDF](6_exhaustive_approximation.pdf) The slide's material as a pdf.
+
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
   <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
   <!-- - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md) -->
