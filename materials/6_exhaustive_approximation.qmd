@@ -519,13 +519,13 @@ def newtons_sqrt(n:float, guess:float = 1.0) -> float:
 
 ---
 
-With debug print statements ... 
+Test using debug print statements ... 
 
 ```{python}
-# Test the function
 my_num = 25
 result = newtons_sqrt(my_num)
-print(f"Verification:\n {result}^2 = {result**2} is {result**2 == result**2}")
+print(f"Verification:\n {result}^2 = ")
+print(f"{result**2} is {result**2 == result**2}")
 
 ```
 ---
@@ -541,40 +541,10 @@ So, how does this thing work?
 
 ---
 
-:::: {.columns}
-
-::: {.column width="50%"}
-**Algorithm Steps:**
-1. Start with `ans = 0.0`
-2. Increment by `epsilon` each iteration
-3. Check if `ans²` is close enough to `x`
-4. Stop when within tolerance or exceeded target
-
-**Key Variables:**
-- `step`: How much to increment each guess
-- `num_guesses`: Performance counter
-- `ans`: Current approximation
-:::
-
-::: {.column width="50%"}
-**Loop Condition Explained:**
-- `abs(ans**2 - x) >= epsilon`: Not accurate enough yet
-- `ans*ans <= x`: Haven't exceeded target (prevents infinite loop)
-
-**Why It Works:**
-- Systematically tests every possible value
-- Guaranteed to find solution if it exists
-- Simple but inefficient for large numbers
-:::
-
-::::
-
----
 
 ## Cube Roots
 
 ```{python}
-# cube root
 def newtons_cube_root(n:float, guess:float = 1.0) -> float:
     while abs(n - guess*guess*guess) > .0001:
         print(f"n = {n}, guess = {guess}")
@@ -600,19 +570,121 @@ Testing the Prototype
 ```{python}
 newtons_cube_root(27)
 ```
+
+---
+
+Testing the Prototype
+
+```{python}
+newtons_cube_root(31)
+```
+
+---
+
+## General Case
+
+```{python}
+def newtons_nth_root(n: int, value: float, guess: float = 1.0) -> float:
+    """
+    Find the nth root of a value using Newton's method.
+    
+    Parameters:
+    n (int): The root to find (e.g., 2 for square root, 3 for cube root)
+    value (float): The value for which to find the nth root
+    guess (float): Initial guess (default: 1.0)
+    
+    Returns:
+    float: The nth root of the value
+    
+    Mathematical formula:
+    For finding y such that y^n = value, we use Newton's method:
+    y_new = y - f(y)/f'(y)
+    where f(y) = y^n - value and f'(y) = n * y^(n-1)
+    So: y_new = y - (y^n - value)/(n * y^(n-1))
+    """
+    if n <= 0:
+        raise ValueError("n must be a positive integer")
+    if value < 0 and n % 2 == 0:
+        raise ValueError("Cannot find even root of negative number")
+    
+    tolerance = 0.0001
+    
+    while abs(guess**n - value) > tolerance:
+        print(f"n = {n}, value = {value}, guess = {guess}")
+        print(f"   abs(guess^n - value) = abs({guess}^{n} - {value}) = {abs(guess**n - value)}")
+        
+        # Newton's method formula: guess_new = guess - (guess^n - value)/(n * guess^(n-1))
+        guess_new = guess - (guess**n - value) / (n * guess**(n-1))
+        
+        print(f"   guess_new = guess - (guess^n - value)/(n * guess^(n-1))")
+        print(f"   guess_new = {guess} - ({guess}^{n} - {value})/({n} * {guess}^{n-1}) = {guess_new}\n")
+        
+        guess = guess_new
+    
+    return guess
+```
+
+---
+
+Testing the Prototype (1)
+
+```{python}
+print("Square root of 16 (n=2, value=16):")
+result = newtons_nth_root(2, 16)
+print(f"Result: {result}")
+print(f"Verification: {result}^2 = {result**2}\n")
+```
+
+---
+
+Testing the Prototype (2)
+
+```{python}
+print("Cube root of 27 (n=3, value=27):")
+result = newtons_nth_root(3, 27)
+print(f"Result: {result}")
+print(f"Verification: {result}^3 = {result**3}\n")
+```
+---
+
+Testing the Prototype (3)
+
+```{python}
+print("Fourth root of 81 (n=4, value=81):")
+result = newtons_nth_root(4, 81)
+print(f"Result: {result}")
+print(f"Verification: {result}^4 = {result**4}\n")
+```
+
+---
+
+Testing the Prototype ((4)
+
+```{python}
+print("4. Square root of 10 (n=2, value=10):")
+result = newtons_nth_root(2, 10)
+print(f"Result: {result}")
+print(f"Verification: {result}^2 = {result**2}\n")
+```
+
+
+
 ---
 
 # Challenge!
 
-Can you modify the `newtons_cube_root()` algorithm to find the forth root `newtons_cube_root()`
+Can you modify the `newtons_cube_root()` algorithm to find the forth root `newtons_4_root()`
 
 &nbsp;
 
-&nbsp;
+Hint: Use the general case to create the code.
 
 <center>
 ![](graphics/think.png){width=90%}
 </center>
+
+
+<!-- &nbsp; -->
 
 
 <!-- 
