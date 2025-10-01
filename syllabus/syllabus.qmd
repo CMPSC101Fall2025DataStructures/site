@@ -265,9 +265,11 @@ All students in the CIS department are expected to turn in assignments on time. 
 
 Students in 101 are allotted four tokens to receive extensions on any assignment except the final with no questions asked by the course instructor except either in the rare cases of documented severe and/or extenuating circumstances or in cases that violate the CIS policy document or any College-approved policy.
 
-A token may be applied via a Google Form up to the assignment deadline, with exceptions granted only for severe and/or extenuating circumstances.
+* A token may be applied via a Google Form up to the assignment deadline, with exceptions granted only for severe and/or extenuating circumstances.
 
-Tokens grant an automatic extension of one week to anything except the final exam.
+*  Tokens grant an automatic extension of **one week** to anything except the project or final exam.
+
+* Tokens will not be accepted after the due date of the last lab. This means that token usage will end after the labs are complete and will no longer be accepted. This roughly implies that they will stop three or four weeks from the end of class.
 
 [Token Form for Automatic Extension](https://forms.gle/hjrJLnpHrauFmJqH8)
 
