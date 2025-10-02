@@ -606,14 +606,14 @@
     "href": "materials/6_energy_analysis_slides.html#results-energy-analysis",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Results: Energy Analysis",
-    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000226 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
+    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000331 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
     "href": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Energy Scaling Summary",
-    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.007ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.004ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.005ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.005ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.006ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.012ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.019ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
+    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.009ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.006ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.008ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.007ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.009ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.016ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.025ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#key-energy-findings",
@@ -788,7 +788,7 @@
     "href": "materials/0_materials.html#exhaustive-enumeration-and-approximation",
     "title": "Materials",
     "section": "6. Exhaustive enumeration and Approximation",
-    "text": "6. Exhaustive enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML\nPDF The slide’s material as a pdf."
+    "text": "6. Exhaustive enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML\nPDF The slide’s material as a pdf.\n\nLab05: Approximations by the Taylor Series\n\nGitHub Classroom link"
   },
   {
     "objectID": "playground/06_listAndDictionaries.html",
