@@ -585,14 +585,14 @@
     "href": "materials/6_energy_analysis_slides.html#the-general-algorithm",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "The General Algorithm",
-    "text": "The General Algorithm\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0):\n    \"\"\"Find the nth root of a value using Newton's method\"\"\"\n    tolerance = 0.0001\n    \n    while abs(guess**n - value) &gt; tolerance:\n        # Newton's formula: y_new = y - f(y)/f'(y)\n        # For f(y) = y^n - value:\n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    return guess\n\n\n\n\n\n\n\nMathematical Foundation\n\n\nQuadratic convergence means errors roughly square each iteration!\nThis exponential error reduction is the key to Newton’s energy efficiency."
+    "text": "The General Algorithm\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0):\n    \"\"\"Find the nth root of a value using Newton's method\"\"\"\n    tolerance = 0.0001\n    \n    while abs(guess**n - value) &gt; tolerance:\n        # Newton's formula: y_new = y - f(y)/f'(y)\n        # For f(y) = y^n - value:\n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    return guess\n\n \n\n\n\n\n\n\nMathematical Foundation\n\n\nQuadratic convergence means errors roughly square each iteration!\nThis exponential error reduction is the key to Newton’s energy efficiency."
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
     "href": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Energy Measurement Setup",
-    "text": "Energy Measurement Setup\n\nEnergy Tracking Strategy\n\nCount arithmetic operations per iteration\nMeasure wall-clock computation time\n\nTrack convergence behavior\nCompare across different root degrees"
+    "text": "Energy Measurement Setup\n\n\n\n\nEnergy Tracking Strategy\n\nCount arithmetic operations per iteration\nMeasure wall-clock computation time\n\nTrack convergence behavior\nCompare across different root degrees"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#live-demo-energy-analysis",
@@ -606,14 +606,14 @@
     "href": "materials/6_energy_analysis_slides.html#results-energy-analysis",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Results: Energy Analysis",
-    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000331 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
+    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n# Quick demo: Square root of 16\nresult, iters, time_taken, ops = newtons_nth_root(2, 16, verbose=True)\nprint(f\"Result: {result:.6f}\")\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000306 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
     "href": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Energy Scaling Summary",
-    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.009ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.006ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.008ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.007ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.009ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.016ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.025ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
+    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.009ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.006ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.008ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.006ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.008ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.016ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.026ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#key-energy-findings",
@@ -649,13 +649,6 @@
     "title": "Computational Energy Analysis of Newton’s Method",
     "section": "Performance Comparison: Setup",
     "text": "Performance Comparison: Setup\n\n# Enhanced comparison: Perfect vs Non-Perfect Powers\ncomparison_data = []\n\n# Extended comparison set\ncomparisons = [\n    ((2, 16, \"√16 (perfect)\"), (2, 15, \"√15 (non-perfect)\")),\n    ((2, 25, \"√25 (perfect)\"), (2, 24, \"√24 (non-perfect)\")),\n    ((3, 27, \"∛27 (perfect)\"), (3, 26, \"∛26 (non-perfect)\")),\n    ((3, 64, \"∛64 (perfect)\"), (3, 63, \"∛63 (non-perfect)\")),\n    ((4, 81, \"⁴√81 (perfect)\"), (4, 80, \"⁴√80 (non-perfect)\")),\n    ((5, 32, \"⁵√32 (perfect)\"), (5, 31, \"⁵√31 (non-perfect)\")),\n]\n\nfor (n1, v1, desc1), (n2, v2, desc2) in comparisons:\n    _, iters1, time1, ops1 = newtons_nth_root(n1, v1, verbose=False)\n    _, iters2, time2, ops2 = newtons_nth_root(n2, v2, verbose=False)\n    \n    comparison_data.extend([\n        {'root_degree': n1, 'type': 'Perfect Power', 'description': desc1, \n         'iterations': iters1, 'operations': ops1, 'time_ms': time1*1000},\n        {'root_degree': n2, 'type': 'Non-Perfect', 'description': desc2, \n         'iterations': iters2, 'operations': ops2, 'time_ms': time2*1000}\n    ])\n\ncomp_df = pd.DataFrame(comparison_data)"
-  },
-  {
-    "objectID": "materials/6_energy_analysis_slides.html#real-world-energy-impact",
-    "href": "materials/6_energy_analysis_slides.html#real-world-energy-impact",
-    "title": "Computational Energy Analysis of Newton’s Method",
-    "section": "Real-World Energy Impact",
-    "text": "Real-World Energy Impact\n\n\nSmartphone Calculator App\n\nSquare root calculation: ~10-20 operations\nBattery impact: Negligible (&lt; 0.001%)\nUser experience: Instant response\n\nScientific Computing Cluster\n\nMillion root calculations/second\nEnergy efficiency matters at scale\nNewton’s method saves significant power\n\n\nIoT Sensor Network\n\nLimited battery life\nOccasional calibration calculations\nNewton’s method enables longer deployment"
   },
   {
     "objectID": "materials/6_energy_analysis_slides.html#conclusion-why-newtons-method-wins",

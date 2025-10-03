@@ -96,6 +96,9 @@ def newtons_nth_root(n: int, value: float, guess: float = 1.0):
     return guess
 ```
 
+
+&nbsp;
+
 ::: {.callout-tip}
 ## Mathematical Foundation
 **Quadratic convergence** means errors roughly [square each iteration]{.energy-highlight}!
@@ -104,6 +107,11 @@ This exponential error reduction is the key to Newton's energy efficiency.
 :::
 
 ## Energy Measurement Setup {.smaller}
+
+<center>
+![](graphics/strategy_i.png){width=45%}
+</center>
+
 
 ::: {.efficiency-box}
 **Energy Tracking Strategy**
@@ -118,14 +126,16 @@ This exponential error reduction is the key to Newton's energy efficiency.
 
 ```{python}
 #| echo: true
-#| eval: false
+#| eval: true
+#| output: false
+
 import time
 
 def newtons_nth_root_instrumented(n, value, guess=1.0):
     iterations = 0
     operations_count = 0
     start_time = time.time()
-    
+    tolerance = 0.0001
     while abs(guess**n - value) > tolerance:
         iterations += 1
         
@@ -139,7 +149,45 @@ def newtons_nth_root_instrumented(n, value, guess=1.0):
     
     computation_time = time.time() - start_time
     return guess, iterations, computation_time, operations_count
+
+# print the results
+results = newtons_nth_root_instrumented(2,144)
+print(f"guess : {results[0]}")
+print(f"iterations : {results[1]}")
+print(f"comp_time : {results[2]}")
+print(f"operations : {results[3]}")
 ```
+
+---
+
+
+### Results
+
+```{python}
+#| echo: true
+#| eval: true
+#| output: true
+results = newtons_nth_root_instrumented(3,27)
+print(f"guess : {results[0]}")
+print(f"iterations : {results[1]}")
+print(f"comp_time : {results[2]}")
+print(f"operations : {results[3]}")
+```
+
+<!-- &nbsp; -->
+
+```{python}
+#| echo: true
+#| eval: true
+#| output: true
+results = newtons_nth_root_instrumented(3,27)
+print(f"guess : {results[0]}")
+print(f"iterations : {results[1]}")
+print(f"comp_time : {results[2]}")
+print(f"operations : {results[3]}")
+```
+
+---
 
 ## Live Demo: Energy Analysis {.smaller}
 
@@ -192,6 +240,14 @@ Watch Newton's method converge in real-time with energy tracking!
 :::
 
 ```{python}
+#| echo: true
+#| eval: false
+# Quick demo: Square root of 16
+result, iters, time_taken, ops = newtons_nth_root(2, 16, verbose=True)
+print(f"Result: {result:.6f}")
+```
+
+```{python}
 # Quick demo: Square root of 16
 result, iters, time_taken, ops = newtons_nth_root(2, 16, verbose=True)
 print(f"Result: {result:.6f}")
@@ -209,6 +265,7 @@ Notice how quickly it converges - only [**2-3 iterations**]{.energy-highlight} f
 ```{python}
 #| echo: true
 #| eval: true
+#| output: false
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -325,6 +382,7 @@ fig.show()
 
 ---
 
+### Newton's Method: Energy Scaling Analysis {.smaller}
 <!-- #### Interactive Energy Scaling Visualization -->
 
 ```{python}
@@ -390,13 +448,13 @@ fig_display.add_trace(
 
 # Enhanced layout for presentation
 fig_display.update_layout(
-    title=dict(
-        text="<b>Newton's Method: Energy Scaling Analysis</b>",
-        x=0.5,
-        font=dict(size=20)
-    ),
+    #title=dict(
+    #    text="<b>Newton's Method: Energy Scaling Analysis</b>",
+    #    x=0.5,
+    #    font=dict(size=15)
+    #),
     showlegend=False,
-    height=700,
+    height=600,
     font=dict(size=14)
 )
 
@@ -627,7 +685,7 @@ fig.update_layout(
     ),
     height=400,
     showlegend=True,
-    legend=dict(orientation="h", yanchor="top", y=1.02, xanchor="left", x=1)
+    legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
 )
 
 fig.update_xaxes(title_text="Root Degree (n)", row=1, col=1)
@@ -649,30 +707,121 @@ print(f"   Energy penalty for non-perfect: {((nonperfect_avg_iters/perfect_avg_i
 print("   💡 Perfect powers converge faster, but the difference is manageable!")
 ```
 
-## Real-World Energy Impact {.smaller}
+---
 
-::: {.columns}
+### What Code Just Made That Plot? {.smaller}
 
-::: {.column width="60%"}
-### **Smartphone Calculator App**
+```{python}
+
+#| echo: true
+#| eval: true
+#| output: false
+
+# Create interactive comparison plot
+fig = make_subplots(
+    rows=1, cols=2,
+    subplot_titles=('Iterations', 
+                   'Total Operations'),
+    # subplot_titles=('Iterations: Perfect vs Non-Perfect Powers', 
+    #                'Total Operations: Perfect vs Non-Perfect Powers'),
+    specs=[[{"secondary_y": False}, {"secondary_y": False}]]
+)
+
+# Colors for perfect vs non-perfect
+colors = {'Perfect Power': 'lightblue', 'Non-Perfect': 'lightcoral'}
+
+# Plot iterations comparison
+for power_type in ['Perfect Power', 'Non-Perfect']:
+    data_subset = comp_df[comp_df['type'] == power_type]
+    fig.add_trace(
+        go.Scatter(x=data_subset['root_degree'], y=data_subset['iterations'],
+                   mode='markers+lines',
+                   name=f'{power_type} - Iterations',
+                   text=data_subset['description'],
+                   marker=dict(size=12, color=colors[power_type]),
+                   line=dict(width=3),
+                   hovertemplate='<b>%{text}</b><br>Root Degree: %{x}<br>Iterations: %{y}<extra></extra>'),
+        row=1, col=1
+    )
+
+# Plot operations comparison  
+for power_type in ['Perfect Power', 'Non-Perfect']:
+    data_subset = comp_df[comp_df['type'] == power_type]
+    fig.add_trace(
+        go.Scatter(x=data_subset['root_degree'], y=data_subset['operations'],
+                   mode='markers+lines',
+                   name=f'{power_type} - Operations',
+                   text=data_subset['description'],
+                   marker=dict(size=12, color=colors[power_type]),
+                   line=dict(width=3),
+                   hovertemplate='<b>%{text}</b><br>Root Degree: %{x}<br>Operations: %{y}<extra></extra>'),
+        row=1, col=2
+    )
+
+fig.update_layout(
+    title=dict(
+        # text="<b>Energy Impact: Perfect vs Non-Perfect Powers</b>",
+        text="<b></b>",
+        x=0.5,
+        font=dict(size=16)
+    ),
+    height=400,
+    showlegend=True,
+    legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
+)
+
+fig.update_xaxes(title_text="Root Degree (n)", row=1, col=1)
+fig.update_xaxes(title_text="Root Degree (n)", row=1, col=2)
+fig.update_yaxes(title_text="Iterations", row=1, col=1)
+fig.update_yaxes(title_text="Total Operations", row=1, col=2)
+
+fig.show()
+
+
+# Summary statistics
+perfect_avg_iters = comp_df[comp_df['type'] == 'Perfect Power']['iterations'].mean()
+nonperfect_avg_iters = comp_df[comp_df['type'] == 'Non-Perfect']['iterations'].mean()
+
+print(f"\n📊 Perfect vs Non-Perfect Power Analysis:")
+print(f"   Average iterations (Perfect Powers): {perfect_avg_iters:.1f}")
+print(f"   Average iterations (Non-Perfect): {nonperfect_avg_iters:.1f}")
+print(f"   Energy penalty for non-perfect: {((nonperfect_avg_iters/perfect_avg_iters-1)*100):+.1f}%")
+print("   💡 Perfect powers converge faster, but the difference is manageable!")
+```
+
+---
+
+#### Real-World Energy Impact (I)
+
+::: {.callout-note}
+## 📱 Smartphone Calculator App
 - Square root calculation: ~10-20 operations
 - Battery impact: Negligible (< 0.001%)
 - User experience: Instant response
+:::
 
-### **Scientific Computing Cluster**
+::: {.callout-tip}
+## 🖥️ Scientific Computing Cluster
 - Million root calculations/second
 - Energy efficiency matters at scale
 - Newton's method saves significant power
 :::
 
-::: {.column width="40%"}
-### **IoT Sensor Network**
+---
+
+#### Real-World Energy Impact (II)
+
+
+::: {.callout-warning}
+## 📟 IoT Sensor Network
 - Limited battery life
 - Occasional calibration calculations
 - Newton's method enables longer deployment
 :::
 
-:::
+<center>
+![](graphics/battery_i.png){width=50%}
+</center>
 
 ## Conclusion: Why Newton's Method Wins {.smaller}
 

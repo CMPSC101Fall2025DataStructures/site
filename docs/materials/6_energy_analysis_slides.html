@@ -287,7 +287,7 @@ Energy-Efficient Computing Research
 </section>
 <section id="the-general-algorithm" class="slide level2 smaller">
 <h2>The General Algorithm</h2>
-<div id="52cd5957" class="cell" data-execution_count="1">
+<div id="0238b88e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> newtons_nth_root(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>):</span>
 <span id="cb1-2"><a></a>    <span class="co">"""Find the nth root of a value using Newton's method"""</span></span>
 <span id="cb1-3"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
@@ -300,6 +300,7 @@ Energy-Efficient Computing Research
 <span id="cb1-10"><a></a>    </span>
 <span id="cb1-11"><a></a>    <span class="cf">return</span> guess</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>&nbsp;</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -317,6 +318,9 @@ Energy-Efficient Computing Research
 </section>
 <section id="energy-measurement-setup" class="slide level2 smaller">
 <h2>Energy Measurement Setup</h2>
+<center>
+<img data-src="graphics/strategy_i.png" style="width:45.0%">
+</center>
 <div class="efficiency-box">
 <p><strong>Energy Tracking Strategy</strong></p>
 <ul>
@@ -330,14 +334,14 @@ Energy-Efficient Computing Research
 </section>
 <section class="slide level2">
 
-<div id="8feff0d1" class="cell" data-execution_count="2">
+<div id="04b86e0f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> time</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a><span class="kw">def</span> newtons_nth_root_instrumented(n, value, guess<span class="op">=</span><span class="fl">1.0</span>):</span>
 <span id="cb2-4"><a></a>    iterations <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-5"><a></a>    operations_count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-6"><a></a>    start_time <span class="op">=</span> time.time()</span>
-<span id="cb2-7"><a></a>    </span>
+<span id="cb2-7"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
 <span id="cb2-8"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">&gt;</span> tolerance:</span>
 <span id="cb2-9"><a></a>        iterations <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb2-10"><a></a>        </span>
@@ -350,46 +354,84 @@ Energy-Efficient Computing Research
 <span id="cb2-17"><a></a>        guess <span class="op">=</span> guess <span class="op">-</span> (guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">/</span> (n <span class="op">*</span> guess<span class="op">**</span>(n<span class="op">-</span><span class="dv">1</span>))</span>
 <span id="cb2-18"><a></a>    </span>
 <span id="cb2-19"><a></a>    computation_time <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
-<span id="cb2-20"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-20"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span>
+<span id="cb2-21"><a></a></span>
+<span id="cb2-22"><a></a><span class="co"># print the results</span></span>
+<span id="cb2-23"><a></a>results <span class="op">=</span> newtons_nth_root_instrumented(<span class="dv">2</span>,<span class="dv">144</span>)</span>
+<span id="cb2-24"><a></a><span class="bu">print</span>(<span class="ss">f"guess : </span><span class="sc">{</span>results[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-25"><a></a><span class="bu">print</span>(<span class="ss">f"iterations : </span><span class="sc">{</span>results[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-26"><a></a><span class="bu">print</span>(<span class="ss">f"comp_time : </span><span class="sc">{</span>results[<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-27"><a></a><span class="bu">print</span>(<span class="ss">f"operations : </span><span class="sc">{</span>results[<span class="dv">3</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="results">Results</h3>
+<div id="239a4cf0" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>results <span class="op">=</span> newtons_nth_root_instrumented(<span class="dv">3</span>,<span class="dv">27</span>)</span>
+<span id="cb3-2"><a></a><span class="bu">print</span>(<span class="ss">f"guess : </span><span class="sc">{</span>results[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-3"><a></a><span class="bu">print</span>(<span class="ss">f"iterations : </span><span class="sc">{</span>results[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-4"><a></a><span class="bu">print</span>(<span class="ss">f"comp_time : </span><span class="sc">{</span>results[<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-5"><a></a><span class="bu">print</span>(<span class="ss">f"operations : </span><span class="sc">{</span>results[<span class="dv">3</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>guess : 3.0000005410641766
+iterations : 7
+comp_time : 1.2159347534179688e-05
+operations : 56</code></pre>
+</div>
+</div>
+<!-- &nbsp; -->
+<div id="fed51729" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>results <span class="op">=</span> newtons_nth_root_instrumented(<span class="dv">3</span>,<span class="dv">27</span>)</span>
+<span id="cb5-2"><a></a><span class="bu">print</span>(<span class="ss">f"guess : </span><span class="sc">{</span>results[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-3"><a></a><span class="bu">print</span>(<span class="ss">f"iterations : </span><span class="sc">{</span>results[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-4"><a></a><span class="bu">print</span>(<span class="ss">f"comp_time : </span><span class="sc">{</span>results[<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(<span class="ss">f"operations : </span><span class="sc">{</span>results[<span class="dv">3</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>guess : 3.0000005410641766
+iterations : 7
+comp_time : 8.106231689453125e-06
+operations : 56</code></pre>
+</div>
 </div>
 </section>
 <section id="live-demo-energy-analysis" class="slide level2 smaller">
 <h2>Live Demo: Energy Analysis</h2>
-<div id="7615537f" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> time</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="kw">def</span> newtons_nth_root(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>, verbose: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
-<span id="cb3-4"><a></a>    <span class="co">"""Find the nth root of a value using Newton's method with performance analysis."""</span></span>
-<span id="cb3-5"><a></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb3-6"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"n must be a positive integer"</span>)</span>
-<span id="cb3-7"><a></a>    <span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb3-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot find even root of negative number"</span>)</span>
-<span id="cb3-9"><a></a>    </span>
-<span id="cb3-10"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
-<span id="cb3-11"><a></a>    iterations <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-12"><a></a>    operations_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-13"><a></a>    start_time <span class="op">=</span> time.time()</span>
-<span id="cb3-14"><a></a>    </span>
-<span id="cb3-15"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">&gt;</span> tolerance:</span>
-<span id="cb3-16"><a></a>        iterations <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb3-17"><a></a>        </span>
-<span id="cb3-18"><a></a>        <span class="cf">if</span> verbose:</span>
-<span id="cb3-19"><a></a>            <span class="bu">print</span>(<span class="ss">f"Iter </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss">: guess = </span><span class="sc">{</span>guess<span class="sc">:.4f}</span><span class="ss">, error = </span><span class="sc">{</span><span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value)<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
-<span id="cb3-20"><a></a>        </span>
-<span id="cb3-21"><a></a>        operations_this_iteration <span class="op">=</span> (n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> (n<span class="op">-</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb3-22"><a></a>        operations_count <span class="op">+=</span> operations_this_iteration</span>
-<span id="cb3-23"><a></a>        </span>
-<span id="cb3-24"><a></a>        guess_new <span class="op">=</span> guess <span class="op">-</span> (guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">/</span> (n <span class="op">*</span> guess<span class="op">**</span>(n<span class="op">-</span><span class="dv">1</span>))</span>
-<span id="cb3-25"><a></a>        guess <span class="op">=</span> guess_new</span>
-<span id="cb3-26"><a></a>    </span>
-<span id="cb3-27"><a></a>    computation_time <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
-<span id="cb3-28"><a></a>    </span>
-<span id="cb3-29"><a></a>    <span class="cf">if</span> verbose:</span>
-<span id="cb3-30"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Converged in </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss"> iterations"</span>)</span>
-<span id="cb3-31"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Total operations: </span><span class="sc">{</span>operations_count<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-32"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Time: </span><span class="sc">{</span>computation_time<span class="sc">:.6f}</span><span class="ss"> seconds"</span>)</span>
-<span id="cb3-33"><a></a>    </span>
-<span id="cb3-34"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="00c9f3cc" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> time</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="kw">def</span> newtons_nth_root(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>, verbose: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
+<span id="cb7-4"><a></a>    <span class="co">"""Find the nth root of a value using Newton's method with performance analysis."""</span></span>
+<span id="cb7-5"><a></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb7-6"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"n must be a positive integer"</span>)</span>
+<span id="cb7-7"><a></a>    <span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb7-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot find even root of negative number"</span>)</span>
+<span id="cb7-9"><a></a>    </span>
+<span id="cb7-10"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
+<span id="cb7-11"><a></a>    iterations <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-12"><a></a>    operations_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-13"><a></a>    start_time <span class="op">=</span> time.time()</span>
+<span id="cb7-14"><a></a>    </span>
+<span id="cb7-15"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">&gt;</span> tolerance:</span>
+<span id="cb7-16"><a></a>        iterations <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-17"><a></a>        </span>
+<span id="cb7-18"><a></a>        <span class="cf">if</span> verbose:</span>
+<span id="cb7-19"><a></a>            <span class="bu">print</span>(<span class="ss">f"Iter </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss">: guess = </span><span class="sc">{</span>guess<span class="sc">:.4f}</span><span class="ss">, error = </span><span class="sc">{</span><span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value)<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb7-20"><a></a>        </span>
+<span id="cb7-21"><a></a>        operations_this_iteration <span class="op">=</span> (n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> (n<span class="op">-</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb7-22"><a></a>        operations_count <span class="op">+=</span> operations_this_iteration</span>
+<span id="cb7-23"><a></a>        </span>
+<span id="cb7-24"><a></a>        guess_new <span class="op">=</span> guess <span class="op">-</span> (guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">/</span> (n <span class="op">*</span> guess<span class="op">**</span>(n<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb7-25"><a></a>        guess <span class="op">=</span> guess_new</span>
+<span id="cb7-26"><a></a>    </span>
+<span id="cb7-27"><a></a>    computation_time <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
+<span id="cb7-28"><a></a>    </span>
+<span id="cb7-29"><a></a>    <span class="cf">if</span> verbose:</span>
+<span id="cb7-30"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Converged in </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss"> iterations"</span>)</span>
+<span id="cb7-31"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Total operations: </span><span class="sc">{</span>operations_count<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-32"><a></a>        <span class="bu">print</span>(<span class="ss">f"✓ Time: </span><span class="sc">{</span>computation_time<span class="sc">:.6f}</span><span class="ss"> seconds"</span>)</span>
+<span id="cb7-33"><a></a>    </span>
+<span id="cb7-34"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="results-energy-analysis" class="slide level2 smaller">
@@ -407,7 +449,12 @@ Energy-Efficient Computing Research
 </div>
 </div>
 </div>
-<div id="ba224bfb" class="cell" data-execution_count="4">
+<div id="7427cff9" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="co"># Quick demo: Square root of 16</span></span>
+<span id="cb8-2"><a></a>result, iters, time_taken, ops <span class="op">=</span> newtons_nth_root(<span class="dv">2</span>, <span class="dv">16</span>, verbose<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-3"><a></a><span class="bu">print</span>(<span class="ss">f"Result: </span><span class="sc">{</span>result<span class="sc">:.6f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8f90f7c0" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Iter 1: guess = 1.0000, error = 15.000000
 Iter 2: guess = 8.5000, error = 56.250000
@@ -416,7 +463,7 @@ Iter 4: guess = 4.1367, error = 1.111995
 Iter 5: guess = 4.0023, error = 0.018065
 ✓ Converged in 5 iterations
 ✓ Total operations: 30
-✓ Time: 0.000331 seconds
+✓ Time: 0.000306 seconds
 Result: 4.000001</code></pre>
 </div>
 </div>
@@ -437,166 +484,131 @@ Result: 4.000001</code></pre>
 <section class="slide level2">
 
 <h3 class="smaller" id="energy-comp-across-root-degrees">Energy Comp Across Root Degrees</h3>
-<div id="31342f45" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb5-2"><a></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb5-3"><a></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
-<span id="cb5-4"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="co"># Test cases for energy comparison</span></span>
-<span id="cb5-7"><a></a>test_cases <span class="op">=</span> [</span>
-<span id="cb5-8"><a></a>    (<span class="dv">2</span>, <span class="dv">16</span>, <span class="st">"Square root of 16"</span>), (<span class="dv">3</span>, <span class="dv">27</span>, <span class="st">"Cube root of 27"</span>),</span>
-<span id="cb5-9"><a></a>    (<span class="dv">4</span>, <span class="dv">81</span>, <span class="st">"Fourth root of 81"</span>), (<span class="dv">5</span>, <span class="dv">32</span>, <span class="st">"Fifth root of 32"</span>),</span>
-<span id="cb5-10"><a></a>    (<span class="dv">6</span>, <span class="dv">64</span>, <span class="st">"Sixth root of 64"</span>), (<span class="dv">8</span>, <span class="dv">256</span>, <span class="st">"Eighth root of 256"</span>),</span>
-<span id="cb5-11"><a></a>    (<span class="dv">10</span>, <span class="dv">1024</span>, <span class="st">"Tenth root of 1024"</span>),</span>
-<span id="cb5-12"><a></a>]</span>
-<span id="cb5-13"><a></a></span>
-<span id="cb5-14"><a></a><span class="co"># Collect data for plotting</span></span>
-<span id="cb5-15"><a></a>data <span class="op">=</span> []</span>
-<span id="cb5-16"><a></a><span class="cf">for</span> n, value, description <span class="kw">in</span> test_cases:</span>
-<span id="cb5-17"><a></a>    result, iterations, time_taken, operations <span class="op">=</span> newtons_nth_root(n, value, verbose<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb5-18"><a></a>    ops_per_iter <span class="op">=</span> operations <span class="op">/</span> iterations</span>
-<span id="cb5-19"><a></a>    data.append({</span>
-<span id="cb5-20"><a></a>        <span class="st">'root_degree'</span>: n,</span>
-<span id="cb5-21"><a></a>        <span class="st">'value'</span>: value,</span>
-<span id="cb5-22"><a></a>        <span class="st">'description'</span>: description,</span>
-<span id="cb5-23"><a></a>        <span class="st">'iterations'</span>: iterations,</span>
-<span id="cb5-24"><a></a>        <span class="st">'operations'</span>: operations,</span>
-<span id="cb5-25"><a></a>        <span class="st">'ops_per_iter'</span>: ops_per_iter,</span>
-<span id="cb5-26"><a></a>        <span class="st">'time_seconds'</span>: time_taken,</span>
-<span id="cb5-27"><a></a>        <span class="st">'result'</span>: result</span>
-<span id="cb5-28"><a></a>    })</span>
-<span id="cb5-29"><a></a></span>
-<span id="cb5-30"><a></a>df <span class="op">=</span> pd.DataFrame(data)</span>
-<span id="cb5-31"><a></a></span>
-<span id="cb5-32"><a></a><span class="co"># Create interactive subplots</span></span>
-<span id="cb5-33"><a></a>fig <span class="op">=</span> make_subplots(</span>
-<span id="cb5-34"><a></a>    rows<span class="op">=</span><span class="dv">2</span>, cols<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb5-35"><a></a>    subplot_titles<span class="op">=</span>(<span class="st">'Total Operations vs Root Degree'</span>, <span class="st">'Iterations vs Root Degree'</span>,</span>
-<span id="cb5-36"><a></a>                   <span class="st">'Operations per Iteration vs Root Degree'</span>, <span class="st">'Computation Time vs Root Degree'</span>),</span>
-<span id="cb5-37"><a></a>    specs<span class="op">=</span>[[{<span class="st">"secondary_y"</span>: <span class="va">False</span>}, {<span class="st">"secondary_y"</span>: <span class="va">False</span>}],</span>
-<span id="cb5-38"><a></a>           [{<span class="st">"secondary_y"</span>: <span class="va">False</span>}, {<span class="st">"secondary_y"</span>: <span class="va">False</span>}]]</span>
-<span id="cb5-39"><a></a>)</span>
-<span id="cb5-40"><a></a></span>
-<span id="cb5-41"><a></a><span class="co"># Plot 1: Total Operations vs Root Degree</span></span>
-<span id="cb5-42"><a></a>fig.add_trace(</span>
-<span id="cb5-43"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'operations'</span>],</span>
-<span id="cb5-44"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
-<span id="cb5-45"><a></a>               name<span class="op">=</span><span class="st">'Total Operations'</span>,</span>
-<span id="cb5-46"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
-<span id="cb5-47"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'blue'</span>),</span>
-<span id="cb5-48"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'blue'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
-<span id="cb5-49"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Operations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
-<span id="cb5-50"><a></a>    row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb5-51"><a></a>)</span>
-<span id="cb5-52"><a></a></span>
-<span id="cb5-53"><a></a><span class="co"># Plot 2: Iterations vs Root Degree  </span></span>
-<span id="cb5-54"><a></a>fig.add_trace(</span>
-<span id="cb5-55"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'iterations'</span>],</span>
-<span id="cb5-56"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
-<span id="cb5-57"><a></a>               name<span class="op">=</span><span class="st">'Iterations'</span>,</span>
-<span id="cb5-58"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
-<span id="cb5-59"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'red'</span>),</span>
-<span id="cb5-60"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'red'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
-<span id="cb5-61"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Iterations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
-<span id="cb5-62"><a></a>    row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span></span>
-<span id="cb5-63"><a></a>)</span>
-<span id="cb5-64"><a></a></span>
-<span id="cb5-65"><a></a><span class="co"># Plot 3: Operations per Iteration vs Root Degree</span></span>
-<span id="cb5-66"><a></a>fig.add_trace(</span>
-<span id="cb5-67"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'ops_per_iter'</span>],</span>
-<span id="cb5-68"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
-<span id="cb5-69"><a></a>               name<span class="op">=</span><span class="st">'Ops/Iteration'</span>,</span>
-<span id="cb5-70"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
-<span id="cb5-71"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'green'</span>),</span>
-<span id="cb5-72"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'green'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
-<span id="cb5-73"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Ops/Iter: %</span><span class="sc">{y:.1f}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
-<span id="cb5-74"><a></a>    row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb5-75"><a></a>)</span>
-<span id="cb5-76"><a></a></span>
-<span id="cb5-77"><a></a><span class="co"># Plot 4: Computation Time vs Root Degree</span></span>
-<span id="cb5-78"><a></a>fig.add_trace(</span>
-<span id="cb5-79"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'time_seconds'</span>]<span class="op">*</span><span class="dv">1000</span>,  <span class="co"># Convert to milliseconds</span></span>
-<span id="cb5-80"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
-<span id="cb5-81"><a></a>               name<span class="op">=</span><span class="st">'Time (ms)'</span>,</span>
-<span id="cb5-82"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
-<span id="cb5-83"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'purple'</span>),</span>
-<span id="cb5-84"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'purple'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
-<span id="cb5-85"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Time: %</span><span class="sc">{y:.3f}</span><span class="st"> ms&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
-<span id="cb5-86"><a></a>    row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span></span>
-<span id="cb5-87"><a></a>)</span>
-<span id="cb5-88"><a></a></span>
-<span id="cb5-89"><a></a><span class="co"># Update layout</span></span>
-<span id="cb5-90"><a></a>fig.update_layout(</span>
-<span id="cb5-91"><a></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb5-92"><a></a>        text<span class="op">=</span><span class="st">"&lt;b&gt;Newton's Method: Energy Scaling Analysis&lt;/b&gt;"</span>,</span>
-<span id="cb5-93"><a></a>        x<span class="op">=</span><span class="fl">0.5</span>,</span>
-<span id="cb5-94"><a></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb5-95"><a></a>    ),</span>
-<span id="cb5-96"><a></a>    showlegend<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb5-97"><a></a>    height<span class="op">=</span><span class="dv">600</span>,</span>
-<span id="cb5-98"><a></a>    font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb5-99"><a></a>)</span>
-<span id="cb5-100"><a></a></span>
-<span id="cb5-101"><a></a><span class="co"># Update axes labels</span></span>
-<span id="cb5-102"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-103"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb5-104"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-105"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb5-106"><a></a></span>
-<span id="cb5-107"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Total Operations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-108"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Iterations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb5-109"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Operations per Iteration"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb5-110"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Time (milliseconds)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb5-111"><a></a></span>
-<span id="cb5-112"><a></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        </script>
-        <script type="module">import "https://cdn.plot.ly/plotly-3.1.0.min"</script>
-        
-</div>
-<div class="cell-output cell-output-display">
-<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="1b4f9fd5-ecb8-49ce-8911-4c40d0e7349f" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1b4f9fd5-ecb8-49ce-8911-4c40d0e7349f")) {                    Plotly.newPlot(                        "1b4f9fd5-ecb8-49ce-8911-4c40d0e7349f",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"blue","width":3},"marker":{"color":"blue","size":10},"mode":"markers+lines","name":"Total Operations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i2","bdata":"HgA4AG4AeADEANQBnAM="},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"red","width":3},"marker":{"color":"red","size":10},"mode":"markers+lines","name":"Iterations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i1","bdata":"BQcLCg4aKg=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOps\u002fIter: %{y:.1f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"green","width":3},"marker":{"color":"green","size":10},"mode":"markers+lines","name":"Ops\u002fIteration","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAAAAGEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAKEAAAAAAAAAsQAAAAAAAADJAAAAAAAAANkA="},"type":"scatter","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eTime: %{y:.3f} ms\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"purple","width":3},"marker":{"color":"purple","size":10},"mode":"markers+lines","name":"Time (ms)","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAACOgj8AAAAAAGp4PwAAAAAAHYA\u002fAAAAAABMfT8AAAAAAAuDPwAAAAAAHZA\u002fAAAAAABkmT8="},"type":"scatter","xaxis":"x4","yaxis":"y4"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Root Degree (n)"}},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"text":"Total Operations"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Root Degree (n)"}},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"text":"Iterations"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45],"title":{"text":"Root Degree (n)"}},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"text":"Operations per Iteration"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0],"title":{"text":"Root Degree (n)"}},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"text":"Time (milliseconds)"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Total Operations vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Iterations vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Operations per Iteration vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Computation Time vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"title":{"font":{"size":18},"text":"\u003cb\u003eNewton's Method: Energy Scaling Analysis\u003c\u002fb\u003e","x":0.5},"font":{"size":12},"showlegend":false,"height":600},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('1b4f9fd5-ecb8-49ce-8911-4c40d0e7349f');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };            </script>        </div>
-</div>
+<div id="8fd0ac70" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb10-2"><a></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb10-3"><a></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb10-4"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-5"><a></a></span>
+<span id="cb10-6"><a></a><span class="co"># Test cases for energy comparison</span></span>
+<span id="cb10-7"><a></a>test_cases <span class="op">=</span> [</span>
+<span id="cb10-8"><a></a>    (<span class="dv">2</span>, <span class="dv">16</span>, <span class="st">"Square root of 16"</span>), (<span class="dv">3</span>, <span class="dv">27</span>, <span class="st">"Cube root of 27"</span>),</span>
+<span id="cb10-9"><a></a>    (<span class="dv">4</span>, <span class="dv">81</span>, <span class="st">"Fourth root of 81"</span>), (<span class="dv">5</span>, <span class="dv">32</span>, <span class="st">"Fifth root of 32"</span>),</span>
+<span id="cb10-10"><a></a>    (<span class="dv">6</span>, <span class="dv">64</span>, <span class="st">"Sixth root of 64"</span>), (<span class="dv">8</span>, <span class="dv">256</span>, <span class="st">"Eighth root of 256"</span>),</span>
+<span id="cb10-11"><a></a>    (<span class="dv">10</span>, <span class="dv">1024</span>, <span class="st">"Tenth root of 1024"</span>),</span>
+<span id="cb10-12"><a></a>]</span>
+<span id="cb10-13"><a></a></span>
+<span id="cb10-14"><a></a><span class="co"># Collect data for plotting</span></span>
+<span id="cb10-15"><a></a>data <span class="op">=</span> []</span>
+<span id="cb10-16"><a></a><span class="cf">for</span> n, value, description <span class="kw">in</span> test_cases:</span>
+<span id="cb10-17"><a></a>    result, iterations, time_taken, operations <span class="op">=</span> newtons_nth_root(n, value, verbose<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-18"><a></a>    ops_per_iter <span class="op">=</span> operations <span class="op">/</span> iterations</span>
+<span id="cb10-19"><a></a>    data.append({</span>
+<span id="cb10-20"><a></a>        <span class="st">'root_degree'</span>: n,</span>
+<span id="cb10-21"><a></a>        <span class="st">'value'</span>: value,</span>
+<span id="cb10-22"><a></a>        <span class="st">'description'</span>: description,</span>
+<span id="cb10-23"><a></a>        <span class="st">'iterations'</span>: iterations,</span>
+<span id="cb10-24"><a></a>        <span class="st">'operations'</span>: operations,</span>
+<span id="cb10-25"><a></a>        <span class="st">'ops_per_iter'</span>: ops_per_iter,</span>
+<span id="cb10-26"><a></a>        <span class="st">'time_seconds'</span>: time_taken,</span>
+<span id="cb10-27"><a></a>        <span class="st">'result'</span>: result</span>
+<span id="cb10-28"><a></a>    })</span>
+<span id="cb10-29"><a></a></span>
+<span id="cb10-30"><a></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb10-31"><a></a></span>
+<span id="cb10-32"><a></a><span class="co"># Create interactive subplots</span></span>
+<span id="cb10-33"><a></a>fig <span class="op">=</span> make_subplots(</span>
+<span id="cb10-34"><a></a>    rows<span class="op">=</span><span class="dv">2</span>, cols<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb10-35"><a></a>    subplot_titles<span class="op">=</span>(<span class="st">'Total Operations vs Root Degree'</span>, <span class="st">'Iterations vs Root Degree'</span>,</span>
+<span id="cb10-36"><a></a>                   <span class="st">'Operations per Iteration vs Root Degree'</span>, <span class="st">'Computation Time vs Root Degree'</span>),</span>
+<span id="cb10-37"><a></a>    specs<span class="op">=</span>[[{<span class="st">"secondary_y"</span>: <span class="va">False</span>}, {<span class="st">"secondary_y"</span>: <span class="va">False</span>}],</span>
+<span id="cb10-38"><a></a>           [{<span class="st">"secondary_y"</span>: <span class="va">False</span>}, {<span class="st">"secondary_y"</span>: <span class="va">False</span>}]]</span>
+<span id="cb10-39"><a></a>)</span>
+<span id="cb10-40"><a></a></span>
+<span id="cb10-41"><a></a><span class="co"># Plot 1: Total Operations vs Root Degree</span></span>
+<span id="cb10-42"><a></a>fig.add_trace(</span>
+<span id="cb10-43"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'operations'</span>],</span>
+<span id="cb10-44"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb10-45"><a></a>               name<span class="op">=</span><span class="st">'Total Operations'</span>,</span>
+<span id="cb10-46"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
+<span id="cb10-47"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'blue'</span>),</span>
+<span id="cb10-48"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'blue'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb10-49"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Operations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb10-50"><a></a>    row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb10-51"><a></a>)</span>
+<span id="cb10-52"><a></a></span>
+<span id="cb10-53"><a></a><span class="co"># Plot 2: Iterations vs Root Degree  </span></span>
+<span id="cb10-54"><a></a>fig.add_trace(</span>
+<span id="cb10-55"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'iterations'</span>],</span>
+<span id="cb10-56"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb10-57"><a></a>               name<span class="op">=</span><span class="st">'Iterations'</span>,</span>
+<span id="cb10-58"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
+<span id="cb10-59"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'red'</span>),</span>
+<span id="cb10-60"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'red'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb10-61"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Iterations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb10-62"><a></a>    row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb10-63"><a></a>)</span>
+<span id="cb10-64"><a></a></span>
+<span id="cb10-65"><a></a><span class="co"># Plot 3: Operations per Iteration vs Root Degree</span></span>
+<span id="cb10-66"><a></a>fig.add_trace(</span>
+<span id="cb10-67"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'ops_per_iter'</span>],</span>
+<span id="cb10-68"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb10-69"><a></a>               name<span class="op">=</span><span class="st">'Ops/Iteration'</span>,</span>
+<span id="cb10-70"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
+<span id="cb10-71"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'green'</span>),</span>
+<span id="cb10-72"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'green'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb10-73"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Ops/Iter: %</span><span class="sc">{y:.1f}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb10-74"><a></a>    row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb10-75"><a></a>)</span>
+<span id="cb10-76"><a></a></span>
+<span id="cb10-77"><a></a><span class="co"># Plot 4: Computation Time vs Root Degree</span></span>
+<span id="cb10-78"><a></a>fig.add_trace(</span>
+<span id="cb10-79"><a></a>    go.Scatter(x<span class="op">=</span>df[<span class="st">'root_degree'</span>], y<span class="op">=</span>df[<span class="st">'time_seconds'</span>]<span class="op">*</span><span class="dv">1000</span>,  <span class="co"># Convert to milliseconds</span></span>
+<span id="cb10-80"><a></a>               mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb10-81"><a></a>               name<span class="op">=</span><span class="st">'Time (ms)'</span>,</span>
+<span id="cb10-82"><a></a>               text<span class="op">=</span>df[<span class="st">'description'</span>],</span>
+<span id="cb10-83"><a></a>               marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'purple'</span>),</span>
+<span id="cb10-84"><a></a>               line<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'purple'</span>, width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb10-85"><a></a>               hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Time: %</span><span class="sc">{y:.3f}</span><span class="st"> ms&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb10-86"><a></a>    row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb10-87"><a></a>)</span>
+<span id="cb10-88"><a></a></span>
+<span id="cb10-89"><a></a><span class="co"># Update layout</span></span>
+<span id="cb10-90"><a></a>fig.update_layout(</span>
+<span id="cb10-91"><a></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb10-92"><a></a>        text<span class="op">=</span><span class="st">"&lt;b&gt;Newton's Method: Energy Scaling Analysis&lt;/b&gt;"</span>,</span>
+<span id="cb10-93"><a></a>        x<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb10-94"><a></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb10-95"><a></a>    ),</span>
+<span id="cb10-96"><a></a>    showlegend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb10-97"><a></a>    height<span class="op">=</span><span class="dv">600</span>,</span>
+<span id="cb10-98"><a></a>    font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-99"><a></a>)</span>
+<span id="cb10-100"><a></a></span>
+<span id="cb10-101"><a></a><span class="co"># Update axes labels</span></span>
+<span id="cb10-102"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-103"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-104"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-105"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-106"><a></a></span>
+<span id="cb10-107"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Total Operations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-108"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Iterations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-109"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Operations per Iteration"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-110"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Time (milliseconds)"</span>, row<span class="op">=</span><span class="dv">2</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-111"><a></a></span>
+<span id="cb10-112"><a></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
+<h3 class="smaller" id="newtons-method-energy-scaling-analysis">Newton’s Method: Energy Scaling Analysis</h3>
 <!-- #### Interactive Energy Scaling Visualization -->
-<div id="53836579" class="cell" data-execution_count="6">
+<div id="ac05763d" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="bb89a03f-1858-4ca6-b186-8b99ecbfcc07" class="plotly-graph-div" style="height:700px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("bb89a03f-1858-4ca6-b186-8b99ecbfcc07")) {                    Plotly.newPlot(                        "bb89a03f-1858-4ca6-b186-8b99ecbfcc07",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"blue","width":4},"marker":{"color":"blue","size":12},"mode":"markers+lines","name":"Total Operations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i2","bdata":"HgA4AG4AeADEANQBnAM="},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"red","width":4},"marker":{"color":"red","size":12},"mode":"markers+lines","name":"Iterations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i1","bdata":"BQcLCg4aKg=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOps\u002fIter: %{y:.1f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"green","width":4},"marker":{"color":"green","size":12},"mode":"markers+lines","name":"Ops\u002fIteration","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAAAAGEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAKEAAAAAAAAAsQAAAAAAAADJAAAAAAAAANkA="},"type":"scatter","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eTime: %{y:.3f} ms\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"purple","width":4},"marker":{"color":"purple","size":12},"mode":"markers+lines","name":"Time (ms)","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAACOgj8AAAAAAGp4PwAAAAAAHYA\u002fAAAAAABMfT8AAAAAAAuDPwAAAAAAHZA\u002fAAAAAABkmT8="},"type":"scatter","xaxis":"x4","yaxis":"y4"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"font":{"size":14},"text":"Total Operations"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"font":{"size":14},"text":"Iterations"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"font":{"size":14},"text":"Operations per Iteration"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"font":{"size":14},"text":"Time (milliseconds)"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Total Operations vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Iterations vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Operations per Iteration vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Computation Time vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"title":{"font":{"size":20},"text":"\u003cb\u003eNewton's Method: Energy Scaling Analysis\u003c\u002fb\u003e","x":0.5},"font":{"size":14},"showlegend":false,"height":700},                        {"responsive": true}                    ).then(function(){
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="2be8c5e8-83da-4817-869e-cdf02821e2c9" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("2be8c5e8-83da-4817-869e-cdf02821e2c9")) {                    Plotly.newPlot(                        "2be8c5e8-83da-4817-869e-cdf02821e2c9",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"blue","width":4},"marker":{"color":"blue","size":12},"mode":"markers+lines","name":"Total Operations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i2","bdata":"HgA4AG4AeADEANQBnAM="},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"red","width":4},"marker":{"color":"red","size":12},"mode":"markers+lines","name":"Iterations","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"i1","bdata":"BQcLCg4aKg=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOps\u002fIter: %{y:.1f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"green","width":4},"marker":{"color":"green","size":12},"mode":"markers+lines","name":"Ops\u002fIteration","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAAAAGEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAKEAAAAAAAAAsQAAAAAAAADJAAAAAAAAANkA="},"type":"scatter","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eTime: %{y:.3f} ms\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"purple","width":4},"marker":{"color":"purple","size":12},"mode":"markers+lines","name":"Time (ms)","text":["Square root of 16","Cube root of 27","Fourth root of 81","Fifth root of 32","Sixth root of 64","Eighth root of 256","Tenth root of 1024"],"x":{"dtype":"i1","bdata":"AgMEBQYICg=="},"y":{"dtype":"f8","bdata":"AAAAAAARgj8AAAAAAGp4PwAAAAAAmoA\u002fAAAAAABkeT8AAAAAAB2APwAAAACAW5A\u002fAAAAAADbmj8="},"type":"scatter","xaxis":"x4","yaxis":"y4"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"font":{"size":14},"text":"Total Operations"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"font":{"size":14},"text":"Iterations"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"font":{"size":14},"text":"Operations per Iteration"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0],"title":{"font":{"size":14},"text":"Root Degree (n)"}},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"font":{"size":14},"text":"Time (milliseconds)"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Total Operations vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Iterations vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Operations per Iteration vs Root Degree","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Computation Time vs Root Degree","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"font":{"size":14},"showlegend":false,"height":600},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('bb89a03f-1858-4ca6-b186-8b99ecbfcc07');
+var gd = document.getElementById('2be8c5e8-83da-4817-869e-cdf02821e2c9');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -627,17 +639,17 @@ if (outputEl) {{
 </section>
 <section id="energy-scaling-summary" class="slide level2">
 <h2>Energy Scaling Summary</h2>
-<div id="5330c85a" class="cell" data-execution_count="7">
+<div id="88522d11" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>Interactive Energy Scaling Summary:
 ============================================================
 n= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.009ms
 n= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.006ms
 n= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.008ms
-n= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.007ms
-n= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.009ms
+n= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.006ms
+n= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.008ms
 n= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.016ms
-n=10: 42 iters, 924 ops,  22.0 ops/iter,  0.025ms
+n=10: 42 iters, 924 ops,  22.0 ops/iter,  0.026ms
 
 💡 Key Insights from Interactive Plot:
    - Linear scaling: Operations ∝ Root Degree
@@ -798,32 +810,32 @@ n=10: 42 iters, 924 ops,  22.0 ops/iter,  0.025ms
 </section>
 <section id="performance-comparison-setup" class="slide level2 smaller">
 <h2>Performance Comparison: Setup</h2>
-<div id="637e8d25" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># Enhanced comparison: Perfect vs Non-Perfect Powers</span></span>
-<span id="cb7-2"><a></a>comparison_data <span class="op">=</span> []</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="co"># Extended comparison set</span></span>
-<span id="cb7-5"><a></a>comparisons <span class="op">=</span> [</span>
-<span id="cb7-6"><a></a>    ((<span class="dv">2</span>, <span class="dv">16</span>, <span class="st">"√16 (perfect)"</span>), (<span class="dv">2</span>, <span class="dv">15</span>, <span class="st">"√15 (non-perfect)"</span>)),</span>
-<span id="cb7-7"><a></a>    ((<span class="dv">2</span>, <span class="dv">25</span>, <span class="st">"√25 (perfect)"</span>), (<span class="dv">2</span>, <span class="dv">24</span>, <span class="st">"√24 (non-perfect)"</span>)),</span>
-<span id="cb7-8"><a></a>    ((<span class="dv">3</span>, <span class="dv">27</span>, <span class="st">"∛27 (perfect)"</span>), (<span class="dv">3</span>, <span class="dv">26</span>, <span class="st">"∛26 (non-perfect)"</span>)),</span>
-<span id="cb7-9"><a></a>    ((<span class="dv">3</span>, <span class="dv">64</span>, <span class="st">"∛64 (perfect)"</span>), (<span class="dv">3</span>, <span class="dv">63</span>, <span class="st">"∛63 (non-perfect)"</span>)),</span>
-<span id="cb7-10"><a></a>    ((<span class="dv">4</span>, <span class="dv">81</span>, <span class="st">"⁴√81 (perfect)"</span>), (<span class="dv">4</span>, <span class="dv">80</span>, <span class="st">"⁴√80 (non-perfect)"</span>)),</span>
-<span id="cb7-11"><a></a>    ((<span class="dv">5</span>, <span class="dv">32</span>, <span class="st">"⁵√32 (perfect)"</span>), (<span class="dv">5</span>, <span class="dv">31</span>, <span class="st">"⁵√31 (non-perfect)"</span>)),</span>
-<span id="cb7-12"><a></a>]</span>
-<span id="cb7-13"><a></a></span>
-<span id="cb7-14"><a></a><span class="cf">for</span> (n1, v1, desc1), (n2, v2, desc2) <span class="kw">in</span> comparisons:</span>
-<span id="cb7-15"><a></a>    _, iters1, time1, ops1 <span class="op">=</span> newtons_nth_root(n1, v1, verbose<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb7-16"><a></a>    _, iters2, time2, ops2 <span class="op">=</span> newtons_nth_root(n2, v2, verbose<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb7-17"><a></a>    </span>
-<span id="cb7-18"><a></a>    comparison_data.extend([</span>
-<span id="cb7-19"><a></a>        {<span class="st">'root_degree'</span>: n1, <span class="st">'type'</span>: <span class="st">'Perfect Power'</span>, <span class="st">'description'</span>: desc1, </span>
-<span id="cb7-20"><a></a>         <span class="st">'iterations'</span>: iters1, <span class="st">'operations'</span>: ops1, <span class="st">'time_ms'</span>: time1<span class="op">*</span><span class="dv">1000</span>},</span>
-<span id="cb7-21"><a></a>        {<span class="st">'root_degree'</span>: n2, <span class="st">'type'</span>: <span class="st">'Non-Perfect'</span>, <span class="st">'description'</span>: desc2, </span>
-<span id="cb7-22"><a></a>         <span class="st">'iterations'</span>: iters2, <span class="st">'operations'</span>: ops2, <span class="st">'time_ms'</span>: time2<span class="op">*</span><span class="dv">1000</span>}</span>
-<span id="cb7-23"><a></a>    ])</span>
-<span id="cb7-24"><a></a></span>
-<span id="cb7-25"><a></a>comp_df <span class="op">=</span> pd.DataFrame(comparison_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ce27ce6b" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># Enhanced comparison: Perfect vs Non-Perfect Powers</span></span>
+<span id="cb12-2"><a></a>comparison_data <span class="op">=</span> []</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a><span class="co"># Extended comparison set</span></span>
+<span id="cb12-5"><a></a>comparisons <span class="op">=</span> [</span>
+<span id="cb12-6"><a></a>    ((<span class="dv">2</span>, <span class="dv">16</span>, <span class="st">"√16 (perfect)"</span>), (<span class="dv">2</span>, <span class="dv">15</span>, <span class="st">"√15 (non-perfect)"</span>)),</span>
+<span id="cb12-7"><a></a>    ((<span class="dv">2</span>, <span class="dv">25</span>, <span class="st">"√25 (perfect)"</span>), (<span class="dv">2</span>, <span class="dv">24</span>, <span class="st">"√24 (non-perfect)"</span>)),</span>
+<span id="cb12-8"><a></a>    ((<span class="dv">3</span>, <span class="dv">27</span>, <span class="st">"∛27 (perfect)"</span>), (<span class="dv">3</span>, <span class="dv">26</span>, <span class="st">"∛26 (non-perfect)"</span>)),</span>
+<span id="cb12-9"><a></a>    ((<span class="dv">3</span>, <span class="dv">64</span>, <span class="st">"∛64 (perfect)"</span>), (<span class="dv">3</span>, <span class="dv">63</span>, <span class="st">"∛63 (non-perfect)"</span>)),</span>
+<span id="cb12-10"><a></a>    ((<span class="dv">4</span>, <span class="dv">81</span>, <span class="st">"⁴√81 (perfect)"</span>), (<span class="dv">4</span>, <span class="dv">80</span>, <span class="st">"⁴√80 (non-perfect)"</span>)),</span>
+<span id="cb12-11"><a></a>    ((<span class="dv">5</span>, <span class="dv">32</span>, <span class="st">"⁵√32 (perfect)"</span>), (<span class="dv">5</span>, <span class="dv">31</span>, <span class="st">"⁵√31 (non-perfect)"</span>)),</span>
+<span id="cb12-12"><a></a>]</span>
+<span id="cb12-13"><a></a></span>
+<span id="cb12-14"><a></a><span class="cf">for</span> (n1, v1, desc1), (n2, v2, desc2) <span class="kw">in</span> comparisons:</span>
+<span id="cb12-15"><a></a>    _, iters1, time1, ops1 <span class="op">=</span> newtons_nth_root(n1, v1, verbose<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-16"><a></a>    _, iters2, time2, ops2 <span class="op">=</span> newtons_nth_root(n2, v2, verbose<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-17"><a></a>    </span>
+<span id="cb12-18"><a></a>    comparison_data.extend([</span>
+<span id="cb12-19"><a></a>        {<span class="st">'root_degree'</span>: n1, <span class="st">'type'</span>: <span class="st">'Perfect Power'</span>, <span class="st">'description'</span>: desc1, </span>
+<span id="cb12-20"><a></a>         <span class="st">'iterations'</span>: iters1, <span class="st">'operations'</span>: ops1, <span class="st">'time_ms'</span>: time1<span class="op">*</span><span class="dv">1000</span>},</span>
+<span id="cb12-21"><a></a>        {<span class="st">'root_degree'</span>: n2, <span class="st">'type'</span>: <span class="st">'Non-Perfect'</span>, <span class="st">'description'</span>: desc2, </span>
+<span id="cb12-22"><a></a>         <span class="st">'iterations'</span>: iters2, <span class="st">'operations'</span>: ops2, <span class="st">'time_ms'</span>: time2<span class="op">*</span><span class="dv">1000</span>}</span>
+<span id="cb12-23"><a></a>    ])</span>
+<span id="cb12-24"><a></a></span>
+<span id="cb12-25"><a></a>comp_df <span class="op">=</span> pd.DataFrame(comparison_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -846,12 +858,12 @@ n=10: 42 iters, 924 ops,  22.0 ops/iter,  0.025ms
 <section class="slide level2">
 
 <h3 id="perfect-vs-non-perfect-powers">Perfect vs Non-Perfect Powers</h3>
-<div id="88ab1145" class="cell" data-execution_count="9">
+<div id="c1bd92ed" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="83ab0953-ab96-476c-a621-04f64b96b3eb" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("83ab0953-ab96-476c-a621-04f64b96b3eb")) {                    Plotly.newPlot(                        "83ab0953-ab96-476c-a621-04f64b96b3eb",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightblue","size":12},"mode":"markers+lines","name":"Perfect Power - Iterations","text":["\u221a16 (perfect)","\u221a25 (perfect)","\u221b27 (perfect)","\u221b64 (perfect)","\u2074\u221a81 (perfect)","\u2075\u221a32 (perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"BQYHCQsK"},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightcoral","size":12},"mode":"markers+lines","name":"Non-Perfect - Iterations","text":["\u221a15 (non-perfect)","\u221a24 (non-perfect)","\u221b26 (non-perfect)","\u221b63 (non-perfect)","\u2074\u221a80 (non-perfect)","\u2075\u221a31 (non-perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"BQYHCQsK"},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightblue","size":12},"mode":"markers+lines","name":"Perfect Power - Operations","text":["\u221a16 (perfect)","\u221a25 (perfect)","\u221b27 (perfect)","\u221b64 (perfect)","\u2074\u221a81 (perfect)","\u2075\u221a32 (perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"HiQ4SG54"},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightcoral","size":12},"mode":"markers+lines","name":"Non-Perfect - Operations","text":["\u221a15 (non-perfect)","\u221a24 (non-perfect)","\u221b26 (non-perfect)","\u221b63 (non-perfect)","\u2074\u221a80 (non-perfect)","\u2075\u221a31 (non-perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"HiQ4SG54"},"type":"scatter","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Root Degree (n)"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Iterations"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Root Degree (n)"}},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"title":{"text":"Total Operations"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Iterations","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Total Operations","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"title":{"font":{"size":16},"text":"\u003cb\u003e\u003c\u002fb\u003e","x":0.5},"legend":{"orientation":"h","yanchor":"top","y":1.02,"xanchor":"left","x":1},"height":400,"showlegend":true},                        {"responsive": true}                    ).then(function(){
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="d681c3ca-6c1c-4cf8-b490-147756a6762a" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("d681c3ca-6c1c-4cf8-b490-147756a6762a")) {                    Plotly.newPlot(                        "d681c3ca-6c1c-4cf8-b490-147756a6762a",                        [{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightblue","size":12},"mode":"markers+lines","name":"Perfect Power - Iterations","text":["\u221a16 (perfect)","\u221a25 (perfect)","\u221b27 (perfect)","\u221b64 (perfect)","\u2074\u221a81 (perfect)","\u2075\u221a32 (perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"BQYHCQsK"},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eIterations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightcoral","size":12},"mode":"markers+lines","name":"Non-Perfect - Iterations","text":["\u221a15 (non-perfect)","\u221a24 (non-perfect)","\u221b26 (non-perfect)","\u221b63 (non-perfect)","\u2074\u221a80 (non-perfect)","\u2075\u221a31 (non-perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"BQYHCQsK"},"type":"scatter","xaxis":"x","yaxis":"y"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightblue","size":12},"mode":"markers+lines","name":"Perfect Power - Operations","text":["\u221a16 (perfect)","\u221a25 (perfect)","\u221b27 (perfect)","\u221b64 (perfect)","\u2074\u221a81 (perfect)","\u2075\u221a32 (perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"HiQ4SG54"},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eRoot Degree: %{x}\u003cbr\u003eOperations: %{y}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"width":3},"marker":{"color":"lightcoral","size":12},"mode":"markers+lines","name":"Non-Perfect - Operations","text":["\u221a15 (non-perfect)","\u221a24 (non-perfect)","\u221b26 (non-perfect)","\u221b63 (non-perfect)","\u2074\u221a80 (non-perfect)","\u2075\u221a31 (non-perfect)"],"x":{"dtype":"i1","bdata":"AgIDAwQF"},"y":{"dtype":"i1","bdata":"HiQ4SG54"},"type":"scatter","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Root Degree (n)"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Iterations"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Root Degree (n)"}},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"title":{"text":"Total Operations"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Iterations","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Total Operations","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"title":{"font":{"size":16},"text":"\u003cb\u003e\u003c\u002fb\u003e","x":0.5},"legend":{"orientation":"h","yanchor":"bottom","y":-0.3,"xanchor":"center","x":0.5},"height":400,"showlegend":true},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('83ab0953-ab96-476c-a621-04f64b96b3eb');
+var gd = document.getElementById('d681c3ca-6c1c-4cf8-b490-147756a6762a');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -885,30 +897,143 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section id="real-world-energy-impact" class="slide level2 smaller">
-<h2>Real-World Energy Impact</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<h3 id="smartphone-calculator-app"><strong>Smartphone Calculator App</strong></h3>
+<section class="slide level2">
+
+<h3 class="smaller" id="what-code-just-made-that-plot">What Code Just Made That Plot?</h3>
+<div id="24d246d9" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># Create interactive comparison plot</span></span>
+<span id="cb14-2"><a></a>fig <span class="op">=</span> make_subplots(</span>
+<span id="cb14-3"><a></a>    rows<span class="op">=</span><span class="dv">1</span>, cols<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb14-4"><a></a>    subplot_titles<span class="op">=</span>(<span class="st">'Iterations'</span>, </span>
+<span id="cb14-5"><a></a>                   <span class="st">'Total Operations'</span>),</span>
+<span id="cb14-6"><a></a>    <span class="co"># subplot_titles=('Iterations: Perfect vs Non-Perfect Powers', </span></span>
+<span id="cb14-7"><a></a>    <span class="co">#                'Total Operations: Perfect vs Non-Perfect Powers'),</span></span>
+<span id="cb14-8"><a></a>    specs<span class="op">=</span>[[{<span class="st">"secondary_y"</span>: <span class="va">False</span>}, {<span class="st">"secondary_y"</span>: <span class="va">False</span>}]]</span>
+<span id="cb14-9"><a></a>)</span>
+<span id="cb14-10"><a></a></span>
+<span id="cb14-11"><a></a><span class="co"># Colors for perfect vs non-perfect</span></span>
+<span id="cb14-12"><a></a>colors <span class="op">=</span> {<span class="st">'Perfect Power'</span>: <span class="st">'lightblue'</span>, <span class="st">'Non-Perfect'</span>: <span class="st">'lightcoral'</span>}</span>
+<span id="cb14-13"><a></a></span>
+<span id="cb14-14"><a></a><span class="co"># Plot iterations comparison</span></span>
+<span id="cb14-15"><a></a><span class="cf">for</span> power_type <span class="kw">in</span> [<span class="st">'Perfect Power'</span>, <span class="st">'Non-Perfect'</span>]:</span>
+<span id="cb14-16"><a></a>    data_subset <span class="op">=</span> comp_df[comp_df[<span class="st">'type'</span>] <span class="op">==</span> power_type]</span>
+<span id="cb14-17"><a></a>    fig.add_trace(</span>
+<span id="cb14-18"><a></a>        go.Scatter(x<span class="op">=</span>data_subset[<span class="st">'root_degree'</span>], y<span class="op">=</span>data_subset[<span class="st">'iterations'</span>],</span>
+<span id="cb14-19"><a></a>                   mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb14-20"><a></a>                   name<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>power_type<span class="sc">}</span><span class="ss"> - Iterations'</span>,</span>
+<span id="cb14-21"><a></a>                   text<span class="op">=</span>data_subset[<span class="st">'description'</span>],</span>
+<span id="cb14-22"><a></a>                   marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span>colors[power_type]),</span>
+<span id="cb14-23"><a></a>                   line<span class="op">=</span><span class="bu">dict</span>(width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb14-24"><a></a>                   hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Iterations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb14-25"><a></a>        row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb14-26"><a></a>    )</span>
+<span id="cb14-27"><a></a></span>
+<span id="cb14-28"><a></a><span class="co"># Plot operations comparison  </span></span>
+<span id="cb14-29"><a></a><span class="cf">for</span> power_type <span class="kw">in</span> [<span class="st">'Perfect Power'</span>, <span class="st">'Non-Perfect'</span>]:</span>
+<span id="cb14-30"><a></a>    data_subset <span class="op">=</span> comp_df[comp_df[<span class="st">'type'</span>] <span class="op">==</span> power_type]</span>
+<span id="cb14-31"><a></a>    fig.add_trace(</span>
+<span id="cb14-32"><a></a>        go.Scatter(x<span class="op">=</span>data_subset[<span class="st">'root_degree'</span>], y<span class="op">=</span>data_subset[<span class="st">'operations'</span>],</span>
+<span id="cb14-33"><a></a>                   mode<span class="op">=</span><span class="st">'markers+lines'</span>,</span>
+<span id="cb14-34"><a></a>                   name<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>power_type<span class="sc">}</span><span class="ss"> - Operations'</span>,</span>
+<span id="cb14-35"><a></a>                   text<span class="op">=</span>data_subset[<span class="st">'description'</span>],</span>
+<span id="cb14-36"><a></a>                   marker<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span>colors[power_type]),</span>
+<span id="cb14-37"><a></a>                   line<span class="op">=</span><span class="bu">dict</span>(width<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb14-38"><a></a>                   hovertemplate<span class="op">=</span><span class="st">'&lt;b&gt;%</span><span class="sc">{text}</span><span class="st">&lt;/b&gt;&lt;br&gt;Root Degree: %</span><span class="sc">{x}</span><span class="st">&lt;br&gt;Operations: %</span><span class="sc">{y}</span><span class="st">&lt;extra&gt;&lt;/extra&gt;'</span>),</span>
+<span id="cb14-39"><a></a>        row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb14-40"><a></a>    )</span>
+<span id="cb14-41"><a></a></span>
+<span id="cb14-42"><a></a>fig.update_layout(</span>
+<span id="cb14-43"><a></a>    title<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb14-44"><a></a>        <span class="co"># text="&lt;b&gt;Energy Impact: Perfect vs Non-Perfect Powers&lt;/b&gt;",</span></span>
+<span id="cb14-45"><a></a>        text<span class="op">=</span><span class="st">"&lt;b&gt;&lt;/b&gt;"</span>,</span>
+<span id="cb14-46"><a></a>        x<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb14-47"><a></a>        font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb14-48"><a></a>    ),</span>
+<span id="cb14-49"><a></a>    height<span class="op">=</span><span class="dv">400</span>,</span>
+<span id="cb14-50"><a></a>    showlegend<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-51"><a></a>    legend<span class="op">=</span><span class="bu">dict</span>(orientation<span class="op">=</span><span class="st">"h"</span>, yanchor<span class="op">=</span><span class="st">"bottom"</span>, y<span class="op">=-</span><span class="fl">0.3</span>, xanchor<span class="op">=</span><span class="st">"center"</span>, x<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb14-52"><a></a>)</span>
+<span id="cb14-53"><a></a></span>
+<span id="cb14-54"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-55"><a></a>fig.update_xaxes(title_text<span class="op">=</span><span class="st">"Root Degree (n)"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-56"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Iterations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-57"><a></a>fig.update_yaxes(title_text<span class="op">=</span><span class="st">"Total Operations"</span>, row<span class="op">=</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-58"><a></a></span>
+<span id="cb14-59"><a></a>fig.show()</span>
+<span id="cb14-60"><a></a></span>
+<span id="cb14-61"><a></a></span>
+<span id="cb14-62"><a></a><span class="co"># Summary statistics</span></span>
+<span id="cb14-63"><a></a>perfect_avg_iters <span class="op">=</span> comp_df[comp_df[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'Perfect Power'</span>][<span class="st">'iterations'</span>].mean()</span>
+<span id="cb14-64"><a></a>nonperfect_avg_iters <span class="op">=</span> comp_df[comp_df[<span class="st">'type'</span>] <span class="op">==</span> <span class="st">'Non-Perfect'</span>][<span class="st">'iterations'</span>].mean()</span>
+<span id="cb14-65"><a></a></span>
+<span id="cb14-66"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">📊 Perfect vs Non-Perfect Power Analysis:"</span>)</span>
+<span id="cb14-67"><a></a><span class="bu">print</span>(<span class="ss">f"   Average iterations (Perfect Powers): </span><span class="sc">{</span>perfect_avg_iters<span class="sc">:.1f}</span><span class="ss">"</span>)</span>
+<span id="cb14-68"><a></a><span class="bu">print</span>(<span class="ss">f"   Average iterations (Non-Perfect): </span><span class="sc">{</span>nonperfect_avg_iters<span class="sc">:.1f}</span><span class="ss">"</span>)</span>
+<span id="cb14-69"><a></a><span class="bu">print</span>(<span class="ss">f"   Energy penalty for non-perfect: </span><span class="sc">{</span>((nonperfect_avg_iters<span class="op">/</span>perfect_avg_iters<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span><span class="dv">100</span>)<span class="sc">:+.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb14-70"><a></a><span class="bu">print</span>(<span class="st">"   💡 Perfect powers converge faster, but the difference is manageable!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="real-world-energy-impact-i">Real-World Energy Impact (I)</h4>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>📱 Smartphone Calculator App</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li>Square root calculation: ~10-20 operations</li>
 <li>Battery impact: Negligible (&lt; 0.001%)</li>
 <li>User experience: Instant response</li>
 </ul>
-<h3 id="scientific-computing-cluster"><strong>Scientific Computing Cluster</strong></h3>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>🖥️ Scientific Computing Cluster</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li>Million root calculations/second</li>
 <li>Energy efficiency matters at scale</li>
 <li>Newton’s method saves significant power</li>
 </ul>
-</div><div class="column" style="width:40%;">
-<h3 id="iot-sensor-network"><strong>IoT Sensor Network</strong></h3>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="real-world-energy-impact-ii">Real-World Energy Impact (II)</h4>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>📟 IoT Sensor Network</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li>Limited battery life</li>
 <li>Occasional calibration calculations</li>
 <li>Newton’s method enables longer deployment</li>
 </ul>
-</div></div>
+</div>
+</div>
+</div>
+<center>
+<img data-src="graphics/battery_i.png" style="width:50.0%">
+</center>
 </section>
 <section id="conclusion-why-newtons-method-wins" class="slide level2 smaller">
 <h2>Conclusion: Why Newton’s Method Wins</h2>
@@ -951,56 +1076,56 @@ if (outputEl) {{
 </div>
 <div class="fragment">
 <h3 id="try-it-yourself">Try it yourself!</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="co"># Experiment with different roots and values</span></span>
-<span id="cb9-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">7</span>, <span class="dv">128</span>, verbose<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="co"># Experiment with different roots and values</span></span>
+<span id="cb15-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">7</span>, <span class="dv">128</span>, verbose<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="appendix-complete-implementation" class="slide level2 smaller">
 <h2>Appendix: Complete Implementation</h2>
-<div id="0fee89f6" class="cell" data-execution_count="10">
+<div id="faf7fafa" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Show complete instrumented function</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> newtons_nth_root_complete(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>, verbose: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
-<span id="cb10-2"><a></a>    <span class="co">"""</span></span>
-<span id="cb10-3"><a></a><span class="co">    Complete instrumented version with full energy analysis</span></span>
-<span id="cb10-4"><a></a><span class="co">    """</span></span>
-<span id="cb10-5"><a></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
-<span id="cb10-6"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"n must be a positive integer"</span>)</span>
-<span id="cb10-7"><a></a>    <span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb10-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot find even root of negative number"</span>)</span>
-<span id="cb10-9"><a></a>    </span>
-<span id="cb10-10"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
-<span id="cb10-11"><a></a>    iterations <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-12"><a></a>    operations_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-13"><a></a>    start_time <span class="op">=</span> time.time()</span>
-<span id="cb10-14"><a></a>    </span>
-<span id="cb10-15"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">&gt;</span> tolerance:</span>
-<span id="cb10-16"><a></a>        iterations <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb10-17"><a></a>        </span>
-<span id="cb10-18"><a></a>        <span class="cf">if</span> verbose:</span>
-<span id="cb10-19"><a></a>            <span class="bu">print</span>(<span class="ss">f"Iteration </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss">: n = </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, value = </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">, guess = </span><span class="sc">{</span>guess<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-20"><a></a>            <span class="bu">print</span>(<span class="ss">f"   abs(guess^n - value) = </span><span class="sc">{</span><span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-21"><a></a>        </span>
-<span id="cb10-22"><a></a>        <span class="co"># Detailed operation counting</span></span>
-<span id="cb10-23"><a></a>        operations_this_iteration <span class="op">=</span> (n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> (n<span class="op">-</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb10-24"><a></a>        operations_count <span class="op">+=</span> operations_this_iteration</span>
-<span id="cb10-25"><a></a>        </span>
-<span id="cb10-26"><a></a>        guess_new <span class="op">=</span> guess <span class="op">-</span> (guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">/</span> (n <span class="op">*</span> guess<span class="op">**</span>(n<span class="op">-</span><span class="dv">1</span>))</span>
-<span id="cb10-27"><a></a>        </span>
-<span id="cb10-28"><a></a>        <span class="cf">if</span> verbose:</span>
-<span id="cb10-29"><a></a>            <span class="bu">print</span>(<span class="ss">f"   new_guess = </span><span class="sc">{</span>guess_new<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-30"><a></a>            <span class="bu">print</span>(<span class="ss">f"   Operations this iteration: </span><span class="sc">{</span>operations_this_iteration<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-31"><a></a>        </span>
-<span id="cb10-32"><a></a>        guess <span class="op">=</span> guess_new</span>
-<span id="cb10-33"><a></a>    </span>
-<span id="cb10-34"><a></a>    computation_time <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
-<span id="cb10-35"><a></a>    </span>
-<span id="cb10-36"><a></a>    <span class="cf">if</span> verbose:</span>
-<span id="cb10-37"><a></a>        <span class="bu">print</span>(<span class="ss">f"Convergence in </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss"> iterations"</span>)</span>
-<span id="cb10-38"><a></a>        <span class="bu">print</span>(<span class="ss">f"Total operations: </span><span class="sc">{</span>operations_count<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-39"><a></a>        <span class="bu">print</span>(<span class="ss">f"Computation time: </span><span class="sc">{</span>computation_time<span class="sc">:.6f}</span><span class="ss"> seconds"</span>)</span>
-<span id="cb10-40"><a></a>    </span>
-<span id="cb10-41"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> newtons_nth_root_complete(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>, verbose: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
+<span id="cb16-2"><a></a>    <span class="co">"""</span></span>
+<span id="cb16-3"><a></a><span class="co">    Complete instrumented version with full energy analysis</span></span>
+<span id="cb16-4"><a></a><span class="co">    """</span></span>
+<span id="cb16-5"><a></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb16-6"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"n must be a positive integer"</span>)</span>
+<span id="cb16-7"><a></a>    <span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Cannot find even root of negative number"</span>)</span>
+<span id="cb16-9"><a></a>    </span>
+<span id="cb16-10"><a></a>    tolerance <span class="op">=</span> <span class="fl">0.0001</span></span>
+<span id="cb16-11"><a></a>    iterations <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-12"><a></a>    operations_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-13"><a></a>    start_time <span class="op">=</span> time.time()</span>
+<span id="cb16-14"><a></a>    </span>
+<span id="cb16-15"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">&gt;</span> tolerance:</span>
+<span id="cb16-16"><a></a>        iterations <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-17"><a></a>        </span>
+<span id="cb16-18"><a></a>        <span class="cf">if</span> verbose:</span>
+<span id="cb16-19"><a></a>            <span class="bu">print</span>(<span class="ss">f"Iteration </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss">: n = </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, value = </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">, guess = </span><span class="sc">{</span>guess<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-20"><a></a>            <span class="bu">print</span>(<span class="ss">f"   abs(guess^n - value) = </span><span class="sc">{</span><span class="bu">abs</span>(guess<span class="op">**</span>n <span class="op">-</span> value)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-21"><a></a>        </span>
+<span id="cb16-22"><a></a>        <span class="co"># Detailed operation counting</span></span>
+<span id="cb16-23"><a></a>        operations_this_iteration <span class="op">=</span> (n<span class="op">-</span><span class="dv">1</span>) <span class="op">+</span> (n<span class="op">-</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb16-24"><a></a>        operations_count <span class="op">+=</span> operations_this_iteration</span>
+<span id="cb16-25"><a></a>        </span>
+<span id="cb16-26"><a></a>        guess_new <span class="op">=</span> guess <span class="op">-</span> (guess<span class="op">**</span>n <span class="op">-</span> value) <span class="op">/</span> (n <span class="op">*</span> guess<span class="op">**</span>(n<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb16-27"><a></a>        </span>
+<span id="cb16-28"><a></a>        <span class="cf">if</span> verbose:</span>
+<span id="cb16-29"><a></a>            <span class="bu">print</span>(<span class="ss">f"   new_guess = </span><span class="sc">{</span>guess_new<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-30"><a></a>            <span class="bu">print</span>(<span class="ss">f"   Operations this iteration: </span><span class="sc">{</span>operations_this_iteration<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-31"><a></a>        </span>
+<span id="cb16-32"><a></a>        guess <span class="op">=</span> guess_new</span>
+<span id="cb16-33"><a></a>    </span>
+<span id="cb16-34"><a></a>    computation_time <span class="op">=</span> time.time() <span class="op">-</span> start_time</span>
+<span id="cb16-35"><a></a>    </span>
+<span id="cb16-36"><a></a>    <span class="cf">if</span> verbose:</span>
+<span id="cb16-37"><a></a>        <span class="bu">print</span>(<span class="ss">f"Convergence in </span><span class="sc">{</span>iterations<span class="sc">}</span><span class="ss"> iterations"</span>)</span>
+<span id="cb16-38"><a></a>        <span class="bu">print</span>(<span class="ss">f"Total operations: </span><span class="sc">{</span>operations_count<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb16-39"><a></a>        <span class="bu">print</span>(<span class="ss">f"Computation time: </span><span class="sc">{</span>computation_time<span class="sc">:.6f}</span><span class="ss"> seconds"</span>)</span>
+<span id="cb16-40"><a></a>    </span>
+<span id="cb16-41"><a></a>    <span class="cf">return</span> guess, iterations, computation_time, operations_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 
