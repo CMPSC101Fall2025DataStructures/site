@@ -320,7 +320,7 @@ CS 101 - Fall 2025
 <span id="cb2-5"><a></a><span class="bu">print</span>(<span class="ss">f" (t1 + t2) --&gt; </span><span class="sc">{</span>(t1 <span class="op">+</span> t2)<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb2-6"><a></a><span class="bu">print</span>(<span class="ss">f" (t1 + t2)[3] --&gt;  </span><span class="sc">{</span>(t1 <span class="op">+</span> t2)[<span class="dv">3</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb2-7"><a></a><span class="bu">print</span>(<span class="ss">f" (t1 + t2)[2:5] --&gt; </span><span class="sc">{</span>(t1 <span class="op">+</span> t2)[<span class="dv">2</span>:<span class="dv">5</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="a073e33f" class="cell" data-execution_count="1">
+<div id="0413d4a8" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code> t2 --&gt; ((1, 'two', 3), 3.25)
  (t1 + t2) --&gt; (1, 'two', 3, (1, 'two', 3), 3.25)
@@ -522,7 +522,7 @@ CS 101 - Fall 2025
 <span id="cb8-8"><a></a><span class="bu">print</span>(<span class="ss">f" L2 is copy of L1 --&gt; </span><span class="sc">{</span>L2<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb8-9"><a></a>L2.append(<span class="st">"2000"</span>) <span class="co"># Modify L2</span></span>
 <span id="cb8-10"><a></a><span class="bu">print</span>(<span class="ss">f"Appending to L2 modifies L1 = </span><span class="sc">{</span>L2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="7a4458c5" class="cell" data-execution_count="2">
+<div id="73e6aef8" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>L1 --&gt; [1, 2, 3]
  L2 is copy of L1 --&gt; [1, 2, 3]
@@ -622,7 +622,7 @@ Appending to L2 modifies L1 = [1, 2, 3, '100', '2000']</code></pre>
 <span id="cb12-4"><a></a><span class="co"># Create a list of tuples combining elements from list1 and list2</span></span>
 <span id="cb12-5"><a></a>combined_list <span class="op">=</span> [(x, y) <span class="cf">for</span> x <span class="kw">in</span> list1 <span class="cf">for</span> y <span class="kw">in</span> list2]</span>
 <span id="cb12-6"><a></a><span class="bu">print</span>(combined_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="5e1a0159" class="cell" data-execution_count="3">
+<div id="b39c89ae" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b'), (3, 'a'), (3, 'b')]</code></pre>
 </div>
@@ -813,7 +813,7 @@ Appending to L2 modifies L1 = [1, 2, 3, '100', '2000']</code></pre>
 <span id="cb17-15"><a></a><span class="bu">print</span>(<span class="ss">f"Apply squaring to each element of L : </span><span class="sc">{</span>L<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb17-16"><a></a>apply_to_each(L, <span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb17-17"><a></a><span class="bu">print</span>(<span class="ss">f"L = </span><span class="sc">{</span>L<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fe79998c" class="cell" data-execution_count="4">
+<div id="34dce98a" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>L = [1, -2, 3.33, -5]
 Apply ABS() to each element of L
@@ -851,7 +851,7 @@ L = [1.0, 4.0, 9.0, 25.0]</code></pre>
 <span id="cb19-10"><a></a><span class="bu">print</span>(<span class="ss">f"Apply squaring to each element of L : </span><span class="sc">{</span>L<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb19-11"><a></a>apply_to_each(L, <span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb19-12"><a></a><span class="bu">print</span>(<span class="ss">f"L = </span><span class="sc">{</span>L<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="6037eaec" class="cell" data-execution_count="5">
+<div id="13fa4071" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>L = [1, -2, 3.33, -5]
 Apply squaring to each element of L : [1, -2, 3.33, -5]
