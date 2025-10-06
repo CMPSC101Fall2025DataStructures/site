@@ -1,6 +1,6 @@
 ---
-title: "Python Programming: Concepts I"
-subtitle: "Guttag Chapter 2"
+title: "Chapter 2: Python Programming: Concepts I"
+subtitle: "Basics, Solutions"
 author: "Oliver Bonham-Carter"
 format: revealjs
 theme: moon

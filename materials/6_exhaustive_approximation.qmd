@@ -1,6 +1,6 @@
 ---
-title: "Some Approximation Techniques in Python"
-subtitle: "Numerical Search Methods and Their Applications"
+title: "Chapter 4: SOME SIMPLE NUMERICAL PROGRAMS"
+subtitle: "Some Approximation Techniques in Python: Numerical Search Methods and Their Applications"
 author: "CS 101 - Fall 2025"
 format: 
   revealjs:
