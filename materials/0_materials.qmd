@@ -72,7 +72,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 
 
-## 7.Chapter 5 Exhaustive enumeration and Approximation
+## 7.Chapter 5: Exhaustive enumeration and Approximation
 - **Some Approximation Techniques in Python**
   - [HTML](7_python_fundamentals_slides.html) Slides
   -  [PDF](7_python_fundamentals_slides.pdf) The slide's material as a pdf.
