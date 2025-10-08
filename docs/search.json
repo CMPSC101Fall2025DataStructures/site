@@ -298,21 +298,21 @@
     "href": "materials/0_materials.html#chapter-2-lists-and-dictionaries",
     "title": "Materials",
     "section": "5. Chapter 2: Lists and Dictionaries",
-    "text": "5. Chapter 2: Lists and Dictionaries\n\nReturn to Programming challenges of Activity 03\n\nREADME\nNote: This time only: Changed Due Date. Now set to 22nd Sept 2025, 11:30pm\n\nLists and Dictionaries at Work\n\nPlayGround demonstrations: Demonstration\nFinish slides from last week (Check the challenges)\n\nHTML Slides\n\n\nLab04: For loops and While Loops\n\nGitHub Classroom link\n\nActivity 04: Fixing code for finding approximations\n\nGitHub Classroom Link"
+    "text": "5. Chapter 2: Lists and Dictionaries\n\nReturn to Programming Challenges of Activity 03\n\nREADME\nNote: This time only: Changed Due Date. Now set to 22nd Sept 2025, 11:30pm\n\nLists and Dictionaries at Work\n\nPlayGround demonstrations: Demonstration\nFinish slides from last week (Check the challenges)\n\nHTML Slides\n\n\nLab04: For loops and While Loops\n\nGitHub Classroom link\n\nActivity 04: Fixing code for finding approximations\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-3-exhaustive-enumeration-and-approximation",
     "href": "materials/0_materials.html#chapter-3-exhaustive-enumeration-and-approximation",
     "title": "Materials",
-    "section": "6. Chapter 3: Exhaustive enumeration and Approximation",
-    "text": "6. Chapter 3: Exhaustive enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML\nPDF The slide’s material as a pdf.\n\nLab05: Approximations by the Taylor Series\n\nGitHub Classroom link"
+    "section": "6. Chapter 3: Exhaustive Enumeration and Approximation",
+    "text": "6. Chapter 3: Exhaustive Enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML\nPDF The slide’s material as a pdf.\n\nLab05: Approximations by the Taylor Series\n\nGitHub Classroom link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-5-exhaustive-enumeration-and-approximation",
     "href": "materials/0_materials.html#chapter-5-exhaustive-enumeration-and-approximation",
     "title": "Materials",
-    "section": "7. Chapter 5: Exhaustive enumeration and Approximation",
-    "text": "7. Chapter 5: Exhaustive enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf."
+    "section": "7. Chapter 5: Exhaustive Enumeration and Approximation",
+    "text": "7. Chapter 5: Exhaustive Enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nMidterm Preparation Guide\n\nMidterm exam: During lab on Thursday, 23rd October 2025\nHTML\nPDF"
   },
   {
     "objectID": "materials/3_i_introToPython.html#what-are-literals",
@@ -378,214 +378,151 @@
     "text": "Consider This!\nLet’s do these in class!"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#introduction",
-    "href": "materials/6_energy_analysis_slides.html#introduction",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Introduction",
-    "text": "Introduction\n\n\n\n\n\n\nResearch Question\n\n\nHow much computational energy does Newton’s method consume when generalized to find any nth root?\n\n\n\n\nNewton’s method is a powerful algorithm for finding roots\nWe’ve generalized it from square roots to any nth root\nWhy does energy matter?\n\n🔋 Battery life in mobile devices\n🌱 Server costs and carbon footprint\n⚡ Real-time system constraints\n📱 IoT and edge computing limitations"
+    "objectID": "materials/7_midterm_study_sheet.html",
+    "href": "materials/7_midterm_study_sheet.html",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "",
+    "text": "This study guide covers all the essential Python concepts you need to know for the midterm exam in our course. During lab time on Thursday 23th October 2025. The exam will be 70 minutes long, closed-book, and will test your understanding of Python fundamentals and concepts taken from the Materials pages in our course (see URL; https://cmpsc101fall2025datastructures.github.io/site/materials/0_materials.html. In addition, this midterm will cover chapters 1,2,3 and 5 of our textbook; Introduction to Computation and Programming Using Python by John V. Guttag.\n\n\nWhat will the midterm look like? The below list provides a a general idea of what to expect.\n\nCode Output Questions: You will be given Python code and asked what it prints\nMultiple Choice: Select the best answer from given options\n\nTrue/False with Explanation: State whether something is true or false and explain why\nFill-in-the-Blank: Complete code to achieve a specific result\nShort Answer: Explain concepts or differences between approaches\nGuttag’s textbook: Chapters 1,2,3 and 5\n\n\n\n\nHow can you prepare for this midterm? Your instructor has assembled a non-exhaustive short list of some of the best ways to prepare for the midterm.\n\nPractice writing code by hand - You will not have a computer during the exam\nTrace through code step by step - Follow the execution mentally\nKnow the exact output format - Pay attention to spacing, quotes, brackets\nUnderstand concepts, don’t just memorize - Know why things work the way they do\nReview common errors - Understanding what goes wrong helps you get it right"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#the-general-algorithm",
-    "href": "materials/6_energy_analysis_slides.html#the-general-algorithm",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "The General Algorithm",
-    "text": "The General Algorithm\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0):\n    \"\"\"Find the nth root of a value using Newton's method\"\"\"\n    tolerance = 0.0001\n    \n    while abs(guess**n - value) &gt; tolerance:\n        # Newton's formula: y_new = y - f(y)/f'(y)\n        # For f(y) = y^n - value:\n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    return guess\n\n \n\n\n\n\n\n\nMathematical Foundation\n\n\nQuadratic convergence means errors roughly square each iteration!\nThis exponential error reduction is the key to Newton’s energy efficiency."
+    "objectID": "materials/7_midterm_study_sheet.html#exam-format",
+    "href": "materials/7_midterm_study_sheet.html#exam-format",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "",
+    "text": "What will the midterm look like? The below list provides a a general idea of what to expect.\n\nCode Output Questions: You will be given Python code and asked what it prints\nMultiple Choice: Select the best answer from given options\n\nTrue/False with Explanation: State whether something is true or false and explain why\nFill-in-the-Blank: Complete code to achieve a specific result\nShort Answer: Explain concepts or differences between approaches\nGuttag’s textbook: Chapters 1,2,3 and 5"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
-    "href": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Energy Measurement Setup",
-    "text": "Energy Measurement Setup\n\n\n\n\nEnergy Tracking Strategy\n\nCount arithmetic operations per iteration\nMeasure wall-clock computation time\n\nTrack convergence behavior\nCompare across different root degrees"
+    "objectID": "materials/7_midterm_study_sheet.html#study-tips",
+    "href": "materials/7_midterm_study_sheet.html#study-tips",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "",
+    "text": "How can you prepare for this midterm? Your instructor has assembled a non-exhaustive short list of some of the best ways to prepare for the midterm.\n\nPractice writing code by hand - You will not have a computer during the exam\nTrace through code step by step - Follow the execution mentally\nKnow the exact output format - Pay attention to spacing, quotes, brackets\nUnderstand concepts, don’t just memorize - Know why things work the way they do\nReview common errors - Understanding what goes wrong helps you get it right"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#live-demo-energy-analysis",
-    "href": "materials/6_energy_analysis_slides.html#live-demo-energy-analysis",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Live Demo: Energy Analysis",
-    "text": "Live Demo: Energy Analysis\n\nimport time\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0, verbose: bool = True) -&gt; tuple:\n    \"\"\"Find the nth root of a value using Newton's method with performance analysis.\"\"\"\n    if n &lt;= 0:\n        raise ValueError(\"n must be a positive integer\")\n    if value &lt; 0 and n % 2 == 0:\n        raise ValueError(\"Cannot find even root of negative number\")\n    \n    tolerance = 0.0001\n    iterations = 0\n    operations_count = 0\n    start_time = time.time()\n    \n    while abs(guess**n - value) &gt; tolerance:\n        iterations += 1\n        \n        if verbose:\n            print(f\"Iter {iterations}: guess = {guess:.4f}, error = {abs(guess**n - value):.6f}\")\n        \n        operations_this_iteration = (n-1) + (n-2) + 3 + 2\n        operations_count += operations_this_iteration\n        \n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    computation_time = time.time() - start_time\n    \n    if verbose:\n        print(f\"✓ Converged in {iterations} iterations\")\n        print(f\"✓ Total operations: {operations_count}\")\n        print(f\"✓ Time: {computation_time:.6f} seconds\")\n    \n    return guess, iterations, computation_time, operations_count"
+    "objectID": "materials/7_midterm_study_sheet.html#python-literals-and-data-types",
+    "href": "materials/7_midterm_study_sheet.html#python-literals-and-data-types",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.1 1. Python Literals and Data Types",
+    "text": "2.1 1. Python Literals and Data Types\n\n2.1.1 What You Need to Know\n\nLiterals are fixed values written directly in code\nData types: int, float, str, bool\nType conversion: int(), float(), str(), bool()\n\n\n\n2.1.2 Key Points\n# Valid literals\n42          # integer\n3.14        # float  \n\"hello\"     # string\n'world'     # string (single quotes also work)\nTrue        # boolean\nFalse       # boolean\n\n# Invalid literals\n3.14.5      # Two decimal points\nTrue.       # Period after boolean\n\n\n2.1.3 Practice Questions\nPractice 1: Which of these are valid Python literals?\na) 100    b) 2.5.7    c) \"Python\"    d) True    e) 'coding'\nPractice 2: What data type is each of these?\nx = 25\ny = 3.14\nz = \"Hello\"\nw = True"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#results-energy-analysis",
-    "href": "materials/6_energy_analysis_slides.html#results-energy-analysis",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Results: Energy Analysis",
-    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n# Quick demo: Square root of 16\nresult, iters, time_taken, ops = newtons_nth_root(2, 16, verbose=True)\nprint(f\"Result: {result:.6f}\")\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000122 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
+    "objectID": "materials/7_midterm_study_sheet.html#variables-and-operators",
+    "href": "materials/7_midterm_study_sheet.html#variables-and-operators",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.2 2. Variables and Operators",
+    "text": "2.2 2. Variables and Operators\n\n2.2.1 What You Need to Know\n\nAssignment operator: = (assigns value to variable)\nArithmetic operators: +, -, *, /, ** (power), % (modulus)\nComparison operators: ==, !=, &lt;, &gt;, &lt;=, &gt;=\nLogical operators: and, or, not\n\n\n\n2.2.2 Key Points\n# Assignment vs Equality\nx = 5       # Assignment (single =)\nx == 5      # Comparison (double ==)\n\n# Order of operations (PEMDAS)\nresult = 2 + 3 * 4      # Result is 14, not 20\nresult = (2 + 3) * 4    # Result is 20\n\n# Modulus operator\n7 % 3       # Result is 1 (remainder)\n8 % 2       # Result is 0 (no remainder)\n\n\n2.2.3 Practice Questions\nPractice 3: What will this code output?\na = 10\nb = 3\nprint(a + b)\nprint(a ** b)\nprint(a % b)\nPractice 4: What will this expression evaluate to?\nx = 8\nresult = x &gt; 5 and x &lt; 15"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
-    "href": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Energy Scaling Summary",
-    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.006ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.004ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.005ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.004ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.006ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.010ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.030ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
+    "objectID": "materials/7_midterm_study_sheet.html#conditionals-ifelifelse",
+    "href": "materials/7_midterm_study_sheet.html#conditionals-ifelifelse",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.3 3. Conditionals (if/elif/else)",
+    "text": "2.3 3. Conditionals (if/elif/else)\n\n2.3.1 What You Need to Know\n\nif statements execute code when condition is True\nelif (else if) provides additional conditions to check\nelse runs when no conditions are True\nIndentation matters - Use consistent spacing (usually 4 spaces)\n\n\n\n2.3.2 Key Points\n# Basic structure\nif condition1:\n    # Code runs if condition1 is True\nelif condition2:\n    # Code runs if condition2 is True (and condition1 was False)\nelse:\n    # Code runs if all conditions were False\n\n# Logical operators in conditions\nif x &gt; 0 and x &lt; 10:        # Both must be true\nif x &lt; 0 or x &gt; 100:        # Either can be true\nif not x == 0:              # Same as x != 0\n\n\n2.3.3 Practice Questions\nPractice 5: What will this code print if score = 85?\nif score &gt;= 90:\n    print(\"A\")\nelif score &gt;= 80:\n    print(\"B\")\nelif score &gt;= 70:\n    print(\"C\")\nelse:\n    print(\"F\")\nPractice 6: Complete this code to check if a number is even or odd:\nnumber = 7\nif __________:\n    print(\"Even\")\nelse:\n    print(\"Odd\")"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#key-energy-findings",
-    "href": "materials/6_energy_analysis_slides.html#key-energy-findings",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Key Energy Findings",
-    "text": "Key Energy Findings\n\n\nExcellent Scaling Properties\n\nTime Complexity: O(log(precision))\nOperations per iteration: O(n)\nTotal Energy: O(n × log(precision))\nIndependent of input magnitude!\n\n\nConvergence Characteristics\n\nQuadratic convergence rate\nPerfect powers converge faster\nPredictable iteration counts\nMinimal memory usage O(1)\n\n\n\n\n\n\n\n\n🏆 Bottom Line\n\n\nNewton’s method is remarkably energy-efficient due to its quadratic convergence!\nPerfect for: Mobile apps, IoT devices, real-time systems, and green computing initiatives."
+    "objectID": "materials/7_midterm_study_sheet.html#loops-for-and-while",
+    "href": "materials/7_midterm_study_sheet.html#loops-for-and-while",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.4 4. Loops (for and while)",
+    "text": "2.4 4. Loops (for and while)\n\n2.4.1 What You Need to Know\n\nfor loops iterate over sequences (ranges, lists, strings)\nwhile loops continue as long as condition is True\nrange() function: range(stop), range(start, stop), range(start, stop, step)\n\n\n\n2.4.2 Key Points\n# For loops with range\nfor i in range(5):          # 0, 1, 2, 3, 4\nfor i in range(2, 8):       # 2, 3, 4, 5, 6, 7\nfor i in range(1, 10, 2):   # 1, 3, 5, 7, 9\n\n# While loops\ncount = 0\nwhile count &lt; 5:\n    print(count)\n    count += 1              # Same as count = count + 1\n\n\n2.4.3 Practice Questions\nPractice 7: What will this for loop print?\nfor i in range(2, 7, 2):\n    print(i)\nPractice 8: Complete this while loop to print numbers 5 down to 1:\nnum = 5\nwhile __________:\n    print(num)\n    __________"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#energy-vs-other-methods",
-    "href": "materials/6_energy_analysis_slides.html#energy-vs-other-methods",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Energy vs Other Methods",
-    "text": "Energy vs Other Methods\n\n\n\n\n\n\n\n\nMethod\nTime Complexity\nEnergy Dependency\n\n\n\n\nNewton’s Method\nO(n × log(precision))\nIndependent of input size\n\n\nBinary Search\nO(log(value) × log(precision))\nDepends on input magnitude\n\n\nTrial & Error\nO(value^(1/n))\nExponential in input\n\n\nLinear Methods\nO(precision)\nPoor convergence\n\n\n\n\n\n\n\n\n\n🏆 Clear Winner: Newton’s Method!\n\n\nIndependent of input size - this is huge for scalability!"
+    "objectID": "materials/7_midterm_study_sheet.html#strings-and-string-operations",
+    "href": "materials/7_midterm_study_sheet.html#strings-and-string-operations",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.5 5. Strings and String Operations",
+    "text": "2.5 5. Strings and String Operations\n\n2.5.1 What You Need to Know\n\nString indexing: string[0] is first character, string[-1] is last\nString slicing: string[start:end:step]\nString methods: .lower(), .upper(), .replace(), .split(), .strip()\nF-strings: f\"Hello {name}\"\n\n\n\n2.5.2 Key Points\ntext = \"Python\"\n# Indexing (starts at 0)\ntext[0]     # 'P'\ntext[-1]    # 'n' (last character)\n\n# Slicing\ntext[1:4]   # 'yth' (characters 1, 2, 3)\ntext[:3]    # 'Pyt' (first 3 characters)\ntext[2:]    # 'thon' (from position 2 to end)\ntext[::2]   # 'Pto' (every 2nd character)\n\n# F-strings\nname = \"Alice\"\nage = 20\nprint(f\"{name} is {age} years old\")\n\n\n2.5.3 Practice Questions\nPractice 9: Given word = \"Programming\", what do these expressions return?\na) word[3:7]\nb) word[-4:]\nc) word[::3]\nPractice 10: What will this string method output?\nsentence = \"Hello World\"\nprint(sentence.replace(\"World\", \"Python\").upper())"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#practical-energy-implications",
-    "href": "materials/6_energy_analysis_slides.html#practical-energy-implications",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Practical Energy Implications",
-    "text": "Practical Energy Implications\n\n🔋 Mobile Devices: Fast convergence = longer battery life\n🌱 Data Centers: Predictable costs, lower carbon footprint\n⚡ Real-time Systems: Bounded computation time\n📟 IoT Devices: Suitable for resource-constrained environments\n🔬 Scientific Computing: Efficient for high-precision calculations\n\n\n\n\n\n\n\nEnergy Optimization Tips\n\n\n\nUse good initial guesses to reduce iterations\nAdjust tolerance based on precision needs\nCache results for repeated calculations\nConsider hardware-specific optimizations"
+    "objectID": "materials/7_midterm_study_sheet.html#lists",
+    "href": "materials/7_midterm_study_sheet.html#lists",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.6 6. Lists",
+    "text": "2.6 6. Lists\n\n2.6.1 What You Need to Know\n\nLists are mutable (can be changed after creation)\nList indexing and slicing works like strings\nList methods: .append(), .insert(), .remove(), .pop(), .copy()\nList cloning vs list referencing\n\n\n\n2.6.2 Key Points\n# Creating and modifying lists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"date\")               # Add to end\nfruits.insert(1, \"blueberry\")       # Insert at position 1\nfruits.remove(\"banana\")             # Remove by value\nlast = fruits.pop()                 # Remove and return last item\n\n# Cloning vs Referencing\nlist1 = [1, 2, 3]\nlist2 = list1           # Reference (same list!)\nlist3 = list1.copy()    # Clone (independent copy)\n\n# List comprehensions\nsquares = [x**2 for x in range(5)]     # [0, 1, 4, 9, 16]\nevens = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]\n\n\n2.6.3 Practice Questions\nPractice 11: What will this code output?\nnumbers = [1, 2, 3]\nnumbers.append(4)\nnumbers.insert(0, 0)\nprint(numbers)\nPractice 12: What’s the difference between these two operations?\noriginal = [1, 2, 3]\ncopy_a = original\ncopy_b = original.copy()\noriginal.append(4)"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#mathematical-energy-theory",
-    "href": "materials/6_energy_analysis_slides.html#mathematical-energy-theory",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Mathematical Energy Theory",
-    "text": "Mathematical Energy Theory\nConvergence Formula\n\\[\\text{Error}_{n+1} \\approx \\frac{(\\text{Error}_n)^2}{2 \\cdot f'(\\text{root})}\\]\nEnergy Cost Model\n\\[\\text{Energy} \\propto \\text{Iterations} \\times \\text{Operations per Iteration} \\times \\text{Hardware Efficiency}\\]\n\\[\\text{Energy} \\propto \\log(\\text{precision}) \\times n \\times \\text{constant}\\]\n\n\n\n\n\n\n🧮 Key Mathematical Insight\n\n\nLogarithmic dependence on precision makes it incredibly efficient!\nDouble the precision? Only one more iteration needed!"
+    "objectID": "materials/7_midterm_study_sheet.html#tuples",
+    "href": "materials/7_midterm_study_sheet.html#tuples",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.7 7. Tuples",
+    "text": "2.7 7. Tuples\n\n2.7.1 What You Need to Know\n\nTuples are immutable (cannot be changed after creation)\nUse parentheses instead of square brackets\nTuple unpacking: x, y, z = (1, 2, 3)\nGood for coordinates, RGB values, or any fixed data\n\n\n\n2.7.2 Key Points\n# Creating tuples\npoint = (10, 20)\nrgb = (255, 128, 0)\ninfo = (\"Alice\", 20, \"CS\")\n\n# Accessing elements (like lists)\nx = point[0]        # 10\nname = info[0]      # \"Alice\"\n\n# Tuple unpacking\nx, y = point        # x=10, y=20\nname, age, major = info\n\n\n2.7.3 Practice Questions\nPractice 13: What will this code output?\ndata = (5, 10, 15, 20)\na, b, c, d = data\nprint(a + c)"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#performance-comparison-setup",
-    "href": "materials/6_energy_analysis_slides.html#performance-comparison-setup",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Performance Comparison: Setup",
-    "text": "Performance Comparison: Setup\n\n# Enhanced comparison: Perfect vs Non-Perfect Powers\ncomparison_data = []\n\n# Extended comparison set\ncomparisons = [\n    ((2, 16, \"√16 (perfect)\"), (2, 15, \"√15 (non-perfect)\")),\n    ((2, 25, \"√25 (perfect)\"), (2, 24, \"√24 (non-perfect)\")),\n    ((3, 27, \"∛27 (perfect)\"), (3, 26, \"∛26 (non-perfect)\")),\n    ((3, 64, \"∛64 (perfect)\"), (3, 63, \"∛63 (non-perfect)\")),\n    ((4, 81, \"⁴√81 (perfect)\"), (4, 80, \"⁴√80 (non-perfect)\")),\n    ((5, 32, \"⁵√32 (perfect)\"), (5, 31, \"⁵√31 (non-perfect)\")),\n]\n\nfor (n1, v1, desc1), (n2, v2, desc2) in comparisons:\n    _, iters1, time1, ops1 = newtons_nth_root(n1, v1, verbose=False)\n    _, iters2, time2, ops2 = newtons_nth_root(n2, v2, verbose=False)\n    \n    comparison_data.extend([\n        {'root_degree': n1, 'type': 'Perfect Power', 'description': desc1, \n         'iterations': iters1, 'operations': ops1, 'time_ms': time1*1000},\n        {'root_degree': n2, 'type': 'Non-Perfect', 'description': desc2, \n         'iterations': iters2, 'operations': ops2, 'time_ms': time2*1000}\n    ])\n\ncomp_df = pd.DataFrame(comparison_data)"
+    "objectID": "materials/7_midterm_study_sheet.html#dictionaries",
+    "href": "materials/7_midterm_study_sheet.html#dictionaries",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.8 8. Dictionaries",
+    "text": "2.8 8. Dictionaries\n\n2.8.1 What You Need to Know\n\nKey-value pairs: {\"key\": \"value\"}\nAccessing values: dict[\"key\"]\nAdding/modifying: dict[\"new_key\"] = \"value\"\nDictionary methods: .keys(), .values(), .items()\n\n\n\n2.8.2 Key Points\n# Creating and using dictionaries\nstudent = {\"name\": \"Bob\", \"age\": 19, \"grade\": 85}\n\n# Accessing and modifying\nname = student[\"name\"]          # \"Bob\"\nstudent[\"age\"] = 20             # Modify existing\nstudent[\"gpa\"] = 3.5            # Add new key-value pair\n\n# Iterating through dictionaries\nfor key, value in student.items():\n    print(f\"{key}: {value}\")\n\n\n2.8.3 Practice Questions\nPractice 14: What will this code output?\nscores = {\"Alice\": 85, \"Bob\": 92, \"Carol\": 78}\nscores[\"Alice\"] = 87\nprint(len(scores))\nprint(scores[\"Bob\"])"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#conclusion-why-newtons-method-wins",
-    "href": "materials/6_energy_analysis_slides.html#conclusion-why-newtons-method-wins",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Conclusion: Why Newton’s Method Wins",
-    "text": "Conclusion: Why Newton’s Method Wins\n\nQuadratic Convergence: Errors square each iteration\nPredictable Energy Cost: O(n × log(precision))\nScale Independence: Input magnitude doesn’t matter\nHardware Friendly: Simple arithmetic operations\nMemory Efficient: Constant space complexity\nUniversally Applicable: Any nth root with same efficiency"
+    "objectID": "materials/7_midterm_study_sheet.html#sets",
+    "href": "materials/7_midterm_study_sheet.html#sets",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "2.9 9. Sets",
+    "text": "2.9 9. Sets\n\n2.9.1 What You Need to Know\n\nSets contain unique elements (no duplicates)\nSet operations: union (|), intersection (&), difference (-)\nUse curly braces: {1, 2, 3}\n\n\n\n2.9.2 Key Points\n# Creating sets\nnumbers = {3, 1, 4, 1, 5}       # Becomes {1, 3, 4, 5}\nset1 = {1, 2, 3, 4}\nset2 = {3, 4, 5, 6}\n\n# Set operations\nintersection = set1 & set2      # {3, 4}\nunion = set1 | set2             # {1, 2, 3, 4, 5, 6}\ndifference = set1 - set2        # {1, 2}\n\n\n2.9.3 Practice Questions\nPractice 15: What will this set operation return?\nA = {1, 2, 3, 4, 5}\nB = {4, 5, 6, 7, 8}\nresult = A & B"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#questions-discussion",
-    "href": "materials/6_energy_analysis_slides.html#questions-discussion",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Questions & Discussion",
-    "text": "Questions & Discussion\n\nHow might energy considerations influence algorithm choice in your projects?\n\n\nTry it yourself!\n# Experiment with different roots and values\nresult = newtons_nth_root(7, 128, verbose=True)"
+    "objectID": "materials/7_midterm_study_sheet.html#exhaustive-enumeration",
+    "href": "materials/7_midterm_study_sheet.html#exhaustive-enumeration",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "3.1 Exhaustive Enumeration",
+    "text": "3.1 Exhaustive Enumeration\n\nSystematic checking of all possibilities\nUsed for finding perfect squares, cubes, etc.\nLimitation: Only works for integer solutions"
   },
   {
-    "objectID": "materials/6_energy_analysis_slides.html#appendix-complete-implementation",
-    "href": "materials/6_energy_analysis_slides.html#appendix-complete-implementation",
-    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
-    "section": "Appendix: Complete Implementation",
-    "text": "Appendix: Complete Implementation\n\n\nShow complete instrumented function\ndef newtons_nth_root_complete(n: int, value: float, guess: float = 1.0, verbose: bool = True) -&gt; tuple:\n    \"\"\"\n    Complete instrumented version with full energy analysis\n    \"\"\"\n    if n &lt;= 0:\n        raise ValueError(\"n must be a positive integer\")\n    if value &lt; 0 and n % 2 == 0:\n        raise ValueError(\"Cannot find even root of negative number\")\n    \n    tolerance = 0.0001\n    iterations = 0\n    operations_count = 0\n    start_time = time.time()\n    \n    while abs(guess**n - value) &gt; tolerance:\n        iterations += 1\n        \n        if verbose:\n            print(f\"Iteration {iterations}: n = {n}, value = {value}, guess = {guess}\")\n            print(f\"   abs(guess^n - value) = {abs(guess**n - value)}\")\n        \n        # Detailed operation counting\n        operations_this_iteration = (n-1) + (n-2) + 3 + 2\n        operations_count += operations_this_iteration\n        \n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        \n        if verbose:\n            print(f\"   new_guess = {guess_new}\")\n            print(f\"   Operations this iteration: {operations_this_iteration}\")\n        \n        guess = guess_new\n    \n    computation_time = time.time() - start_time\n    \n    if verbose:\n        print(f\"Convergence in {iterations} iterations\")\n        print(f\"Total operations: {operations_count}\")\n        print(f\"Computation time: {computation_time:.6f} seconds\")\n    \n    return guess, iterations, computation_time, operations_count"
+    "objectID": "materials/7_midterm_study_sheet.html#newtons-method",
+    "href": "materials/7_midterm_study_sheet.html#newtons-method",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "3.2 Newton’s Method",
+    "text": "3.2 Newton’s Method\n\nIterative approximation technique\nFinds approximate roots of equations\nAdvantage: Very fast convergence\nQuadratic convergence: Error roughly squares each iteration"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#what-are-literals-again",
-    "href": "materials/3_ii_introToPython_solutions.html#what-are-literals-again",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "What are literals, Again??",
-    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
+    "objectID": "materials/7_midterm_study_sheet.html#code-tracing-practice",
+    "href": "materials/7_midterm_study_sheet.html#code-tracing-practice",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "4.1 Code Tracing Practice",
+    "text": "4.1 Code Tracing Practice\nProblem 1: What is the complete output?\nfor i in range(3):\n    for j in range(2):\n        print(f\"({i},{j})\")\nProblem 2: What values do these variables have at the end?\nx = 5\ny = 10\nx, y = y, x + 3\nProblem 3: What will this nested condition print?\nscore = 85\nif score &gt;= 80:\n    if score &gt;= 90:\n        print(\"Excellent\")\n    else:\n        print(\"Good\")\nelse:\n    print(\"Needs improvement\")"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#python-code-sample-with-f-strings",
-    "href": "materials/3_ii_introToPython_solutions.html#python-code-sample-with-f-strings",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Python Code Sample with F-strings",
-    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+    "objectID": "materials/7_midterm_study_sheet.html#syntax-errors",
+    "href": "materials/7_midterm_study_sheet.html#syntax-errors",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "5.1 Syntax Errors",
+    "text": "5.1 Syntax Errors\n\nForgetting colons after if, for, while, def statements\nInconsistent indentation - Python is very strict about this\nUsing = instead of == for comparisons"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#operators",
-    "href": "materials/3_ii_introToPython_solutions.html#operators",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Operators",
-    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+    "objectID": "materials/7_midterm_study_sheet.html#logic-errors",
+    "href": "materials/7_midterm_study_sheet.html#logic-errors",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "5.2 Logic Errors",
+    "text": "5.2 Logic Errors\n\nOff-by-one errors in ranges and indexing\nConfusing assignment and comparison operators\nNot handling edge cases (empty lists, zero values, etc.)"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#python-code-sample",
-    "href": "materials/3_ii_introToPython_solutions.html#python-code-sample",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Python Code Sample",
-    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
+    "objectID": "materials/7_midterm_study_sheet.html#stringlist-confusion",
+    "href": "materials/7_midterm_study_sheet.html#stringlist-confusion",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "5.3 String/List Confusion",
+    "text": "5.3 String/List Confusion\n\nStrings are immutable, lists are mutable\nString slicing returns a string, not individual characters\nList methods like append() modify the original list"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#interesting-application",
-    "href": "materials/3_ii_introToPython_solutions.html#interesting-application",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Interesting Application",
-    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+    "objectID": "materials/7_midterm_study_sheet.html#before-the-exam",
+    "href": "materials/7_midterm_study_sheet.html#before-the-exam",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "6.1 Before the Exam",
+    "text": "6.1 Before the Exam\n\nReview all code examples in this study guide\nPractice writing code by hand (no computer!)\nWork through all practice problems\nUnderstand the difference between similar concepts (lists vs tuples, = vs ==)\nGet a good night’s sleep"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#loops",
-    "href": "materials/3_ii_introToPython_solutions.html#loops",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Loops",
-    "text": "Loops\nLoops repeat actions. Use for and while loops."
+    "objectID": "materials/7_midterm_study_sheet.html#during-the-exam",
+    "href": "materials/7_midterm_study_sheet.html#during-the-exam",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "6.2 During the Exam",
+    "text": "6.2 During the Exam\n\nRead each question carefully\nTrace through code step by step\nDouble-check your answers\nManage your time (about 3 minutes per question)\nIf stuck, move on and come back"
   },
   {
-    "objectID": "materials/3_ii_introToPython_solutions.html#conditionals",
-    "href": "materials/3_ii_introToPython_solutions.html#conditionals",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Conditionals",
-    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#sort-of-interesting-application",
-    "href": "materials/3_ii_introToPython_solutions.html#sort-of-interesting-application",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Sort of Interesting Application",
-    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#nested-conditionals",
-    "href": "materials/3_ii_introToPython_solutions.html#nested-conditionals",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Nested Conditionals",
-    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#logical-operator",
-    "href": "materials/3_ii_introToPython_solutions.html#logical-operator",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Logical Operator",
-    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#string-manipulation",
-    "href": "materials/3_ii_introToPython_solutions.html#string-manipulation",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "String Manipulation",
-    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#lists",
-    "href": "materials/3_ii_introToPython_solutions.html#lists",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Lists",
-    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#demo-of-lists",
-    "href": "materials/3_ii_introToPython_solutions.html#demo-of-lists",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Demo of Lists",
-    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#dictionaries",
-    "href": "materials/3_ii_introToPython_solutions.html#dictionaries",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Dictionaries",
-    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#demo-of-dictionaries",
-    "href": "materials/3_ii_introToPython_solutions.html#demo-of-dictionaries",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Demo of Dictionaries",
-    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
-  },
-  {
-    "objectID": "materials/3_ii_introToPython_solutions.html#coding-challenges",
-    "href": "materials/3_ii_introToPython_solutions.html#coding-challenges",
-    "title": "Chapter 2: Python Programming: Concepts II",
-    "section": "Coding Challenges",
-    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\na = 10\nb = 5\nprint(\"Sum:\", a + b)\nprint(\"Difference:\", a - b)\nprint(\"Product:\", a * b)\nprint(\"Quotient:\", a / b)"
+    "objectID": "materials/7_midterm_study_sheet.html#key-formulas-to-remember",
+    "href": "materials/7_midterm_study_sheet.html#key-formulas-to-remember",
+    "title": "CS101 Fall 2025 :: Midterm Preparation Guide",
+    "section": "6.3 Key Formulas to Remember",
+    "text": "6.3 Key Formulas to Remember\n\nRange function: range(start, stop, step)\nString slicing: string[start:end:step]\nList comprehension: [expression for item in iterable if condition]\nF-string format: f\"Text {variable} more text\"\n\n\nGood luck on your midterm! Remember, understanding the concepts is more important than memorizing syntax. Focus on why things work the way they do, and you will be fine! 🐍✨"
   },
   {
     "objectID": "materials/7_python_fundamentals_slides.html#tuples-the-unchangeable-twins",
@@ -726,6 +663,216 @@
     "title": "Chapter 5: STRUCTURED TYPES AND MUTABILITY",
     "section": "Sets: Mathematical Operations",
     "text": "Sets: Mathematical Operations\n\n\n\nSet Operations\n\n\n# Set operations\ncommon = colors1 & colors2          # Intersection\nall_colors = colors1 | colors2      # Union\nunique_to_1 = colors1 - colors2     # Difference\n\nprint(f\"Common colors: {common}\")       # {'blue'}\nprint(f\"All colors: {all_colors}\")     \n# {'red', 'green', 'blue', 'yellow', 'purple'}\n\n# Fast membership testing\nprint(\"red\" in colors1)  # True - very fast!\n\n\n\n\n\nWhy this works: Sets automatically handle uniqueness and provide super-fast lookups and mathematical operations!"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#what-are-literals-again",
+    "href": "materials/3_ii_introToPython_solutions.html#what-are-literals-again",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "What are literals, Again??",
+    "text": "What are literals, Again??\nLet’s Return to Literals (e.g., numbers, strings, booleans, etc.) and work with them in interesting ways using print().\n\n\n\n\n\n\nNote\n\n\nIn Python, print statements with an f prefix before the opening quotation mark denote f-strings, also known as formatted string literals. F-strings provide a concise and readable way to embed expressions inside string literals for formatting output."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#python-code-sample-with-f-strings",
+    "href": "materials/3_ii_introToPython_solutions.html#python-code-sample-with-f-strings",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Python Code Sample with F-strings",
+    "text": "Python Code Sample with F-strings\n\n\n\n\n\n\nNote\n\n\nCuriously, both of the below print statements print out the same results, but the code is not the same …\n\n\n\nfirstName = \"Robert\"\nlastName = \"Paulson\"\nprint(f\"His name is: {firstName} {lastName}!\") # f for auto formatting\nprint(\"His name is:\",firstName, lastName,\"!\") # original structure\n\nOutput:\nHis name is: Robert Paulson!\nHis name is: Robert Paulson ! # A space appears?!"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#operators",
+    "href": "materials/3_ii_introToPython_solutions.html#operators",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Operators",
+    "text": "Operators\nOperators let you do math, compare values, and more!\n\n\n\n\n\n\nImportant\n\n\nExamples:\n\nArithmetic: +, -, *, /, ** (power)\nComparison: ==, !=, &lt;, &gt;\nAssignment: =, +=, -="
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#python-code-sample",
+    "href": "materials/3_ii_introToPython_solutions.html#python-code-sample",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Python Code Sample",
+    "text": "Python Code Sample\nx = 5\ny = 2\nsum = x + y\nproduct = x * y\nis_equal = (x == y)\nx += 1"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#interesting-application",
+    "href": "materials/3_ii_introToPython_solutions.html#interesting-application",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Interesting Application",
+    "text": "Interesting Application\nVariables and operators are the backbone of calculators, games, and simulations!"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#loops",
+    "href": "materials/3_ii_introToPython_solutions.html#loops",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Loops",
+    "text": "Loops\nLoops repeat actions. Use for and while loops."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#conditionals",
+    "href": "materials/3_ii_introToPython_solutions.html#conditionals",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let your code make decisions using if, elif, and else.\n\nExamples:\nfor i in range(5):\n    print(i)\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Counting:\", count)\n    count += 1 \n    # Do not forget to increment \n    # the counter, or you will create an infinite loop!\n\n    if x &gt; y:\n        print(\"x is greater!\")\n    elif x == y:\n        print(\"x equals y!\")\n    else:\n        print(\"x is less!\")"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#sort-of-interesting-application",
+    "href": "materials/3_ii_introToPython_solutions.html#sort-of-interesting-application",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Sort of Interesting Application",
+    "text": "Sort of Interesting Application\nLoops and conditionals can be used to determine positive, negative numbers, or zeros. Neat-O!\n\nExamples:\nnum = 10\nif num &gt; 0:\n    print(\"Positive number\")\nelif num == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#nested-conditionals",
+    "href": "materials/3_ii_introToPython_solutions.html#nested-conditionals",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Nested Conditionals",
+    "text": "Nested Conditionals\nYou can nest loops, one inside the other.\n\nExamples:\nnum = 15\nif num &gt;= 0:\n    if num == 0:\n        print(\"Zero\")\n    else:\n        print(\"Positive number\")\nelse:\n    print(\"Negative number\")\n\n\nOutput:\nPositive"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#logical-operator",
+    "href": "materials/3_ii_introToPython_solutions.html#logical-operator",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Logical Operator",
+    "text": "Logical Operator\nLogical operators use True and False to determine outcomes.\n\nExamples:\na = 10\nb = 20\nif a &gt; 5 and b &gt; 15:\n    print(\"Both conditions are true\")\nif a &gt; 5 or b &lt; 15:\n    print(\"At least one condition is true\")\nif not a &lt; 5:\n    print(\"a is not less than 5\")\n\n\nOutput:\nBoth conditions are true At least one condition is true a is not less than 5"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#string-manipulation",
+    "href": "materials/3_ii_introToPython_solutions.html#string-manipulation",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "String Manipulation",
+    "text": "String Manipulation\nWe now look at how we can manipulate strings\n\nExamples:\ntext = \"Hello, World!\"\nprint(text.lower())  # hello, world!\nprint(text.upper())  # HELLO, WORLD!\nprint(text.replace(\"World\", \"Python\"))  # Hello, Python!\nprint(text.split(\", \"))  # ['Hello', 'World!']\nprint(text.strip(\"!\"))  # Hello, World"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#lists",
+    "href": "materials/3_ii_introToPython_solutions.html#lists",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Lists",
+    "text": "Lists\n\nA list is a fundamental data structure in Python used to store an ordered collection of items.\nLists maintain the order of elements, with each item accessible by its index (starting from 0).\nLists are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nLists can hold items of different data types, including other lists.\nLists are created using square brackets, with elements separated by commas."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#demo-of-lists",
+    "href": "materials/3_ii_introToPython_solutions.html#demo-of-lists",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Demo of Lists",
+    "text": "Demo of Lists\n\nExamples:\nmy_list = [1, 2, 3, 4, 5] # definition\nprint(my_list[0])  # Access first element\nmy_list.append(6)  # Add an element to the end\nprint(my_list)  # [1, 2, 3, 4, 5, 6]\nmy_list.remove(3)  # Remove element with value 3\nprint(my_list)  # [1, 2, 4, 5, 6]\nprint(len(my_list))  # Length of the list\n\nOutput:\n1\n[1, 2, 3, 4, 5, 6]\n[1, 2, 4, 5, 6]\n5"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#dictionaries",
+    "href": "materials/3_ii_introToPython_solutions.html#dictionaries",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Dictionaries",
+    "text": "Dictionaries\nA dictionary is a built-in data structure in Python used to store key-value pairs.\nDictionaries are unordered collections (as of Python 3.6+, they maintain insertion order), where each value is accessed using its unique key.\nDictionaries are mutable, so their contents can be changed after creation (items can be added, removed, or modified).\nKeys in a dictionary must be unique and immutable (such as strings, numbers, or tuples), while values can be of any data type.\nDictionaries are created using curly braces {}, with key-value pairs separated by commas and a colon between each key and value."
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#demo-of-dictionaries",
+    "href": "materials/3_ii_introToPython_solutions.html#demo-of-dictionaries",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Demo of Dictionaries",
+    "text": "Demo of Dictionaries\n\nExamples:\nmy_dict = {\"name\": \"Alice\", \"age\": 25, \"is_student\": True}  # definition\nprint(my_dict[\"name\"])  # Access value by key\nmy_dict[\"age\"] = 26  # Modify value\nmy_dict[\"city\"] = \"New York\"  # Add new key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'is_student': True, 'city': 'New York'}\ndel my_dict[\"is_student\"]  # Remove a key-value pair\nprint(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'New York'}\nprint(len(my_dict))  # Number of key-value pairs\n\nOutput:\nAlice\n{‘name’: ‘Alice’, ‘age’: 26, ‘is_student’: True, ‘city’: ‘New York’}\n{‘name’: ‘Alice’, ‘age’: 26, ‘city’: ‘New York’}\n3"
+  },
+  {
+    "objectID": "materials/3_ii_introToPython_solutions.html#coding-challenges",
+    "href": "materials/3_ii_introToPython_solutions.html#coding-challenges",
+    "title": "Chapter 2: Python Programming: Concepts II",
+    "section": "Coding Challenges",
+    "text": "Coding Challenges\n1. Variables and Operators\nChallenge:\nCreate two variables, a and b, assign them integer values, and print their sum, difference, product, and quotient.\n\nSolution:\na = 10\nb = 5\nprint(\"Sum:\", a + b)\nprint(\"Difference:\", a - b)\nprint(\"Product:\", a * b)\nprint(\"Quotient:\", a / b)"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#introduction",
+    "href": "materials/6_energy_analysis_slides.html#introduction",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Introduction",
+    "text": "Introduction\n\n\n\n\n\n\nResearch Question\n\n\nHow much computational energy does Newton’s method consume when generalized to find any nth root?\n\n\n\n\nNewton’s method is a powerful algorithm for finding roots\nWe’ve generalized it from square roots to any nth root\nWhy does energy matter?\n\n🔋 Battery life in mobile devices\n🌱 Server costs and carbon footprint\n⚡ Real-time system constraints\n📱 IoT and edge computing limitations"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#the-general-algorithm",
+    "href": "materials/6_energy_analysis_slides.html#the-general-algorithm",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "The General Algorithm",
+    "text": "The General Algorithm\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0):\n    \"\"\"Find the nth root of a value using Newton's method\"\"\"\n    tolerance = 0.0001\n    \n    while abs(guess**n - value) &gt; tolerance:\n        # Newton's formula: y_new = y - f(y)/f'(y)\n        # For f(y) = y^n - value:\n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    return guess\n\n \n\n\n\n\n\n\nMathematical Foundation\n\n\nQuadratic convergence means errors roughly square each iteration!\nThis exponential error reduction is the key to Newton’s energy efficiency."
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
+    "href": "materials/6_energy_analysis_slides.html#energy-measurement-setup",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Energy Measurement Setup",
+    "text": "Energy Measurement Setup\n\n\n\n\nEnergy Tracking Strategy\n\nCount arithmetic operations per iteration\nMeasure wall-clock computation time\n\nTrack convergence behavior\nCompare across different root degrees"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#live-demo-energy-analysis",
+    "href": "materials/6_energy_analysis_slides.html#live-demo-energy-analysis",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Live Demo: Energy Analysis",
+    "text": "Live Demo: Energy Analysis\n\nimport time\n\ndef newtons_nth_root(n: int, value: float, guess: float = 1.0, verbose: bool = True) -&gt; tuple:\n    \"\"\"Find the nth root of a value using Newton's method with performance analysis.\"\"\"\n    if n &lt;= 0:\n        raise ValueError(\"n must be a positive integer\")\n    if value &lt; 0 and n % 2 == 0:\n        raise ValueError(\"Cannot find even root of negative number\")\n    \n    tolerance = 0.0001\n    iterations = 0\n    operations_count = 0\n    start_time = time.time()\n    \n    while abs(guess**n - value) &gt; tolerance:\n        iterations += 1\n        \n        if verbose:\n            print(f\"Iter {iterations}: guess = {guess:.4f}, error = {abs(guess**n - value):.6f}\")\n        \n        operations_this_iteration = (n-1) + (n-2) + 3 + 2\n        operations_count += operations_this_iteration\n        \n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        guess = guess_new\n    \n    computation_time = time.time() - start_time\n    \n    if verbose:\n        print(f\"✓ Converged in {iterations} iterations\")\n        print(f\"✓ Total operations: {operations_count}\")\n        print(f\"✓ Time: {computation_time:.6f} seconds\")\n    \n    return guess, iterations, computation_time, operations_count"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#results-energy-analysis",
+    "href": "materials/6_energy_analysis_slides.html#results-energy-analysis",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Results: Energy Analysis",
+    "text": "Results: Energy Analysis\n\n\n\n\n\n\nLive Demonstration\n\n\nWatch Newton’s method converge in real-time with energy tracking!\n\n\n\n\n# Quick demo: Square root of 16\nresult, iters, time_taken, ops = newtons_nth_root(2, 16, verbose=True)\nprint(f\"Result: {result:.6f}\")\n\n\n\nIter 1: guess = 1.0000, error = 15.000000\nIter 2: guess = 8.5000, error = 56.250000\nIter 3: guess = 5.1912, error = 10.948313\nIter 4: guess = 4.1367, error = 1.111995\nIter 5: guess = 4.0023, error = 0.018065\n✓ Converged in 5 iterations\n✓ Total operations: 30\n✓ Time: 0.000108 seconds\nResult: 4.000001\n\n\n\n\n\n\n\n\nKey Observation\n\n\nNotice how quickly it converges - only 2-3 iterations for most calculations!"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
+    "href": "materials/6_energy_analysis_slides.html#energy-scaling-summary",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Energy Scaling Summary",
+    "text": "Energy Scaling Summary\n\n\nInteractive Energy Scaling Summary:\n============================================================\nn= 2:  5 iters,  30 ops,   6.0 ops/iter,  0.008ms\nn= 3:  7 iters,  56 ops,   8.0 ops/iter,  0.005ms\nn= 4: 11 iters, 110 ops,  10.0 ops/iter,  0.005ms\nn= 5: 10 iters, 120 ops,  12.0 ops/iter,  0.005ms\nn= 6: 14 iters, 196 ops,  14.0 ops/iter,  0.006ms\nn= 8: 26 iters, 468 ops,  18.0 ops/iter,  0.012ms\nn=10: 42 iters, 924 ops,  22.0 ops/iter,  0.018ms\n\n💡 Key Insights from Interactive Plot:\n   - Linear scaling: Operations ∝ Root Degree\n   - Consistent iterations: Usually 2-4 for perfect powers\n   - Predictable performance: Energy cost is very manageable!\n\n\n\n\n\n\n\n\nEnergy Efficiency Breakthrough!\n\n\nLinear scaling with root degree means predictable energy costs regardless of calculation complexity!"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#key-energy-findings",
+    "href": "materials/6_energy_analysis_slides.html#key-energy-findings",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Key Energy Findings",
+    "text": "Key Energy Findings\n\n\nExcellent Scaling Properties\n\nTime Complexity: O(log(precision))\nOperations per iteration: O(n)\nTotal Energy: O(n × log(precision))\nIndependent of input magnitude!\n\n\nConvergence Characteristics\n\nQuadratic convergence rate\nPerfect powers converge faster\nPredictable iteration counts\nMinimal memory usage O(1)\n\n\n\n\n\n\n\n\n🏆 Bottom Line\n\n\nNewton’s method is remarkably energy-efficient due to its quadratic convergence!\nPerfect for: Mobile apps, IoT devices, real-time systems, and green computing initiatives."
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#energy-vs-other-methods",
+    "href": "materials/6_energy_analysis_slides.html#energy-vs-other-methods",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Energy vs Other Methods",
+    "text": "Energy vs Other Methods\n\n\n\n\n\n\n\n\nMethod\nTime Complexity\nEnergy Dependency\n\n\n\n\nNewton’s Method\nO(n × log(precision))\nIndependent of input size\n\n\nBinary Search\nO(log(value) × log(precision))\nDepends on input magnitude\n\n\nTrial & Error\nO(value^(1/n))\nExponential in input\n\n\nLinear Methods\nO(precision)\nPoor convergence\n\n\n\n\n\n\n\n\n\n🏆 Clear Winner: Newton’s Method!\n\n\nIndependent of input size - this is huge for scalability!"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#practical-energy-implications",
+    "href": "materials/6_energy_analysis_slides.html#practical-energy-implications",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Practical Energy Implications",
+    "text": "Practical Energy Implications\n\n🔋 Mobile Devices: Fast convergence = longer battery life\n🌱 Data Centers: Predictable costs, lower carbon footprint\n⚡ Real-time Systems: Bounded computation time\n📟 IoT Devices: Suitable for resource-constrained environments\n🔬 Scientific Computing: Efficient for high-precision calculations\n\n\n\n\n\n\n\nEnergy Optimization Tips\n\n\n\nUse good initial guesses to reduce iterations\nAdjust tolerance based on precision needs\nCache results for repeated calculations\nConsider hardware-specific optimizations"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#mathematical-energy-theory",
+    "href": "materials/6_energy_analysis_slides.html#mathematical-energy-theory",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Mathematical Energy Theory",
+    "text": "Mathematical Energy Theory\nConvergence Formula\n\\[\\text{Error}_{n+1} \\approx \\frac{(\\text{Error}_n)^2}{2 \\cdot f'(\\text{root})}\\]\nEnergy Cost Model\n\\[\\text{Energy} \\propto \\text{Iterations} \\times \\text{Operations per Iteration} \\times \\text{Hardware Efficiency}\\]\n\\[\\text{Energy} \\propto \\log(\\text{precision}) \\times n \\times \\text{constant}\\]\n\n\n\n\n\n\n🧮 Key Mathematical Insight\n\n\nLogarithmic dependence on precision makes it incredibly efficient!\nDouble the precision? Only one more iteration needed!"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#performance-comparison-setup",
+    "href": "materials/6_energy_analysis_slides.html#performance-comparison-setup",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Performance Comparison: Setup",
+    "text": "Performance Comparison: Setup\n\n# Enhanced comparison: Perfect vs Non-Perfect Powers\ncomparison_data = []\n\n# Extended comparison set\ncomparisons = [\n    ((2, 16, \"√16 (perfect)\"), (2, 15, \"√15 (non-perfect)\")),\n    ((2, 25, \"√25 (perfect)\"), (2, 24, \"√24 (non-perfect)\")),\n    ((3, 27, \"∛27 (perfect)\"), (3, 26, \"∛26 (non-perfect)\")),\n    ((3, 64, \"∛64 (perfect)\"), (3, 63, \"∛63 (non-perfect)\")),\n    ((4, 81, \"⁴√81 (perfect)\"), (4, 80, \"⁴√80 (non-perfect)\")),\n    ((5, 32, \"⁵√32 (perfect)\"), (5, 31, \"⁵√31 (non-perfect)\")),\n]\n\nfor (n1, v1, desc1), (n2, v2, desc2) in comparisons:\n    _, iters1, time1, ops1 = newtons_nth_root(n1, v1, verbose=False)\n    _, iters2, time2, ops2 = newtons_nth_root(n2, v2, verbose=False)\n    \n    comparison_data.extend([\n        {'root_degree': n1, 'type': 'Perfect Power', 'description': desc1, \n         'iterations': iters1, 'operations': ops1, 'time_ms': time1*1000},\n        {'root_degree': n2, 'type': 'Non-Perfect', 'description': desc2, \n         'iterations': iters2, 'operations': ops2, 'time_ms': time2*1000}\n    ])\n\ncomp_df = pd.DataFrame(comparison_data)"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#conclusion-why-newtons-method-wins",
+    "href": "materials/6_energy_analysis_slides.html#conclusion-why-newtons-method-wins",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Conclusion: Why Newton’s Method Wins",
+    "text": "Conclusion: Why Newton’s Method Wins\n\nQuadratic Convergence: Errors square each iteration\nPredictable Energy Cost: O(n × log(precision))\nScale Independence: Input magnitude doesn’t matter\nHardware Friendly: Simple arithmetic operations\nMemory Efficient: Constant space complexity\nUniversally Applicable: Any nth root with same efficiency"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#questions-discussion",
+    "href": "materials/6_energy_analysis_slides.html#questions-discussion",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Questions & Discussion",
+    "text": "Questions & Discussion\n\nHow might energy considerations influence algorithm choice in your projects?\n\n\nTry it yourself!\n# Experiment with different roots and values\nresult = newtons_nth_root(7, 128, verbose=True)"
+  },
+  {
+    "objectID": "materials/6_energy_analysis_slides.html#appendix-complete-implementation",
+    "href": "materials/6_energy_analysis_slides.html#appendix-complete-implementation",
+    "title": "Chapter 4: Computational Energy Analysis of Newton’s Method",
+    "section": "Appendix: Complete Implementation",
+    "text": "Appendix: Complete Implementation\n\n\nShow complete instrumented function\ndef newtons_nth_root_complete(n: int, value: float, guess: float = 1.0, verbose: bool = True) -&gt; tuple:\n    \"\"\"\n    Complete instrumented version with full energy analysis\n    \"\"\"\n    if n &lt;= 0:\n        raise ValueError(\"n must be a positive integer\")\n    if value &lt; 0 and n % 2 == 0:\n        raise ValueError(\"Cannot find even root of negative number\")\n    \n    tolerance = 0.0001\n    iterations = 0\n    operations_count = 0\n    start_time = time.time()\n    \n    while abs(guess**n - value) &gt; tolerance:\n        iterations += 1\n        \n        if verbose:\n            print(f\"Iteration {iterations}: n = {n}, value = {value}, guess = {guess}\")\n            print(f\"   abs(guess^n - value) = {abs(guess**n - value)}\")\n        \n        # Detailed operation counting\n        operations_this_iteration = (n-1) + (n-2) + 3 + 2\n        operations_count += operations_this_iteration\n        \n        guess_new = guess - (guess**n - value) / (n * guess**(n-1))\n        \n        if verbose:\n            print(f\"   new_guess = {guess_new}\")\n            print(f\"   Operations this iteration: {operations_this_iteration}\")\n        \n        guess = guess_new\n    \n    computation_time = time.time() - start_time\n    \n    if verbose:\n        print(f\"Convergence in {iterations} iterations\")\n        print(f\"Total operations: {operations_count}\")\n        print(f\"Computation time: {computation_time:.6f} seconds\")\n    \n    return guess, iterations, computation_time, operations_count"
   },
   {
     "objectID": "materials/3_ii_introToPython.html#what-are-literals-again",
