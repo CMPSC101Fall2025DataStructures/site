@@ -15,7 +15,7 @@ format:
 
 # Overview of Midterm
 
-This study guide covers all the essential Python concepts you need to know for the midterm exam in our course. During lab time on Thursday 23th October 2025. The exam will be **70 minutes long**, **closed-book**, and will test your understanding of Python fundamentals and concepts taken from the `Materials` pages in our course (see URL; [https://cmpsc101fall2025datastructures.github.io/site/materials/0_materials.html](https://cmpsc101fall2025datastructures.github.io/site/materials/0_materials.html).  In addition, this midterm will cover chapters 1,2,3 and 5 of our textbook; *Introduction to Computation and Programming Using Python* by John V. Guttag. 
+This study guide covers all the essential Python concepts you need to know for the midterm exam in our course. During lab time on Thursday 23th October 2025. The exam will be **70 minutes long**, **closed-book**, and will test your understanding of Python fundamentals and concepts taken from the `Materials` pages in our course (see URL; [https://cmpsc101fall2025datastructures.github.io/site/materials/0_materials.html](https://cmpsc101fall2025datastructures.github.io/site/materials/0_materials.html).  In addition, this midterm will cover chapters 1,2,3,4 and 5 of our textbook; *Introduction to Computation and Programming Using Python* by John V. Guttag. 
 
 ## Exam Format
 
@@ -26,7 +26,7 @@ What will the midterm look like? The below list provides a a general idea of wha
 - **True/False with Explanation**: State whether something is true or false and explain why
 - **Fill-in-the-Blank**: Complete code to achieve a specific result
 - **Short Answer**: Explain concepts or differences between approaches
-- **Guttag's textbook**: Chapters 1,2,3 and 5
+- **Guttag's textbook**: Chapters 1,2,3,4 and 5
 
 ## Study Tips
 
