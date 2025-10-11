@@ -65,22 +65,27 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [HTML](6_exhaustive_approximation.html) Slides
   -  [PDF](6_exhaustive_approximation.pdf) The slide's material as a pdf.
 - **A Study of the General nth Root Algorithm**
-  - [HTML](6_energy_analysis_slides.html)
+  - [HTML](6_energy_analysis_slides.html) Slides
   - [PDF](6_energy_analysis_slides.pdf) The slide's material as a pdf.
 - **Lab05**: Approximations by the Taylor Series
   - [GitHub Classroom link](https://classroom.github.com/a/HXIF82p0)
 
 
 
-## 7. Chapter 5: Exhaustive Enumeration and Approximation
-- **Some Approximation Techniques in Python**
+## 7. Chapter 5: STRUCTURED TYPES AND MUTABILITY
+- **Some Fundamental Programming in Python**
   - [HTML](7_python_fundamentals_slides.html) Slides
   -  [PDF](7_python_fundamentals_slides.pdf) The slide's material as a pdf.
 - Midterm Preparation Guide
-  -  Midterm exam: During lab on Thursday, 23rd October 2025
-  -  [HTML](7_midterm_study_sheet.html)
-  -  [PDF](7_midterm_study_sheet.pdf)
+  -  Midterm exam: During lab oßn Thursday, 23rd October 2025
+  -  [HTML](7_midterm_study_sheet.html) Slides
+  -  [PDF](7_midterm_study_sheet.pdf) The slide's material as a pdf.
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
   <!-- - [GitHub Classroom Link](https://classroom.github.com/a/zVISbjta)  -->
   <!-- - **README** [Lab 01 documentation](https://github.com/CMPSC101Fall2025DataStructures/01_lab/blob/main/README.md) -->
   
+
+## 8. Chapter 4: A Return to Functional Programming
+- **Lambda and Higher Order Functions**
+ - [HTML](8_lambdaFunctions_i.html) Slides
+ - [PDF](8_lambdaFunctions_i.pdf) The slide's material as a pdf.

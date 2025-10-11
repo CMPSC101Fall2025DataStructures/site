@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.10)  9 OCT 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.10)  11 OCT 2025 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1333,21 +1333,122 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 
 
 ]
+File: graphics/strategy_i.png Graphic file (type bmp)
+<graphics/strategy_i.png>
 
-LaTeX Warning: File `graphics/strategy_i.png' not found on input line 298.
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
-! Unable to load picture or PDF file 'graphics/strategy_i.png'.
+ []
+
+[2] [3]
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+[4]
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+Missing character: There is no ✓ (U+2713) in font [lmmono10-regular]:!
+[5]
+Overfull \vbox (2.39798pt too high) detected at line 594
+ []
+
+[6]
+Underfull \vbox (badness 10000) detected at line 594
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 594
+ []
+
+[7] [8]
+Missing character: There is no 💡 (U+1F4A1) in font [lmmono10-regular]:!
+Missing character: There is no 💡 (U+1F4A1) in font [lmmono10-regular]:!
+Missing character: There is no ∝ (U+221D) in font [lmmono10-regular]:!
+Missing character: There is no 🏆 (U+1F3C6) in font [lmroman10-regular]:mapping=
+tex-text;!
+[9]
+Missing character: There is no 🏆 (U+1F3C6) in font [lmroman10-regular]:mapping=
+tex-text;!
+Missing character: There is no 🔋 (U+1F50B) in font [lmroman10-bold]:mapping=tex
+-text;!
+Missing character: There is no 🌱 (U+1F331) in font [lmroman10-bold]:mapping=tex
+-text;!
+Missing character: There is no ⚡ (U+26A1) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 📟 (U+1F4DF) in font [lmroman10-bold]:mapping=tex
+-text;!
+Missing character: There is no 🔬 (U+1F52C) in font [lmroman10-bold]:mapping=tex
+-text;!
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95099pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.66568pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.4755pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 742.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 742.
+[10]
+Missing character: There is no 🧮 (U+1F9EE) in font [lmroman10-regular]:mapping=
+tex-text;!
+Missing character: There is no ∛ (U+221B) in font [lmmono10-regular]:!
+Missing character: There is no ∛ (U+221B) in font [lmmono10-regular]:!
+Missing character: There is no ∛ (U+221B) in font [lmmono10-regular]:!
+Missing character: There is no ∛ (U+221B) in font [lmmono10-regular]:!
+Missing character: There is no ⁴ (U+2074) in font [lmmono10-regular]:!
+Missing character: There is no ⁴ (U+2074) in font [lmmono10-regular]:!
+Missing character: There is no ⁵ (U+2075) in font [lmmono10-regular]:!
+Missing character: There is no ⁵ (U+2075) in font [lmmono10-regular]:!
+Missing character: There is no 🔍 (U+1F50D) in font [lmroman10-regular]:mapping=
+tex-text;!
+[11]
+Missing character: There is no 📊 (U+1F4CA) in font [lmmono10-regular]:!
+Missing character: There is no 📊 (U+1F4CA) in font [lmmono10-regular]:!
+Missing character: There is no 💡 (U+1F4A1) in font [lmmono10-regular]:!
+Missing character: There is no 📊 (U+1F4CA) in font [lmmono10-regular]:!
+Missing character: There is no 💡 (U+1F4A1) in font [lmmono10-regular]:!
+[12]
+Underfull \vbox (badness 10000) detected at line 899
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 899
+ []
+
+[13]
+Missing character: There is no 📱 (U+1F4F1) in font [lmroman10-regular]:mapping=
+tex-text;!
+Missing character: There is no 🖥 (U+1F5A5) in font [lmroman10-regular]:mapping=
+tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 📟 (U+1F4DF) in font [lmroman10-regular]:mapping=
+tex-text;!
+
+LaTeX Warning: File `graphics/battery_i.png' not found on input line 953.
+
+! Unable to load picture or PDF file 'graphics/battery_i.png'.
 <to be read again> 
                    }
-l.298 ...keepaspectratio]{graphics/strategy_i.png}
+l.953 ...,keepaspectratio]{graphics/battery_i.png}
                                                    
 Here is how much of TeX's memory you used:
- 38934 strings out of 474773
- 796143 string characters out of 5757724
- 1933839 words of memory out of 5000000
- 60542 multiletter control sequences out of 15000+600000
- 561673 words of font info for 70 fonts, out of 8000000 for 9000
+ 39067 strings out of 474773
+ 799731 string characters out of 5757724
+ 1945839 words of memory out of 5000000
+ 60656 multiletter control sequences out of 15000+600000
+ 564524 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,7n,121p,10938b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,8n,121p,10938b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 6_energy_analysis_slides.pdf (1 page).
+Output written on 6_energy_analysis_slides.pdf (13 pages).
