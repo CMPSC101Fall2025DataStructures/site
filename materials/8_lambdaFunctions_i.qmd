@@ -65,7 +65,9 @@ format:
 
 * Lambda functions are restricted to a single expression.
 * They cannot contain statements like assignments, if-else, or for loops within their definition.
-* They are primarily used for simple, short operations. For more complex logic, a named def function is more appropriate.
+* They are primarily used for simple, short operations.
+* For more complex logic, a named function is more appropriate;
+  * `def myFunction():`
 
 :::
 
@@ -131,7 +133,8 @@ print(greet("Alice"))      # Output: Hello, Alice!
 
 1. A lambda that calculates the area of a circle: `π * r²`
 2. A lambda that converts Fahrenheit to Celsius: `(f - 32) * 5/9`
-3. A lambda that finds the maximum of three numbers
+3. A lambda that finds the maximum `max()` of three numbers
+3. A lambda that finds the minimum `min()` of three numbers
 
 **Starter Code:**
 ```python
@@ -141,11 +144,13 @@ import math
 circle_area = lambda r: # Complete this
 fahrenheit_to_celsius = lambda f: # Complete this  
 max_three = lambda a, b, c: # Complete this
+min_three = lambda a, b, c: # Complete this
 
 # Test your functions
 print(circle_area(5))
 print(fahrenheit_to_celsius(68))
 print(max_three(10, 20, 15))
+print(min_three(10, 20, 15))
 ```
 :::
 
@@ -168,84 +173,19 @@ fahrenheit_to_celsius = lambda f: (f - 32) * 5/9
 max_three = lambda a, b, c: max(a, max(b, c))
 # Alternative: max_three = lambda a, b, c: max(a, b, c)
 
+# Solution 4: Minimum of three numbers (in a list)
+myVals = [10, 20, 15]
+min_three = lambda thisValue: min(thisValue)
+print(myVals)
+print(min_three(myVals))
+
 # Test results
 print(f"Circle area (r=5): {circle_area(5):.2f}")      # 78.54
 print(f"68°F in Celsius: {fahrenheit_to_celsius(68)}")  # 20.0
 print(f"Max of 10,20,15: {max_three(10, 20, 15)}")     # 20
+print(f"Min of 10,20,15: {min_three(10, 20, 15)}")     # 10
 ```
 :::
-
-
-
-
-# Lambda vs Regular Functions
-
-::: {.callout-note icon="false"}
-## When to Use Each
-**Lambda:** For simple, one-line operations that you'll use briefly  
-**Regular Functions:** For complex logic, multiple statements, or reusable code
-:::
-
-:::: {.columns}
-::: {.column width="70%"}
-::: {style="color: #8E44AD;"}
-**Rule of thumb:** If you can't explain what the function does in one sentence, use a regular function!
-:::
-:::
-::: {.column width="30%"}
-⚖️🤔💡
-:::
-::::
-
-
-
-## Lambda vs Regular: Comparison
-
-::: {.callout-important icon="false"}
-## Side-by-Side Comparison
-```python
-# ✅ Good use of lambda - simple, clear
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x**2, numbers))
-
-# ❌ Bad use of lambda - too complex
-complex_lambda = lambda x: x**2 if x > 0 else -x**2 if x < 0 else 0
-
-# ✅ Better as regular function
-def process_number(x):
-    if x > 0:
-        return x**2
-    elif x < 0:
-        return -x**2
-    else:
-        return 0
-```
-:::
-
-::: {style="color: #E74C3C;"}
-**Remember:** Lambda functions should be simple and readable!
-:::
-
-
-
-# Lambda with Built-in Functions
-
-::: {.callout-note icon="false"}
-## The Power Combination
-Lambda functions really shine when used with Python's built-in functions like `map()`, `filter()`, and `sorted()`!
-:::
-
-:::: {.columns}
-::: {.column width="70%"}
-::: {style="color: #8E44AD;"}
-**Why this matters:** These combinations let you process data efficiently with minimal code
-:::
-:::
-::: {.column width="30%"}
-🔥⚡🎯
-:::
-::::
-
 
 
 ## Meet Your New Best Friends! 👋
@@ -324,6 +264,81 @@ print("Both methods give the same result!")
 ```
 
 ::: -->
+
+
+
+
+# Lambda vs Regular Functions
+
+::: {.callout-note icon="false"}
+## When to Use Each
+**Lambda:** For simple, one-line operations that you'll use briefly  
+**Regular Functions:** For complex logic, multiple statements, or reusable code
+:::
+
+:::: {.columns}
+::: {.column width="70%"}
+::: {style="color: #8E44AD;"}
+**Rule of thumb:** If you can't explain what the function does in one sentence, use a regular function; e.g., `def myFunction():`
+:::
+:::
+::: {.column width="30%"}
+⚖️🤔💡
+:::
+::::
+
+
+
+## Lambda vs Regular: Comparison
+
+::: {.callout-important icon="false"}
+## Side-by-Side Comparison
+```python
+# ✅ Good use of lambda - simple, clear
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+
+# ❌ Bad use of lambda - too complex
+complex_lambda = lambda x: x**2 if x > 0 else -x**2 if x < 0 else 0
+
+# ✅ Better as regular function
+def process_number(x):
+    if x > 0:
+        return x**2
+    elif x < 0:
+        return -x**2
+    else:
+        return 0
+```
+:::
+
+::: {style="color: #E74C3C;"}
+**Remember:** Lambda functions should be simple and readable!
+:::
+
+
+
+# Lambda with Built-in Functions
+
+::: {.callout-note icon="false"}
+## The Power Combination
+Lambda functions really shine when used with Python's built-in functions like `map()`, `filter()`, and `sorted()`!
+:::
+
+:::: {.columns}
+::: {.column width="70%"}
+::: {style="color: #8E44AD;"}
+**Why this matters:** These combinations let you process data efficiently with minimal code
+:::
+:::
+::: {.column width="30%"}
+🔥⚡🎯
+:::
+::::
+
+
+
+
 
 
 ## Lambda with map()
@@ -886,7 +901,7 @@ users = [{"name": "Alice", "age": 25}]
 names = list(map(lambda u: u["name"], users))
 ```
 
-**❌ DON'T:**
+**❌ DO NOT:**
 ```python
 # Too complex for lambda
 complex_func = lambda x: x**2 if x > 0 else abs(x) if x < 0 else "zero"
@@ -895,6 +910,7 @@ complex_func = lambda x: x**2 if x > 0 else abs(x) if x < 0 else "zero"
 # This won't work:
 # bad_lambda = lambda x: print(x); return x**2
 ```
+
 :::
 
 
@@ -902,9 +918,9 @@ complex_func = lambda x: x**2 if x > 0 else abs(x) if x < 0 else "zero"
 ## Lambda Limitations and Alternatives
 
 ::: {.callout-important icon="false"}
-## When Lambda Isn't Enough
+## When Lambda Is not Enough
 ```python
-# ❌ Lambda can't do multiple statements
+# ❌ Lambda cannot do multiple statements
 # Need regular function for this:
 def process_grade(score):
     print(f"Processing score: {score}")  # Side effect
@@ -918,20 +934,21 @@ def process_grade(score):
 # ✅ Lambda for simple conditions
 grade_simple = lambda score: "Pass" if score >= 60 else "Fail"
 
-# ❌ Lambda can't include assignments
+# ❌ Lambda cannot include assignments
 # Need regular function:
 def calculate_with_logging(x):
     result = x**2 + 2*x + 1  # Assignment
     print(f"Calculated: {result}")
     return result
 ```
+
 :::
 
-
-
+<!-- 
 # Final Challenge: Lambda Mastery
 
-::: {.callout-warning icon="false"}
+::: {.callout-important icon="false"}
+
 ## Ultimate Lambda Challenge (10 minutes)
 
 You're analyzing student performance data. Use lambda functions to solve these tasks:
@@ -952,6 +969,7 @@ students = [
 # 4. Find the top performer in each year
 # 5. Create a summary: {year: [student_names]} for CS majors only
 ```
+
 :::
 
 
@@ -988,7 +1006,7 @@ for year in sorted(years):
     top_student = max(year_students, key=lambda s: sum(s["grades"]) / len(s["grades"]))
     print(f"Year {year} top: {top_student['name']} (GPA: {sum(top_student['grades'])/len(top_student['grades']):.1f})")
 ```
-:::
+::: -->
 
 
 
@@ -1015,9 +1033,12 @@ for year in sorted(years):
 
 :::
 
+# Congrats!
+
 ::: {style="color: #2E86C1; font-size: 1.0em; text-align: center; margin-top: 1em;"}
-🎉 Congratulations! You've mastered Python's lambda functions! 🚀
+🎉 Congratulations! You've mastered Python's lambda functions! 🚀🐍✨
 :::
+
 
 <!-- 
 

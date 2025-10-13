@@ -68,7 +68,7 @@ Let's explore some essential Python concepts!
 :::
 ::::
 
----
+
 
 ## Tuples: Code Example
 
@@ -95,7 +95,7 @@ print(f"Student name: {student_info[0]}")  # Output: Alice
 
 
 
----
+
 
 ## Tuples: Concatenation, indexing, and slicing
 
@@ -128,7 +128,7 @@ print(f" (t1 + t2)[2:5] --> {(t1 + t2)[2:5]}")
 ::: -->
 
 
----
+
 
 
 # Ranges and Iterables
@@ -149,7 +149,7 @@ print(f" (t1 + t2)[2:5] --> {(t1 + t2)[2:5]}")
 :::
 ::::
 
----
+
 
 ## Ranges: Code Example
 
@@ -173,7 +173,7 @@ for i in countdown: print(i)
 **Why this works:** Ranges are memory-efficient and perfect for creating predictable number sequences!
 :::
 
----
+
 
 <!-- # Lists and Mutability: The Shape Shifters 🔄 -->
 # Lists and Mutability
@@ -194,7 +194,7 @@ for i in countdown: print(i)
 :::
 ::::
 
----
+
 
 ## Lists: Code Example
 
@@ -217,7 +217,7 @@ print(f"After adding: {fruits}")
 :::
 
 
----
+
 
 <!-- # Cloning Lists: Making Perfect Copies 👥 -->
 # Cloning Lists
@@ -238,7 +238,7 @@ print(f"After adding: {fruits}")
 :::
 ::::
 
----
+
 
 ## List Cloning: The Wrong Way ❌
 
@@ -255,7 +255,7 @@ print(f"Original changed too! {original}")
 ```
 :::
 
----
+
 
 ## List Cloning: The Right Way ✅
 
@@ -279,7 +279,7 @@ print(f"Copy modified: {copy1}")       # [1, 2, 3, 4, 5, 7]
 **Why this works:** Proper cloning creates independent lists, preventing unwanted side effects!
 :::
 
----
+
 
 
 ## Lists: Another Cloning Example
@@ -320,7 +320,7 @@ print(f"Appending to L2 modifies L1 = {L2}")
 
 
 
----
+
 
 <!-- # List Comprehensions: The Elegant Creators ✨ -->
 # List Comprehensions
@@ -341,7 +341,7 @@ print(f"Appending to L2 modifies L1 = {L2}")
 :::
 ::::
 
----
+
 
 ## List Comprehensions: Traditional vs Modern
 
@@ -359,7 +359,7 @@ print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 :::
 
----
+
 
 ## List Comprehensions: With Conditions
 
@@ -381,7 +381,7 @@ print(caps)  # ['HELLO', 'WORLD', 'PYTHON', 'ROCKS']
 **Why this works:** List comprehensions are Pythonic, readable, and often faster than traditional loops!
 :::
 
----
+
 
 
 ## Lists to Make Tuples
@@ -412,7 +412,7 @@ print(combined_list)
 **Why this works:** A making a copy is 
 ::: -->
 
----
+
 
 
 
@@ -435,7 +435,7 @@ print(combined_list)
 :::
 ::::
 
----
+
 
 ## Nested Lists: Code Example
 
@@ -459,7 +459,7 @@ print(f"Second vegetable: {shopping_lists[1][1]}")  # broccoli
 **Why this works:** Nested lists let us organize related data in logical groups, like folders in a filing cabinet!
 :::
 
----
+
 
 # 2D Lists
 <!-- # 2D Lists: The Grid Masters 🎯 -->
@@ -480,7 +480,7 @@ print(f"Second vegetable: {shopping_lists[1][1]}")  # broccoli
 :::
 ::::
 
----
+
 
 ## 2D Lists: Tic-Tac-Toe Example
 
@@ -504,7 +504,7 @@ board[2][2] = 'X'  # Bottom-right
 **Why this works:** 2D lists give us row[column] access, perfect for grid-based data and games!
 :::
 
----
+
 
 <!-- # Higher-Order Operations: The Power Tools 🔧 -->
 # Higher-Order Functions
@@ -525,7 +525,7 @@ board[2][2] = 'X'  # Bottom-right
 :::
 ::::
 
----
+
 
 ## Higher-Order: map() and filter()
 
@@ -549,30 +549,33 @@ print(f"Evens: {evens}")  # [2, 4, 6, 8, 10]
 **Why this works:** Higher-order functions let us process entire collections efficiently with functional programming!
 :::
 
----
+
 
 ## Higher Order Functions
 
 ::: {.callout-important icon="false"}
 ## Function As Parameters
+Add print statements to see what is happening in the code.
 ```python
 def apply_to_each(L,f):
     """ Assume L is a list, F is a function
     Mutats L by replacing each element, e, of L by f(e)"""
     for i in range(len(L)):
+        print(f" position : {i}L[i] is now : {L[i]}")
         L[i] = f(L[i])
+
 L = [1, -2, 3.33, -5]
-print(f"L = {L}")
+print(f"1. L = {L}")
 print("Apply ABS() to each element of L")
 apply_to_each(L,abs)
-print(f"L = {L}")
+print(f"2. L = {L}")
 apply_to_each(L,int)
-print(f"L = {L}")
+print(f"3. L = {L}")
 apply_to_each(L,float)
-print(f"L = {L}")
+print(f"4. L = {L}")
 print(f"Apply squaring to each element of L : {L}")
 apply_to_each(L, lambda x: x**2)
-print(f"L = {L}")
+print(f"5. L = {L}")
 ```
 
 ```{python}
@@ -580,19 +583,21 @@ def apply_to_each(L,f):
     """ Assume L is a list, F is a function
     Mutats L by replacing each element, e, of L by f(e)"""
     for i in range(len(L)):
+        print(f" position : {i}L[i] is now : {L[i]}")
         L[i] = f(L[i])
+
 L = [1, -2, 3.33, -5]
-print(f"L = {L}")
+print(f"1. L = {L}")
 print("Apply ABS() to each element of L")
 apply_to_each(L,abs)
-print(f"L = {L}")
+print(f"2. L = {L}")
 apply_to_each(L,int)
-print(f"L = {L}")
+print(f"3. L = {L}")
 apply_to_each(L,float)
-print(f"L = {L}")
+print(f"4. L = {L}")
 print(f"Apply squaring to each element of L : {L}")
 apply_to_each(L, lambda x: x**2)
-print(f"L = {L}")
+print(f"5. L = {L}")
 ```
 
 :::
@@ -601,51 +606,6 @@ print(f"L = {L}")
 The function `apply_to_each()` is called higher-order because it
 has an argument that is itself a function.
 :::
-
----
-
-
-## Higher Order Functions
-
-::: {.callout-important icon="false"}
-## Function As Parameters
-```python
-def apply_to_each(L,f):
-    """ Assume L is a list, F is a function
-    Mutats L by replacing each element, e, of L by f(e)"""
-    for i in range(len(L)):
-        L[i] = f(L[i])
-L = [1, -2, 3.33, -5]
-print(f"L = {L}")
-
-# Using an anonymous function (lambda)
-print(f"Apply squaring to each element of L : {L}")
-apply_to_each(L, lambda x: x**2)
-print(f"L = {L}")
-```
-
-```{python}
-def apply_to_each(L,f):
-    """ Assume L is a list, F is a function
-    Mutats L by replacing each element, e, of L by f(e)"""
-    for i in range(len(L)):
-        L[i] = f(L[i])
-L = [1, -2, 3.33, -5]
-print(f"L = {L}")
-
-# Using an anonymous function (lambda)
-print(f"Apply squaring to each element of L : {L}")
-apply_to_each(L, lambda x: x**2)
-print(f"L = {L}")
-```
-
-:::
-<!-- 
-::: {style="color: #E74C3C;"}
-**Why this works:** A making a copy is 
-::: -->
-
----
 
 
 
@@ -668,7 +628,7 @@ print(f"L = {L}")
 :::
 ::::
 
----
+
 
 ## Sequence Types: Common Operations
 
@@ -688,7 +648,7 @@ print(f"List[2]: {numbers_list[2]}")     # 3
 ```
 :::
 
----
+
 
 ## Sequence Types: Key Differences
 
@@ -710,7 +670,7 @@ numbers_list[0] = 0    # Works! Lists are mutable
 **Why this works:** All sequences share similar operations, but mutability determines which operations are allowed!
 :::
 
----
+
 
 <!-- # Sets: The Unique Collection Specialists 🌟 -->
 # Sets
@@ -731,7 +691,7 @@ numbers_list[0] = 0    # Works! Lists are mutable
 :::
 ::::
 
----
+
 
 ## Sets: Creating and Basic Operations
 
@@ -745,30 +705,16 @@ numbers = set([1, 2, 2, 3, 3, 3, 4])      # From list
 
 print(f"Colors1: {colors1}")  # {'red', 'green', 'blue'}
 print(f"Numbers: {numbers}")  # {1, 2, 3, 4}
-```
-:::
 
----
-
-## Sets: Mathematical Operations
-
-::: {.callout-important icon="false"}
-## Set Operations
-```python
-# Set operations
-common = colors1 & colors2          # Intersection
-all_colors = colors1 | colors2      # Union
-unique_to_1 = colors1 - colors2     # Difference
-
-print(f"Common colors: {common}")       # {'blue'}
-print(f"All colors: {all_colors}")     
-# {'red', 'green', 'blue', 'yellow', 'purple'}
-
-# Fast membership testing
-print("red" in colors1)  # True - very fast!
+colors1.add("purple")
+print(f"Add purple to Colors1: {colors1}")  # {'red', 'green', 'blue', 'purple'}
+colors1.add("purple")
+print(f"Add purple to Colors1 (again): {colors1}")  # {'red', 'green', 'blue', 'purple'}
 ```
 
-<!-- ```{python}
+Output:
+
+```{python}
 # Creating sets
 colors1 = {"red", "green", "blue", "red"}  # Duplicate "red" ignored
 colors2 = {"blue", "yellow", "purple"}
@@ -776,6 +722,25 @@ numbers = set([1, 2, 2, 3, 3, 3, 4])      # From list
 
 print(f"Colors1: {colors1}")  # {'red', 'green', 'blue'}
 print(f"Numbers: {numbers}")  # {1, 2, 3, 4}
+
+colors1.add("purple")
+print(f"Add purple to Colors1: {colors1}")  # {'red', 'green', 'blue', 'purple'}
+colors1.add("purple")
+print(f"Add purple to Colors1 (again): {colors1}")  # {'red', 'green', 'blue', 'purple'}
+```
+
+:::
+
+
+
+## Sets: Mathematical Operations
+
+::: {.callout-important icon="false"}
+## Set Operations
+```python
+# Creating sets
+colors1 = {"red", "green", "blue", "red"}  # Duplicate "red" ignored
+colors2 = {"blue", "yellow", "purple"}
 # Set operations
 common = colors1 & colors2          # Intersection
 all_colors = colors1 | colors2      # Union
@@ -787,7 +752,26 @@ print(f"All colors: {all_colors}")
 
 # Fast membership testing
 print("red" in colors1)  # True - very fast!
-``` -->
+```
+
+Output:
+
+```{python}
+# Creating sets
+colors1 = {"red", "green", "blue", "red"}  # Duplicate "red" ignored
+colors2 = {"blue", "yellow", "purple"}
+# Set operations
+common = colors1 & colors2          # Intersection
+all_colors = colors1 | colors2      # Union
+unique_to_1 = colors1 - colors2     # Difference
+
+print(f"Common colors: {common}")       # {'blue'}
+print(f"All colors: {all_colors}")     
+# {'red', 'green', 'blue', 'yellow', 'purple'}
+
+# Fast membership testing
+print("red" in colors1)  # True - very fast!
+```
 
 :::
 
