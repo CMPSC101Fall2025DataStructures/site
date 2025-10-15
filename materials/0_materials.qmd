@@ -87,5 +87,8 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 ## 8. Chapter 4: A Return to Functional Programming
 - **Lambda and Higher Order Functions**
- - [HTML](8_lambdaFunctions_i.html) Slides
- - [PDF](8_lambdaFunctions_i.pdf) The slide's material as a pdf.
+  - [HTML](8_lambdaFunctions_i.html) Slides
+  - [PDF](8_lambdaFunctions_i.pdf) The slide's material as a pdf.
+- **Classes and Decorators Functions**
+  - [HTML](8_classesAndDecorators.html) Slides
+  - [PDF](8_classesAndDecorators.pdf) The slide's material as a pdf.
