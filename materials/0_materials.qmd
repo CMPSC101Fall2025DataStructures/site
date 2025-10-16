@@ -77,7 +77,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [HTML](7_python_fundamentals_slides.html) Slides
   -  [PDF](7_python_fundamentals_slides.pdf) The slide's material as a pdf.
 - Midterm Preparation Guide
-  -  Midterm exam: During lab oßn Thursday, 23rd October 2025
+  -  Midterm exam: During lab on Thursday, 23rd October 2025
   -  [HTML](7_midterm_study_sheet.html) Slides
   -  [PDF](7_midterm_study_sheet.pdf) The slide's material as a pdf.
 <!-- - **Lab 01**: Working with the UV package manager to run Python code. -->
@@ -92,3 +92,5 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Classes and Decorators Functions**
   - [HTML](8_classesAndDecorators.html) Slides
   - [PDF](8_classesAndDecorators.pdf) The slide's material as a pdf.
+- **Lab06**: Midterm practice test
+  - [GitHub Classroom link](https://classroom.github.com/a/ZYy4GlCI)
