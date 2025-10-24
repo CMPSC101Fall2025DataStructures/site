@@ -76,7 +76,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Some Fundamental Programming in Python**
   - [HTML](7_python_fundamentals_slides.html) Slides
   -  [PDF](7_python_fundamentals_slides.pdf) The slide's material as a pdf.
-- Midterm Preparation Guide
+- **Midterm Preparation Guide**
   -  Midterm exam: During lab on Thursday, 23rd October 2025
   -  [HTML](7_midterm_study_sheet.html) Slides
   -  [PDF](7_midterm_study_sheet.pdf) The slide's material as a pdf.
@@ -95,6 +95,11 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Lab06**: Midterm practice test
   - [GitHub Classroom link](https://classroom.github.com/a/ZYy4GlCI)
   
-## 9. Chapter 11: Algorithm Complexity and Big-Oh
+## 9. Chapter 11: Algorithm Complexity and Big-O
 - **Activity 05**: Algorithm Performance Analysis through Doubling Experiments
   - [GitHub Classroom Link](https://classroom.github.com/a/4MAv9YIr)
+- **An informal Introduction to Complexity**: About Big Big-O
+  - [HTML](9_complexity_intro_slides.html) Slides
+  - [PDF](9_complexity_intro_slides.pdf) The slide's material as a pdf.
+- **Activity 06**: Algorithm Performance Analysis through Doubling Experiments
+  - [GitHub Classroom Link](https://classroom.github.com/a/HIHMMxU3)
