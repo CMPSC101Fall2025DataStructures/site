@@ -1,0 +1,24 @@
+\contentsline {section}{\nonumberline Welcome to MORE Python Programming!}{1}{section*.3}%
+\contentsline {subsection}{\nonumberline What are literals, Again??}{1}{subsection*.5}%
+\contentsline {subsection}{\nonumberline Python Code Sample with F-strings}{2}{subsection*.7}%
+\contentsline {subsection}{\nonumberline Operators}{2}{subsection*.9}%
+\contentsline {subsection}{\nonumberline Python Code Sample}{2}{subsection*.11}%
+\contentsline {subsection}{\nonumberline Interesting Application}{3}{subsection*.13}%
+\contentsline {section}{\nonumberline Review Python Loops and Conditionals}{3}{section*.15}%
+\contentsline {subsection}{\nonumberline Loops}{3}{subsection*.17}%
+\contentsline {subsection}{\nonumberline Conditionals}{3}{subsection*.19}%
+\contentsline {subsection}{\nonumberline Sort of Interesting Application}{3}{subsection*.21}%
+\contentsline {subsection}{\nonumberline Nested Conditionals}{4}{subsection*.23}%
+\contentsline {subsection}{\nonumberline Logical Operator}{4}{subsection*.25}%
+\contentsline {subsection}{\nonumberline String Manipulation}{5}{subsection*.27}%
+\contentsline {subsection}{\nonumberline Lists}{5}{subsection*.29}%
+\contentsline {subsection}{\nonumberline Demo of Lists}{5}{subsection*.31}%
+\contentsline {subsection}{\nonumberline Dictionaries}{6}{subsection*.33}%
+\contentsline {subsection}{\nonumberline Demo of Dictionaries}{6}{subsection*.35}%
+\contentsline {subsection}{\nonumberline Coding Challenges}{7}{subsection*.37}%
+\contentsline {subsubsection}{\nonumberline 1. Variables and Operators}{7}{subsubsection*.39}%
+\contentsline {subsubsection}{\nonumberline 2. Working with Lists}{7}{subsubsection*.41}%
+\contentsline {subsubsection}{\nonumberline 3. Dictionaries}{8}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline 4. For Loops}{8}{subsubsection*.45}%
+\contentsline {subsubsection}{\nonumberline 5. While Loops and Conditionals}{8}{subsubsection*.47}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

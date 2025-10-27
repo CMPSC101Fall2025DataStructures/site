@@ -167,12 +167,14 @@ grades. Adjustments to grades will be applied on top of base grades according to
 - **Week Three**: Numerical Programs (Guttag Chapter 3)
 - **Week Four**: Function Scope (Guttag Chapter 4)
 - **Week Five**: Structured Types (Guttag Chapter 5)
+- **Week Eleven**: Object-Oriented Programming (Guttag Chapter 10)
+
+### TBA
 - **Week Six**: Mutability and Aliasing (Guttag Chapter 5)
 - **Week Seven**: Recursion (Guttag Chapter 6)
 - **Fall Break** (Thursday to Sunday)
 - **Week Nine**: Modules and Files (Guttag Chapter 7)
 - **Week Ten**: Testing and Handling Exceptions (Guttag Chapter 8 and 9)
-- **Week Eleven**: Object-Oriented Programming (Guttag Chapter 10)
 - **Week Twelve**: Algorithmic Complexity (Guttag Chapter 11)
 - **Week Thirteen**: Sorting (Guttag Chapter 12)
 - **Week Fourteen**: Data Structures (Guttag Chapter 12 cont)

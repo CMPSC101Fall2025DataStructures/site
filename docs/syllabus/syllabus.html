@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,14 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,6 +81,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">CMPSC101 Fall 2025 :: DataStructures</span>
     </a>
@@ -135,6 +138,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#schedule-at-a-glance" id="toc-schedule-at-a-glance" class="nav-link" data-scroll-target="#schedule-at-a-glance">Schedule At-A-Glance</a>
   <ul class="collapse">
+  <li><a href="#tba" id="toc-tba" class="nav-link" data-scroll-target="#tba">TBA</a></li>
   <li><a href="#final-deliverable" id="toc-final-deliverable" class="nav-link" data-scroll-target="#final-deliverable">Final Deliverable</a></li>
   </ul></li>
   <li><a href="#assignment-policies" id="toc-assignment-policies" class="nav-link" data-scroll-target="#assignment-policies">Assignment Policies</a>
@@ -404,18 +408,23 @@ grades. Adjustments to grades will be applied on top of base grades according to
 <li><strong>Week Three</strong>: Numerical Programs (Guttag Chapter 3)</li>
 <li><strong>Week Four</strong>: Function Scope (Guttag Chapter 4)</li>
 <li><strong>Week Five</strong>: Structured Types (Guttag Chapter 5)</li>
+<li><strong>Week Eleven</strong>: Object-Oriented Programming (Guttag Chapter 10)</li>
+</ul>
+<section id="tba" class="level3">
+<h3 class="anchored" data-anchor-id="tba">TBA</h3>
+<ul>
 <li><strong>Week Six</strong>: Mutability and Aliasing (Guttag Chapter 5)</li>
 <li><strong>Week Seven</strong>: Recursion (Guttag Chapter 6)</li>
 <li><strong>Fall Break</strong> (Thursday to Sunday)</li>
 <li><strong>Week Nine</strong>: Modules and Files (Guttag Chapter 7)</li>
 <li><strong>Week Ten</strong>: Testing and Handling Exceptions (Guttag Chapter 8 and 9)</li>
-<li><strong>Week Eleven</strong>: Object-Oriented Programming (Guttag Chapter 10)</li>
 <li><strong>Week Twelve</strong>: Algorithmic Complexity (Guttag Chapter 11)</li>
 <li><strong>Week Thirteen</strong>: Sorting (Guttag Chapter 12)</li>
 <li><strong>Week Fourteen</strong>: Data Structures (Guttag Chapter 12 cont)</li>
 <li><strong>Week Fifteen</strong>: Optimization Problems (Guttag Chapter 14)</li>
 <li><strong>Week Sixteen</strong>: Review</li>
 </ul>
+</section>
 <section id="final-deliverable" class="level3">
 <h3 class="anchored" data-anchor-id="final-deliverable">Final Deliverable</h3>
 <ul>
@@ -612,13 +621,14 @@ grades. Adjustments to grades will be applied on top of base grades according to
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,14 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,6 +80,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">CMPSC101 Fall 2025 :: DataStructures</span>
     </a>
@@ -130,6 +133,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#chapter-5-structured-types-and-mutability" id="toc-chapter-5-structured-types-and-mutability" class="nav-link" data-scroll-target="#chapter-5-structured-types-and-mutability">7. Chapter 5: STRUCTURED TYPES AND MUTABILITY</a></li>
   <li><a href="#chapter-4-a-return-to-functional-programming" id="toc-chapter-4-a-return-to-functional-programming" class="nav-link" data-scroll-target="#chapter-4-a-return-to-functional-programming">8. Chapter 4: A Return to Functional Programming</a></li>
   <li><a href="#chapter-11-algorithm-complexity-and-big-o" id="toc-chapter-11-algorithm-complexity-and-big-o" class="nav-link" data-scroll-target="#chapter-11-algorithm-complexity-and-big-o">9. Chapter 11: Algorithm Complexity and Big-O</a></li>
+  <li><a href="#chapter-11-continued-o1-and-ologn" id="toc-chapter-11-continued-o1-and-ologn" class="nav-link" data-scroll-target="#chapter-11-continued-o1-and-ologn">10. Chapter 11 (continued): O(1) and O(logN)</a></li>
   </ul>
 </nav>
     </div>
@@ -313,6 +317,26 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://classroom.github.com/a/HIHMMxU3">GitHub Classroom Link</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="chapter-11-continued-o1-and-ologn" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-11-continued-o1-and-ologn">10. Chapter 11 (continued): O(1) and O(logN)</h2>
+<ul>
+<li><strong>O(1) (Constant Time)</strong>
+<ul>
+<li><a href="10_1_big_o_constant_o1.html">HTML</a> Slides</li>
+<li><a href="10_1_big_o_constant_o1.pdf">PDF</a> The slide’s material as a pdf.</li>
+</ul></li>
+<li><strong>O(logN) (Logarithmic Time)</strong>
+<ul>
+<li><a href="10_2_big_o_logarithmic_ologn.html">HTML</a> Slides</li>
+<li><a href="10_2_big_o_logarithmic_ologn.pdf">PDF</a> The slide’s material as a pdf.</li>
+</ul></li>
+<li><strong>Supplement Slides: Heap Sorting</strong>
+<ul>
+<li><a href="10_3_heap_sorting_slides.html">HTML</a> Slides</li>
+<li><a href="10_3_heap_sorting_slides.pdf">PDF</a> The slide’s material as a pdf.</li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -369,13 +393,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
