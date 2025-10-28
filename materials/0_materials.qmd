@@ -111,6 +111,10 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **O(logN) (Logarithmic Time)**
   - [HTML](10_2_big_o_logarithmic_ologn.html) Slides
   - [PDF](10_2_big_o_logarithmic_ologn.pdf) The slide's material as a pdf.
-- **Supplement Slides: Heap Sorting**
+- **O(2^n) (Exponential Time)**
+  - [HTML](10_4_big_o_exponential_o2n.html) Slides
+  - [PDF](10_4_big_o_exponential_o2n.pdf) The slide's material as a pdf.
+
+- **Supplement Slides: Heap Sorting (Logarithmic Time)**
   - [HTML](10_3_heap_sorting_slides.html) Slides
   - [PDF](10_3_heap_sorting_slides.pdf) The slide's material as a pdf.
