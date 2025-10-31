@@ -333,37 +333,72 @@ import time
 ::: {.column}
 **Combinatorial Problems** 🎲
 ```python
-    # Generate all possible combinations - O(2^n)
-    def power_set(items):
-        if not items:
-            return [[]]
-        
-        first = items[0]
-        rest_subsets = power_set(items[1:])  # Recursive call
-        
-        # Each element doubles the possibilities
-        with_first = [subset + [first] for subset in rest_subsets]
-        return rest_subsets + with_first
+# Generate all possible combinations - O(2^n)
+def power_set(items):
+    """
+    Generate all possible subsets (power set) of the given items.
+    Uses recursive approach where each element can either be included or excluded.
+    Time complexity: O(2^n) where n is the number of items.
+    """
+    # Base case: empty list has only one subset - the empty subset
+    if not items:
+        return [[]]
+    
+    # Take the first item and recursively find power set of remaining items
+    first = items[0]
+    rest_subsets = power_set(items[1:])  # Recursive call on remaining items
+    
+    # For each subset of remaining items, create two versions:
+    # 1. Without the first item (already in rest_subsets)
+    # 2. With the first item added to each subset
+    with_first = [subset + [first] for subset in rest_subsets]
+    
+    # Combine both versions: subsets without first + subsets with first
+    return rest_subsets + with_first
 
-    # Traveling Salesman (brute force) - O(n!)
-    def tsp_brute_force(cities, current_city=0, visited=None, path=None):
+# Traveling Salesman Problem (brute force) - O(n!)
+def tsp_brute_force(cities, current_city=0, visited=None, path=None):
+    """
+    Solve Traveling Salesman Problem using brute force approach.
+    Tries all possible routes and returns the shortest one.
+    Time complexity: O(n!) - factorial time, very slow for large inputs.
+    
+    Args:
+        cities: Distance matrix or list of cities
+        current_city: Current position (default: start at city 0)
+        visited: Set of already visited cities
+        path: Current path taken so far
+    
+    Returns:
+        Tuple of (best_path, best_distance)
+    """
+    # Initialize on first call: start at city 0 with empty visited set and path
     if visited is None:
-        visited = {current_city}
-        path = [current_city]
+        visited = {current_city}  # Set to track visited cities
+        path = [current_city]     # List to track the route taken
     
+    # Base case: if we've visited all cities, return to start (city 0)
     if len(visited) == len(cities):
-        return path + [0], calculate_distance(path + [0])
+        complete_path = path + [0]  # Add return trip to starting city
+        total_distance = calculate_distance(complete_path)
+        return complete_path, total_distance
     
+    # Initialize variables to track the best solution found so far
     best_path = None
-    best_distance = float('inf')
+    best_distance = float('inf')  # Start with infinite distance
     
+    # Try visiting each unvisited city next
     for next_city in range(len(cities)):
-        if next_city not in visited:
+        if next_city not in visited:  # Only consider unvisited cities
+            # Recursively solve for the remaining cities
             new_path, distance = tsp_brute_force(
-                cities, next_city, 
-                visited | {next_city}, 
-                path + [next_city]
+                cities, 
+                next_city,                    # Move to this city next
+                visited | {next_city},        # Add this city to visited set
+                path + [next_city]            # Add this city to current path
             )
+            
+            # Keep track of the best (shortest) route found so far
             if distance < best_distance:
                 best_distance = distance
                 best_path = new_path
@@ -371,7 +406,217 @@ import time
     return best_path, best_distance
 
     # Warning: TSP is O(n!) which is even worse than O(2^n)!
+    # For n cities, we have (n-1)! possible routes to check
+
+def calculate_distance(path):
+    """
+    Calculate the total distance for a given path through cities.
+    This is a simplified version using a predefined distance matrix.
+    In a real application, you would calculate distances using coordinates.
+    
+    Args:
+        path: List of city indices representing the route
+        
+    Returns:
+        Total distance of the path
+    """
+    # Predefined distance matrix for a 3-city example
+    # In practice, this would be calculated from city coordinates
+    # using formulas like Euclidean distance: sqrt((x2-x1)² + (y2-y1)²)
+    distances = {
+        (0, 1): 10, (1, 0): 10,  # Distance between city 0 and city 1
+        (0, 2): 15, (2, 0): 15,  # Distance between city 0 and city 2
+        (1, 2): 20, (2, 1): 20,  # Distance between city 1 and city 2
+        (0, 0): 0, (1, 1): 0, (2, 2): 0  # Distance from city to itself is 0
+    }
+    
+    total = 0  # Initialize total distance
+    
+    # Sum up distances between consecutive cities in the path
+    for i in range(len(path) - 1):
+        current_city = path[i]
+        next_city = path[i + 1]
+        # Get distance between current and next city, default to high cost if not found
+        total += distances.get((current_city, next_city), 100)
+    
+    return total
+
+# Example usage and testing
+if __name__ == "__main__":
+    """
+    Main execution block - runs only when script is executed directly.
+    Demonstrates both the power set generation and TSP solving algorithms.
+    """
+    
+    # Test the power set generation algorithm
+    print("Power Set Example:")
+    print("=" * 40)
+    items = [1, 2, 3]  # Test with a simple 3-element set
+    result = power_set(items)
+    print(f"Power set of {items}: {result}")
+    print(f"Number of subsets: {len(result)} (should be 2^{len(items)} = {2**len(items)})")
+    print("This demonstrates exponential growth: each new item doubles the subsets!")
+    
+    print("\nTraveling Salesman Problem Example:")
+    print("=" * 40)
+    # Simple 3-city example with predefined distances
+    # Note: cities parameter is not actually used in our simplified version
+    # The distance calculation uses the hardcoded distance matrix instead
+    cities = [[0, 10, 15], [10, 0, 20], [15, 20, 0]]  # Distance matrix (not used in current implementation)
+    
+    print("Solving TSP for 3 cities using brute force...")
+    print("This will check all possible routes and find the shortest one.")
+    
+    # Find the optimal path
+    path, distance = tsp_brute_force(cities)
+    print(f"Best path found: {path}")
+    print(f"Total distance: {distance}")
+    print(f"For {len(cities)} cities, we checked {len(cities)-1}! = {1 if len(cities)<=1 else eval('*'.join(map(str, range(1, len(cities)))))} possible routes.")
 ```
+
+
+<!-- ```python
+# Generate all possible combinations - O(2^n)
+def power_set(items):
+    """
+    Generate all possible subsets (power set) of the given items.
+    Uses recursive approach where each element can either be included or excluded.
+    Time complexity: O(2^n) where n is the number of items.
+    """
+    # Base case: empty list has only one subset - the empty subset
+    if not items:
+        return [[]]
+    
+    # Take the first item and recursively find power set of remaining items
+    first = items[0]
+    rest_subsets = power_set(items[1:])  # Recursive call on remaining items
+    
+    # For each subset of remaining items, create two versions:
+    # 1. Without the first item (already in rest_subsets)
+    # 2. With the first item added to each subset
+    with_first = [subset + [first] for subset in rest_subsets]
+    
+    # Combine both versions: subsets without first + subsets with first
+    return rest_subsets + with_first
+
+# Traveling Salesman Problem (brute force) - O(n!)
+def tsp_brute_force(cities, current_city=0, visited=None, path=None):
+    """
+    Solve Traveling Salesman Problem using brute force approach.
+    Tries all possible routes and returns the shortest one.
+    Time complexity: O(n!) - factorial time, very slow for large inputs.
+    
+    Args:
+        cities: Distance matrix or list of cities
+        current_city: Current position (default: start at city 0)
+        visited: Set of already visited cities
+        path: Current path taken so far
+    
+    Returns:
+        Tuple of (best_path, best_distance)
+    """
+    # Initialize on first call: start at city 0 with empty visited set and path
+    if visited is None:
+        visited = {current_city}  # Set to track visited cities
+        path = [current_city]     # List to track the route taken
+    
+    # Base case: if we've visited all cities, return to start (city 0)
+    if len(visited) == len(cities):
+        complete_path = path + [0]  # Add return trip to starting city
+        total_distance = calculate_distance(complete_path)
+        return complete_path, total_distance
+    
+    # Initialize variables to track the best solution found so far
+    best_path = None
+    best_distance = float('inf')  # Start with infinite distance
+    
+    # Try visiting each unvisited city next
+    for next_city in range(len(cities)):
+        if next_city not in visited:  # Only consider unvisited cities
+            # Recursively solve for the remaining cities
+            new_path, distance = tsp_brute_force(
+                cities, 
+                next_city,                    # Move to this city next
+                visited | {next_city},        # Add this city to visited set
+                path + [next_city]            # Add this city to current path
+            )
+            
+            # Keep track of the best (shortest) route found so far
+            if distance < best_distance:
+                best_distance = distance
+                best_path = new_path
+    
+    return best_path, best_distance
+
+    # Warning: TSP is O(n!) which is even worse than O(2^n)!
+    # For n cities, we have (n-1)! possible routes to check
+
+def calculate_distance(path):
+    """
+    Calculate the total distance for a given path through cities.
+    This is a simplified version using a predefined distance matrix.
+    In a real application, you would calculate distances using coordinates.
+    
+    Args:
+        path: List of city indices representing the route
+        
+    Returns:
+        Total distance of the path
+    """
+    # Predefined distance matrix for a 3-city example
+    # In practice, this would be calculated from city coordinates
+    # using formulas like Euclidean distance: sqrt((x2-x1)² + (y2-y1)²)
+    distances = {
+        (0, 1): 10, (1, 0): 10,  # Distance between city 0 and city 1
+        (0, 2): 15, (2, 0): 15,  # Distance between city 0 and city 2
+        (1, 2): 20, (2, 1): 20,  # Distance between city 1 and city 2
+        (0, 0): 0, (1, 1): 0, (2, 2): 0  # Distance from city to itself is 0
+    }
+    
+    total = 0  # Initialize total distance
+    
+    # Sum up distances between consecutive cities in the path
+    for i in range(len(path) - 1):
+        current_city = path[i]
+        next_city = path[i + 1]
+        # Get distance between current and next city, default to high cost if not found
+        total += distances.get((current_city, next_city), 100)
+    
+    return total
+
+# Example usage and testing
+if __name__ == "__main__":
+    """
+    Main execution block - runs only when script is executed directly.
+    Demonstrates both the power set generation and TSP solving algorithms.
+    """
+    
+    # Test the power set generation algorithm
+    print("Power Set Example:")
+    print("=" * 40)
+    items = [1, 2, 3]  # Test with a simple 3-element set
+    result = power_set(items)
+    print(f"Power set of {items}: {result}")
+    print(f"Number of subsets: {len(result)} (should be 2^{len(items)} = {2**len(items)})")
+    print("This demonstrates exponential growth: each new item doubles the subsets!")
+    
+    print("\nTraveling Salesman Problem Example:")
+    print("=" * 40)
+    # Simple 3-city example with predefined distances
+    # Note: cities parameter is not actually used in our simplified version
+    # The distance calculation uses the hardcoded distance matrix instead
+    cities = [[0, 10, 15], [10, 0, 20], [15, 20, 0]]  # Distance matrix (not used in current implementation)
+    
+    print("Solving TSP for 3 cities using brute force...")
+    print("This will check all possible routes and find the shortest one.")
+    
+    # Find the optimal path
+    path, distance = tsp_brute_force(cities)
+    print(f"Best path found: {path}")
+    print(f"Total distance: {distance}")
+    print(f"For {len(cities)} cities, we checked {len(cities)-1}! = {1 if len(cities)<=1 else eval('*'.join(map(str, range(1, len(cities)))))} possible routes.")
+``` -->
+
 :::
 :::
 

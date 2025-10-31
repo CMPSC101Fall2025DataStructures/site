@@ -104,7 +104,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Activity 06**: Algorithm Performance Analysis through Doubling Experiments
   - [GitHub Classroom Link](https://classroom.github.com/a/HIHMMxU3)
 
-## 10. Chapter 11 (continued): O(1) and O(logN)
+## 10. Chapter 11 (continued): O(1), O(logN), O(2^N)
 - **O(1) (Constant Time)**
   - [HTML](10_1_big_o_constant_o1.html) Slides
   - [PDF](10_1_big_o_constant_o1.pdf) The slide's material as a pdf.
@@ -114,7 +114,11 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **O(2^n) (Exponential Time)**
   - [HTML](10_4_big_o_exponential_o2n.html) Slides
   - [PDF](10_4_big_o_exponential_o2n.pdf) The slide's material as a pdf.
-
 - **Supplement Slides: Heap Sorting (Logarithmic Time)**
   - [HTML](10_3_heap_sorting_slides.html) Slides
   - [PDF](10_3_heap_sorting_slides.pdf) The slide's material as a pdf.
+- **Travelling Salesman**
+  - [HTML](10_5_travellingSalesman.html) Slides
+  - [PDF](10_5_travellingSalesman.pdf) The slide's material as a pdf.
+- **Activity 07**: Traveling Saleman Problem and Coding
+  - [GitHub Classroom Link](https://classroom.github.com/a/C_SGq80m)

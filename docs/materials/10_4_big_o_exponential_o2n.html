@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.33">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="CS 101 - Fall 2025">
   <title>CMPSC101 Fall 2025 :: DataStructures – O(2^n) - EXPONENTIAL TIME</title>
@@ -504,44 +504,286 @@ See how binary decision trees create exponential numbers of paths!
 <span id="cb4-35"><a></a>    <span class="co"># Try compare_fibonacci(30) - dramatic difference!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <p><strong>Combinatorial Problems</strong> 🎲</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>    <span class="co"># Generate all possible combinations - O(2^n)</span></span>
-<span id="cb5-2"><a></a>    <span class="kw">def</span> power_set(items):</span>
-<span id="cb5-3"><a></a>        <span class="cf">if</span> <span class="kw">not</span> items:</span>
-<span id="cb5-4"><a></a>            <span class="cf">return</span> [[]]</span>
-<span id="cb5-5"><a></a>        </span>
-<span id="cb5-6"><a></a>        first <span class="op">=</span> items[<span class="dv">0</span>]</span>
-<span id="cb5-7"><a></a>        rest_subsets <span class="op">=</span> power_set(items[<span class="dv">1</span>:])  <span class="co"># Recursive call</span></span>
-<span id="cb5-8"><a></a>        </span>
-<span id="cb5-9"><a></a>        <span class="co"># Each element doubles the possibilities</span></span>
-<span id="cb5-10"><a></a>        with_first <span class="op">=</span> [subset <span class="op">+</span> [first] <span class="cf">for</span> subset <span class="kw">in</span> rest_subsets]</span>
-<span id="cb5-11"><a></a>        <span class="cf">return</span> rest_subsets <span class="op">+</span> with_first</span>
-<span id="cb5-12"><a></a></span>
-<span id="cb5-13"><a></a>    <span class="co"># Traveling Salesman (brute force) - O(n!)</span></span>
-<span id="cb5-14"><a></a>    <span class="kw">def</span> tsp_brute_force(cities, current_city<span class="op">=</span><span class="dv">0</span>, visited<span class="op">=</span><span class="va">None</span>, path<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb5-15"><a></a>    <span class="cf">if</span> visited <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb5-16"><a></a>        visited <span class="op">=</span> {current_city}</span>
-<span id="cb5-17"><a></a>        path <span class="op">=</span> [current_city]</span>
-<span id="cb5-18"><a></a>    </span>
-<span id="cb5-19"><a></a>    <span class="cf">if</span> <span class="bu">len</span>(visited) <span class="op">==</span> <span class="bu">len</span>(cities):</span>
-<span id="cb5-20"><a></a>        <span class="cf">return</span> path <span class="op">+</span> [<span class="dv">0</span>], calculate_distance(path <span class="op">+</span> [<span class="dv">0</span>])</span>
-<span id="cb5-21"><a></a>    </span>
-<span id="cb5-22"><a></a>    best_path <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb5-23"><a></a>    best_distance <span class="op">=</span> <span class="bu">float</span>(<span class="st">'inf'</span>)</span>
-<span id="cb5-24"><a></a>    </span>
-<span id="cb5-25"><a></a>    <span class="cf">for</span> next_city <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cities)):</span>
-<span id="cb5-26"><a></a>        <span class="cf">if</span> next_city <span class="kw">not</span> <span class="kw">in</span> visited:</span>
-<span id="cb5-27"><a></a>            new_path, distance <span class="op">=</span> tsp_brute_force(</span>
-<span id="cb5-28"><a></a>                cities, next_city, </span>
-<span id="cb5-29"><a></a>                visited <span class="op">|</span> {next_city}, </span>
-<span id="cb5-30"><a></a>                path <span class="op">+</span> [next_city]</span>
-<span id="cb5-31"><a></a>            )</span>
-<span id="cb5-32"><a></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> best_distance:</span>
-<span id="cb5-33"><a></a>                best_distance <span class="op">=</span> distance</span>
-<span id="cb5-34"><a></a>                best_path <span class="op">=</span> new_path</span>
-<span id="cb5-35"><a></a>    </span>
-<span id="cb5-36"><a></a>    <span class="cf">return</span> best_path, best_distance</span>
-<span id="cb5-37"><a></a></span>
-<span id="cb5-38"><a></a>    <span class="co"># Warning: TSP is O(n!) which is even worse than O(2^n)!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Generate all possible combinations - O(2^n)</span></span>
+<span id="cb5-2"><a></a><span class="kw">def</span> power_set(items):</span>
+<span id="cb5-3"><a></a>    <span class="co">"""</span></span>
+<span id="cb5-4"><a></a><span class="co">    Generate all possible subsets (power set) of the given items.</span></span>
+<span id="cb5-5"><a></a><span class="co">    Uses recursive approach where each element can either be included or excluded.</span></span>
+<span id="cb5-6"><a></a><span class="co">    Time complexity: O(2^n) where n is the number of items.</span></span>
+<span id="cb5-7"><a></a><span class="co">    """</span></span>
+<span id="cb5-8"><a></a>    <span class="co"># Base case: empty list has only one subset - the empty subset</span></span>
+<span id="cb5-9"><a></a>    <span class="cf">if</span> <span class="kw">not</span> items:</span>
+<span id="cb5-10"><a></a>        <span class="cf">return</span> [[]]</span>
+<span id="cb5-11"><a></a>    </span>
+<span id="cb5-12"><a></a>    <span class="co"># Take the first item and recursively find power set of remaining items</span></span>
+<span id="cb5-13"><a></a>    first <span class="op">=</span> items[<span class="dv">0</span>]</span>
+<span id="cb5-14"><a></a>    rest_subsets <span class="op">=</span> power_set(items[<span class="dv">1</span>:])  <span class="co"># Recursive call on remaining items</span></span>
+<span id="cb5-15"><a></a>    </span>
+<span id="cb5-16"><a></a>    <span class="co"># For each subset of remaining items, create two versions:</span></span>
+<span id="cb5-17"><a></a>    <span class="co"># 1. Without the first item (already in rest_subsets)</span></span>
+<span id="cb5-18"><a></a>    <span class="co"># 2. With the first item added to each subset</span></span>
+<span id="cb5-19"><a></a>    with_first <span class="op">=</span> [subset <span class="op">+</span> [first] <span class="cf">for</span> subset <span class="kw">in</span> rest_subsets]</span>
+<span id="cb5-20"><a></a>    </span>
+<span id="cb5-21"><a></a>    <span class="co"># Combine both versions: subsets without first + subsets with first</span></span>
+<span id="cb5-22"><a></a>    <span class="cf">return</span> rest_subsets <span class="op">+</span> with_first</span>
+<span id="cb5-23"><a></a></span>
+<span id="cb5-24"><a></a><span class="co"># Traveling Salesman Problem (brute force) - O(n!)</span></span>
+<span id="cb5-25"><a></a><span class="kw">def</span> tsp_brute_force(cities, current_city<span class="op">=</span><span class="dv">0</span>, visited<span class="op">=</span><span class="va">None</span>, path<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb5-26"><a></a>    <span class="co">"""</span></span>
+<span id="cb5-27"><a></a><span class="co">    Solve Traveling Salesman Problem using brute force approach.</span></span>
+<span id="cb5-28"><a></a><span class="co">    Tries all possible routes and returns the shortest one.</span></span>
+<span id="cb5-29"><a></a><span class="co">    Time complexity: O(n!) - factorial time, very slow for large inputs.</span></span>
+<span id="cb5-30"><a></a><span class="co">    </span></span>
+<span id="cb5-31"><a></a><span class="co">    Args:</span></span>
+<span id="cb5-32"><a></a><span class="co">        cities: Distance matrix or list of cities</span></span>
+<span id="cb5-33"><a></a><span class="co">        current_city: Current position (default: start at city 0)</span></span>
+<span id="cb5-34"><a></a><span class="co">        visited: Set of already visited cities</span></span>
+<span id="cb5-35"><a></a><span class="co">        path: Current path taken so far</span></span>
+<span id="cb5-36"><a></a><span class="co">    </span></span>
+<span id="cb5-37"><a></a><span class="co">    Returns:</span></span>
+<span id="cb5-38"><a></a><span class="co">        Tuple of (best_path, best_distance)</span></span>
+<span id="cb5-39"><a></a><span class="co">    """</span></span>
+<span id="cb5-40"><a></a>    <span class="co"># Initialize on first call: start at city 0 with empty visited set and path</span></span>
+<span id="cb5-41"><a></a>    <span class="cf">if</span> visited <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb5-42"><a></a>        visited <span class="op">=</span> {current_city}  <span class="co"># Set to track visited cities</span></span>
+<span id="cb5-43"><a></a>        path <span class="op">=</span> [current_city]     <span class="co"># List to track the route taken</span></span>
+<span id="cb5-44"><a></a>    </span>
+<span id="cb5-45"><a></a>    <span class="co"># Base case: if we've visited all cities, return to start (city 0)</span></span>
+<span id="cb5-46"><a></a>    <span class="cf">if</span> <span class="bu">len</span>(visited) <span class="op">==</span> <span class="bu">len</span>(cities):</span>
+<span id="cb5-47"><a></a>        complete_path <span class="op">=</span> path <span class="op">+</span> [<span class="dv">0</span>]  <span class="co"># Add return trip to starting city</span></span>
+<span id="cb5-48"><a></a>        total_distance <span class="op">=</span> calculate_distance(complete_path)</span>
+<span id="cb5-49"><a></a>        <span class="cf">return</span> complete_path, total_distance</span>
+<span id="cb5-50"><a></a>    </span>
+<span id="cb5-51"><a></a>    <span class="co"># Initialize variables to track the best solution found so far</span></span>
+<span id="cb5-52"><a></a>    best_path <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb5-53"><a></a>    best_distance <span class="op">=</span> <span class="bu">float</span>(<span class="st">'inf'</span>)  <span class="co"># Start with infinite distance</span></span>
+<span id="cb5-54"><a></a>    </span>
+<span id="cb5-55"><a></a>    <span class="co"># Try visiting each unvisited city next</span></span>
+<span id="cb5-56"><a></a>    <span class="cf">for</span> next_city <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cities)):</span>
+<span id="cb5-57"><a></a>        <span class="cf">if</span> next_city <span class="kw">not</span> <span class="kw">in</span> visited:  <span class="co"># Only consider unvisited cities</span></span>
+<span id="cb5-58"><a></a>            <span class="co"># Recursively solve for the remaining cities</span></span>
+<span id="cb5-59"><a></a>            new_path, distance <span class="op">=</span> tsp_brute_force(</span>
+<span id="cb5-60"><a></a>                cities, </span>
+<span id="cb5-61"><a></a>                next_city,                    <span class="co"># Move to this city next</span></span>
+<span id="cb5-62"><a></a>                visited <span class="op">|</span> {next_city},        <span class="co"># Add this city to visited set</span></span>
+<span id="cb5-63"><a></a>                path <span class="op">+</span> [next_city]            <span class="co"># Add this city to current path</span></span>
+<span id="cb5-64"><a></a>            )</span>
+<span id="cb5-65"><a></a>            </span>
+<span id="cb5-66"><a></a>            <span class="co"># Keep track of the best (shortest) route found so far</span></span>
+<span id="cb5-67"><a></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> best_distance:</span>
+<span id="cb5-68"><a></a>                best_distance <span class="op">=</span> distance</span>
+<span id="cb5-69"><a></a>                best_path <span class="op">=</span> new_path</span>
+<span id="cb5-70"><a></a>    </span>
+<span id="cb5-71"><a></a>    <span class="cf">return</span> best_path, best_distance</span>
+<span id="cb5-72"><a></a></span>
+<span id="cb5-73"><a></a>    <span class="co"># Warning: TSP is O(n!) which is even worse than O(2^n)!</span></span>
+<span id="cb5-74"><a></a>    <span class="co"># For n cities, we have (n-1)! possible routes to check</span></span>
+<span id="cb5-75"><a></a></span>
+<span id="cb5-76"><a></a><span class="kw">def</span> calculate_distance(path):</span>
+<span id="cb5-77"><a></a>    <span class="co">"""</span></span>
+<span id="cb5-78"><a></a><span class="co">    Calculate the total distance for a given path through cities.</span></span>
+<span id="cb5-79"><a></a><span class="co">    This is a simplified version using a predefined distance matrix.</span></span>
+<span id="cb5-80"><a></a><span class="co">    In a real application, you would calculate distances using coordinates.</span></span>
+<span id="cb5-81"><a></a><span class="co">    </span></span>
+<span id="cb5-82"><a></a><span class="co">    Args:</span></span>
+<span id="cb5-83"><a></a><span class="co">        path: List of city indices representing the route</span></span>
+<span id="cb5-84"><a></a><span class="co">        </span></span>
+<span id="cb5-85"><a></a><span class="co">    Returns:</span></span>
+<span id="cb5-86"><a></a><span class="co">        Total distance of the path</span></span>
+<span id="cb5-87"><a></a><span class="co">    """</span></span>
+<span id="cb5-88"><a></a>    <span class="co"># Predefined distance matrix for a 3-city example</span></span>
+<span id="cb5-89"><a></a>    <span class="co"># In practice, this would be calculated from city coordinates</span></span>
+<span id="cb5-90"><a></a>    <span class="co"># using formulas like Euclidean distance: sqrt((x2-x1)² + (y2-y1)²)</span></span>
+<span id="cb5-91"><a></a>    distances <span class="op">=</span> {</span>
+<span id="cb5-92"><a></a>        (<span class="dv">0</span>, <span class="dv">1</span>): <span class="dv">10</span>, (<span class="dv">1</span>, <span class="dv">0</span>): <span class="dv">10</span>,  <span class="co"># Distance between city 0 and city 1</span></span>
+<span id="cb5-93"><a></a>        (<span class="dv">0</span>, <span class="dv">2</span>): <span class="dv">15</span>, (<span class="dv">2</span>, <span class="dv">0</span>): <span class="dv">15</span>,  <span class="co"># Distance between city 0 and city 2</span></span>
+<span id="cb5-94"><a></a>        (<span class="dv">1</span>, <span class="dv">2</span>): <span class="dv">20</span>, (<span class="dv">2</span>, <span class="dv">1</span>): <span class="dv">20</span>,  <span class="co"># Distance between city 1 and city 2</span></span>
+<span id="cb5-95"><a></a>        (<span class="dv">0</span>, <span class="dv">0</span>): <span class="dv">0</span>, (<span class="dv">1</span>, <span class="dv">1</span>): <span class="dv">0</span>, (<span class="dv">2</span>, <span class="dv">2</span>): <span class="dv">0</span>  <span class="co"># Distance from city to itself is 0</span></span>
+<span id="cb5-96"><a></a>    }</span>
+<span id="cb5-97"><a></a>    </span>
+<span id="cb5-98"><a></a>    total <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Initialize total distance</span></span>
+<span id="cb5-99"><a></a>    </span>
+<span id="cb5-100"><a></a>    <span class="co"># Sum up distances between consecutive cities in the path</span></span>
+<span id="cb5-101"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(path) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb5-102"><a></a>        current_city <span class="op">=</span> path[i]</span>
+<span id="cb5-103"><a></a>        next_city <span class="op">=</span> path[i <span class="op">+</span> <span class="dv">1</span>]</span>
+<span id="cb5-104"><a></a>        <span class="co"># Get distance between current and next city, default to high cost if not found</span></span>
+<span id="cb5-105"><a></a>        total <span class="op">+=</span> distances.get((current_city, next_city), <span class="dv">100</span>)</span>
+<span id="cb5-106"><a></a>    </span>
+<span id="cb5-107"><a></a>    <span class="cf">return</span> total</span>
+<span id="cb5-108"><a></a></span>
+<span id="cb5-109"><a></a><span class="co"># Example usage and testing</span></span>
+<span id="cb5-110"><a></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb5-111"><a></a>    <span class="co">"""</span></span>
+<span id="cb5-112"><a></a><span class="co">    Main execution block - runs only when script is executed directly.</span></span>
+<span id="cb5-113"><a></a><span class="co">    Demonstrates both the power set generation and TSP solving algorithms.</span></span>
+<span id="cb5-114"><a></a><span class="co">    """</span></span>
+<span id="cb5-115"><a></a>    </span>
+<span id="cb5-116"><a></a>    <span class="co"># Test the power set generation algorithm</span></span>
+<span id="cb5-117"><a></a>    <span class="bu">print</span>(<span class="st">"Power Set Example:"</span>)</span>
+<span id="cb5-118"><a></a>    <span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">40</span>)</span>
+<span id="cb5-119"><a></a>    items <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]  <span class="co"># Test with a simple 3-element set</span></span>
+<span id="cb5-120"><a></a>    result <span class="op">=</span> power_set(items)</span>
+<span id="cb5-121"><a></a>    <span class="bu">print</span>(<span class="ss">f"Power set of </span><span class="sc">{</span>items<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-122"><a></a>    <span class="bu">print</span>(<span class="ss">f"Number of subsets: </span><span class="sc">{</span><span class="bu">len</span>(result)<span class="sc">}</span><span class="ss"> (should be 2^</span><span class="sc">{</span><span class="bu">len</span>(items)<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span><span class="dv">2</span><span class="op">**</span><span class="bu">len</span>(items)<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb5-123"><a></a>    <span class="bu">print</span>(<span class="st">"This demonstrates exponential growth: each new item doubles the subsets!"</span>)</span>
+<span id="cb5-124"><a></a>    </span>
+<span id="cb5-125"><a></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Traveling Salesman Problem Example:"</span>)</span>
+<span id="cb5-126"><a></a>    <span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">40</span>)</span>
+<span id="cb5-127"><a></a>    <span class="co"># Simple 3-city example with predefined distances</span></span>
+<span id="cb5-128"><a></a>    <span class="co"># Note: cities parameter is not actually used in our simplified version</span></span>
+<span id="cb5-129"><a></a>    <span class="co"># The distance calculation uses the hardcoded distance matrix instead</span></span>
+<span id="cb5-130"><a></a>    cities <span class="op">=</span> [[<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">15</span>], [<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">20</span>], [<span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">0</span>]]  <span class="co"># Distance matrix (not used in current implementation)</span></span>
+<span id="cb5-131"><a></a>    </span>
+<span id="cb5-132"><a></a>    <span class="bu">print</span>(<span class="st">"Solving TSP for 3 cities using brute force..."</span>)</span>
+<span id="cb5-133"><a></a>    <span class="bu">print</span>(<span class="st">"This will check all possible routes and find the shortest one."</span>)</span>
+<span id="cb5-134"><a></a>    </span>
+<span id="cb5-135"><a></a>    <span class="co"># Find the optimal path</span></span>
+<span id="cb5-136"><a></a>    path, distance <span class="op">=</span> tsp_brute_force(cities)</span>
+<span id="cb5-137"><a></a>    <span class="bu">print</span>(<span class="ss">f"Best path found: </span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-138"><a></a>    <span class="bu">print</span>(<span class="ss">f"Total distance: </span><span class="sc">{</span>distance<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-139"><a></a>    <span class="bu">print</span>(<span class="ss">f"For </span><span class="sc">{</span><span class="bu">len</span>(cities)<span class="sc">}</span><span class="ss"> cities, we checked </span><span class="sc">{</span><span class="bu">len</span>(cities)<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">! = </span><span class="sc">{</span><span class="dv">1</span> <span class="cf">if</span> <span class="bu">len</span>(cities)<span class="op">&lt;=</span><span class="dv">1</span> <span class="cf">else</span> <span class="bu">eval</span>(<span class="st">'*'</span>.join(<span class="bu">map</span>(<span class="bu">str</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(cities)))))<span class="sc">}</span><span class="ss"> possible routes."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ```python
+# Generate all possible combinations - O(2^n)
+def power_set(items):
+    """
+    Generate all possible subsets (power set) of the given items.
+    Uses recursive approach where each element can either be included or excluded.
+    Time complexity: O(2^n) where n is the number of items.
+    """
+    # Base case: empty list has only one subset - the empty subset
+    if not items:
+        return [[]]
+    
+    # Take the first item and recursively find power set of remaining items
+    first = items[0]
+    rest_subsets = power_set(items[1:])  # Recursive call on remaining items
+    
+    # For each subset of remaining items, create two versions:
+    # 1. Without the first item (already in rest_subsets)
+    # 2. With the first item added to each subset
+    with_first = [subset + [first] for subset in rest_subsets]
+    
+    # Combine both versions: subsets without first + subsets with first
+    return rest_subsets + with_first
+
+# Traveling Salesman Problem (brute force) - O(n!)
+def tsp_brute_force(cities, current_city=0, visited=None, path=None):
+    """
+    Solve Traveling Salesman Problem using brute force approach.
+    Tries all possible routes and returns the shortest one.
+    Time complexity: O(n!) - factorial time, very slow for large inputs.
+    
+    Args:
+        cities: Distance matrix or list of cities
+        current_city: Current position (default: start at city 0)
+        visited: Set of already visited cities
+        path: Current path taken so far
+    
+    Returns:
+        Tuple of (best_path, best_distance)
+    """
+    # Initialize on first call: start at city 0 with empty visited set and path
+    if visited is None:
+        visited = {current_city}  # Set to track visited cities
+        path = [current_city]     # List to track the route taken
+    
+    # Base case: if we've visited all cities, return to start (city 0)
+    if len(visited) == len(cities):
+        complete_path = path + [0]  # Add return trip to starting city
+        total_distance = calculate_distance(complete_path)
+        return complete_path, total_distance
+    
+    # Initialize variables to track the best solution found so far
+    best_path = None
+    best_distance = float('inf')  # Start with infinite distance
+    
+    # Try visiting each unvisited city next
+    for next_city in range(len(cities)):
+        if next_city not in visited:  # Only consider unvisited cities
+            # Recursively solve for the remaining cities
+            new_path, distance = tsp_brute_force(
+                cities, 
+                next_city,                    # Move to this city next
+                visited | {next_city},        # Add this city to visited set
+                path + [next_city]            # Add this city to current path
+            )
+            
+            # Keep track of the best (shortest) route found so far
+            if distance < best_distance:
+                best_distance = distance
+                best_path = new_path
+    
+    return best_path, best_distance
+
+    # Warning: TSP is O(n!) which is even worse than O(2^n)!
+    # For n cities, we have (n-1)! possible routes to check
+
+def calculate_distance(path):
+    """
+    Calculate the total distance for a given path through cities.
+    This is a simplified version using a predefined distance matrix.
+    In a real application, you would calculate distances using coordinates.
+    
+    Args:
+        path: List of city indices representing the route
+        
+    Returns:
+        Total distance of the path
+    """
+    # Predefined distance matrix for a 3-city example
+    # In practice, this would be calculated from city coordinates
+    # using formulas like Euclidean distance: sqrt((x2-x1)² + (y2-y1)²)
+    distances = {
+        (0, 1): 10, (1, 0): 10,  # Distance between city 0 and city 1
+        (0, 2): 15, (2, 0): 15,  # Distance between city 0 and city 2
+        (1, 2): 20, (2, 1): 20,  # Distance between city 1 and city 2
+        (0, 0): 0, (1, 1): 0, (2, 2): 0  # Distance from city to itself is 0
+    }
+    
+    total = 0  # Initialize total distance
+    
+    # Sum up distances between consecutive cities in the path
+    for i in range(len(path) - 1):
+        current_city = path[i]
+        next_city = path[i + 1]
+        # Get distance between current and next city, default to high cost if not found
+        total += distances.get((current_city, next_city), 100)
+    
+    return total
+
+# Example usage and testing
+if __name__ == "__main__":
+    """
+    Main execution block - runs only when script is executed directly.
+    Demonstrates both the power set generation and TSP solving algorithms.
+    """
+    
+    # Test the power set generation algorithm
+    print("Power Set Example:")
+    print("=" * 40)
+    items = [1, 2, 3]  # Test with a simple 3-element set
+    result = power_set(items)
+    print(f"Power set of {items}: {result}")
+    print(f"Number of subsets: {len(result)} (should be 2^{len(items)} = {2**len(items)})")
+    print("This demonstrates exponential growth: each new item doubles the subsets!")
+    
+    print("\nTraveling Salesman Problem Example:")
+    print("=" * 40)
+    # Simple 3-city example with predefined distances
+    # Note: cities parameter is not actually used in our simplified version
+    # The distance calculation uses the hardcoded distance matrix instead
+    cities = [[0, 10, 15], [10, 0, 20], [15, 20, 0]]  # Distance matrix (not used in current implementation)
+    
+    print("Solving TSP for 3 cities using brute force...")
+    print("This will check all possible routes and find the shortest one.")
+    
+    # Find the optimal path
+    path, distance = tsp_brute_force(cities)
+    print(f"Best path found: {path}")
+    print(f"Total distance: {distance}")
+    print(f"For {len(cities)} cities, we checked {len(cities)-1}! = {1 if len(cities)<=1 else eval('*'.join(map(str, range(1, len(cities)))))} possible routes.")
+``` -->
 </div></div>
 </section>
 
