@@ -122,3 +122,8 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [PDF](10_5_travellingSalesman.pdf) The slide's material as a pdf.
 - **Activity 07**: Traveling Saleman Problem and Coding
   - [GitHub Classroom Link](https://classroom.github.com/a/C_SGq80m)
+
+## 11. Chapter 6. Modules and Files
+- Modules (Imports) and Files
+  - [HTML](11_python_modules_and_files.html) Slides
+  - [PDF](11_python_modules_and_files.pdf) The slide's 

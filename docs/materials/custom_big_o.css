@@ -57,7 +57,7 @@
     color: #8E44AD;
 }
 
-/* Code block styling */
+/* Code block styling - FIXED: No double scrollbars */
 .reveal pre {
     background-color: #f8f9fa;
     border: 2px solid #e9ecef;
@@ -65,17 +65,20 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     font-size: 0.65em;
-    max-height: 400px;
-    overflow-y: auto;
-    overflow-x: auto;
     margin: 0.5em 0;
+    /* CRITICAL: Prevent double scrollbars */
+    max-height: none !important;
+    overflow: visible !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
-/* Callout content scrolling only for very long code blocks */
+/* Callout content - no scrolling conflicts */
 .callout pre {
-    max-height: 400px;
-    overflow-y: auto;
     margin: 0;
+    /* Inherit parent styling, no additional overflow */
+    max-height: none;
+    overflow: visible;
 }
 
 .reveal code {
@@ -161,14 +164,13 @@
     transform: none !important;
 }
 
-/* Only enable scrolling for very long code blocks */
+/* Code blocks - consistent no-scroll styling */
 .reveal pre {
-    max-height: 350px;
+    /* Remove conflicting max-height rules */
+    max-height: none !important;
 }
 
-.reveal pre:has-scrollbar {
-    overflow-y: auto;
-}
+/* Remove scrollbar pseudo-selector that causes conflicts */
 
 /* Ensure content fits better in slide space */
 .reveal .slides section {
@@ -251,7 +253,7 @@
     margin-bottom: 0;
 }
 
-/* Enable scrolling */
+/* Enable scrolling only at slide level */
 .reveal .slides section {
     overflow-y: auto;
     overflow-x: hidden;
@@ -261,12 +263,14 @@
     overflow: hidden;
 }
 
-/* Prevent horizontal scrolling on code blocks */
+/* CRITICAL: Code blocks inherit text wrapping, no independent scrolling */
 .reveal pre {
-    overflow-x: auto;
-    overflow-y: visible;
+    overflow: visible !important;
     white-space: pre-wrap;
     word-wrap: break-word;
+    /* Ensure code content doesn't create horizontal overflow */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Animation for important callouts */
@@ -314,25 +318,42 @@ img {
     height: auto;
 }
 
-/* Additional scroll bar prevention */
+/* CRITICAL: Prevent all double scrollbar issues */
 .reveal .slides section,
 .reveal .slides section .callout,
-.reveal .slides section .columns {
+.reveal .slides section .columns,
+.reveal .slides section .column {
     box-sizing: border-box;
     max-width: 100%;
+    /* Ensure no nested scrolling conflicts */
+    overflow: visible !important;
 }
 
-/* Prevent code from causing horizontal overflow */
+/* Prevent code from causing any overflow */
 .reveal pre code {
     max-width: 100%;
     overflow-wrap: break-word;
-    word-break: break-all;
+    word-break: break-word;
+    /* Critical: No scrolling on code content itself */
+    overflow: visible !important;
+    display: block;
+    padding: 1em;
 }
 
-/* Ensure callout boxes don't overflow */
+/* Ensure callout boxes don't create conflicts */
 .callout {
     max-width: 100%;
     box-sizing: border-box;
+    overflow: visible !important;
+}
+
+/* Override any RevealJS defaults that might cause double scrollbars */
+.reveal pre, 
+.reveal pre code,
+.reveal .slides section .callout pre,
+.reveal .slides section .column pre {
+    overflow: visible !important;
+    max-height: none !important;
 }
 
 /* Big-O specific enhancements */
