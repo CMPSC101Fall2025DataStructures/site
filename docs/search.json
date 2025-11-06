@@ -1971,7 +1971,7 @@
     "href": "materials/0_materials.html#chapter-3-exhaustive-enumeration-and-approximation",
     "title": "Materials",
     "section": "6. Chapter 3: Exhaustive Enumeration and Approximation",
-    "text": "6. Chapter 3: Exhaustive Enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab05: Approximations by the Taylor Series\n\nGitHub Classroom link"
+    "text": "6. Chapter 3: Exhaustive Enumeration and Approximation\n\nSome Approximation Techniques in Python\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nA Study of the General nth Root Algorithm\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab05: Approximations By the Taylor Series\n\nGitHub Classroom link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-5-structured-types-and-mutability",
@@ -1985,28 +1985,28 @@
     "href": "materials/0_materials.html#chapter-4-a-return-to-functional-programming",
     "title": "Materials",
     "section": "8. Chapter 4: A Return to Functional Programming",
-    "text": "8. Chapter 4: A Return to Functional Programming\n\nLambda and Higher Order Functions\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nClasses and Decorators Functions\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab06: Midterm practice test\n\nGitHub Classroom link"
+    "text": "8. Chapter 4: A Return to Functional Programming\n\nLambda and Higher Order Functions\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nClasses and Decorators Functions\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nLab06: Midterm Practice Test\n\nGitHub Classroom link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-11-algorithm-complexity-and-big-o",
     "href": "materials/0_materials.html#chapter-11-algorithm-complexity-and-big-o",
     "title": "Materials",
     "section": "9. Chapter 11: Algorithm Complexity and Big-O",
-    "text": "9. Chapter 11: Algorithm Complexity and Big-O\n\nActivity 05: Algorithm Performance Analysis through Doubling Experiments\n\nGitHub Classroom Link\n\nAn informal Introduction to Complexity: About Big Big-O\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity 06: Algorithm Performance Analysis through Doubling Experiments\n\nGitHub Classroom Link"
+    "text": "9. Chapter 11: Algorithm Complexity and Big-O\n\nActivity 05: Algorithm Performance Analysis through Doubling Experiments\n\nGitHub Classroom Link\n\nAn informal Introduction to Complexity: About Big Big-O\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity 06: Algorithm Performance Analysis Through Doubling Experiments\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-11-continued-o1-ologn-o2n",
     "href": "materials/0_materials.html#chapter-11-continued-o1-ologn-o2n",
     "title": "Materials",
     "section": "10. Chapter 11 (continued): O(1), O(logN), O(2^N)",
-    "text": "10. Chapter 11 (continued): O(1), O(logN), O(2^N)\n\nO(1) (Constant Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nO(logN) (Logarithmic Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nO(2^n) (Exponential Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nSupplement Slides: Heap Sorting (Logarithmic Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nTravelling Salesman\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity 07: Traveling Saleman Problem and Coding\n\nGitHub Classroom Link"
+    "text": "10. Chapter 11 (continued): O(1), O(logN), O(2^N)\n\nO(1) (Constant Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nO(logN) (Logarithmic Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nO(2^n) (Exponential Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nSupplement Slides: Heap Sorting (Logarithmic Time)\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nThe Travelling Salesman\n\nHTML Slides\nPDF The slide’s material as a pdf.\n\nActivity 07: Traveling Salesman Problem and Coding\n\nGitHub Classroom Link"
   },
   {
     "objectID": "materials/0_materials.html#chapter-6.-modules-and-files",
     "href": "materials/0_materials.html#chapter-6.-modules-and-files",
     "title": "Materials",
     "section": "11. Chapter 6. Modules and Files",
-    "text": "11. Chapter 6. Modules and Files\n\nModules (Imports) and Files\n\nHTML Slides\nPDF The slide’s"
+    "text": "11. Chapter 6. Modules and Files\n\nModules (Imports) and Files\n\nHTML Slides\nPDF The slide’s\n\nLab07: Using Modules to Do Analysis\n\nGitHub Classroom link"
   },
   {
     "objectID": "materials/10_2_big_o_logarithmic_ologn.html#what-makes-algorithms-olog-n",

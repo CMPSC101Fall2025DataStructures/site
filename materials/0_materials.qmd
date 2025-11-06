@@ -67,7 +67,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **A Study of the General nth Root Algorithm**
   - [HTML](6_energy_analysis_slides.html) Slides
   - [PDF](6_energy_analysis_slides.pdf) The slide's material as a pdf.
-- **Lab05**: Approximations by the Taylor Series
+- **Lab05**: Approximations By the Taylor Series
   - [GitHub Classroom link](https://classroom.github.com/a/HXIF82p0)
 
 
@@ -92,7 +92,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Classes and Decorators Functions**
   - [HTML](8_classesAndDecorators.html) Slides
   - [PDF](8_classesAndDecorators.pdf) The slide's material as a pdf.
-- **Lab06**: Midterm practice test
+- **Lab06**: Midterm Practice Test
   - [GitHub Classroom link](https://classroom.github.com/a/ZYy4GlCI)
   
 ## 9. Chapter 11: Algorithm Complexity and Big-O
@@ -101,7 +101,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **An informal Introduction to Complexity**: About Big Big-O
   - [HTML](9_complexity_intro_slides.html) Slides
   - [PDF](9_complexity_intro_slides.pdf) The slide's material as a pdf.
-- **Activity 06**: Algorithm Performance Analysis through Doubling Experiments
+- **Activity 06**: Algorithm Performance Analysis Through Doubling Experiments
   - [GitHub Classroom Link](https://classroom.github.com/a/HIHMMxU3)
 
 ## 10. Chapter 11 (continued): O(1), O(logN), O(2^N)
@@ -117,13 +117,16 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Supplement Slides: Heap Sorting (Logarithmic Time)**
   - [HTML](10_3_heap_sorting_slides.html) Slides
   - [PDF](10_3_heap_sorting_slides.pdf) The slide's material as a pdf.
-- **Travelling Salesman**
+- **The Travelling Salesman**
   - [HTML](10_5_travellingSalesman.html) Slides
   - [PDF](10_5_travellingSalesman.pdf) The slide's material as a pdf.
-- **Activity 07**: Traveling Saleman Problem and Coding
+- **Activity 07**: Traveling Salesman Problem and Coding
   - [GitHub Classroom Link](https://classroom.github.com/a/C_SGq80m)
 
 ## 11. Chapter 6. Modules and Files
-- Modules (Imports) and Files
+- **Modules (Imports) and Files**
   - [HTML](11_python_modules_and_files.html) Slides
   - [PDF](11_python_modules_and_files.pdf) The slide's 
+- **Lab07**: Using Modules to Do Analysis
+  - [GitHub Classroom link](https://classroom.github.com/a/-fsqe2DS)
+  
