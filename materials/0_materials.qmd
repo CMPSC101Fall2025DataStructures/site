@@ -129,4 +129,5 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [PDF](11_python_modules_and_files.pdf) The slide's 
 - **Lab07**: Using Modules to Do Analysis
   - [GitHub Classroom link](https://classroom.github.com/a/-fsqe2DS)
-  
+- **Activity 08**: Exploring Python Modules Through Mathematical Animation! 🎬✨
+  - [GitHub Classroom Link](https://classroom.github.com/a/Ac_a3D9e)
