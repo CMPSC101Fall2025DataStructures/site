@@ -123,11 +123,20 @@ Here you will find a listing of lesson materials for the course such as slides, 
 - **Activity 07**: Traveling Salesman Problem and Coding
   - [GitHub Classroom Link](https://classroom.github.com/a/C_SGq80m)
 
-## 11. Chapter 6. Modules and Files
-- **Modules (Imports) and Files**
+## 11. Chapter 6. Modules
+- **Modules and Imports**
   - [HTML](11_python_modules_and_files.html) Slides
   - [PDF](11_python_modules_and_files.pdf) The slide's 
 - **Lab07**: Using Modules to Do Analysis
   - [GitHub Classroom link](https://classroom.github.com/a/-fsqe2DS)
 - **Activity 08**: Exploring Python Modules Through Mathematical Animation! 🎬✨
   - [GitHub Classroom Link](https://classroom.github.com/a/Ac_a3D9e)
+
+## 11. Chapter 6. Files
+- **Working With Files**
+  - [HTML](11_python_modules_and_files.html#/file-operations-working-with-data-files) Slides
+  <!-- - [PDF](11_python_modules_and_files.pdf) The slide's  -->
+- **Lab08**: Researching Ideas for Final Project
+  - [GitHub Classroom link](https://classroom.github.com/a/ws98xus5)
+
+
