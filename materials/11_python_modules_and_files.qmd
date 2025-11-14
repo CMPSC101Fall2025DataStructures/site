@@ -12,7 +12,7 @@ format:
     chalkboard: true
     scrollable: false
     transition: none
-    css: custom_big_o.css
+    # css: custom_big_o.css
     width: 1200
     height: 800
     margin: 0.05

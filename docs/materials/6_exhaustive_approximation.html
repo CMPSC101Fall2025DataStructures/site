@@ -223,7 +223,7 @@ CS 101 - Fall 2025
 <section id="part1-exhaustive-method" class="slide level2">
 <h2>Part1: Exhaustive Method</h2>
 <p>Simple Exhaustive Square Roots</p>
-<div id="d24b0b30" class="cell" data-execution_count="1">
+<div id="04307f97" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># Exhaustive square root</span></span>
 <span id="cb1-2"><a></a><span class="kw">def</span> simple_square_root(x):</span>
 <span id="cb1-3"><a></a>    <span class="co"># find a root of a perfect root</span></span>
@@ -242,14 +242,14 @@ CS 101 - Fall 2025
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="cbac7fe8" class="cell" data-execution_count="2">
+<div id="c8ab98cc" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>simple_square_root(<span class="dv">25</span>) <span class="co"># find the square root of a square.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Square root of 25 is 5.</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-<div id="fe1ab1df" class="cell" data-execution_count="3">
+<div id="c24c9e35" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>simple_square_root(<span class="dv">26</span>) <span class="co"># not a square ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 26 is not perfect square root...</code></pre>
@@ -296,7 +296,7 @@ CS 101 - Fall 2025
 <!-- ### Example: Simple Exhaustive Cube Roots -->
 <p>Simple Exhaustive Cube Roots (with same method)</p>
 <p>&nbsp;</p>
-<div id="ec21e19c" class="cell" data-execution_count="4">
+<div id="df3360bb" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># Exhaustive cube root</span></span>
 <span id="cb6-2"><a></a><span class="kw">def</span> simple_cube_root(x):</span>
 <span id="cb6-3"><a></a>    <span class="co"># find a root of a perfect root</span></span>
@@ -314,14 +314,14 @@ CS 101 - Fall 2025
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="9096c70b" class="cell" data-execution_count="5">
+<div id="23559661" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>simple_cube_root(<span class="dv">8</span>) <span class="co"># has a cube root</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Cube root of 8 is 2.</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-<div id="0f0c439b" class="cell" data-execution_count="6">
+<div id="36c03d60" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>simple_cube_root(<span class="dv">7</span>) <span class="co"># does not have a cube ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 7 is not perfect cube root...</code></pre>
@@ -377,7 +377,7 @@ CS 101 - Fall 2025
 <section id="how-to-generalize-this" class="title-slide slide level1 center">
 <h1>How to Generalize This?</h1>
 <p>Exhaustive <em>n</em>th root</p>
-<div id="347f08e1" class="cell" data-execution_count="7">
+<div id="fe6ef670" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> simple_n_root(x, n):</span>
 <span id="cb11-2"><a></a>    <span class="co"># find a root of a perfect root</span></span>
 <span id="cb11-3"><a></a>    ans <span class="op">=</span> <span class="dv">0</span></span>
@@ -394,21 +394,21 @@ CS 101 - Fall 2025
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="23d88140" class="cell" data-execution_count="8">
+<div id="e7c2f6e5" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>simple_n_root(<span class="dv">8</span>,<span class="dv">2</span>) <span class="co"># find the square root</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 8 is not perfect 2 root...</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-<div id="38297e2a" class="cell" data-execution_count="9">
+<div id="68e720ec" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>simple_n_root(<span class="dv">17</span>,<span class="dv">2</span>) <span class="co"># not a square ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 17 is not perfect 2 root...</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-<div id="a36cab2b" class="cell" data-execution_count="10">
+<div id="9d13ba39" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>simple_n_root(<span class="dv">9</span>,<span class="dv">3</span>) <span class="co"># not a cube ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x = 9 is not perfect 3 root...</code></pre>
@@ -422,7 +422,7 @@ CS 101 - Fall 2025
 <section id="complicated-exhaustive-square-roots" class="slide level2">
 <h2>Complicated Exhaustive Square Roots</h2>
 <p>Add print statements to see steps.</p>
-<div id="9f065eb1" class="cell" data-execution_count="11">
+<div id="6a1252f6" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> exhaustive_sqrt(x, epsilon<span class="op">=</span><span class="fl">0.01</span>):</span>
 <span id="cb18-2"><a></a>    <span class="co">"""</span></span>
 <span id="cb18-3"><a></a><span class="co">    Find square root using exhaustive enumeration</span></span>
@@ -450,7 +450,7 @@ CS 101 - Fall 2025
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="842933b5" class="cell" data-execution_count="12">
+<div id="21b27806" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>exhaustive_sqrt(<span class="dv">25</span>) <span class="co"># find the square root of a square.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Finding square root of 25
@@ -461,7 +461,7 @@ Square root of 25 is approximately 4.999999999999938</code></pre>
 <pre><code>4.999999999999938</code></pre>
 </div>
 </div>
-<div id="54c949f4" class="cell" data-execution_count="13">
+<div id="881868ec" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>exhaustive_sqrt(<span class="dv">26</span>) <span class="co"># Not a square ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Finding square root of 26
@@ -594,7 +594,7 @@ Issac Newton
 <section class="slide level2">
 
 <!-- &nbsp; -->
-<div id="dfbc6dc0" class="cell" data-execution_count="14">
+<div id="d17ba5c4" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="kw">def</span> newtons_sqrt(n:<span class="bu">float</span>, guess:<span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb27-2"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(n <span class="op">-</span> guess<span class="op">*</span>guess) <span class="op">&gt;</span> <span class="fl">.0001</span>:</span>
 <span id="cb27-3"><a></a>        <span class="bu">print</span>(<span class="ss">f"n = </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, guess = </span><span class="sc">{</span>guess<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -611,7 +611,7 @@ Issac Newton
 <section class="slide level2">
 
 <p>Test using debug print statements …</p>
-<div id="176e3df4" class="cell" data-execution_count="15">
+<div id="6c8125c7" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a>my_num <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb28-2"><a></a>result <span class="op">=</span> newtons_sqrt(my_num)</span>
 <span id="cb28-3"><a></a><span class="bu">print</span>(<span class="ss">f"Verification:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">^2 = "</span>)</span>
@@ -664,7 +664,7 @@ Verification:
 </section>
 <section id="cube-roots" class="slide level2">
 <h2>Cube Roots</h2>
-<div id="ffe37178" class="cell" data-execution_count="16">
+<div id="c3fc4e1e" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="kw">def</span> newtons_cube_root(n:<span class="bu">float</span>, guess:<span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb30-2"><a></a>    <span class="cf">while</span> <span class="bu">abs</span>(n <span class="op">-</span> guess<span class="op">*</span>guess<span class="op">*</span>guess) <span class="op">&gt;</span> <span class="fl">.0001</span>:</span>
 <span id="cb30-3"><a></a>        <span class="bu">print</span>(<span class="ss">f"n = </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">, guess = </span><span class="sc">{</span>guess<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -677,7 +677,7 @@ Verification:
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="61781777" class="cell" data-execution_count="17">
+<div id="d75b0bc2" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>newtons_cube_root(<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>n = 8, guess = 1.0
@@ -709,7 +709,7 @@ n = 8, guess = 2.003137499141287
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="a67921f6" class="cell" data-execution_count="18">
+<div id="adf0244e" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a>newtons_cube_root(<span class="dv">27</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>n = 27, guess = 1.0
@@ -749,7 +749,7 @@ n = 27, guess = 3.001274406506175
 <section class="slide level2">
 
 <p>Testing the Prototype</p>
-<div id="9efdddfa" class="cell" data-execution_count="19">
+<div id="9558cad4" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a>newtons_cube_root(<span class="dv">31</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>n = 31, guess = 1.0
@@ -792,7 +792,7 @@ n = 31, guess = 3.1413852355779674
 </section>
 <section id="general-case" class="slide level2">
 <h2>General Case</h2>
-<div id="b32aec8f" class="cell" data-execution_count="20">
+<div id="b2630ff1" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="kw">def</span> newtons_nth_root(n: <span class="bu">int</span>, value: <span class="bu">float</span>, guess: <span class="bu">float</span> <span class="op">=</span> <span class="fl">1.0</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb40-2"><a></a>    <span class="co">"""</span></span>
 <span id="cb40-3"><a></a><span class="co">    Find the nth root of a value using Newton's method.</span></span>
@@ -836,7 +836,7 @@ n = 31, guess = 3.1413852355779674
 <section class="slide level2">
 
 <p>Testing the Prototype (1)</p>
-<div id="67f26a5f" class="cell" data-execution_count="21">
+<div id="a6120065" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="bu">print</span>(<span class="st">"Square root of 16 (n=2, value=16):"</span>)</span>
 <span id="cb41-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">2</span>, <span class="dv">16</span>)</span>
 <span id="cb41-3"><a></a><span class="bu">print</span>(<span class="ss">f"Result: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -877,7 +877,7 @@ Verification: 4.000000636692939^2 = 16.00000509354392
 <section class="slide level2">
 
 <p>Testing the Prototype (2)</p>
-<div id="a51b6562" class="cell" data-execution_count="22">
+<div id="cada4a89" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a><span class="bu">print</span>(<span class="st">"Cube root of 27 (n=3, value=27):"</span>)</span>
 <span id="cb43-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">3</span>, <span class="dv">27</span>)</span>
 <span id="cb43-3"><a></a><span class="bu">print</span>(<span class="ss">f"Result: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -928,7 +928,7 @@ Verification: 3.0000005410641766^3 = 27.000014608735402
 <section class="slide level2">
 
 <p>Testing the Prototype (3)</p>
-<div id="0a55ce1d" class="cell" data-execution_count="23">
+<div id="55bb8574" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a></a><span class="bu">print</span>(<span class="st">"Fourth root of 81 (n=4, value=81):"</span>)</span>
 <span id="cb45-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">4</span>, <span class="dv">81</span>)</span>
 <span id="cb45-3"><a></a><span class="bu">print</span>(<span class="ss">f"Result: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -999,7 +999,7 @@ Verification: 3.000000257729561^4 = 81.00002783479616
 <section class="slide level2">
 
 <p>Testing the Prototype ((4)</p>
-<div id="43a1584b" class="cell" data-execution_count="24">
+<div id="a604de27" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a></a><span class="bu">print</span>(<span class="st">"4. Square root of 10 (n=2, value=10):"</span>)</span>
 <span id="cb47-2"><a></a>result <span class="op">=</span> newtons_nth_root(<span class="dv">2</span>, <span class="dv">10</span>)</span>
 <span id="cb47-3"><a></a><span class="bu">print</span>(<span class="ss">f"Result: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span>

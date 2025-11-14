@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.16)  13 NOV 2025 21:02
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.16)  13 NOV 2025 21:13
  restricted system commands enabled.
 **7_python_fundamentals_slides_all_together.tex
 (./7_python_fundamentals_slides_all_together.tex
@@ -1382,6 +1382,6 @@ ttribute_list, 2 temp, 6 write, 139 pdf_literal, 5 pdf_dest, 43 pdf_colorstack n
 odes
    avail lists: 1:2,2:4,4:2,5:1,10:7,12:1
  61018 multiletter control sequences out of 65536+600000
- 63 fonts using 19179839 bytes
+ 63 fonts using 19179915 bytes
  108i,7n,121p,10654b,1126s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
