@@ -497,8 +497,6 @@ for length in [8, 12, 16]:
 :::
 
 
-
-
 ## Your Turn: Module Exploration! 🔍
 
 ::: {.callout-important icon="true"}
@@ -554,7 +552,7 @@ print(f"Std Dev: {statistics.stdev(scores):.2f}")
 
 # File Operations: Working with Data Files 📄
 
-## Understanding File Types & When to Use Them 
+## Understanding File Types 
 
 ::: {.callout-note icon="true"}
 ## File Formats for Data Storage
@@ -596,6 +594,8 @@ Numbers: 123, 456, 789
   - Survey responses
   - Scientific data
 
+
+
 ```
 Name,Age,Grade,Subject
 Alice,16,95,Math
@@ -605,33 +605,218 @@ Charlie,16,92,Math
 :::
 :::
 
-## Reading Text Files - Your First File Adventure! 📖
 
-::: {.callout-tip icon="true"}
-## Step-by-Step File Reading
 
-Reading files is like opening a book - you need to open it, read the contents, then close it when done!
+## Types of Files
+
+::: {.callout-important}
+So, Like, what do the files look like?
+:::
+
+::: {.columns}
+::: {.column}
+**Text Files (`.txt`)** 📝
+
+::: {.callout-note}
+Text files contain primarily text such as strings. Stories, articles and unstructured data can be contained in a textfile.
+:::
+
+```
+Hello World!
+This is a simple text file.
+Each line can contain any text.
+Numbers: 123, 456, 789
+```
+:::
+
+::: {.column}
+**CSV Files (`.csv`)** 📊
+
+::: {.callout-note}
+**C**omma **S**eparated **V**ariable files contain data in rows and columns. The data entries are separated by (usually) a comma but could have any delimitor seperating them.
+:::
+```
+Name,Age,Grade,Subject
+Alice,16,95,Math
+Bob,17,87,Science  
+Charlie,16,92,Math
+```
+:::
+:::
+
+
+## Let's Build a Joke Machine
+
+::: {.callout-important}
+The following code here will have to be used at the command line on your local machine. This is because Jupyter Notebooks do not typically handle files. We will use the local machine (rather than Jupyter Notebooks) with the CLI (command line input) to work with files. Cool, right?!
+:::
+
+
+::: {.columns}
+::: {.column}
+**Text Files (`.txt`)** 📝
+
+::: {.callout-note}
+Steps: 
+* Open your favorite editor to create the following file
+
+**File**: `jokes.txt`
+:::
+:::
+
+::: {.column}
+Textfile Contents
+
+::: {style="font-size: 0.6em;"}
+```text
+What did 20 do when it was hungry? Twenty-eight.
+Why is grass so dangerous? Because it's full of blades!
+Why are mountains so funny? They’re hill areas.
+Why wasn’t the cactus invited to hang out with the mushrooms? He wasn’t a fungi.
+Why shouldn’t you fundraise for marathons? They just take the money and run.
+Why did the crab cross the road? It didn’t—it used the sidewalk.
+Why does it take pirates a long time to learn the alphabet? Because they can spend years at C!
+Why can't a nose be 12 inches long? Because then it would be a foot.
+Why can’t you put two half-dollars in your pocket? Because two halves make a hole, and your money will fall out!
+Why does a moon rock taste better than an Earth rock? It’s a little meteor.
+How much do rainbows weigh? Not much. They’re actually pretty light.
+What is the most popular fish in the ocean? The starfish.
+A slice of apple pie costs $2.50 in Jamaica, $3.75 in Bermuda, and $3 in the Bahamas. Those are the pie-rates of the Caribbean.
+Why did the football coach yell at the vending machine? He wanted his quarter back!
+I had a joke about paper today, but it was tearable.
+What kind of job can you get at a bicycle factory? A spokesperson
+What does a condiment wizard perform? Saucery
+What's the difference in an alligator and a crocodile? You’ll see one later and one in a while.
+What’s the difference between the bird flu and the swine flu? One requires tweetment and the other an oinkment.
+What’s the difference between ducks and dine-and-dashers? Ducks take care of their bills.
+What's the difference between spring rolls and summer rolls? Their seasoning.
+What’s the difference between Iron Man and Aluminum Man? Iron Man stops the bad guy. Aluminum Man foils their plans.
+What’s the difference between a poorly dressed man on a unicycle and a well-dressed man on a bicycle? Attire.
+What’s the difference between a $20 steak and a $55 steak? February 14th.
+What's the best thing about Switzerland? The flag is a big plus.
+I went to the aquarium this weekend, but I didn’t stay long -- There’s something fishy about that place.
+I found a lion in my closet the other day! When I asked what it was doing there, it said 'Narnia business.'
+What's a cat's favorite instrument? Purrrr-cussion.
+Why did the snail paint a giant S on his car? So when he drove by, people could say: 'Look at that S car go!'
+What do you call a happy cowboy? A jolly rancher.
+What subject do cats like best in school? Hiss-tory.
+Humpty Dumpty had a great fall. He said his summer was pretty good too.
+My boss told me to dress for the job I want, not for the one I have. So I went in as Batman.
+How do you make holy water? You boil the hell out of it.
+Justice is a dish best served cold. Otherwise, it's just water.
+Why should you never throw grandpa's false teeth at a vehicle? You might denture car.
+Why are Christmas trees bad at knitting? They always drop their needles.
+What did the lunch box say to the refrigerator? Don't hate me because I'm a little cooler.
+I can always tell when someone is lying. I can tell when they're standing too.
+Some people pick their nose, but I was born with mine.
+If your house is cold, just stand in the corner. It’s always 90 degrees there.
+Why did the scarecrow win an award? Because he was outstanding in his field!
+```
+:::
+
+:::
+:::
+
+
+
+## Simple Joke Machine
+
+::: {.callout-important}
+We will create some code to display all jokes.
+:::
+
+
+::: {.columns}
+::: {.column}
+**Python File** 📝
+
+::: {.callout-note}
+Steps: 
+* Now create the following source code file in the same directory.
+
+**File**: `joke_machine.py`
+
+:::
+:::
+
+::: {.column}
+Python Code
+
+::: {style="font-size: 0.9em;"}
+```python
+myFile = "jokes.txt"
+
+# Open the text file, display contents
+
+with open(myFile, "r") as file:
+	content = file.read() # pull the contents from the file
+	print(content)
+
+```
+:::
+
+:::
+:::
+
+## Funny, Right?!
+
+![](graphics/grumpy_1151X733.png)
+
+
+
+## One-Liner Joke Machine
+
+::: {.callout-important}
+We will create some code to display a randomly selected joke.
+:::
+
+
+::: {.columns}
+::: {.column}
+**Python File** 📝
+
+::: {.callout-note}
+Steps: 
+* Now create the following source code file in the same directory.
+
+**File**: `joke_machine_one_liner.py`
+:::
 
 :::
 
+::: {.column}
+Python Code
+
+::: {style="font-size: 0.9em;"}
 ```python
-# Method 1: Basic file reading (manual close)
-file = open('student_essay.txt', 'r')  # 'r' = read mode
-content = file.read()  # Read entire file
-print(content)
-file.close()  # Always close the file!
+import random
 
-# Method 2: Read line by line
-file = open('student_essay.txt', 'r')
-for line_number, line in enumerate(file, 1):
-    print(f"Line {line_number}: {line.strip()}")  # strip() removes \n
-file.close()
+myFile = "jokes.txt"
 
-# Method 3: Best practice - using 'with' (auto-closes!)
-with open('student_essay.txt', 'r') as file:
-    content = file.read()
-    print(content)
-# File automatically closes when indented block ends!
+# Open the text file, display a random joke
+
+with open(myFile, "r") as file:
+	jokes = file.readlines() # pull all lines from the file
+	random_joke = random.choice(jokes).strip() # select a random joke
+	print(random_joke)
+```
+:::
+
+:::
+:::
+
+
+
+# Reading Text Files 📖
+
+## Let Python READ to You! 📖
+
+::: {.callout-tip icon="true"}
+When you use `with open()` then Python closes the book for you. How kind, right?!
+:::
+
+::: {style="font-size: 0.9em;"}
+```python
 
 # Method 4: Read all lines into a list
 with open('student_essay.txt', 'r') as file:
@@ -640,6 +825,256 @@ with open('student_essay.txt', 'r') as file:
     for i, line in enumerate(lines):
         print(f"{i+1}: {line.strip()}")
 ```
+:::
+
+
+
+## Reading Text Files 📖
+
+::: {style="font-size: 0.8em;"}
+::: {.callout-tip icon="true"}
+**Step-by-Step File Reading**
+
+Reading files is like opening a book - you need to open it, read the contents, then close it when done! When you use `open()`, then you have to close the book. 
+
+⚠️ To try these examples, make sure you have the file available!
+:::
+:::
+
+::: {style="font-size: 0.6em;"}
+```python
+# Method 1: Basic file reading (manual close)
+file = open('student_essay.txt', 'r')  # 'r' = read mode
+content = file.read()  # Read entire file
+print(content)
+file.close()  # Always close the file!
+```
+
+```python
+##############################
+
+# Method 2: Read line by line
+file = open('student_essay.txt', 'r')
+for line_number, line in enumerate(file, 1):
+    print(f"Line {line_number}: {line.strip()}")  # strip() removes \n
+file.close()
+```
+
+```python
+##############################
+
+# Method 3: Best practice - using 'with' (auto-closes!)
+with open('student_essay.txt', 'r') as file:
+    content = file.read()
+    print(content)
+# File automatically closes when indented block ends!
+```
+:::
+
+
+
+## Wait! What's the Code Doing?
+
+::: {.callout-important}
+Before we move forward, let's look at the code that opens files.
+:::
+
+
+::: {.columns}
+::: {.column}
+
+::: {style="font-size: 0.9em;"}
+```python
+import random
+
+myFile = "jokes.txt"
+
+# Open the text file, display a random joke
+
+with open(myFile, "r") as file:
+	jokes = file.readlines() # pull all lines from the file
+	random_joke = random.choice(jokes).strip() # select a random joke
+	print(random_joke)
+```
+:::
+
+:::
+::: {.column}
+
+::: {style="font-size: 0.9em;"}
+
+```python
+with open(myFile,"r") as file:
+    jokes = file.readlines()
+```
+* `myfile` is a string variable
+* Opens the `myfile` in **read** mode (not **write** mode) 
+* `as file:` file content is saved in `file` which is a `TextIOWrapper` object
+* `jokes = file.readlines()` parse through `TextIOWrapper`, get the text and save to `jokes`.
+:::
+:::
+:::
+
+
+# Writing Files 📝
+
+## Let Python WRITE For You! 📝
+
+::: {.callout-tip icon="true"}
+**Step-by-Step File Writing**
+
+Writing files is like creating a document - you need to open it, write your content, then close it to save! When you use `open()` with write mode, you can save data permanently.
+:::
+
+::: {style="font-size: 0.6em;"}
+```python
+# Method 1: Basic file writing (manual close)
+file = open('my_notes.txt', 'w')  # 'w' = write mode (overwrites!)
+file.write('This is my first note.\n')
+file.write('This is my second note.\n')
+file.close()  # Always close to save!
+```
+
+```python
+##############################
+
+# Method 2: Writing multiple lines at once
+file = open('shopping_list.txt', 'w')
+items = ['Apples\n', 'Bananas\n', 'Milk\n', 'Bread\n']
+file.writelines(items)  # Write all lines at once
+file.close()
+```
+
+```python
+##############################
+
+# Method 3: Best practice - using 'with' (auto-closes!)
+with open('diary.txt', 'w') as file:
+    file.write('Today was a great day!\n')
+    file.write('I learned about file writing in Python.\n')
+# File automatically saves and closes when indented block ends!
+```
+:::
+
+
+## Important: Write Modes Explained! ⚠️
+
+::: {.callout-warning}
+**Be Careful with File Modes!**
+
+Different modes do different things - choose wisely!
+:::
+
+::: {style="font-size: 0.6em;"}
+| Mode | Name | What It Does | Danger Level |
+|------|------|--------------|--------------|
+| `'w'` | Write | Creates new file or **OVERWRITES** existing file | 🔴 High - Deletes old content! |
+| `'a'` | Append | Adds to end of existing file or creates new | 🟢 Safe - Keeps old content |
+| `'r'` | Read | Opens file for reading only | 🟢 Safe - Can't change file |
+| `'x'` | Exclusive | Creates new file, **FAILS** if exists | 🟢 Safe - Won't overwrite |
+:::
+
+::: {style="font-size: 0.6em;"}
+```python
+# DANGER: This erases all old content!
+with open('notes.txt', 'w') as file:
+    file.write('New content replaces everything!\n')
+
+# SAFE: This adds to the end
+with open('notes.txt', 'a') as file:
+    file.write('This line gets added to the end.\n')
+```
+:::
+
+
+## Real Example: Creating a To-Do List 📝
+
+::: {.callout-important}
+Let's see file writing in action with a practical example!
+:::
+
+::: {.columns}
+::: {.column}
+
+::: {style="font-size: 0.6em;"}
+```python
+# Create a to-do list file
+todo_file = "my_tasks.txt"
+
+# Write initial tasks
+with open(todo_file, "w") as file:
+    file.write("To-Do List for Today\n")
+    file.write("=" * 25 + "\n")
+    file.write("1. Study Python\n")
+    file.write("2. Complete homework\n")
+    file.write("3. Exercise for 30 min\n")
+
+print("To-do list created!")
+
+# Later: Add more tasks
+with open(todo_file, "a") as file:
+    file.write("4. Call mom\n")
+    file.write("5. Read chapter 3\n")
+
+print("Tasks added!")
+```
+:::
+
+:::
+::: {.column}
+
+::: {style="font-size: 0.6em;"}
+**What's Happening?**
+
+```python
+with open(todo_file, "w") as file:
+    file.write("To-Do List for Today\n")
+```
+
+* `todo_file` is a string variable with filename
+* Opens file in **write** mode (creates or overwrites)
+* `as file:` gives us a file object to work with
+* `file.write()` writes text to the file
+* `\n` creates a new line (line break)
+* File auto-saves when `with` block ends!
+
+<!-- **Result File:** `my_tasks.txt`
+```
+To-Do List for Today
+=========================
+1. Study Python
+2. Complete homework
+3. Exercise for 30 min
+4. Call mom
+5. Read chapter 3
+``` -->
+:::
+:::
+:::
+
+## What Results?!
+
+::: {style="font-size: 1.0em;"}
+::: {.callout-note}
+**Result File:** `my_tasks.txt`
+```
+To-Do List for Today
+=========================
+1. Study Python
+2. Complete homework
+3. Exercise for 30 min
+4. Call mom
+5. Read chapter 3
+```
+:::
+:::
+
+
+
+# Let's Do Something Cool!
+
+
+
 
 ## Writing Text Files - Saving Your Data! ✏️
 
@@ -647,6 +1082,7 @@ with open('student_essay.txt', 'r') as file:
 ::: {.column}
 **Creating New Files**
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Write a new file
 with open('my_story.txt', 'w') as file:  # 'w' = write mode
@@ -667,10 +1103,12 @@ with open('novel.txt', 'w') as file:
 print("Files created successfully!")
 ```
 :::
+:::
 
 ::: {.column}
 **Appending to Files**
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Add to existing file (don't overwrite!)
 with open('my_story.txt', 'a') as file:  # 'a' = append mode
@@ -692,12 +1130,18 @@ except FileNotFoundError:
 ```
 :::
 :::
+:::
 
-<center>
+<!-- <center>
 ![](graphics/fileWriting.png){width="30%"}
-</center>
+</center> -->
 
-## Working with CSV Files - Structured Data! 📊
+
+
+
+
+
+## Using CSV Files - Structured Data! 📊
 
 ::: {.callout-important icon="true"}
 ## CSV = Comma Separated Values
@@ -706,6 +1150,7 @@ CSV files are perfect for data that fits in rows and columns, like spreadsheets!
 
 :::
 
+::: {style="font-size: 0.6em;"}
 ```python
 import csv
 
@@ -738,13 +1183,15 @@ student_data = [
 ]
 
 with open('new_students.csv', 'w', newline='') as file:
+    # newline='' prevents extra blank lines in CSV on Windows
     csv_writer = csv.writer(file)
     csv_writer.writerows(student_data)  # Write all rows at once
 
 print("CSV file created!")
 ```
+:::
 
-## Interactive File Demo: Grade Book Manager! 📚
+## Demo: Grade Book Manager! 📚
 
 ::: {.callout-tip icon="true"}
 ## Let's Build Something Useful!
@@ -753,7 +1200,135 @@ Create a grade book that can save and load student data!
 
 :::
 
+::: {style="font-size: 0.6em;"}
 ```python
+# Import the csv module to work with CSV files
+import csv
+# Import datetime to add timestamps to grade entries
+from datetime import datetime
+
+class GradeBook:
+    def __init__(self, filename='gradebook.csv'):
+        """Initialize the gradebook with a filename"""
+        # Store the CSV filename for saving/loading data
+        self.filename = filename
+        # Create an empty list to hold all student grade records
+        self.students = []
+        # Automatically load any existing grades when creating a GradeBook object
+        self.load_grades()
+    
+    def load_grades(self):
+        """Load existing grades from CSV file"""
+        try:
+            # Try to open the CSV file in read mode
+            with open(self.filename, 'r') as file:
+                # Create a CSV reader that converts each row into a dictionary
+                # Keys come from the header row (Name, Subject, Grade, Date)
+                csv_reader = csv.DictReader(file)
+                # Convert the reader object to a list and store in self.students
+                self.students = list(csv_reader)
+                # Confirm how many records were loaded
+                print(f"Loaded {len(self.students)} student records")
+        except FileNotFoundError:
+            # If the file doesn't exist yet, that's okay - start with empty list
+            print(f"No existing gradebook found. Starting fresh!")
+            self.students = []
+    
+    def add_student(self, name, subject, grade):
+        """Add a new student grade"""
+        # Create a dictionary to represent one grade entry
+        student = {
+            'Name': name,           # Student's name
+            'Subject': subject,     # Subject/course name
+            'Grade': str(grade),    # Convert grade to string for CSV storage
+            'Date': datetime.now().strftime('%Y-%m-%d')  # Add today's date in YYYY-MM-DD format
+        }
+        # Add this new student record to our list
+        self.students.append(student)
+        # Confirm the grade was added
+        print(f"Added: {name} - {subject}: {grade}%")
+    
+    def save_grades(self):
+        """Save all grades to CSV file"""
+        # Check if there are any grades to save
+        if not self.students:
+            print("No grades to save!")
+            return
+        
+        # Open the file in write mode (will overwrite existing file)
+        # newline='' prevents extra blank lines in CSV on Windows
+        with open(self.filename, 'w', newline='') as file:
+            # Define the column headers for our CSV file
+            fieldnames = ['Name', 'Subject', 'Grade', 'Date']
+            # Create a CSV writer that works with dictionaries
+            csv_writer = csv.DictWriter(file, fieldnames=fieldnames)
+            # Write the header row (column names)
+            csv_writer.writeheader()
+            # Write all student records as rows in the CSV
+            csv_writer.writerows(self.students)
+        # Confirm the save was successful
+        print(f"Saved {len(self.students)} grades to {self.filename}")
+    
+    def get_student_average(self, name):
+        """Calculate average grade for a student"""
+        # Use list comprehension to get all grades for this student
+        # Filter students by name, then convert their grades from strings to integers
+        student_grades = [int(s['Grade']) for s in self.students if s['Name'] == name]
+        # If we found any grades for this student
+        if student_grades:
+            # Calculate and return the average (sum divided by count)
+            return sum(student_grades) / len(student_grades)
+        # If no grades found, return None
+        return None
+    
+    def display_gradebook(self):
+        """Display all grades in a nice format"""
+        # Check if there are any grades to display
+        if not self.students:
+            print("Gradebook is empty!")
+            return
+        
+        # Print a formatted header
+        print("\n📚 GRADEBOOK REPORT")
+        print("-" * 50)
+        # Print column headers with specific widths using f-string formatting
+        # <12 means left-align in 12 characters, <10 means 10 characters, etc.
+        print(f"{'Name':<12} {'Subject':<10} {'Grade':<6} {'Date'}")
+        print("-" * 50)
+        
+        # Loop through each student record and display it
+        for student in self.students:
+            # Print each row with aligned columns
+            # Add '%' to grade and maintain alignment
+            print(f"{student['Name']:<12} {student['Subject']:<10} {student['Grade']+'%':<6} {student['Date']}")
+
+# ========== DEMO: Using the GradeBook ==========
+
+# Create a new GradeBook object (will load existing data if available)
+gb = GradeBook()
+
+# Add some sample student grades
+# Format: add_student(name, subject, grade)
+gb.add_student("Alice", "Math", 95)
+gb.add_student("Bob", "Science", 87)
+gb.add_student("Alice", "Science", 92)
+gb.add_student("Charlie", "Math", 88)
+
+# Display all grades in a formatted table
+gb.display_gradebook()
+
+# Save all grades to the CSV file
+gb.save_grades()
+
+# Calculate and display Alice's average grade across all subjects
+alice_avg = gb.get_student_average("Alice")
+if alice_avg:
+    # Display average with one decimal place using :.1f formatting
+    print(f"\nAlice's average: {alice_avg:.1f}%")
+```
+:::
+
+<!-- ```python
 import csv
 from datetime import datetime
 
@@ -836,23 +1411,27 @@ gb.save_grades()
 alice_avg = gb.get_student_average("Alice")
 if alice_avg:
     print(f"\nAlice's average: {alice_avg:.1f}%")
-```
+``` -->
 
 ---
 
 # Part 2: Creating Your Own Modules 🛠️
 
-## What Makes a Module? Building Your First Module! 
+## What Makes a Module?
 
-::: {.callout-note icon="true"}
-## Modules Are Just Python Files!
+<!-- Building Your First Module!  -->
 
-Any `.py` file can become a module that other programs can import and use!
+::: {style="font-size: 0.6em;"}
+::: {.callout-note icon="false"}
+**Modules Are Just Python Files!**: Any `.py` file can become a module that other programs can import and use!
 
+:::
 :::
 
 ::: {.columns}
 ::: {.column}
+
+::: {style="font-size: 0.6em;"}
 **Create `math_helpers.py`**
 
 ```python
@@ -902,12 +1481,14 @@ def demo():
     print(f"Is 16 perfect square? {is_perfect_square(16)}")
     print(f"Golden ratio: {GOLDEN_RATIO:.6f}")
 ```
+:::
 
 :::
 
 ::: {.column}
 **Using Your Module**
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Import your custom module
 import math_helpers
@@ -940,16 +1521,17 @@ math_helpers.demo()
 ```
 :::
 :::
-
-## Advanced Module Features: Making It Professional! 🎩
-
-::: {.callout-tip icon="true"}
-## Professional Module Structure
-
-Let's add advanced features that make modules robust and user-friendly!
-
 :::
 
+## Advanced Module Features 🎩
+
+::: {style="font-size: 0.6em;"}
+::: {.callout-tip icon="true"}
+**Professional Module Structure**: Let's add advanced features that make modules robust and user-friendly!
+:::
+:::
+
+::: {style="font-size: 0.6em;"}
 ```python
 """
 student_toolkit.py
@@ -1113,11 +1695,15 @@ if __name__ == "__main__":
     save_to_json(sm.students, 'student_data.json')
     print("\n📁 Data saved to CSV and JSON files!")
 ```
+:::
 
-## Using Your Custom Module: Example 1 of Real-World Applications! 🌍
+## Using Your Custom Module
+
+Example 1 of Real-World Applications! 🌍
 
 **Import and Use**
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Using your student toolkit
 from student_toolkit import (
@@ -1166,16 +1752,19 @@ for student in classroom.students:
     
     print(f"{student['name']:<15} | Avg: {avg:5.1f}% | Grade: {letter} | GPA: {gpa:.2f}")
 ```
-
-::: {.callout-important}
-There are many different ways to write *Real-World* applications, but this is a good way to begin a project.
 :::
 
-## Using Your Custom Module: Example 2 of Real-World Applications! 🌍
+<!-- ::: {.callout-important}
+There are many different ways to write *Real-World* applications, but this is a good way to begin a project.
+::: -->
 
+## Using Your Custom Module
+
+Example 2 of Real-World Applications! 🌍
 
 **Module Organization**
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Create a package structure
 """
@@ -1214,16 +1803,20 @@ def quick_demo():
     print("- Report generators: Create summaries")
     print("- Data utilities: Save/load functionality")
 ```
-
+:::
 
 ## Module Best Practices & Documentation! 📋
 
+::: {style="font-size: 0.6em;"}
 ::: {.callout-important icon="true"}
 ## Writing Professional Modules
 Examples of a good way to write code. Follow these practices to create modules that others (and future you!) can easily use!
 
 :::
 
+:::
+
+::: {style="font-size: 0.6em;"}
 ```python
 """
 geometry_tools.py
@@ -1384,8 +1977,11 @@ if __name__ == "__main__":
     angle_rad = convert_to_radians(angle_deg)
     print(f"{angle_deg}° = {angle_rad:.4f} radians")
 ```
+:::
 
-## Hands-On Challenge: Build Your Dream Module! 🎯
+## Hands-On Challenge
+
+Build Your Dream Module! 🎯
 
 ::: {.callout-tip icon="true"}
 ## Final Project: Create Your Own Utility Module!
@@ -1395,8 +1991,15 @@ Choose one of these ideas or create your own unique module:
 :::
 
 ::: {.columns}
+
+
 ::: {.column}
+
+::: {style="font-size: 0.6em;"}
 **Option 1: Game Utilities**
+:::
+
+::: {style="font-size: 0.6em;"}
 ```python
 """
 game_utils.py - Gaming Helper Functions
@@ -1432,9 +2035,15 @@ class Player:
 # - Experience points calculation
 ```
 :::
+:::
 
 ::: {.column}
+
+::: {style="font-size: 0.6em;"}
 **Option 2: Text Analysis**
+:::
+
+::: {style="font-size: 0.6em;"}
 ```python
 """
 text_analyzer.py - Analyze written text
@@ -1471,10 +2080,12 @@ def reading_level(text):
 ```
 :::
 :::
+:::
 
 ## Solution :: Week and Weekend Days
 Solution: How many days are there without weekend days in a month?
 
+::: {style="font-size: 0.6em;"}
 ```python
 # Finding the number of days of the week, less weekend days, each month.
 
@@ -1520,7 +2131,9 @@ print(f" Number of weekend days : {sat + sun} ")
 print(f" Number of days in month : {getMonthLen(year, month)}")
 print(f" Number of weekdays : {getMonthLen(year, month) - (sat + sun)} ")
 ```
+:::
 
+::: {style="font-size: 0.6em;"}
 ```{python}
 # Finding the number of days of the week, less weekend days, each month.
 
@@ -1566,11 +2179,14 @@ print(f" Number of weekend days : {sat + sun} ")
 print(f" Number of days in month : {getMonthLen(year, month)}")
 print(f" Number of weekdays : {getMonthLen(year, month) - (sat + sun)} ")
 ```
+:::
+
 [Return to Challenge Slide](python_modules_and_files.html#/calendar-magic-finding-special-days)
 
 
 ## Solution :: Finding Areas
 
+::: {style="font-size: 0.6em;"}
 ```python
 import math
 
@@ -1609,7 +2225,9 @@ for r in radii:
     # pull values from dictionary structure
     print(f"{info['radius']:<8} {info['diameter']:<10} {info['area']:<12} {info['circumference']:<16} {info['circumference']}")
 ```
+:::
 
+::: {style="font-size: 0.6em;"}
 ```{python}
 import math
 
@@ -1649,19 +2267,23 @@ for r in radii:
     print(f"{info['radius']:<8} {info['diameter']:<10} {info['area']:<12} {info['circumference']:<16} {info['circumference']}")
 
 ```
-
+:::
 
 [Return to Challenge Slide](python_modules_and_files.html#/interactive-math-demo-circle-calculator)
 
 
-## Summary & Next Steps: You're Now a Module Master! 🎓
+## Summary & Next Steps
 
-::: {.callout-tip icon="true"}
+You're Now a Module Master! 🎓
+
+<!-- ::: {.callout-tip icon="true"}
 ## What You've Accomplished Today! 🌟
 
 You've mastered the essential skills of working with Python modules and files!
 
-:::
+::: -->
+
+::: {style="font-size: 0.6em;"}
 
 ::: {.columns}
 ::: {.column}
@@ -1695,7 +2317,7 @@ You've mastered the essential skills of working with Python modules and files!
 - Integrate modules into larger projects
 :::
 :::
-
+:::
 
 ## Keep Exploring! 🚀
 
