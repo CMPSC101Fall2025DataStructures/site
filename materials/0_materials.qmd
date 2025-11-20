@@ -141,7 +141,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 
 ## 12 Final Project
 - **Final Project** Writing your own code
-  - [GitHub Classroom link](https://classroom.github.com/a/lTZNP3Oi)
+  - [GitHub Classroom link](https://classroom.github.com/a/HDTdhiNS)
 
 <!-- ## 12. Structured and un Structured Files, Ideas for Project -->
 
