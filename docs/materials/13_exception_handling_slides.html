@@ -230,7 +230,7 @@ CS 101 - Fall 2025
 <ul>
 <li class="fragment"><strong>Prevent crashes</strong> - Keep your program running</li>
 <li class="fragment"><strong>User-friendly</strong> - Show helpful messages instead of cryptic errors</li>
-<li class="fragment"><strong>Data protection</strong> - Don’t lose work when errors occur</li>
+<li class="fragment"><strong>Data protection</strong> - Do not lose work when errors occur</li>
 <li class="fragment"><strong>Professional code</strong> - Handle edge cases gracefully</li>
 </ul>
 </section>
@@ -430,7 +430,12 @@ Invalid input: invalid literal for int() with base 10: 'twenty'</code></pre>
 <span id="cb14-5"><a></a>    <span class="bu">file</span>.close()</span>
 <span id="cb14-6"><a></a>    <span class="cf">return</span> content</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
-<p><strong>Requirements:</strong> - Handle <code>FileNotFoundError</code> - Always close the file (use <code>finally</code>) - Return <code>None</code> if file doesn’t exist</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Handle <code>FileNotFoundError</code></li>
+<li>Always close the file (use <code>finally</code>)</li>
+<li>Return <code>None</code> if file doesn’t exist</li>
+</ul>
 </div>
 </section>
 <section id="solution-2" class="slide level2">
@@ -681,16 +686,16 @@ Value error: Cannot divide by zero</code></pre>
 <h2>Best Practices ⭐</h2>
 <ol type="1">
 <li class="fragment"><strong>Be specific</strong> - Catch specific exceptions, not all errors</li>
-<li class="fragment"><strong>Don’t hide errors</strong> - Log or display useful information</li>
+<li class="fragment"><strong>Do not hide errors</strong> - Log or display useful information</li>
 <li class="fragment"><strong>Clean up resources</strong> - Use <code>finally</code> for files, connections</li>
 <li class="fragment"><strong>Fail gracefully</strong> - Provide helpful error messages</li>
-<li class="fragment"><strong>Don’t overuse</strong> - Not everything needs try-except</li>
+<li class="fragment"><strong>Do not overuse</strong> - Not everything needs try-except</li>
 <li class="fragment"><strong>Document exceptions</strong> - Tell users what errors to expect</li>
 </ol>
 </section>
 <section id="common-mistakes-to-avoid" class="slide level2">
 <h2>Common Mistakes to Avoid ⚠️</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="co"># ❌ DON'T: Catch everything blindly</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="co"># ❌ DO NOT: Catch everything blindly</span></span>
 <span id="cb32-2"><a></a><span class="cf">try</span>:</span>
 <span id="cb32-3"><a></a>    do_something()</span>
 <span id="cb32-4"><a></a><span class="cf">except</span>:</span>

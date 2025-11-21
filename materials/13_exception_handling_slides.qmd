@@ -49,7 +49,7 @@ ValueError: invalid literal for int() with base 10: 'hello'
 ::: {.incremental}
 - **Prevent crashes** - Keep your program running
 - **User-friendly** - Show helpful messages instead of cryptic errors
-- **Data protection** - Don't lose work when errors occur
+- **Data protection** - Do not lose work when errors occur
 - **Professional code** - Handle edge cases gracefully
 :::
 
@@ -292,6 +292,7 @@ def read_file_safely(filename):
 . . .
 
 **Requirements:**
+
 - Handle `FileNotFoundError`
 - Always close the file (use `finally`)
 - Return `None` if file doesn't exist
@@ -625,10 +626,10 @@ def fetch_data(url):
 
 ::: {.incremental}
 1. **Be specific** - Catch specific exceptions, not all errors
-2. **Don't hide errors** - Log or display useful information
+2. **Do not hide errors** - Log or display useful information
 3. **Clean up resources** - Use `finally` for files, connections
 4. **Fail gracefully** - Provide helpful error messages
-5. **Don't overuse** - Not everything needs try-except
+5. **Do not overuse** - Not everything needs try-except
 6. **Document exceptions** - Tell users what errors to expect
 :::
 
@@ -637,7 +638,7 @@ def fetch_data(url):
 ## Common Mistakes to Avoid ⚠️
 
 ```python
-# ❌ DON'T: Catch everything blindly
+# ❌ DO NOT: Catch everything blindly
 try:
     do_something()
 except:
