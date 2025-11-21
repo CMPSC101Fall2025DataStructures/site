@@ -126,7 +126,7 @@ Here you will find a listing of lesson materials for the course such as slides, 
 ## 11. Chapter 6. Modules
 - **Modules and Imports**
   - [HTML](11_python_modules_and_files.html) Slides
-  - [PDF](11_python_modules_and_files.pdf) The slide's 
+  - [PDF](11_python_modules_and_files.pdf) The slide's material as a pdf.
 - **Lab07**: Using Modules to Do Analysis
   - [GitHub Classroom link](https://classroom.github.com/a/-fsqe2DS)
 - **Activity 08**: Exploring Python Modules Through Mathematical Animation! 🎬✨
@@ -144,4 +144,8 @@ Here you will find a listing of lesson materials for the course such as slides, 
   - [GitHub Classroom GROUP link](https://classroom.github.com/a/HDTdhiNS)
 - **Activity 09**:  Pygame Ideas for Final Project 🎯
   - [GitHub Classroom Link](https://classroom.github.com/a/ebGLnCU5)
-  
+
+## 13. Exception Handling
+- **Working With Files**
+  - [HTML](13_exception_handling_slides.html) Slides
+  - [PDF](13_exception_handling_slides.pdf) The slide's material as a pdf. 
