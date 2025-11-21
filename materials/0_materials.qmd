@@ -142,7 +142,6 @@ Here you will find a listing of lesson materials for the course such as slides, 
 ## 12 Final Project
 - **Final Project** Writing your own code
   - [GitHub Classroom GROUP link](https://classroom.github.com/a/HDTdhiNS)
-
-<!-- ## 12. Structured and un Structured Files, Ideas for Project -->
-<!-- - **Activity 09**: Making Simple games With Pygame 🎯
-  - [GitHub Classroom Link](https://classroom.github.com/a/ebGLnCU5) -->
+- **Activity 09**:  Pygame Ideas for Final Project 🎯
+  - [GitHub Classroom Link](https://classroom.github.com/a/ebGLnCU5)
+  
